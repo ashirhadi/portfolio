@@ -3,81 +3,901 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Muhammad Ashir Hadi - Professional Portfolio">
+<meta name="description" content="Muhammad Ashir Hadi | Technician, Team Leader, Facility & MEP Operations Professional">
+<meta name="author" content="Muhammad Ashir Hadi">
+<meta name="theme-color" content="#070b12">
 <title>Muhammad Ashir Hadi | Professional Portfolio</title>
+
 <style>
-<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-/* YOUR EXISTING CSS */
+html{
+  scroll-behavior:smooth;
+}
 
+body{
+  font-family:Inter,Arial,sans-serif;
+  background:#050810;
+  color:#f5f7fb;
+  line-height:1.6;
+  overflow-x:hidden;
+}
 
-/* ===== HOLOGRAPHIC EFFECT ===== */
+/* =========================
+   HOLOGRAPHIC BACKGROUND
+========================= */
 
 body::before{
   content:"";
   position:fixed;
   inset:-50%;
-  ...
+  z-index:-3;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(0,255,255,.15),transparent 24%),
+    radial-gradient(circle at 80% 20%,rgba(130,0,255,.16),transparent 25%),
+    radial-gradient(circle at 50% 80%,rgba(0,150,255,.12),transparent 30%);
+  animation:holoBackground 14s ease-in-out infinite alternate;
 }
 
-/* rest of Holo CSS */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  background:
+    linear-gradient(
+      120deg,
+      transparent 0%,
+      rgba(255,255,255,.025) 45%,
+      transparent 50%
+    );
+  background-size:200% 200%;
+  animation:scan 10s linear infinite;
+}
 
-</style>
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#070b12;color:#f5f7fb;line-height:1.6}
-nav{position:fixed;top:0;width:100%;z-index:100;background:#070b12dd;backdrop-filter:blur(15px);border-bottom:1px solid #202938}
-.nav{max-width:1150px;margin:auto;padding:18px 22px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:23px;font-weight:800}.logo span,h1 span{color:#5ee7ff}
-.links{display:flex;gap:24px}.links a{color:#ccd3df;text-decoration:none}.links a:hover{color:#5ee7ff}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:110px 20px;background:radial-gradient(circle at 50% 15%,#123747,#070b12 48%)}
-.hero-box{max-width:900px}.badge{display:inline-block;padding:8px 16px;border:1px solid #285365;border-radius:30px;color:#5ee7ff;background:#0c1820;margin-bottom:25px;font-size:13px}
-h1{font-size:clamp(45px,8vw,90px);line-height:1.05;margin-bottom:20px}
-.hero p{max-width:720px;margin:auto;color:#aeb8c8;font-size:18px}
-.buttons{margin-top:35px;display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
-.btn{padding:13px 24px;border-radius:9px;border:1px solid #30404f;font-weight:700;text-decoration:none}.primary{background:#5ee7ff;color:#071018}
-.secondary{color:#fff}.secondary:hover{border-color:#5ee7ff;color:#5ee7ff}
-section{max-width:1150px;margin:auto;padding:95px 22px}.title{text-align:center;margin-bottom:50px}.title h2{font-size:38px}.title p{color:#8e99aa;margin-top:8px}
-.card{background:#10151f;border:1px solid #202938;border-radius:18px;padding:30px}.card p{color:#9ca7b8}
-.timeline{border-left:2px solid #254252;padding-left:30px}.item{margin-bottom:38px;position:relative}.item:before{content:"";position:absolute;left:-39px;top:5px;width:15px;height:15px;border-radius:50%;background:#5ee7ff}.item small{color:#5ee7ff}.item h3{margin:5px 0}.item p{color:#9ca7b8}
-.skills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}.skill{padding:10px 17px;border:1px solid #293545;border-radius:30px;background:#0e131c;color:#b9c4d4}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}.service{background:#10151f;border:1px solid #202938;border-radius:18px;padding:28px}.service h3{margin:12px 0}.service p{color:#9ca7b8}.icon{font-size:30px}
-.contact{text-align:center}.contact-box{max-width:700px;margin:auto;background:#10151f;border:1px solid #202938;border-radius:20px;padding:40px}.social{display:flex;justify-content:center;gap:15px;margin-top:25px}.social a{padding:10px 16px;border:1px solid #293545;border-radius:8px;text-decoration:none;color:#fff}.social a:hover{color:#5ee7ff;border-color:#5ee7ff}
-footer{text-align:center;padding:30px;color:#778293;border-top:1px solid #202632}
-@media(max-width:700px){.links{display:none}section{padding:75px 18px}.hero p{font-size:16px}}
+@keyframes holoBackground{
+  0%{
+    transform:translate(-3%,-2%) rotate(0deg) scale(1);
+  }
+  50%{
+    transform:translate(3%,2%) rotate(3deg) scale(1.06);
+  }
+  100%{
+    transform:translate(-2%,3%) rotate(-3deg) scale(1.1);
+  }
+}
+
+@keyframes scan{
+  0%{background-position:-100% -100%}
+  100%{background-position:100% 100%}
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(5,8,16,.72);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(94,231,255,.12);
+}
+
+.nav{
+  max-width:1180px;
+  margin:auto;
+  padding:17px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.logo span{
+  color:#5ee7ff;
+  text-shadow:0 0 15px #5ee7ff;
+}
+
+.links{
+  display:flex;
+  gap:25px;
+}
+
+.links a{
+  color:#cbd4e1;
+  text-decoration:none;
+  font-size:14px;
+  transition:.3s;
+}
+
+.links a:hover{
+  color:#5ee7ff;
+  text-shadow:0 0 12px #5ee7ff;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:120px 20px 80px;
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(20,70,90,.8),
+      transparent 42%
+    );
+}
+
+.hero-box{
+  max-width:950px;
+  position:relative;
+}
+
+.badge{
+  display:inline-block;
+  padding:9px 17px;
+  border:1px solid rgba(94,231,255,.4);
+  border-radius:50px;
+  color:#5ee7ff;
+  background:rgba(94,231,255,.06);
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 25px rgba(94,231,255,.08);
+  margin-bottom:28px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+h1{
+  font-size:clamp(45px,8vw,92px);
+  line-height:1;
+  margin-bottom:25px;
+  letter-spacing:-3px;
+}
+
+h1 span{
+  background:linear-gradient(
+    90deg,
+    #5ee7ff,
+    #ffffff,
+    #a56cff,
+    #5ee7ff
+  );
+  background-size:300% auto;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:holoText 5s linear infinite;
+  text-shadow:none;
+}
+
+@keyframes holoText{
+  to{
+    background-position:300% center;
+  }
+}
+
+.hero-subtitle{
+  color:#c3ccda;
+  font-size:20px;
+  margin-bottom:12px;
+}
+
+.hero-description{
+  max-width:720px;
+  margin:auto;
+  color:#8e9bad;
+  font-size:16px;
+}
+
+.buttons{
+  margin-top:38px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 25px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:800;
+  border:1px solid rgba(94,231,255,.3);
+  transition:.3s;
+}
+
+.primary{
+  color:#041016;
+  background:linear-gradient(
+    90deg,
+    #5ee7ff,
+    #a57cff,
+    #5ee7ff
+  );
+  background-size:200% auto;
+  animation:holoButton 4s linear infinite;
+}
+
+.secondary{
+  color:#fff;
+  background:rgba(255,255,255,.03);
+  backdrop-filter:blur(10px);
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+  box-shadow:
+    0 0 20px rgba(94,231,255,.25),
+    0 0 45px rgba(140,70,255,.12);
+}
+
+@keyframes holoButton{
+  to{
+    background-position:200% center;
+  }
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+  max-width:1150px;
+  margin:auto;
+  padding:100px 22px;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:55px;
+}
+
+.title h2{
+  font-size:40px;
+  margin-bottom:8px;
+}
+
+.title p{
+  color:#7f8b9e;
+}
+
+/* =========================
+   GLASS CARDS
+========================= */
+
+.card,
+.service,
+.contact-box{
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.07),
+      rgba(0,220,255,.025),
+      rgba(140,0,255,.05)
+    );
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:20px;
+  padding:32px;
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.06),
+    0 15px 50px rgba(0,0,0,.15);
+  transition:.4s;
+}
+
+.card::before,
+.service::before,
+.contact-box::before{
+  content:"";
+  position:absolute;
+  inset:-100%;
+  background:
+    linear-gradient(
+      120deg,
+      transparent 40%,
+      rgba(94,231,255,.2),
+      rgba(170,80,255,.18),
+      transparent 60%
+    );
+  transform:translateX(-40%) rotate(20deg);
+  transition:.8s;
+  pointer-events:none;
+}
+
+.card:hover::before,
+.service:hover::before,
+.contact-box:hover::before{
+  transform:translateX(40%) rotate(20deg);
+}
+
+.card:hover,
+.service:hover,
+.contact-box:hover{
+  transform:translateY(-8px);
+  border-color:rgba(94,231,255,.4);
+  box-shadow:
+    0 0 25px rgba(94,231,255,.12),
+    0 25px 70px rgba(0,0,0,.3);
+}
+
+.card p,
+.service p{
+  color:#9ba7b8;
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.timeline{
+  border-left:2px solid rgba(94,231,255,.3);
+  padding-left:32px;
+}
+
+.item{
+  position:relative;
+  margin-bottom:42px;
+}
+
+.item::before{
+  content:"";
+  position:absolute;
+  left:-41px;
+  top:5px;
+  width:15px;
+  height:15px;
+  border-radius:50%;
+  background:#5ee7ff;
+  box-shadow:
+    0 0 10px #5ee7ff,
+    0 0 25px rgba(94,231,255,.5);
+}
+
+.item small{
+  color:#5ee7ff;
+  font-weight:700;
+}
+
+.item h3{
+  margin:6px 0 8px;
+  font-size:21px;
+}
+
+.item p{
+  color:#9ba7b8;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:13px;
+}
+
+.skill{
+  padding:11px 18px;
+  border:1px solid rgba(94,231,255,.15);
+  border-radius:50px;
+  color:#b9c4d4;
+  background:rgba(255,255,255,.025);
+  backdrop-filter:blur(10px);
+  transition:.3s;
+}
+
+.skill:hover{
+  color:#fff;
+  border-color:#5ee7ff;
+  background:rgba(94,231,255,.1);
+  box-shadow:0 0 20px rgba(94,231,255,.15);
+  transform:translateY(-4px);
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+}
+
+.icon{
+  font-size:35px;
+}
+
+.service h3{
+  margin:12px 0;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+  text-align:center;
+}
+
+.contact-box{
+  max-width:750px;
+  margin:auto;
+}
+
+.contact-box h3{
+  font-size:26px;
+}
+
+.contact-box p{
+  margin-top:10px;
+}
+
+.social{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:28px;
+}
+
+.social a{
+  display:inline-block;
+  padding:11px 17px;
+  color:#fff;
+  text-decoration:none;
+  border:1px solid rgba(94,231,255,.2);
+  border-radius:9px;
+  background:rgba(255,255,255,.025);
+  transition:.3s;
+}
+
+.social a:hover{
+  color:#5ee7ff;
+  border-color:#5ee7ff;
+  box-shadow:0 0 18px rgba(94,231,255,.15);
+  transform:translateY(-3px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  text-align:center;
+  padding:35px 20px;
+  color:#6f7b8e;
+  border-top:1px solid rgba(255,255,255,.08);
+  background:rgba(0,0,0,.15);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+  .links{
+    display:none;
+  }
+
+  .nav{
+    padding:16px 18px;
+  }
+
+  .hero{
+    padding:110px 18px 70px;
+  }
+
+  h1{
+    font-size:48px;
+    letter-spacing:-2px;
+  }
+
+  .hero-subtitle{
+    font-size:17px;
+  }
+
+  .hero-description{
+    font-size:15px;
+  }
+
+  section{
+    padding:75px 18px;
+  }
+
+  .title h2{
+    font-size:32px;
+  }
+
+  .card,
+  .service,
+  .contact-box{
+    padding:25px;
+  }
+
+  .timeline{
+    padding-left:25px;
+  }
+
+  .item::before{
+    left:-34px;
+  }
+
+  .buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+  }
+}
 </style>
 </head>
+
 <body>
-<nav><div class="nav"><div class="logo">ASHIR<span>.</span></div><div class="links"><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#contact">Contact</a></div></div></nav>
 
-<header class="hero"><div class="hero-box">
-<div class="badge">AVAILABLE FOR PROFESSIONAL OPPORTUNITIES</div>
-<h1>Muhammad <span>Ashir Hadi</span></h1>
-<p>Technician • Team Leader • Computer Operations • MEP & Facility Support</p>
-<p style="margin-top:12px">A versatile professional combining technical operations, team leadership, computer operations and facility support experience.</p>
-<div class="buttons"><a class="btn primary" href="#contact">Let's Connect</a><a class="btn secondary" href="#experience">View Experience</a></div>
-</div></header>
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-<section id="about"><div class="title"><h2>About Me</h2><p>Professional Profile</p></div><div class="card"><p>I am a versatile professional with experience across technical operations, facility support, team leadership, production and logistics, and computer operations. I bring practical problem solving, team coordination, workplace safety and operational efficiency.</p></div></section>
+<nav>
+  <div class="nav">
 
-<section id="experience"><div class="title"><h2>Experience</h2><p>Professional Journey</p></div><div class="timeline">
-<div class="item"><small>UAE • Facility Management</small><h3>Plumbing / Dewatering / Pump Operations</h3><p>Technical and facility-support responsibilities including plumbing-related work, dewatering operations, pump operations, inspection activities and operational support.</p></div>
-<div class="item"><small>Pakistan • Vision Technology</small><h3>Team Leader — Production & Logistics</h3><p>Led operational activities, supported supervisors, coordinated team members and assisted with production and logistics processes.</p></div>
-<div class="item"><small>Pakistan • Office Operations</small><h3>Computer Operator / Office Operations</h3><p>Computer operations, office administration, documentation, data handling and digital workplace tasks.</p></div>
-</div></section>
+    <div class="logo">
+      ASHIR<span>.</span>
+    </div>
 
-<section id="skills"><div class="title"><h2>Core Skills</h2><p>Professional Capabilities</p></div><div class="skills">
-<div class="skill">Team Leadership</div><div class="skill">Facility Operations</div><div class="skill">Plumbing Support</div><div class="skill">Pump Operations</div><div class="skill">Dewatering</div><div class="skill">MEP Support</div><div class="skill">Production</div><div class="skill">Logistics</div><div class="skill">Computer Operations</div><div class="skill">Office Management</div><div class="skill">Documentation</div><div class="skill">Problem Solving</div>
-</div></section>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
 
-<section id="services"><div class="title"><h2>What I Bring</h2><p>Professional Strengths</p></div><div class="grid">
-<div class="service"><div class="icon">⚙️</div><h3>Technical Operations</h3><p>Hands-on technical and facility support with practical problem solving.</p></div>
-<div class="service"><div class="icon">👥</div><h3>Team Leadership</h3><p>Team coordination and operational support focused on productivity.</p></div>
-<div class="service"><div class="icon">💻</div><h3>Computer Operations</h3><p>Office systems, documentation, data handling and digital workplace support.</p></div>
-<div class="service"><div class="icon">📊</div><h3>Operations Support</h3><p>Production, logistics, reporting and day-to-day operational coordination.</p></div>
-</div></section>
+  </div>
+</nav>
 
-<section id="contact" class="contact"><div class="title"><h2>Let's Connect</h2><p>Open to professional opportunities and collaboration</p></div><div class="contact-box"><h3>Muhammad Ashir Hadi</h3><p style="margin-top:10px;color:#9ca7b8">For employment, professional opportunities or collaboration.</p><div class="social"><a href="mailto:mashirhadi@gmail.com">Email</a><a href="https://github.com/ashirhadi" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359/" target="_blank" rel="noopener">LinkedIn</a></div></div></section>
 
-<footer>© 2026 Muhammad Ashir Hadi • Professional Portfolio</footer>
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+  <div class="hero-box">
+
+    <div class="badge">
+      AVAILABLE FOR PROFESSIONAL OPPORTUNITIES
+    </div>
+
+    <h1>
+      Muhammad <span>Ashir Hadi</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Technician • Team Leader • Facility & MEP Operations
+    </p>
+
+    <p class="hero-description">
+      Professional experience in technical operations, facility support,
+      team leadership, production, logistics and computer operations.
+    </p>
+
+    <div class="buttons">
+
+      <a class="btn primary" href="#contact">
+        Let's Connect
+      </a>
+
+      <a class="btn secondary" href="#experience">
+        View Experience
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+  <div class="title">
+    <h2>About Me</h2>
+    <p>Professional Profile</p>
+  </div>
+
+  <div class="card">
+
+    <p>
+      I am a versatile professional with experience across technical
+      operations, facility support, team leadership, production and
+      logistics, and computer operations. I bring practical problem
+      solving, team coordination, workplace safety and operational
+      efficiency to every role.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience">
+
+  <div class="title">
+    <h2>Experience</h2>
+    <p>Professional Journey</p>
+  </div>
+
+  <div class="timeline">
+
+    <div class="item">
+
+      <small>UAE • Facility Management</small>
+
+      <h3>
+        Plumbing / Dewatering / Pump Operations
+      </h3>
+
+      <p>
+        Technical and facility-support responsibilities including
+        plumbing-related work, dewatering operations, pump operations,
+        inspection activities and operational support.
+      </p>
+
+    </div>
+
+
+    <div class="item">
+
+      <small>Pakistan • Vision Technology</small>
+
+      <h3>
+        Team Leader — Production & Logistics
+      </h3>
+
+      <p>
+        Led operational activities, supported supervisors, coordinated
+        team members and assisted with production and logistics processes.
+      </p>
+
+    </div>
+
+
+    <div class="item">
+
+      <small>Pakistan • Office Operations</small>
+
+      <h3>
+        Computer Operator / Office Operations
+      </h3>
+
+      <p>
+        Computer operations, office administration, documentation,
+        data handling and digital workplace tasks.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+  <div class="title">
+    <h2>Core Skills</h2>
+    <p>Professional Capabilities</p>
+  </div>
+
+  <div class="skills">
+
+    <div class="skill">Team Leadership</div>
+    <div class="skill">Facility Operations</div>
+    <div class="skill">Plumbing Support</div>
+    <div class="skill">Pump Operations</div>
+    <div class="skill">Dewatering</div>
+    <div class="skill">MEP Support</div>
+    <div class="skill">Production</div>
+    <div class="skill">Logistics</div>
+    <div class="skill">Computer Operations</div>
+    <div class="skill">Office Management</div>
+    <div class="skill">Documentation</div>
+    <div class="skill">Problem Solving</div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services">
+
+  <div class="title">
+    <h2>What I Bring</h2>
+    <p>Professional Strengths</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="service">
+
+      <div class="icon">⚙️</div>
+
+      <h3>
+        Technical Operations
+      </h3>
+
+      <p>
+        Hands-on technical and facility support with practical
+        problem solving.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <div class="icon">👥</div>
+
+      <h3>
+        Team Leadership
+      </h3>
+
+      <p>
+        Team coordination and operational support focused on
+        productivity and efficiency.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <div class="icon">💻</div>
+
+      <h3>
+        Computer Operations
+      </h3>
+
+      <p>
+        Office systems, documentation, data handling and
+        digital workplace support.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <div class="icon">📊</div>
+
+      <h3>
+        Operations Support
+      </h3>
+
+      <p>
+        Production, logistics, reporting and day-to-day
+        operational coordination.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+  <div class="title">
+
+    <h2>Let's Connect</h2>
+
+    <p>
+      Open to professional opportunities and collaboration
+    </p>
+
+  </div>
+
+
+  <div class="contact-box">
+
+    <h3>
+      Muhammad Ashir Hadi
+    </h3>
+
+    <p>
+      For employment, professional opportunities or collaboration.
+    </p>
+
+
+    <div class="social">
+
+      <a href="mailto:mashirhadi@gmail.com">
+        📧 Email
+      </a>
+
+      <a href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359/"
+         target="_blank"
+         rel="noopener">
+        💼 LinkedIn
+      </a>
+
+      <a href="https://github.com/ashirhadi"
+         target="_blank"
+         rel="noopener">
+        💻 GitHub
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  © 2026 Muhammad Ashir Hadi
+  • Professional Portfolio
+
+</footer>
+
 </body>
 </html>
