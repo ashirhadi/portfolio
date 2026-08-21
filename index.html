@@ -1426,7 +1426,26 @@ margin-top:20px;
 
 }
 
-@media(max-width:500px){
+@media(max-width:850px){.nav-links{
+display:none;
+position:fixed;
+top:74px;
+left:0;
+width:100%;
+padding:25px;
+background:#070a19;
+flex-direction:column;
+gap:20px;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.menu{
+display:block;
+}
 
 .hero h1{
 
