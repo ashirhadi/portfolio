@@ -1520,7 +1520,109 @@ linear-gradient(
 
 border-radius:10px;
 }
+/* ===== FINAL DESKTOP + MOBILE RESPONSIVE FIX ===== */
 
+.hero-grid{
+    width:100%;
+}
+
+.hero{
+    min-height:100vh;
+}
+
+.hero-grid > div{
+    min-width:0;
+}
+
+.holo{
+    max-width:370px;
+}
+
+.profile-photo{
+    display:block;
+    width:145px;
+    height:145px;
+    object-fit:cover;
+    border-radius:50%;
+    margin:auto;
+}
+
+@media (min-width:851px){
+
+    .hero{
+        padding-top:120px;
+    }
+
+    .hero-grid{
+        grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);
+    }
+
+    .hero h1{
+        font-size:clamp(55px,6vw,82px);
+    }
+
+    .hero p{
+        max-width:680px;
+    }
+
+    .buttons{
+        justify-content:flex-start;
+    }
+
+}
+
+@media (max-width:850px){
+
+    .hero-grid{
+        grid-template-columns:1fr !important;
+    }
+
+    .hero{
+        text-align:center;
+        padding-top:110px;
+    }
+
+    .hero p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .holo{
+        margin:40px auto 0;
+    }
+
+}
+
+@media (max-width:600px){
+
+    .hero h1{
+        font-size:46px;
+        line-height:1.02;
+    }
+
+    .hero h2{
+        font-size:19px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .buttons{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .btn{
+        text-align:center;
+        width:100%;
+    }
+
+}
 </style>
 </head>
 
@@ -1647,8 +1749,6 @@ Download CV
 href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359/"
 target="_blank"
 rel="noopener">
-
-target="_blank">
 
 LinkedIn ↗
 
