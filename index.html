@@ -1,1982 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Muhammad Ashir Hadi | Technical Professional</title>
-
-<meta name="description"
-content="Muhammad Ashir Hadi - Technical Professional, MEP & Facility Operations, Team Leadership and Computer Operations.">
-
-<meta name="keywords"
-content="Muhammad Ashir Hadi, Technical Professional, MEP, Facility Management, Team Leader, UAE, Dubai, Technician">
-
-<meta name="author" content="Muhammad Ashir Hadi">
-
-<meta name="theme-color" content="#050816">
-
-<meta property="og:title"
-content="Muhammad Ashir Hadi | Professional Portfolio">
-
-<meta property="og:description"
-content="Technical Professional | MEP & Facility Operations | Team Leadership | Computer Operations">
-
-<meta property="og:type" content="website">
-
-
-<style>
-.profile-photo{
-    width:145px;
-    height:145px;
-    object-fit:cover;
-    border-radius:50%;
-    border:2px solid #00f6ff;
-    box-shadow:
-        0 0 25px rgba(0,246,255,.35),
-        0 0 60px rgba(124,92,255,.18);
-}
-
-/* =========================================================
-   GLOBAL
-========================================================= */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-
-font-family:
-Inter,
-Segoe UI,
-Roboto,
-Arial,
-sans-serif;
-
-background:#050816;
-
-color:#fff;
-
-line-height:1.6;
-
-overflow-x:hidden;
-}
-
-body:before{
-
-content:"";
-
-position:fixed;
-
-inset:0;
-
-pointer-events:none;
-
-z-index:9999;
-
-opacity:.025;
-
-background-image:
-linear-gradient(#fff 1px,transparent 1px),
-linear-gradient(90deg,#fff 1px,transparent 1px);
-
-background-size:45px 45px;
-}
-
-::selection{
-background:#00f6ff;
-color:#050816;
-}
-
-a{
-text-decoration:none;
-color:inherit;
-}
-
-.container{
-
-width:min(1180px,92%);
-
-margin:auto;
-}
-
-
-/* =========================================================
-   BACKGROUND EFFECTS
-========================================================= */
-
-.bg-orb{
-
-position:fixed;
-
-width:450px;
-height:450px;
-
-border-radius:50%;
-
-filter:blur(100px);
-
-opacity:.12;
-
-pointer-events:none;
-
-z-index:-1;
-}
-
-.orb1{
-
-background:#00f6ff;
-
-top:-180px;
-left:-180px;
-}
-
-.orb2{
-
-background:#8b5cf6;
-
-right:-180px;
-top:25%;
-}
-
-.orb3{
-
-background:#ff2bd6;
-
-bottom:-200px;
-left:30%;
-}
-
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
-header{
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-
-z-index:1000;
-
-background:rgba(5,8,22,.72);
-
-backdrop-filter:blur(20px);
-
-border-bottom:1px solid rgba(255,255,255,.07);
-}
-
-nav{
-
-height:74px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-}
-
-.logo{
-
-font-weight:900;
-
-font-size:20px;
-
-letter-spacing:1px;
-
-background:
-linear-gradient(
-90deg,
-#00f6ff,
-#7c5cff,
-#ff35d0,
-#00f6ff
-);
-
-background-size:300%;
-
--webkit-background-clip:text;
-
-color:transparent;
-
-animation:gradient 6s linear infinite;
-}
-
-.nav-links{
-
-display:flex;
-
-gap:27px;
-
-list-style:none;
-}
-
-.nav-links a{
-
-font-size:14px;
-
-color:#a8adbf;
-
-transition:.3s;
-}
-
-.nav-links a:hover{
-
-color:#00f6ff;
-
-text-shadow:0 0 15px #00f6ff;
-}
-
-.menu{
-
-display:none;
-
-background:none;
-
-border:0;
-
-color:#fff;
-
-font-size:28px;
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero{
-
-min-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-padding-top:100px;
-
-position:relative;
-}
-
-.hero-grid{
-
-display:grid;
-
-grid-template-columns:
-1.15fr .85fr;
-
-gap:60px;
-
-align-items:center;
-}
-
-.available{
-
-display:inline-flex;
-
-align-items:center;
-
-gap:9px;
-
-padding:7px 14px;
-
-border:1px solid rgba(0,246,255,.2);
-
-background:rgba(0,246,255,.04);
-
-border-radius:50px;
-
-color:#8ffaff;
-
-font-size:12px;
-
-margin-bottom:22px;
-}
-
-.dot{
-
-width:8px;
-height:8px;
-
-border-radius:50%;
-
-background:#00f6ff;
-
-box-shadow:0 0 15px #00f6ff;
-
-animation:pulse 1.6s infinite;
-}
-
-.hero h1{
-
-font-size:clamp(45px,7vw,82px);
-
-line-height:1;
-
-letter-spacing:-4px;
-
-font-weight:950;
-}
-
-.gradient{
-
-background:
-linear-gradient(
-100deg,
-#00f6ff,
-#7c5cff,
-#ff35d0,
-#00f6ff
-);
-
-background-size:300%;
-
--webkit-background-clip:text;
-
-color:transparent;
-
-animation:gradient 6s ease infinite;
-}
-
-.hero h2{
-
-margin-top:22px;
-
-font-size:clamp(18px,3vw,26px);
-
-color:#d4d7e3;
-
-font-weight:500;
-}
-
-.hero p{
-
-margin-top:20px;
-
-max-width:700px;
-
-color:#8e94a9;
-
-font-size:16px;
-}
-
-.buttons{
-
-display:flex;
-
-gap:12px;
-
-flex-wrap:wrap;
-
-margin-top:30px;
-}
-
-.btn{
-
-padding:13px 20px;
-
-border-radius:11px;
-
-font-size:13px;
-
-font-weight:700;
-
-border:1px solid rgba(255,255,255,.1);
-
-transition:.3s;
-}
-
-.btn-primary{
-
-background:
-linear-gradient(
-135deg,
-#00f6ff,
-#705cff
-);
-
-color:#050816;
-
-box-shadow:
-0 0 30px rgba(0,246,255,.13);
-}
-
-.btn-secondary{
-
-background:rgba(255,255,255,.04);
-
-color:#fff;
-}
-
-.btn:hover{
-
-transform:translateY(-4px);
-
-box-shadow:
-0 12px 35px rgba(0,246,255,.14);
-}
-
-
-/* =========================================================
-   HOLOGRAM
-========================================================= */
-
-.holo{
-
-width:min(370px,80vw);
-
-aspect-ratio:1;
-
-margin:auto;
-
-position:relative;
-
-perspective:1000px;
-}
-
-.holo-card{
-
-position:absolute;
-
-inset:0;
-
-border-radius:35px;
-
-background:
-
-linear-gradient(
-145deg,
-rgba(0,246,255,.10),
-rgba(124,92,255,.08),
-rgba(255,255,255,.025)
-);
-
-border:1px solid rgba(255,255,255,.15);
-
-backdrop-filter:blur(18px);
-
-box-shadow:
-inset 0 0 50px rgba(0,246,255,.04),
-0 30px 100px rgba(0,0,0,.4);
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-text-align:center;
-
-transition:.2s;
-
-overflow:hidden;
-}
-
-.holo-card:after{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:
-repeating-linear-gradient(
-0deg,
-transparent,
-transparent 3px,
-rgba(255,255,255,.035) 4px
-);
-}
-
-.avatar{
-
-width:145px;
-height:145px;
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:44px;
-
-font-weight:900;
-
-color:#00f6ff;
-
-border:2px solid #00f6ff;
-
-background:
-
-radial-gradient(
-circle,
-rgba(0,246,255,.15),
-rgba(124,92,255,.12),
-#050816
-);
-
-box-shadow:
-0 0 40px rgba(0,246,255,.2),
-inset 0 0 30px rgba(0,246,255,.08);
-
-margin:auto;
-}
-
-.holo-info h3{
-
-font-size:23px;
-
-margin-top:20px;
-}
-
-.holo-info p{
-
-color:#858ba0;
-
-font-size:12px;
-
-margin-top:5px;
-}
-
-.orbit{
-
-position:absolute;
-
-inset:-20px;
-
-border:1px solid rgba(0,246,255,.15);
-
-border-radius:50%;
-
-animation:spin 12s linear infinite;
-}
-
-.orbit:after{
-
-content:"";
-
-position:absolute;
-
-width:10px;
-height:10px;
-
-border-radius:50%;
-
-background:#00f6ff;
-
-box-shadow:0 0 20px #00f6ff;
-
-top:50%;
-left:-5px;
-}
-
-
-/* =========================================================
-   SECTIONS
-========================================================= */
-
-section{
-
-padding:105px 0;
-}
-
-.section-head{
-
-text-align:center;
-
-margin-bottom:55px;
-}
-
-.section-head small{
-
-color:#00f6ff;
-
-text-transform:uppercase;
-
-letter-spacing:4px;
-
-font-size:11px;
-}
-
-.section-head h2{
-
-font-size:clamp(32px,5vw,50px);
-
-margin-top:8px;
-
-letter-spacing:-1px;
-}
-
-.section-head p{
-
-max-width:650px;
-
-margin:12px auto;
-
-color:#858b9f;
-
-font-size:14px;
-}
-
-
-/* =========================================================
-   GLASS
-========================================================= */
-
-.glass{
-
-background:
-
-linear-gradient(
-145deg,
-rgba(255,255,255,.055),
-rgba(255,255,255,.018)
-);
-
-border:1px solid rgba(255,255,255,.08);
-
-border-radius:20px;
-
-backdrop-filter:blur(18px);
-
-transition:.35s;
-}
-
-.glass:hover{
-
-transform:translateY(-6px);
-
-border-color:rgba(0,246,255,.25);
-
-box-shadow:
-0 20px 60px rgba(0,246,255,.06);
-}
-
-
-/* =========================================================
-   STATS
-========================================================= */
-
-.stats{
-
-display:grid;
-
-grid-template-columns:
-repeat(4,1fr);
-
-gap:15px;
-
-margin-top:60px;
-}
-
-.stat{
-
-padding:24px;
-
-text-align:center;
-}
-
-.stat strong{
-
-display:block;
-
-font-size:32px;
-
-background:
-linear-gradient(
-90deg,
-#00f6ff,
-#9c6cff
-);
-
--webkit-background-clip:text;
-
-color:transparent;
-}
-
-.stat span{
-
-color:#858b9f;
-
-font-size:12px;
-}
-
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
-.about-grid{
-
-display:grid;
-
-grid-template-columns:
-1.2fr .8fr;
-
-gap:22px;
-}
-
-.about-card{
-
-padding:32px;
-}
-
-.about-card h3{
-
-font-size:21px;
-
-margin-bottom:14px;
-}
-
-.about-card p{
-
-color:#8c92a6;
-
-font-size:14px;
-}
-
-.highlight{
-
-display:grid;
-
-grid-template-columns:
-repeat(2,1fr);
-
-gap:14px;
-}
-
-.highlight-card{
-
-padding:24px;
-}
-
-.highlight-icon{
-
-font-size:24px;
-
-margin-bottom:12px;
-}
-
-.highlight-card h4{
-
-font-size:15px;
-}
-
-.highlight-card p{
-
-font-size:12px;
-
-color:#7f8599;
-
-margin-top:5px;
-}
-
-
-/* =========================================================
-   SKILLS
-========================================================= */
-
-.skills{
-
-display:grid;
-
-grid-template-columns:
-repeat(2,1fr);
-
-gap:18px;
-}
-
-.skill{
-
-padding:24px;
-}
-
-.skill-title{
-
-display:flex;
-
-justify-content:space-between;
-
-font-size:14px;
-
-margin-bottom:10px;
-}
-
-.skill-title span{
-
-color:#00f6ff;
-}
-
-.bar{
-
-height:6px;
-
-background:rgba(255,255,255,.07);
-
-border-radius:10px;
-
-overflow:hidden;
-}
-
-.bar span{
-
-display:block;
-
-height:100%;
-
-width:0;
-
-background:
-linear-gradient(
-90deg,
-#00f6ff,
-#765cff,
-#ff35d0
-);
-
-transition:1.5s;
-}
-
-
-/* =========================================================
-   EXPERIENCE
-========================================================= */
-
-.timeline{
-
-max-width:900px;
-
-margin:auto;
-
-position:relative;
-}
-
-.timeline:before{
-
-content:"";
-
-position:absolute;
-
-left:17px;
-
-top:0;
-bottom:0;
-
-width:1px;
-
-background:
-linear-gradient(
-#00f6ff,
-rgba(255,255,255,.08),
-#765cff
-);
-}
-
-.timeline-item{
-
-position:relative;
-
-padding-left:60px;
-
-margin-bottom:25px;
-}
-
-.timeline-dot{
-
-position:absolute;
-
-left:9px;
-
-top:28px;
-
-width:18px;
-height:18px;
-
-border-radius:50%;
-
-background:#050816;
-
-border:2px solid #00f6ff;
-
-box-shadow:0 0 18px #00f6ff;
-}
-
-.timeline-card{
-
-padding:28px;
-}
-
-.timeline-card .date{
-
-color:#00f6ff;
-
-font-size:11px;
-
-letter-spacing:1px;
-}
-
-.timeline-card h3{
-
-font-size:20px;
-
-margin:5px 0;
-}
-
-.timeline-card h4{
-
-font-size:13px;
-
-color:#9b9faf;
-
-font-weight:500;
-}
-
-.timeline-card p{
-
-color:#858b9f;
-
-font-size:13px;
-
-margin-top:12px;
-}
-
-.responsibilities{
-
-margin-top:15px;
-
-padding-left:18px;
-
-color:#8d93a5;
-
-font-size:13px;
-}
-
-.responsibilities li{
-
-margin-bottom:5px;
-}
-
-
-/* =========================================================
-   COMPETENCIES
-========================================================= */
-
-.competencies{
-
-display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
-gap:18px;
-}
-
-.competency{
-
-padding:28px;
-}
-
-.competency-icon{
-
-font-size:28px;
-
-margin-bottom:12px;
-}
-
-.competency h3{
-
-font-size:17px;
-}
-
-.competency p{
-
-font-size:13px;
-
-color:#858b9f;
-
-margin-top:7px;
-}
-
-
-/* =========================================================
-   PROJECTS
-========================================================= */
-
-.projects{
-
-display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
-gap:20px;
-}
-
-.project{
-
-overflow:hidden;
-}
-
-.project-visual{
-
-height:170px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-background:
-
-radial-gradient(
-circle,
-rgba(0,246,255,.12),
-transparent 60%
-);
-}
-
-.project-symbol{
-
-width:72px;
-height:72px;
-
-border-radius:20px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:30px;
-
-border:1px solid rgba(0,246,255,.2);
-
-background:rgba(0,246,255,.04);
-
-box-shadow:0 0 40px rgba(0,246,255,.08);
-}
-
-.project-body{
-
-padding:25px;
-}
-
-.project-body h3{
-
-font-size:18px;
-}
-
-.project-body p{
-
-font-size:13px;
-
-color:#858b9f;
-
-margin-top:7px;
-}
-
-.tags{
-
-display:flex;
-
-flex-wrap:wrap;
-
-gap:6px;
-
-margin-top:15px;
-}
-
-.tag{
-
-font-size:10px;
-
-padding:4px 8px;
-
-border-radius:20px;
-
-color:#9ffcff;
-
-background:rgba(0,246,255,.05);
-
-border:1px solid rgba(0,246,255,.1);
-}
-
-
-/* =========================================================
-   EDUCATION
-========================================================= */
-
-.education{
-
-display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
-gap:18px;
-}
-
-.edu{
-
-padding:27px;
-}
-
-.edu-icon{
-
-font-size:28px;
-
-margin-bottom:12px;
-}
-
-.edu h3{
-
-font-size:16px;
-}
-
-.edu p{
-
-font-size:12px;
-
-color:#858b9f;
-
-margin-top:6px;
-}
-
-
-/* =========================================================
-   CAREER OBJECTIVE
-========================================================= */
-
-.objective{
-
-max-width:900px;
-
-margin:auto;
-
-padding:42px;
-
-text-align:center;
-}
-
-.objective h2{
-
-font-size:32px;
-}
-
-.objective p{
-
-color:#8a90a4;
-
-font-size:14px;
-
-margin-top:14px;
-}
-
-
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.contact{
-
-max-width:950px;
-
-margin:auto;
-
-padding:45px;
-
-text-align:center;
-}
-
-.contact h2{
-
-font-size:clamp(30px,5vw,48px);
-}
-
-.contact p{
-
-max-width:620px;
-
-margin:12px auto 25px;
-
-color:#858b9f;
-
-font-size:14px;
-}
-
-.contact-buttons{
-
-display:flex;
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-gap:12px;
-}
-
-.contact-btn{
-
-padding:11px 18px;
-
-border-radius:10px;
-
-border:1px solid rgba(255,255,255,.08);
-
-background:rgba(255,255,255,.04);
-
-font-size:13px;
-
-transition:.3s;
-}
-
-.contact-btn:hover{
-
-border-color:#00f6ff;
-
-color:#00f6ff;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer{
-
-border-top:1px solid rgba(255,255,255,.06);
-
-padding:30px 0;
-
-text-align:center;
-
-color:#686e82;
-
-font-size:12px;
-}
-
-footer span{
-color:#00f6ff;
-}
-
-
-/* =========================================================
-   REVEAL
-========================================================= */
-
-.reveal{
-opacity:1;
-transform:none;
-transition:
-opacity .8s ease,
-transform .8s ease;
-}
-
-.reveal.show{
-opacity:1;
-transform:none;
-}
-
-
-/* =========================================================
-   ANIMATIONS
-========================================================= */
-
-@keyframes gradient{
-
-0%{
-background-position:0%;
-}
-
-50%{
-background-position:100%;
-}
-
-100%{
-background-position:0%;
-}
-}
-
-@keyframes pulse{
-
-0%,100%{
-transform:scale(1);
-}
-
-50%{
-transform:scale(1.5);
-}
-}
-
-@keyframes spin{
-
-to{
-transform:rotate(360deg);
-}
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media(max-width:850px){
-
-.nav-links{
-
-display:none;
-
-position:fixed;
-
-top:74px;
-left:0;
-
-width:100%;
-
-padding:25px;
-
-background:#070a19;
-
-flex-direction:column;
-
-gap:20px;
-
-border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.nav-links.active{
-display:flex;
-}
-
-.menu{
-display:block;
-}
-
-.hero-grid{
-
-grid-template-columns:1fr;
-
-text-align:center;
-}
-
-.hero p{
-margin-left:auto;
-margin-right:auto;
-}
-
-.buttons{
-justify-content:center;
-}
-
-.stats{
-
-grid-template-columns:
-repeat(2,1fr);
-}
-
-.about-grid{
-
-grid-template-columns:1fr;
-}
-
-.skills{
-
-grid-template-columns:1fr;
-}
-
-.competencies{
-
-grid-template-columns:
-repeat(2,1fr);
-}
-
-.projects{
-
-grid-template-columns:1fr;
-}
-
-.education{
-
-grid-template-columns:1fr;
-}
-
-.holo{
-
-margin-top:20px;
-}
-
-}
-
-@media(max-width:850px){.nav-links{
-display:none;
-position:fixed;
-top:74px;
-left:0;
-width:100%;
-padding:25px;
-background:#070a19;
-flex-direction:column;
-gap:20px;
-border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.nav-links.active{
-display:flex;
-}
-
-.menu{
-display:block;
-}
-
-.hero h1{
-
-font-size:48px;
-
-letter-spacing:-2px;
-}
-
-section{
-
-padding:80px 0;
-}
-
-.stats{
-
-grid-template-columns:1fr 1fr;
-}
-
-.highlight{
-
-grid-template-columns:1fr;
-}
-
-.competencies{
-
-grid-template-columns:1fr;
-}
-
-.contact,
-.objective{
-
-padding:28px 20px;
-}
-
-.timeline-item{
-
-padding-left:47px;
-}
-
-.timeline:before{
-
-left:12px;
-}
-
-.timeline-dot{
-
-left:4px;
-}
-
-}
-
-
-/* =========================================================
-   SCROLLBAR
-========================================================= */
-
-::-webkit-scrollbar{
-width:7px;
-}
-
-::-webkit-scrollbar-track{
-background:#050816;
-}
-
-::-webkit-scrollbar-thumb{
-
-background:
-linear-gradient(
-#00f6ff,
-#765cff
-);
-
-border-radius:10px;
-}
-/* ===== FINAL DESKTOP + MOBILE RESPONSIVE FIX ===== */
-
-.hero-grid{
-    width:100%;
-}
-
-.hero{
-    min-height:100vh;
-}
-
-.hero-grid > div{
-    min-width:0;
-}
-
-.holo{
-    max-width:370px;
-}
-
-.profile-photo{
-    display:block;
-    width:145px;
-    height:145px;
-    object-fit:cover;
-    border-radius:50%;
-    margin:auto;
-}
-
-@media (min-width:851px){
-
-    .hero{
-        padding-top:120px;
-    }
-
-    .hero-grid{
-        grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);
-    }
-
-    .hero h1{
-        font-size:clamp(55px,6vw,82px);
-    }
-
-    .hero p{
-        max-width:680px;
-    }
-
-    .buttons{
-        justify-content:flex-start;
-    }
-
-}
-
-@media (max-width:850px){
-
-    .hero-grid{
-        grid-template-columns:1fr !important;
-    }
-
-    .hero{
-        text-align:center;
-        padding-top:110px;
-    }
-
-    .hero p{
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .buttons{
-        justify-content:center;
-    }
-
-    .holo{
-        margin:40px auto 0;
-    }
-
-}
-
-@media (max-width:600px){
-
-    .hero h1{
-        font-size:46px;
-        line-height:1.02;
-    }
-
-    .hero h2{
-        font-size:19px;
-    }
-
-    .hero p{
-        font-size:14px;
-    }
-
-    .buttons{
-        flex-direction:column;
-        align-items:stretch;
-    }
-
-    .btn{
-        text-align:center;
-        width:100%;
-    }
-
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashir Hadi — Software Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        holoDark: '#030712',
+                        holoCard: '#0b1329',
+                        holoBorder: '#1e293b',
+                        holoCyan: '#00f0ff',
+                        holoBlue: '#3b82f6'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(3, 7, 18, 0.8) 100%);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 240, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 0 15px rgba(0, 240, 255, 0.05);
+        }
+        .glow-cyan {
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+        }
+    </style>
 </head>
-
-
-<body>
-
-
-<div class="bg-orb orb1"></div>
-<div class="bg-orb orb2"></div>
-<div class="bg-orb orb3"></div>
-
-
-<!-- ======================================================
-     NAVIGATION
-====================================================== -->
-
-<header>
-
-<div class="container">
-
-<nav>
-
-<a class="logo" href="#home">
-ASHIR.HADI
-</a>
-
-<button class="menu" id="menu">
-☰
-</button>
-
-<ul class="nav-links" id="nav">
-
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#education">Education</a></li>
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-</div>
-
-</header>
-
-
-
-<main>
-
-
-<!-- ======================================================
-     HERO
-====================================================== -->
-
-<section class="hero" id="home">
-
-<div class="container">
-
-<div class="hero-grid">
-
-
-<div class="reveal">
-
-<div class="available">
-
-<span class="dot"></span>
-
-Open to Professional Opportunities
-
-</div>
-
-
-<h1>
-
-Muhammad
-
-<br>
-
-<span class="gradient">
-Ashir Hadi
-</span>
-
-</h1>
-
-
-<h2>
-Technical Professional | MEP & Facility Operations | Team Leadership
-</h2>
-
-
-<p>
-
-Experienced technical professional with a diverse background
-in facility operations, plumbing, MEP support, pump/dewatering
-operations, production & logistics coordination, team leadership
-and computer-based office operations.
-
-</p>
-
-
-<div class="buttons">
-
-<a class="btn btn-primary"
-href="#contact">
-
-Hire / Connect →
-
-</a>
-
-
-<a class="btn btn-secondary"
-href="resume.pdf"
-target="_blank">
-
-Download CV
-
-</a>
-
-
-<a class="btn btn-secondary"
-href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359/"
-target="_blank"
-rel="noopener">
-
-LinkedIn ↗
-
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="holo reveal">
-
-<div class="orbit"></div>
-
-<div class="holo-card" id="holoCard">
-
-<div>
-
-<div class="avatar">
-<img
-class="profile-photo"
-src="IMG-20250803-WA0006.jpg"
-alt="Muhammad Ashir Hadi">
-</div>
-
-<div class="holo-info">
-
-<h3>
-Muhammad Ashir Hadi
-</h3>
-
-<p>
-TECHNICAL PROFESSIONAL
-</p>
-
-<p>
-UAE • MEP • FACILITY • OPERATIONS
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-
-<!-- STATS -->
-
-<div class="stats">
-
-<div class="glass stat reveal">
-
-<strong>4+</strong>
-
-<span>
-Years Office & Computer Experience
-</span>
-
-</div>
-
-
-<div class="glass stat reveal">
-
-<strong>3+</strong>
-
-<span>
-Years Production & Logistics
-</span>
-
-</div>
-
-
-<div class="glass stat reveal">
-
-<strong>2+</strong>
-
-<span>
-Years Facility Operations
-</span>
-
-</div>
-
-
-<div class="glass stat reveal">
-
-<strong>1+</strong>
-
-<span>
-Year Team Leadership
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ======================================================
-     ABOUT
-====================================================== -->
-
-<section id="about">
-
-<div class="container">
-
-<div class="section-head reveal">
-
-<small>01 — Profile</small>
-
-<h2>Professional Profile</h2>
-
-<p>
-A practical, reliable and continuously developing professional
-with experience across technical and operational environments.
-</p>
-
-</div>
-
-
-<div class="about-grid">
-
-
-<div class="glass about-card reveal">
-
-<h3>
-About Me
-</h3>
-
-<p>
-
-I am a motivated technical professional with experience
-in UAE facility and technical operations together with
-previous experience in office operations, production,
-logistics and team coordination.
-
-</p>
-
-<br>
-
-<p>
-
-My professional approach is based on safety, teamwork,
-responsibility, problem-solving and completing assigned
-tasks efficiently. I am interested in growing toward
-higher technical, supervisory and coordination roles.
-
-</p>
-
-<br>
-
-<p>
-
-I combine hands-on technical experience with computer
-skills and practical team leadership, allowing me to
-work effectively in both field and operational environments.
-
-</p>
-
-</div>
-
-
-
-<div class="highlight">
-
-
-<div class="glass highlight-card reveal">
-
-<div class="highlight-icon">⚙️</div>
-
-<h4>
-Technical Operations
-</h4>
-
-<p>
-Hands-on maintenance and technical support.
-</p>
-
-</div>
-
-
-<div class="glass highlight-card reveal">
-
-<div class="highlight-icon">👥</div>
-
-<h4>
-Team Coordination
-</h4>
-
-<p>
-Supporting teams and coordinating daily activities.
-</p>
-
-</div>
-
-
-<div class="glass highlight-card reveal">
-
-<div class="highlight-icon">💻</div>
-
-<h4>
-Digital Skills
-</h4>
-
-<p>
-Computer, documentation and data operations.
-</p>
-
-</div>
-
-
-<div class="glass highlight-card reveal">
-
-<div class="highlight-icon">📈</div>
-
-<h4>
-Career Growth
-</h4>
-
-<p>
-Focused on professional development and leadership.
-</
+<body class="bg-holoDark text-slate-100 font-sans antialiased selection:bg-holoCyan selection:text-black overflow-x-hidden">
+
+    <!-- Top Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-holoBorder/50 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+            <span class="bg-gradient-to-r from-holoCyan to-blue-500 text-black font-extrabold px-3 py-1 rounded-md text-sm">AH</span>
+            <span class="font-semibold tracking-wide text-sm hidden sm:inline">Ashir Hadi</span>
+        </div>
+        <nav class="hidden md:flex items-center space-x-6 text-sm text-slate-400">
+            <a href="#home" class="text-holoCyan font-medium">Home</a>
+            <a href="#about" class="hover:text-white transition">About</a>
+            <a href="#skills" class="hover:text-white transition">Skills</a>
+            <a href="#projects" class="hover:text-white transition">Projects</a>
+            <a href="#process" class="hover:text-white transition">Process</a>
+            <a href="#contact" class="hover:text-white transition">Contact</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <button class="glass-panel text-xs px-4 py-2 rounded-full border border-holoCyan/40 hover:bg-holoCyan/10 transition">
+                Download CV
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 pt-28 pb-16 space-y-6">
+        
+        <!-- Hero Section -->
+        <section id="home" class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <div class="lg:col-span-7 glass-panel rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute -top-24 -left-24 w-72 h-72 bg-holoCyan/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div>
+                    <span class="text-xs tracking-widest text-holoCyan uppercase font-semibold">Software Developer</span>
+                    <h1 class="text-4xl sm:text-6xl font-extrabold mt-4 leading-tight tracking-tight">
+                        I build digital <span class="text-transparent bg-clip-text bg-gradient-to-r from-holoCyan to-blue-400">experiences</span> that matter.
+                    </h1>
+                    <p class="text-slate-400 mt-4 text-sm sm:text-base max-w-lg">
+                        I’m Ashir Hadi, a passionate full-stack developer turning visionary ideas into scalable, beautiful, and performant applications.
+                    </p>
+                </div>
+                <div class="flex flex-wrap items-center gap-4 mt-8">
+                    <a href="#projects" class="bg-gradient-to-r from-holoCyan to-blue-500 text-black font-semibold text-sm px-6 py-3 rounded-xl glow-cyan hover:opacity-90 transition">
+                        View My Work →
+                    </a>
+                    <a href="#contact" class="glass-panel text-sm font-semibold px-6 py-3 rounded-xl hover:bg-white/5 transition">
+                        Let's Talk 💬
+                    </a>
+                </div>
+            </div>
+
+            <!-- Holo Visual Card & Stats -->
+            <div class="lg:col-span-5 grid grid-rows-2 gap-6">
+                <div class="glass-panel rounded-3xl p-6 relative flex items-center justify-center overflow-hidden min-h-[220px]">
+                    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/40 via-transparent to-transparent"></div>
+                    <div class="text-center z-10">
+                        <div class="inline-block p-3 rounded-2xl bg-holoCyan/10 border border-holoCyan/30 mb-2 text-holoCyan">
+                            ⟨/⟩ Clean Code & Scalable Solutions
+                        </div>
+                        <p class="text-xs text-slate-400">Holo-3D Matrix Environment Online</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="glass-panel p-4 rounded-2xl text-center flex flex-col justify-center">
+                        <span class="text-xl font-bold text-holoCyan">4+</span>
+                        <span class="text-[10px] text-slate-400 uppercase tracking-wider mt-1">Years Exp.</span>
+                    </div>
+                    <div class="glass-panel p-4 rounded-2xl text-center flex flex-col justify-center">
+                        <span class="text-xl font-bold text-holoCyan">20+</span>
+                        <span class="text-[10px] text-slate-400 uppercase tracking-wider mt-1">Projects</span>
+                    </div>
+                    <div class="glass-panel p-4 rounded-2xl text-center flex flex-col justify-center">
+                        <span class="text-xl font-bold text-holoCyan">99%</span>
+                        <span class="text-[10px] text-slate-400 uppercase tracking-wider mt-1">Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Expertise -->
+        <section id="about" class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <div class="lg:col-span-5 glass-panel rounded-3xl p-6 flex flex-col justify-between">
+                <div>
+                    <h2 class="text-lg font-bold flex items-center space-x-2 text-holoCyan">
+                        <span>👤 About Me</span>
+                    </h2>
+                    <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+                        I am Ashir Hadi, focused on building modern, responsive, and high-performance apps. I love solving complicated tech challenges and engineering robust systems.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mt-6 pt-6 border-t border-slate-800 text-xs">
+                    <div>
+                        <span class="text-slate-500 block">Name</span>
+                        <span class="font-medium text-slate-200">Ashir Hadi</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-500 block">Availability</span>
+                        <span class="font-medium text-emerald-400 flex items-center gap-1">● Open to Work</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="skills" class="lg:col-span-7 glass-panel rounded-3xl p-6">
+                <h2 class="text-lg font-bold flex items-center space-x-2 text-holoCyan mb-6">
+                    <span>⚡ My Expertise</span>
+                </h2>
+                <div class="space-y-4 text-sm">
+                    <div>
+                        <div class="flex justify-between mb-1 text-xs"><span>JavaScript / TypeScript</span><span class="text-holoCyan">95%</span></div>
+                        <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-gradient-to-r from-blue-500 to-holoCyan h-full w-[95%]"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1 text-xs"><span>React / Next.js</span><span class="text-holoCyan">90%</span></div>
+                        <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-gradient-to-r from-blue-500 to-holoCyan h-full w-[90%]"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1 text-xs"><span>Node.js / Express</span><span class="text-holoCyan">85%</span></div>
+                        <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-gradient-to-r from-blue-500 to-holoCyan h-full w-[85%]"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Projects Section -->
+        <section id="projects" class="space-y-4">
+            <h2 class="text-lg font-bold text-holoCyan">🚀 Selected Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-panel p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] bg-holoCyan/10 text-holoCyan px-2 py-1 rounded">Full Stack</span>
+                        <h3 class="font-bold mt-3">FinTrack Dashboard</h3>
+                        <p class="text-xs text-slate-400 mt-2">Modern finance dashboard for tracking expenses, budgets, and analytics.</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-slate-800 text-[10px] text-holoCyan flex gap-2">
+                        <span>Next.js</span> • <span>TypeScript</span> • <span>Tailwind</span>
+                    </div>
+                </div>
+                <div class="glass-panel p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] bg-holoCyan/10 text-holoCyan px-2 py-1 rounded">E-commerce</span>
+                        <h3 class="font-bold mt-3">ShopVista Store</h3>
+                        <p class="text-xs text-slate-400 mt-2">Feature-rich eCommerce ecosystem with secure payment integration.</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-slate-800 text-[10px] text-holoCyan flex gap-2">
+                        <span>React</span> • <span>Node.js</span> • <span>MongoDB</span>
+                    </div>
+                </div>
+                <div class="glass-panel p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] bg-holoCyan/10 text-holoCyan px-2 py-1 rounded">AI Web-App</span>
+                        <h3 class="font-bold mt-3">Taskify AI</h3>
+                        <p class="text-xs text-slate-400 mt-2">AI-powered productivity app to optimize workflows and deadlines.</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-slate-800 text-[10px] text-holoCyan flex gap-2">
+                        <span>Next.js</span> • <span>OpenAI API</span> • <span>Prisma</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="glass-panel rounded-3xl p-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div>
+                <h2 class="text-xl font-bold text-holoCyan">Let’s Build Something Great</h2>
+                <p class="text-xs text-slate-400 mt-2">Have a project in mind or want to collaborate? Reach out below.</p>
+                <div class="mt-6 space-y-3 text-xs">
+                    <p><span class="text-slate-500">Email:</span> contact@ashirhadi.dev</p>
+                    <p><span class="text-slate-500">GitHub:</span> github.com/ashirhadi</p>
+                </div>
+            </div>
+            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                <input type="text" placeholder="Your Name" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-holoCyan">
+                <input type="email" placeholder="Your Email" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-holoCyan">
+                <textarea rows="3" placeholder="Your Message" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-holoCyan"></textarea>
+                <button type="submit" class="w-full bg-gradient-to-r from-holoCyan to-blue-500 text-black font-semibold text-xs py-3 rounded-xl glow-cyan hover:opacity-90 transition">Send Message 🚀</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-holoBorder py-6 text-center text-xs text-slate-500">
+        <p>© 2026 Ashir Hadi. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
