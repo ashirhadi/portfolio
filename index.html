@@ -4,39 +4,124 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Muhammad Ashir Hadi | FMS & Operations Professional</title>
+<title>Muhammad Ashir Hadi | Holo FMS Portfolio</title>
 
 <meta name="description"
-content="Muhammad Ashir Hadi - Assistant Supervisor FMS, BMS Operator, Team Leader and Facility Operations Professional.">
+content="Muhammad Ashir Hadi — Assistant Supervisor FMS, BMS Operator, Team Leader, MEP and Facility Operations Professional.">
 
 <style>
+/* =========================================================
+   HOLO NEON PORTFOLIO
+   ========================================================= */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
     scroll-behavior:smooth;
 }
 
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#05070d;
-    color:#f5f7ff;
-    line-height:1.6;
-    overflow-x:hidden;
+:root{
+    --cyan:#00f6ff;
+    --blue:#008cff;
+    --purple:#9b5cff;
+    --pink:#ff3cac;
+    --bg:#02040a;
+    --glass:rgba(8,15,30,.58);
+    --border:rgba(0,246,255,.24);
+    --text:#eef8ff;
+    --muted:#8295ad;
 }
 
-body::before{
-    content:"";
+body{
+    font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:
+    radial-gradient(circle at 20% 20%,rgba(0,246,255,.09),transparent 28%),
+    radial-gradient(circle at 80% 80%,rgba(155,92,255,.10),transparent 30%),
+    #02040a;
+
+    color:var(--text);
+    overflow-x:hidden;
+    line-height:1.6;
+}
+
+/* =========================================================
+   3D CANVAS BACKGROUND
+   ========================================================= */
+
+#space{
     position:fixed;
     inset:0;
-    z-index:-1;
-    pointer-events:none;
-    background:
-    radial-gradient(circle at 15% 20%,rgba(0,229,255,.14),transparent 30%),
-    radial-gradient(circle at 85% 70%,rgba(135,80,255,.14),transparent 30%);
+    width:100%;
+    height:100%;
+    z-index:-10;
 }
 
-/* NAVIGATION */
+.noise{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-4;
+    opacity:.035;
+
+    background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+}
+
+/* =========================================================
+   HOLO GRID
+   ========================================================= */
+
+.grid-floor{
+    position:fixed;
+    left:-20%;
+    bottom:-35%;
+    width:140%;
+    height:70%;
+
+    z-index:-5;
+
+    background-image:
+    linear-gradient(rgba(0,246,255,.10) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,246,255,.10) 1px,transparent 1px);
+
+    background-size:70px 70px;
+
+    transform:
+    perspective(500px)
+    rotateX(62deg);
+
+    mask-image:
+    linear-gradient(
+        to top,
+        transparent,
+        black 25%,
+        transparent 100%
+    );
+
+    animation:gridMove 9s linear infinite;
+}
+
+@keyframes gridMove{
+    from{
+        background-position:0 0;
+    }
+    to{
+        background-position:0 70px;
+    }
+}
+
+/* =========================================================
+   NAV
+   ========================================================= */
 
 nav{
     position:fixed;
@@ -44,349 +129,786 @@ nav{
     left:0;
     width:100%;
     z-index:1000;
-    background:rgba(5,7,13,.88);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid rgba(0,229,255,.18);
+
+    background:rgba(2,5,12,.60);
+
+    backdrop-filter:
+    blur(20px)
+    saturate(160%);
+
+    border-bottom:
+    1px solid rgba(0,246,255,.16);
+
+    box-shadow:
+    0 0 35px rgba(0,246,255,.04);
 }
 
-.nav-container{
-    max-width:1200px;
+.nav-inner{
+    max-width:1250px;
     margin:auto;
-    padding:17px 25px;
+
+    height:74px;
+
+    padding:0 25px;
+
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
-    color:#00e5ff;
-    font-size:21px;
-    font-weight:800;
-    letter-spacing:1px;
+    font-size:20px;
+    font-weight:900;
+    letter-spacing:2px;
+
+    color:var(--cyan);
+
+    text-shadow:
+    0 0 10px rgba(0,246,255,.8),
+    0 0 30px rgba(0,246,255,.4);
+}
+
+.logo span{
+    color:white;
 }
 
 nav ul{
     display:flex;
-    list-style:none;
     gap:25px;
+    list-style:none;
 }
 
 nav a{
-    color:#dce6f7;
+    position:relative;
+
+    color:#b9c9dc;
     text-decoration:none;
-    font-size:14px;
+
+    font-size:13px;
+    letter-spacing:.5px;
+
     transition:.3s;
 }
 
 nav a:hover{
-    color:#00e5ff;
+    color:var(--cyan);
+    text-shadow:0 0 12px var(--cyan);
 }
 
-/* HERO */
+nav a::after{
+    content:"";
 
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    padding:120px 25px 70px;
-}
+    position:absolute;
+    left:0;
+    bottom:-8px;
 
-.hero-container{
-    width:100%;
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1.15fr .85fr;
-    gap:60px;
-    align-items:center;
-}
+    width:0;
+    height:1px;
 
-.badge{
-    display:inline-block;
-    padding:8px 17px;
-    border:1px solid rgba(0,229,255,.5);
-    border-radius:30px;
-    color:#00e5ff;
-    font-size:12px;
-    letter-spacing:1px;
-    background:rgba(0,229,255,.05);
-    margin-bottom:22px;
-}
+    background:var(--cyan);
 
-h1{
-    font-size:clamp(45px,7vw,78px);
-    line-height:1.04;
-    margin-bottom:20px;
-    background:linear-gradient(90deg,#fff,#00e5ff,#a879ff);
-    -webkit-background-clip:text;
-    color:transparent;
-}
+    box-shadow:0 0 8px var(--cyan);
 
-.hero h2{
-    font-size:clamp(20px,3vw,31px);
-    color:#d5dfef;
-    margin-bottom:20px;
-}
-
-.hero-description{
-    color:#9daac0;
-    font-size:17px;
-    max-width:700px;
-}
-
-.buttons{
-    margin-top:30px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:13px;
-}
-
-.btn{
-    display:inline-block;
-    text-decoration:none;
-    padding:13px 21px;
-    border-radius:10px;
-    font-weight:bold;
     transition:.3s;
 }
 
+nav a:hover::after{
+    width:100%;
+}
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+section{
+    max-width:1250px;
+    margin:auto;
+    padding:110px 25px;
+}
+
+.section-label{
+    color:var(--cyan);
+
+    font-size:11px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+
+    text-shadow:0 0 10px rgba(0,246,255,.7);
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:65px;
+}
+
+.section-title h2{
+    font-size:clamp(32px,5vw,52px);
+    line-height:1.1;
+}
+
+.section-title h2 span{
+    color:var(--cyan);
+
+    text-shadow:
+    0 0 12px rgba(0,246,255,.5);
+}
+
+.section-title p{
+    margin-top:14px;
+    color:var(--muted);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    padding-top:120px;
+}
+
+.hero-inner{
+    width:100%;
+    max-width:1250px;
+    margin:auto;
+
+    padding:0 25px;
+
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+
+    gap:70px;
+    align-items:center;
+}
+
+/* HERO TEXT */
+
+.status{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:8px 15px;
+
+    border:1px solid rgba(0,246,255,.30);
+    border-radius:30px;
+
+    background:rgba(0,246,255,.04);
+
+    color:#9cecf1;
+
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    box-shadow:
+    inset 0 0 20px rgba(0,246,255,.03),
+    0 0 20px rgba(0,246,255,.05);
+}
+
+.status-dot{
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:#00ff9d;
+
+    box-shadow:
+    0 0 7px #00ff9d,
+    0 0 18px #00ff9d;
+
+    animation:pulse 1.6s infinite;
+}
+
+@keyframes pulse{
+    50%{
+        opacity:.35;
+        transform:scale(.7);
+    }
+}
+
+.hero h1{
+    margin-top:25px;
+
+    font-size:clamp(48px,7vw,88px);
+
+    line-height:.98;
+
+    letter-spacing:-4px;
+
+    background:
+    linear-gradient(
+        110deg,
+        #ffffff 10%,
+        #9cefff 35%,
+        #00f6ff 55%,
+        #a875ff 85%
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+
+    text-shadow:
+    0 0 35px rgba(0,246,255,.10);
+}
+
+.hero-role{
+    margin-top:25px;
+
+    font-size:clamp(19px,3vw,30px);
+
+    color:#d9e9f8;
+}
+
+.hero-role strong{
+    color:var(--cyan);
+
+    text-shadow:
+    0 0 15px rgba(0,246,255,.6);
+}
+
+.hero-description{
+    max-width:720px;
+
+    margin-top:20px;
+
+    color:#8496ad;
+
+    font-size:16px;
+}
+
+.hero-buttons{
+    margin-top:32px;
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+/* =========================================================
+   NEON BUTTONS
+   ========================================================= */
+
+.btn{
+    position:relative;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:13px 21px;
+
+    border-radius:9px;
+
+    text-decoration:none;
+
+    font-size:13px;
+    font-weight:700;
+
+    transition:.35s;
+
+    overflow:hidden;
+}
+
 .btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 30px rgba(0,229,255,.25);
+    transform:translateY(-4px);
 }
 
-.primary{
-    background:#00d9ff;
-    color:#001017;
+.btn-primary{
+    color:#001014;
+
+    background:var(--cyan);
+
+    box-shadow:
+    0 0 10px rgba(0,246,255,.7),
+    0 0 35px rgba(0,246,255,.25);
 }
 
-.secondary{
-    background:#0b101a;
-    border:1px solid #263750;
-    color:#fff;
+.btn-primary:hover{
+    box-shadow:
+    0 0 15px rgba(0,246,255,1),
+    0 0 55px rgba(0,246,255,.45);
 }
 
-.whatsapp{
-    background:#20c76a;
+.btn-glass{
     color:white;
+
+    background:rgba(255,255,255,.035);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
 }
 
-.email{
-    background:#655cff;
+.btn-glass:hover{
+    border-color:var(--cyan);
+    box-shadow:0 0 25px rgba(0,246,255,.15);
+}
+
+.btn-whatsapp{
+    background:#16c76a;
     color:white;
+
+    box-shadow:
+    0 0 18px rgba(22,199,106,.25);
 }
 
-/* PHOTO */
+.btn-email{
+    background:#675cff;
+    color:white;
 
-.photo-area{
+    box-shadow:
+    0 0 18px rgba(103,92,255,.25);
+}
+
+/* =========================================================
+   3D PROFILE CARD
+   ========================================================= */
+
+.profile-wrap{
+    perspective:1200px;
+
     display:flex;
     justify-content:center;
 }
 
-.photo-card{
-    width:min(380px,90vw);
-    padding:10px;
-    border-radius:28px;
-    background:linear-gradient(
-        135deg,
-        rgba(0,229,255,.65),
-        rgba(120,80,255,.55)
-    );
-    box-shadow:
-    0 0 35px rgba(0,229,255,.18),
-    0 0 80px rgba(120,80,255,.12);
+.profile-card{
+    position:relative;
+
+    width:min(390px,90vw);
+
+    transform-style:preserve-3d;
+
+    animation:floatCard 5s ease-in-out infinite;
+
+    transition:transform .15s ease-out;
 }
 
-.photo-inner{
-    background:#080c15;
-    border-radius:21px;
+@keyframes floatCard{
+
+    0%,100%{
+        transform:translateY(0) rotateY(-5deg);
+    }
+
+    50%{
+        transform:translateY(-15px) rotateY(5deg);
+    }
+}
+
+.profile-glow{
+    position:absolute;
+
+    inset:-35px;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(0,246,255,.28),
+        transparent 60%
+    );
+
+    filter:blur(20px);
+
+    z-index:-1;
+}
+
+.profile-frame{
+    position:relative;
+
+    padding:2px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--cyan),
+        transparent 35%,
+        var(--purple) 70%,
+        var(--pink)
+    );
+
+    box-shadow:
+    0 0 25px rgba(0,246,255,.22),
+    0 0 80px rgba(155,92,255,.12);
+}
+
+.profile-inner{
+    background:#050912;
+
+    border-radius:28px;
+
     padding:10px;
+
     overflow:hidden;
 }
 
 .profile-photo{
     width:100%;
+
     aspect-ratio:4/5;
+
     object-fit:cover;
+
     display:block;
-    border-radius:16px;
+
+    border-radius:20px;
+
+    filter:
+    saturate(1.05)
+    contrast(1.03);
 }
 
-.photo-caption{
-    text-align:center;
-    padding:16px 10px 10px;
+/* Holographic overlay */
+
+.profile-inner::after{
+    content:"";
+
+    position:absolute;
+    inset:12px;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent 20%,
+        rgba(0,246,255,.12),
+        transparent 45%
+    );
+
+    transform:translateX(-120%);
+
+    animation:scan 4s infinite;
+
+    pointer-events:none;
 }
 
-.photo-caption strong{
+@keyframes scan{
+    0%,45%{
+        transform:translateX(-120%);
+    }
+
+    70%,100%{
+        transform:translateX(120%);
+    }
+}
+
+.profile-bottom{
+    padding:17px 10px 10px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.profile-bottom strong{
+    font-size:17px;
+}
+
+.profile-bottom small{
     display:block;
-    font-size:19px;
+    color:var(--cyan);
+    font-size:11px;
+    letter-spacing:1px;
 }
 
-.photo-caption span{
-    color:#00e5ff;
-    font-size:13px;
+.availability{
+    padding:6px 10px;
+
+    border-radius:20px;
+
+    color:#00ff9d;
+
+    background:rgba(0,255,157,.06);
+
+    border:1px solid rgba(0,255,157,.2);
+
+    font-size:9px;
 }
 
-/* SECTIONS */
+/* =========================================================
+   HOLO CARDS
+   ========================================================= */
 
-section{
-    max-width:1200px;
-    margin:auto;
-    padding:90px 25px;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.section-title h2{
-    font-size:38px;
-    margin-bottom:10px;
-}
-
-.section-title span{
-    color:#00e5ff;
-}
-
-.section-title p{
-    color:#8391a8;
-}
-
-/* ABOUT */
-
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
-}
-
-.card{
-    padding:30px;
-    background:rgba(12,17,29,.78);
-    border:1px solid rgba(100,130,170,.16);
-    border-radius:18px;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    border-color:rgba(0,229,255,.4);
-}
-
-.card h3{
-    color:#00e5ff;
-    margin-bottom:15px;
-    font-size:22px;
-}
-
-.card p{
-    color:#a7b3c7;
-}
-
-/* INFO */
-
-.info-grid{
+.holo-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:12px;
-    margin-top:25px;
+    gap:20px;
 }
 
-.info{
-    background:#080d16;
-    border:1px solid #1b2a40;
-    border-radius:10px;
-    padding:13px 15px;
+.holo-card{
+    position:relative;
+
+    padding:30px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(12,25,43,.68),
+        rgba(5,10,20,.68)
+    );
+
+    border:1px solid rgba(0,246,255,.13);
+
+    border-radius:18px;
+
+    backdrop-filter:blur(15px);
+
+    overflow:hidden;
+
+    transition:.4s;
 }
 
-.info strong{
-    color:#00e5ff;
-    display:block;
-    font-size:12px;
-    margin-bottom:3px;
+.holo-card::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:70%;
+    height:1px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        var(--cyan),
+        transparent
+    );
+
+    box-shadow:0 0 15px var(--cyan);
+
+    animation:cardScan 5s infinite;
 }
 
-.info span{
-    color:#d7e0ef;
-    font-size:14px;
+@keyframes cardScan{
+
+    0%{
+        left:-100%;
+    }
+
+    50%,100%{
+        left:150%;
+    }
 }
 
-/* STATS */
+.holo-card::after{
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    right:-80px;
+    bottom:-80px;
+
+    border-radius:50%;
+
+    background:rgba(0,246,255,.08);
+
+    filter:blur(25px);
+}
+
+.holo-card:hover{
+    transform:
+    translateY(-7px)
+    perspective(800px)
+    rotateX(2deg);
+
+    border-color:rgba(0,246,255,.42);
+
+    box-shadow:
+    0 15px 50px rgba(0,0,0,.35),
+    0 0 30px rgba(0,246,255,.08);
+}
+
+.holo-card h3{
+    color:var(--cyan);
+
+    font-size:21px;
+
+    margin-bottom:13px;
+}
+
+.holo-card p{
+    color:#95a7bd;
+}
+
+/* =========================================================
+   STATS
+   ========================================================= */
 
 .stats{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:15px;
-    margin-top:30px;
+
+    margin-top:25px;
 }
 
 .stat{
-    padding:25px 10px;
+    position:relative;
+
+    padding:25px 12px;
+
     text-align:center;
-    background:#0a0f19;
-    border:1px solid #182438;
+
+    background:rgba(5,12,23,.68);
+
+    border:1px solid rgba(0,246,255,.12);
+
     border-radius:14px;
+
+    backdrop-filter:blur(10px);
+
+    overflow:hidden;
 }
 
 .stat strong{
     display:block;
-    color:#00e5ff;
-    font-size:31px;
+
+    font-size:34px;
+
+    color:var(--cyan);
+
+    text-shadow:
+    0 0 14px rgba(0,246,255,.45);
 }
 
 .stat span{
-    color:#8997ad;
-    font-size:13px;
+    color:#73859d;
+    font-size:11px;
+    letter-spacing:.5px;
 }
 
-/* EXPERIENCE */
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
 
-.experience{
-    display:grid;
-    gap:20px;
+.timeline{
+    position:relative;
+
+    max-width:950px;
+
+    margin:auto;
+}
+
+.timeline::before{
+    content:"";
+
+    position:absolute;
+
+    left:18px;
+    top:0;
+    bottom:0;
+
+    width:1px;
+
+    background:
+    linear-gradient(
+        to bottom,
+        transparent,
+        var(--cyan),
+        var(--purple),
+        transparent
+    );
+
+    box-shadow:0 0 12px rgba(0,246,255,.4);
 }
 
 .job{
-    padding:30px;
-    background:linear-gradient(135deg,#0b101b,#080c14);
-    border:1px solid #1b2a40;
-    border-left:3px solid #00e5ff;
-    border-radius:15px;
-    transition:.3s;
+    position:relative;
+
+    margin-bottom:25px;
+
+    padding:27px 30px 27px 60px;
+
+    background:
+    linear-gradient(
+        120deg,
+        rgba(10,22,39,.75),
+        rgba(5,10,20,.65)
+    );
+
+    border:1px solid rgba(0,246,255,.13);
+
+    border-radius:16px;
+
+    backdrop-filter:blur(14px);
+
+    transition:.35s;
+}
+
+.job::before{
+    content:"";
+
+    position:absolute;
+
+    left:11px;
+    top:32px;
+
+    width:15px;
+    height:15px;
+
+    border-radius:50%;
+
+    background:var(--cyan);
+
+    box-shadow:
+    0 0 8px var(--cyan),
+    0 0 22px var(--cyan);
 }
 
 .job:hover{
-    transform:translateX(5px);
-    border-left-color:#a879ff;
+    transform:translateX(7px);
+
+    border-color:rgba(0,246,255,.4);
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.3),
+    0 0 25px rgba(0,246,255,.07);
 }
 
 .job h3{
-    font-size:23px;
+    font-size:22px;
 }
 
 .job .role{
-    color:#00e5ff;
-    font-weight:bold;
-    margin:5px 0 8px;
+    color:var(--cyan);
+    font-weight:700;
+    margin:4px 0;
 }
 
 .job .date{
-    color:#718097;
-    font-size:13px;
-    margin-bottom:15px;
+    color:#657991;
+    font-size:11px;
+    letter-spacing:1px;
+    margin-bottom:12px;
 }
 
 .job ul{
-    padding-left:20px;
-    color:#aab5c8;
+    padding-left:18px;
+    color:#94a6bd;
 }
 
 .job li{
-    margin:7px 0;
+    margin:5px 0;
 }
 
-/* SKILLS */
+/* =========================================================
+   SKILLS
+   ========================================================= */
 
 .skills{
     display:grid;
@@ -395,128 +917,203 @@ section{
 }
 
 .skill{
-    padding:23px;
-    background:#0b101a;
-    border:1px solid #1b293d;
-    border-radius:14px;
-    transition:.3s;
+    position:relative;
+
+    padding:25px;
+
+    background:rgba(7,15,28,.70);
+
+    border:1px solid rgba(0,246,255,.12);
+
+    border-radius:15px;
+
+    transition:.35s;
+
+    overflow:hidden;
 }
 
 .skill:hover{
-    border-color:#00e5ff;
-    transform:translateY(-4px);
+    transform:
+    translateY(-7px)
+    rotateX(2deg);
+
+    border-color:rgba(0,246,255,.42);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.3),
+    0 0 25px rgba(0,246,255,.07);
+}
+
+.skill-icon{
+    width:43px;
+    height:43px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:15px;
+
+    border-radius:12px;
+
+    color:var(--cyan);
+
+    background:rgba(0,246,255,.05);
+
+    border:1px solid rgba(0,246,255,.2);
+
+    font-size:19px;
+
+    box-shadow:
+    inset 0 0 15px rgba(0,246,255,.04);
 }
 
 .skill h3{
-    color:#00e5ff;
-    margin-bottom:8px;
+    color:#eafaff;
+    margin-bottom:7px;
 }
 
 .skill p{
-    color:#8e9bb1;
-    font-size:14px;
+    color:#7f92aa;
+    font-size:13px;
 }
 
-/* CV */
-
-.cv-section{
-    text-align:center;
-}
+/* =========================================================
+   CV
+   ========================================================= */
 
 .cv-box{
-    max-width:750px;
+    max-width:850px;
+
     margin:auto;
-    padding:40px 25px;
-    border:1px solid #1b3045;
-    border-radius:20px;
-    background:linear-gradient(
+
+    text-align:center;
+
+    padding:45px 25px;
+
+    border-radius:22px;
+
+    background:
+    linear-gradient(
         135deg,
-        rgba(0,229,255,.06),
-        rgba(125,80,255,.06)
+        rgba(0,246,255,.07),
+        rgba(155,92,255,.07)
     );
+
+    border:1px solid rgba(0,246,255,.2);
+
+    box-shadow:
+    inset 0 0 50px rgba(0,246,255,.02),
+    0 20px 70px rgba(0,0,0,.25);
 }
 
-.cv-box h2{
-    margin-bottom:10px;
+.cv-box h3{
+    font-size:27px;
 }
 
 .cv-box p{
-    color:#9ba8bd;
-    margin-bottom:25px;
+    color:#8295ad;
+    margin:10px 0 25px;
 }
 
-/* CONTACT */
-
-.contact{
-    text-align:center;
-}
+/* =========================================================
+   CONTACT
+   ========================================================= */
 
 .contact-box{
-    max-width:850px;
+    max-width:900px;
+
     margin:auto;
-    padding:45px 25px;
-    border:1px solid #1b3045;
-    border-radius:20px;
-    background:linear-gradient(
-        135deg,
-        rgba(0,229,255,.06),
-        rgba(125,80,255,.06)
-    );
+
+    text-align:center;
+
+    padding:50px 25px;
+
+    border-radius:22px;
+
+    background:
+    radial-gradient(
+        circle at 50% 0%,
+        rgba(0,246,255,.08),
+        transparent 50%
+    ),
+    rgba(5,12,22,.70);
+
+    border:1px solid rgba(0,246,255,.18);
+
+    backdrop-filter:blur(15px);
 }
 
 .contact-box h2{
     font-size:35px;
-    margin-bottom:12px;
 }
 
 .contact-box p{
-    color:#9ba8bd;
-    margin-bottom:25px;
+    color:#8193aa;
+
+    max-width:650px;
+
+    margin:12px auto 25px;
 }
 
 .contact-info{
     display:flex;
     justify-content:center;
-    gap:15px;
     flex-wrap:wrap;
+    gap:12px;
+
     margin-bottom:25px;
 }
 
 .contact-item{
     padding:12px 18px;
-    border:1px solid #263750;
+
+    border:1px solid rgba(0,246,255,.14);
+
     border-radius:10px;
-    color:#dce5f4;
-    background:#080d16;
-}
 
-.contact-item span{
-    color:#00e5ff;
-}
+    background:rgba(255,255,255,.025);
 
-/* FOOTER */
+    color:#cdd9e8;
 
-footer{
-    text-align:center;
-    padding:30px;
-    border-top:1px solid #152235;
-    color:#6f7c91;
     font-size:13px;
 }
 
-/* MOBILE */
+.contact-item span{
+    color:var(--cyan);
+}
 
-@media(max-width:850px){
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer{
+    text-align:center;
+
+    padding:35px 20px;
+
+    color:#566a82;
+
+    font-size:11px;
+
+    border-top:1px solid rgba(0,246,255,.09);
+}
+
+footer strong{
+    color:var(--cyan);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:900px){
 
     nav ul{
         display:none;
     }
 
-    .hero{
-        padding-top:110px;
-    }
-
-    .hero-container{
+    .hero-inner{
         grid-template-columns:1fr;
         text-align:center;
     }
@@ -525,59 +1122,75 @@ footer{
         margin:auto;
     }
 
-    .buttons{
+    .hero-buttons{
         justify-content:center;
     }
 
-    .photo-area{
+    .profile-wrap{
         order:-1;
     }
 
-    .photo-card{
-        width:280px;
-    }
-
-    .about{
-        grid-template-columns:1fr;
+    .profile-card{
+        width:290px;
     }
 
     .skills{
         grid-template-columns:1fr 1fr;
     }
-
-    .stats{
-        grid-template-columns:repeat(2,1fr);
-    }
 }
 
-@media(max-width:520px){
+@media(max-width:650px){
 
     section{
-        padding:70px 18px;
+        padding:80px 18px;
     }
 
-    h1{
-        font-size:43px;
+    .hero{
+        padding-top:105px;
     }
 
-    .hero h2{
-        font-size:21px;
+    .hero-inner{
+        padding:0 18px;
     }
 
-    .hero-description{
-        font-size:15px;
+    .hero h1{
+        font-size:45px;
+        letter-spacing:-2px;
+    }
+
+    .holo-grid{
+        grid-template-columns:1fr;
     }
 
     .skills{
         grid-template-columns:1fr;
     }
 
-    .info-grid{
-        grid-template-columns:1fr;
+    .stats{
+        grid-template-columns:1fr 1fr;
     }
 
-    .section-title h2{
-        font-size:31px;
+    .job{
+        padding-left:48px;
+    }
+
+    .section-title{
+        margin-bottom:45px;
+    }
+}
+
+@media(max-width:400px){
+
+    .hero h1{
+        font-size:39px;
+    }
+
+    .stats{
+        gap:8px;
+    }
+
+    .stat{
+        padding:20px 7px;
     }
 }
 </style>
@@ -585,71 +1198,95 @@ footer{
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- =====================================================
+     BACKGROUND
+     ===================================================== -->
+
+<canvas id="space"></canvas>
+
+<div class="grid-floor"></div>
+<div class="noise"></div>
+
+
+<!-- =====================================================
+     NAVIGATION
+     ===================================================== -->
 
 <nav>
-<div class="nav-container">
 
-<div class="logo">ASHIR HADI</div>
+<div class="nav-inner">
+
+<div class="logo">
+ASHIR <span>HADI</span>
+</div>
 
 <ul>
-<li><a href="#about">About</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#skills">Skills</a></li>
+<li><a href="#about">ABOUT</a></li>
+<li><a href="#experience">EXPERIENCE</a></li>
+<li><a href="#skills">SKILLS</a></li>
 <li><a href="#cv">CV</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="#contact">CONTACT</a></li>
 </ul>
 
 </div>
+
 </nav>
 
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+     ===================================================== -->
 
 <header class="hero">
 
-<div class="hero-container">
+<div class="hero-inner">
 
 <div>
 
-<div class="badge">
-FACILITY MANAGEMENT • OPERATIONS • LEADERSHIP
+<div class="status">
+<span class="status-dot"></span>
+OPEN TO PROFESSIONAL OPPORTUNITIES
 </div>
 
 <h1>
-Muhammad Ashir Hadi
+Muhammad<br>
+Ashir Hadi
 </h1>
 
-<h2>
-Assistant Supervisor – FMS | BMS Operator | Team Leader
-</h2>
+<div class="hero-role">
+<strong>Assistant Supervisor – FMS</strong><br>
+BMS Operator • Team Leader • Facility Operations
+</div>
 
 <p class="hero-description">
+
 Facility Management • MEP Operations • BMS • Supply Chain
 • Production Coordination • Team Leadership • Operations
+
 </p>
 
-<div class="buttons">
 
-<a class="btn primary" href="#experience">
-View Experience
+<div class="hero-buttons">
+
+<a class="btn btn-primary" href="#experience">
+EXPLORE EXPERIENCE →
 </a>
 
-<a class="btn whatsapp"
+<a class="btn btn-whatsapp"
 href="https://wa.me/971558436330"
 target="_blank">
-💬 WhatsApp
+WHATSAPP
 </a>
 
-<a class="btn email"
+<a class="btn btn-email"
 href="mailto:mashirhadi@gmail.com">
-✉ Email
+EMAIL
 </a>
 
-<a class="btn secondary"
+<a class="btn btn-glass"
 href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359"
 target="_blank">
-LinkedIn
+LINKEDIN
 </a>
 
 </div>
@@ -657,513 +1294,17 @@ LinkedIn
 </div>
 
 
-<!-- YOUR PHOTO -->
+<!-- 3D PROFILE -->
 
-<div class="photo-area">
+<div class="profile-wrap">
 
-<div class="photo-card">
+<div class="profile-card" id="profileCard">
 
-<div class="photo-inner">
+<div class="profile-glow"></div>
+
+<div class="profile-frame">
+
+<div class="profile-inner">
 
 <img
-src="IMG-20250803-WA0006.jpg"
-alt="Muhammad Ashir Hadi"
-class="profile-photo"
->
-
-<div class="photo-caption">
-
-<strong>Muhammad Ashir Hadi</strong>
-
-<span>
-Assistant Supervisor – FMS
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</header>
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<div class="section-title">
-
-<h2>
-Professional <span>Profile</span>
-</h2>
-
-<p>
-Facility Management • Operations • Team Leadership
-</p>
-
-</div>
-
-
-<div class="about">
-
-<div class="card">
-
-<h3>About Me</h3>
-
-<p>
-Experienced operations and facility management professional
-with experience in FMS, MEP maintenance, BMS operations,
-production, logistics, supply chain coordination and team
-leadership.
-</p>
-
-<br>
-
-<p>
-Experienced in supporting supervisors, coordinating teams,
-monitoring facility activities, following up maintenance
-requirements and maintaining smooth daily operations.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>Professional Information</h3>
-
-<div class="info-grid">
-
-<div class="info">
-<strong>NAME</strong>
-<span>Muhammad Ashir Hadi</span>
-</div>
-
-<div class="info">
-<strong>EMAIL</strong>
-<span>mashirhadi@gmail.com</span>
-</div>
-
-<div class="info">
-<strong>LOCATION</strong>
-<span>Dubai, UAE</span>
-</div>
-
-<div class="info">
-<strong>WHATSAPP</strong>
-<span>+971 55 843 6330</span>
-</div>
-
-<div class="info">
-<strong>PRIMARY ROLE</strong>
-<span>Assistant Supervisor – FMS</span>
-</div>
-
-<div class="info">
-<strong>FOCUS</strong>
-<span>Facility & Operations</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="stats">
-
-<div class="stat">
-<strong>4+</strong>
-<span>Years Operations</span>
-</div>
-
-<div class="stat">
-<strong>3+</strong>
-<span>Years Supply Chain</span>
-</div>
-
-<div class="stat">
-<strong>2+</strong>
-<span>Years MEP / Facility</span>
-</div>
-
-<div class="stat">
-<strong>1+</strong>
-<span>Year Team Leadership</span>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- EXPERIENCE -->
-
-<section id="experience">
-
-<div class="section-title">
-
-<h2>
-Professional <span>Experience</span>
-</h2>
-
-<p>
-FMS • Assistant Supervision • BMS • MEP • Operations
-</p>
-
-</div>
-
-
-<div class="experience">
-
-
-<div class="job">
-
-<h3>
-Assistant Supervisor – FMS
-</h3>
-
-<div class="role">
-Facility Management Services
-</div>
-
-<div class="date">
-Professional Experience
-</div>
-
-<ul>
-<li>Support daily Facility Management Services operations.</li>
-<li>Coordinate technicians, operators and support teams.</li>
-<li>Assist supervisors with work allocation and follow-up.</li>
-<li>Monitor daily facility activities and operational requirements.</li>
-<li>Support maintenance coordination and service requests.</li>
-<li>Assist with operational reports and documentation.</li>
-<li>Help maintain efficient facility operations.</li>
-</ul>
-
-</div>
-
-
-<div class="job">
-
-<h3>
-Team Leader
-</h3>
-
-<div class="role">
-Production & Logistics Operations
-</div>
-
-<div class="date">
-3+ Years Experience
-</div>
-
-<ul>
-<li>Led daily production and logistics activities.</li>
-<li>Coordinated team members and assigned operational tasks.</li>
-<li>Supported supervisors in achieving operational targets.</li>
-<li>Coordinated material movement and workflow.</li>
-<li>Maintained operational records and reporting.</li>
-<li>Supported coordination between departments.</li>
-</ul>
-
-</div>
-
-
-<div class="job">
-
-<h3>
-BMS Operator
-</h3>
-
-<div class="role">
-Building Management Systems
-</div>
-
-<ul>
-<li>Monitor building systems through BMS platforms.</li>
-<li>Monitor alarms, equipment status and operating conditions.</li>
-<li>Identify abnormal conditions and report them to relevant teams.</li>
-<li>Support facility monitoring and operational control.</li>
-<li>Assist with daily BMS operational reporting.</li>
-</ul>
-
-</div>
-
-
-<div class="job">
-
-<h3>
-MEP & Facility Operations
-</h3>
-
-<div class="role">
-MEP / Facility Maintenance
-</div>
-
-<div class="date">
-2+ Years Experience
-</div>
-
-<ul>
-<li>Support MEP and facility maintenance operations.</li>
-<li>Coordinate maintenance requirements with technical teams.</li>
-<li>Follow up preventive and corrective maintenance activities.</li>
-<li>Assist supervisors with facility operational requirements.</li>
-<li>Support maintenance workflow and reporting.</li>
-</ul>
-
-</div>
-
-
-<div class="job">
-
-<h3>
-Computer & Office Operations
-</h3>
-
-<div class="role">
-Administration & Operations Support
-</div>
-
-<ul>
-<li>Computer-based office operations and documentation.</li>
-<li>Data entry and operational record management.</li>
-<li>Prepare and maintain reports and documentation.</li>
-<li>Support administrative and operational coordination.</li>
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-<div class="section-title">
-
-<h2>
-Core <span>Skills</span>
-</h2>
-
-<p>
-Professional capabilities
-</p>
-
-</div>
-
-
-<div class="skills">
-
-<div class="skill">
-<h3>FMS Operations</h3>
-<p>
-Facility management coordination, daily site operations and service support.
-</p>
-</div>
-
-<div class="skill">
-<h3>Assistant Supervision</h3>
-<p>
-Team coordination, task allocation, follow-up and supervisor support.
-</p>
-</div>
-
-<div class="skill">
-<h3>BMS Operations</h3>
-<p>
-Building monitoring, alarms, system observation and operational reporting.
-</p>
-</div>
-
-<div class="skill">
-<h3>MEP Maintenance</h3>
-<p>
-MEP maintenance coordination, facility support and technical follow-up.
-</p>
-</div>
-
-<div class="skill">
-<h3>Team Leadership</h3>
-<p>
-Team coordination, workflow management and daily operational support.
-</p>
-</div>
-
-<div class="skill">
-<h3>Supply Chain</h3>
-<p>
-Production, logistics, material coordination and workflow management.
-</p>
-</div>
-
-<div class="skill">
-<h3>Production Coordination</h3>
-<p>
-Production workflow, team coordination and operational monitoring.
-</p>
-</div>
-
-<div class="skill">
-<h3>Facility Operations</h3>
-<p>
-Daily facility activities, maintenance follow-up and operational coordination.
-</p>
-</div>
-
-<div class="skill">
-<h3>Computer Operations</h3>
-<p>
-Data entry, documentation, reporting and office systems.
-</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CV -->
-
-<section id="cv" class="cv-section">
-
-<div class="section-title">
-
-<h2>
-My <span>CV</span>
-</h2>
-
-<p>
-View or download my professional resume
-</p>
-
-</div>
-
-<div class="cv-box">
-
-<h2>
-Muhammad Ashir Hadi – Resume
-</h2>
-
-<p>
-My complete professional CV is available below.
-</p>
-
-<div class="buttons" style="justify-content:center;">
-
-<a
-class="btn primary"
-href="resume.pdf"
-target="_blank">
-📄 View CV
-</a>
-
-<a
-class="btn secondary"
-href="resume.pdf"
-download>
-⬇ Download CV
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact" class="contact">
-
-<div class="section-title">
-
-<h2>
-Let's <span>Connect</span>
-</h2>
-
-<p>
-Professional contact
-</p>
-
-</div>
-
-
-<div class="contact-box">
-
-<h2>
-Muhammad Ashir Hadi
-</h2>
-
-<p>
-Open to professional opportunities in FMS, Facility Operations,
-Assistant Supervisor, BMS, MEP and Team Leadership.
-</p>
-
-
-<div class="contact-info">
-
-<div class="contact-item">
-<span>Email:</span>
-mashirhadi@gmail.com
-</div>
-
-<div class="contact-item">
-<span>WhatsApp:</span>
-+971 55 843 6330
-</div>
-
-</div>
-
-
-<div class="buttons" style="justify-content:center;">
-
-<a
-class="btn whatsapp"
-href="https://wa.me/971558436330"
-target="_blank">
-💬 Contact on WhatsApp
-</a>
-
-<a
-class="btn email"
-href="mailto:mashirhadi@gmail.com">
-✉ Send Email
-</a>
-
-<a
-class="btn secondary"
-href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359"
-target="_blank">
-LinkedIn Profile
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-© 2026 Muhammad Ashir Hadi
-
-<br>
-
-FMS • Assistant Supervisor • BMS • MEP • Operations • Team Leadership
-
-</footer>
-
-</body>
-</html>
+src="IMG-20250803-WA0006.jp
