@@ -3,17 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050816">
 
-<title>Muhammad Ashir Hadi | Holo FMS Portfolio</title>
+<title>Muhammad Ashir Hadi | Professional Portfolio</title>
 
-<meta name="description"
-content="Muhammad Ashir Hadi — Assistant Supervisor FMS, BMS Operator, Team Leader, MEP and Facility Operations Professional.">
+<meta name="description" content="Muhammad Ashir Hadi - Team Leader, Assistant Supervisor, BMS Operator, Facility Operations and Production & Logistics Professional.">
+<meta name="author" content="Muhammad Ashir Hadi">
 
 <style>
-/* =========================================================
-   HOLO NEON PORTFOLIO
-   ========================================================= */
-
 *{
     margin:0;
     padding:0;
@@ -24,133 +21,103 @@ html{
     scroll-behavior:smooth;
 }
 
-:root{
-    --cyan:#00f6ff;
-    --blue:#008cff;
-    --purple:#9b5cff;
-    --pink:#ff3cac;
-    --bg:#02040a;
-    --glass:rgba(8,15,30,.58);
-    --border:rgba(0,246,255,.24);
-    --text:#eef8ff;
-    --muted:#8295ad;
-}
-
 body{
-    font-family:
-    Inter,
-    Arial,
-    Helvetica,
-    sans-serif;
-
-    background:
-    radial-gradient(circle at 20% 20%,rgba(0,246,255,.09),transparent 28%),
-    radial-gradient(circle at 80% 80%,rgba(155,92,255,.10),transparent 30%),
-    #02040a;
-
-    color:var(--text);
+    font-family:Arial, Helvetica, sans-serif;
+    background:#030611;
+    color:#eafcff;
     overflow-x:hidden;
-    line-height:1.6;
 }
 
-/* =========================================================
-   3D CANVAS BACKGROUND
-   ========================================================= */
+/* ================= BACKGROUND ================= */
 
-#space{
+body::before{
+    content:"";
     position:fixed;
     inset:0;
-    width:100%;
-    height:100%;
-    z-index:-10;
-}
-
-.noise{
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    z-index:-4;
-    opacity:.035;
-
-    background-image:
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
-}
-
-/* =========================================================
-   HOLO GRID
-   ========================================================= */
-
-.grid-floor{
-    position:fixed;
-    left:-20%;
-    bottom:-35%;
-    width:140%;
-    height:70%;
-
     z-index:-5;
+    background:
+        radial-gradient(circle at 20% 20%,rgba(0,255,255,.13),transparent 25%),
+        radial-gradient(circle at 80% 30%,rgba(120,0,255,.14),transparent 28%),
+        radial-gradient(circle at 50% 90%,rgba(0,150,255,.12),transparent 30%),
+        #030611;
+}
 
+.grid{
+    position:fixed;
+    inset:0;
+    z-index:-4;
+    opacity:.22;
     background-image:
-    linear-gradient(rgba(0,246,255,.10) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(0,246,255,.10) 1px,transparent 1px);
-
-    background-size:70px 70px;
-
-    transform:
-    perspective(500px)
-    rotateX(62deg);
-
-    mask-image:
-    linear-gradient(
-        to top,
-        transparent,
-        black 25%,
-        transparent 100%
-    );
-
-    animation:gridMove 9s linear infinite;
+        linear-gradient(rgba(0,255,255,.12) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(0,255,255,.12) 1px,transparent 1px);
+    background-size:55px 55px;
+    transform:perspective(600px) rotateX(60deg) scale(2);
+    transform-origin:center bottom;
+    animation:gridMove 12s linear infinite;
 }
 
 @keyframes gridMove{
-    from{
-        background-position:0 0;
-    }
-    to{
-        background-position:0 70px;
-    }
+    from{transform:perspective(600px) rotateX(60deg) scale(2) translateY(0)}
+    to{transform:perspective(600px) rotateX(60deg) scale(2) translateY(55px)}
 }
 
-/* =========================================================
-   NAV
-   ========================================================= */
+.orb{
+    position:fixed;
+    border-radius:50%;
+    filter:blur(2px);
+    opacity:.25;
+    z-index:-3;
+    animation:float 10s ease-in-out infinite;
+}
+
+.orb.one{
+    width:180px;
+    height:180px;
+    background:#00ffff;
+    top:10%;
+    left:-60px;
+}
+
+.orb.two{
+    width:220px;
+    height:220px;
+    background:#8b00ff;
+    right:-80px;
+    top:50%;
+    animation-delay:2s;
+}
+
+.orb.three{
+    width:140px;
+    height:140px;
+    background:#0066ff;
+    left:40%;
+    bottom:-50px;
+    animation-delay:4s;
+}
+
+@keyframes float{
+    0%,100%{transform:translate(0,0)}
+    50%{transform:translate(40px,-50px)}
+}
+
+/* ================= NAVBAR ================= */
 
 nav{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    z-index:1000;
-
-    background:rgba(2,5,12,.60);
-
-    backdrop-filter:
-    blur(20px)
-    saturate(160%);
-
-    border-bottom:
-    1px solid rgba(0,246,255,.16);
-
-    box-shadow:
-    0 0 35px rgba(0,246,255,.04);
+    z-index:100;
+    padding:18px 6%;
+    background:rgba(3,6,17,.72);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(0,255,255,.18);
 }
 
 .nav-inner{
-    max-width:1250px;
+    max-width:1200px;
     margin:auto;
-
-    height:74px;
-
-    padding:0 25px;
-
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -158,954 +125,454 @@ nav{
 
 .logo{
     font-size:20px;
-    font-weight:900;
+    font-weight:bold;
+    color:#00ffff;
     letter-spacing:2px;
-
-    color:var(--cyan);
-
-    text-shadow:
-    0 0 10px rgba(0,246,255,.8),
-    0 0 30px rgba(0,246,255,.4);
-}
-
-.logo span{
-    color:white;
+    text-shadow:0 0 12px #00ffff;
 }
 
 nav ul{
+    list-style:none;
     display:flex;
     gap:25px;
-    list-style:none;
 }
 
 nav a{
-    position:relative;
-
-    color:#b9c9dc;
+    color:#d9ffff;
     text-decoration:none;
-
-    font-size:13px;
-    letter-spacing:.5px;
-
+    font-size:14px;
     transition:.3s;
 }
 
 nav a:hover{
-    color:var(--cyan);
-    text-shadow:0 0 12px var(--cyan);
+    color:#00ffff;
+    text-shadow:0 0 12px #00ffff;
 }
 
-nav a::after{
-    content:"";
+/* ================= GENERAL ================= */
 
-    position:absolute;
-    left:0;
-    bottom:-8px;
-
-    width:0;
-    height:1px;
-
-    background:var(--cyan);
-
-    box-shadow:0 0 8px var(--cyan);
-
-    transition:.3s;
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
 }
-
-nav a:hover::after{
-    width:100%;
-}
-
-/* =========================================================
-   SECTIONS
-   ========================================================= */
 
 section{
-    max-width:1250px;
-    margin:auto;
-    padding:110px 25px;
-}
-
-.section-label{
-    color:var(--cyan);
-
-    font-size:11px;
-    letter-spacing:4px;
-    text-transform:uppercase;
-
-    margin-bottom:10px;
-
-    text-shadow:0 0 10px rgba(0,246,255,.7);
+    padding:100px 0;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:65px;
+    margin-bottom:55px;
 }
 
 .section-title h2{
-    font-size:clamp(32px,5vw,52px);
-    line-height:1.1;
+    font-size:38px;
+    color:#fff;
+    text-shadow:0 0 18px rgba(0,255,255,.45);
 }
 
-.section-title h2 span{
-    color:var(--cyan);
-
-    text-shadow:
-    0 0 12px rgba(0,246,255,.5);
+.section-title span{
+    color:#00ffff;
 }
 
 .section-title p{
-    margin-top:14px;
-    color:var(--muted);
+    margin-top:12px;
+    color:#8fa8b8;
 }
 
-/* =========================================================
-   HERO
-   ========================================================= */
+/* ================= HERO ================= */
 
 .hero{
     min-height:100vh;
-
     display:flex;
     align-items:center;
-
-    padding-top:120px;
+    padding-top:100px;
 }
 
-.hero-inner{
-    width:100%;
-    max-width:1250px;
-    margin:auto;
-
-    padding:0 25px;
-
+.hero-content{
     display:grid;
-    grid-template-columns:1.1fr .9fr;
-
+    grid-template-columns:1.2fr .8fr;
+    align-items:center;
     gap:70px;
-    align-items:center;
 }
 
-/* HERO TEXT */
-
-.status{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-
-    padding:8px 15px;
-
-    border:1px solid rgba(0,246,255,.30);
-    border-radius:30px;
-
-    background:rgba(0,246,255,.04);
-
-    color:#9cecf1;
-
-    font-size:11px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-
-    box-shadow:
-    inset 0 0 20px rgba(0,246,255,.03),
-    0 0 20px rgba(0,246,255,.05);
-}
-
-.status-dot{
-    width:7px;
-    height:7px;
-
-    border-radius:50%;
-
-    background:#00ff9d;
-
-    box-shadow:
-    0 0 7px #00ff9d,
-    0 0 18px #00ff9d;
-
-    animation:pulse 1.6s infinite;
-}
-
-@keyframes pulse{
-    50%{
-        opacity:.35;
-        transform:scale(.7);
-    }
+.badge{
+    display:inline-block;
+    padding:9px 16px;
+    border:1px solid rgba(0,255,255,.45);
+    border-radius:50px;
+    color:#00ffff;
+    background:rgba(0,255,255,.06);
+    box-shadow:0 0 20px rgba(0,255,255,.12);
+    margin-bottom:20px;
+    font-size:13px;
 }
 
 .hero h1{
-    margin-top:25px;
-
-    font-size:clamp(48px,7vw,88px);
-
-    line-height:.98;
-
-    letter-spacing:-4px;
-
-    background:
-    linear-gradient(
-        110deg,
-        #ffffff 10%,
-        #9cefff 35%,
-        #00f6ff 55%,
-        #a875ff 85%
-    );
-
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-
-    text-shadow:
-    0 0 35px rgba(0,246,255,.10);
+    font-size:clamp(45px,7vw,82px);
+    line-height:1;
+    letter-spacing:-3px;
+    margin-bottom:20px;
 }
 
-.hero-role{
-    margin-top:25px;
-
-    font-size:clamp(19px,3vw,30px);
-
-    color:#d9e9f8;
+.hero h1 .cyan{
+    color:#00ffff;
+    text-shadow:0 0 25px rgba(0,255,255,.7);
 }
 
-.hero-role strong{
-    color:var(--cyan);
-
-    text-shadow:
-    0 0 15px rgba(0,246,255,.6);
+.hero h1 .purple{
+    color:#9c6cff;
+    text-shadow:0 0 25px rgba(156,108,255,.6);
 }
 
-.hero-description{
-    max-width:720px;
+.hero h2{
+    color:#a8bdc9;
+    font-size:22px;
+    margin-bottom:20px;
+}
 
-    margin-top:20px;
-
-    color:#8496ad;
-
+.hero p{
+    color:#8499a7;
+    line-height:1.8;
+    max-width:650px;
     font-size:16px;
 }
 
-.hero-buttons{
-    margin-top:32px;
-
+.buttons{
     display:flex;
     flex-wrap:wrap;
-    gap:12px;
+    gap:15px;
+    margin-top:30px;
 }
-
-/* =========================================================
-   NEON BUTTONS
-   ========================================================= */
 
 .btn{
-    position:relative;
-
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:13px 21px;
-
-    border-radius:9px;
-
+    display:inline-block;
+    padding:14px 22px;
+    border-radius:12px;
     text-decoration:none;
-
-    font-size:13px;
-    font-weight:700;
-
-    transition:.35s;
-
-    overflow:hidden;
-}
-
-.btn:hover{
-    transform:translateY(-4px);
+    font-weight:bold;
+    transition:.3s;
 }
 
 .btn-primary{
     color:#001014;
-
-    background:var(--cyan);
-
-    box-shadow:
-    0 0 10px rgba(0,246,255,.7),
-    0 0 35px rgba(0,246,255,.25);
+    background:#00ffff;
+    box-shadow:0 0 25px rgba(0,255,255,.4);
 }
 
 .btn-primary:hover{
-    box-shadow:
-    0 0 15px rgba(0,246,255,1),
-    0 0 55px rgba(0,246,255,.45);
+    transform:translateY(-4px);
+    box-shadow:0 0 40px rgba(0,255,255,.7);
 }
 
-.btn-glass{
-    color:white;
-
-    background:rgba(255,255,255,.035);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    backdrop-filter:blur(10px);
+.btn-secondary{
+    color:#fff;
+    border:1px solid rgba(255,255,255,.2);
+    background:rgba(255,255,255,.04);
 }
 
-.btn-glass:hover{
-    border-color:var(--cyan);
-    box-shadow:0 0 25px rgba(0,246,255,.15);
+.btn-secondary:hover{
+    border-color:#00ffff;
+    color:#00ffff;
+    transform:translateY(-4px);
 }
 
-.btn-whatsapp{
-    background:#16c76a;
-    color:white;
+/* ================= PROFILE PHOTO ================= */
 
-    box-shadow:
-    0 0 18px rgba(22,199,106,.25);
-}
-
-.btn-email{
-    background:#675cff;
-    color:white;
-
-    box-shadow:
-    0 0 18px rgba(103,92,255,.25);
-}
-
-/* =========================================================
-   3D PROFILE CARD
-   ========================================================= */
-
-.profile-wrap{
-    perspective:1200px;
-
+.photo-wrap{
     display:flex;
     justify-content:center;
+    perspective:1000px;
 }
 
-.profile-card{
+.photo-card{
+    width:340px;
+    height:420px;
     position:relative;
-
-    width:min(390px,90vw);
-
-    transform-style:preserve-3d;
-
-    animation:floatCard 5s ease-in-out infinite;
-
-    transition:transform .15s ease-out;
+    padding:8px;
+    border-radius:28px;
+    background:linear-gradient(135deg,#00ffff,#6d35ff,#00ffff);
+    box-shadow:
+        0 0 25px rgba(0,255,255,.35),
+        0 0 70px rgba(100,0,255,.2);
+    animation:cardFloat 5s ease-in-out infinite;
+    transform:rotateY(-7deg) rotateX(3deg);
 }
 
-@keyframes floatCard{
-
-    0%,100%{
-        transform:translateY(0) rotateY(-5deg);
-    }
-
-    50%{
-        transform:translateY(-15px) rotateY(5deg);
-    }
-}
-
-.profile-glow{
+.photo-card::before{
+    content:"";
     position:absolute;
-
-    inset:-35px;
-
-    background:
-    radial-gradient(
-        circle,
-        rgba(0,246,255,.28),
-        transparent 60%
-    );
-
-    filter:blur(20px);
-
+    inset:-3px;
+    border-radius:30px;
+    background:linear-gradient(45deg,#00ffff,transparent,#9c00ff,#00ffff);
+    filter:blur(15px);
+    opacity:.35;
     z-index:-1;
 }
 
-.profile-frame{
-    position:relative;
-
-    padding:2px;
-
-    border-radius:30px;
-
-    background:
-    linear-gradient(
-        135deg,
-        var(--cyan),
-        transparent 35%,
-        var(--purple) 70%,
-        var(--pink)
-    );
-
-    box-shadow:
-    0 0 25px rgba(0,246,255,.22),
-    0 0 80px rgba(155,92,255,.12);
-}
-
-.profile-inner{
-    background:#050912;
-
-    border-radius:28px;
-
-    padding:10px;
-
-    overflow:hidden;
-}
-
-.profile-photo{
+.photo-card img{
     width:100%;
-
-    aspect-ratio:4/5;
-
+    height:100%;
     object-fit:cover;
-
+    object-position:center top;
+    border-radius:22px;
     display:block;
-
-    border-radius:20px;
-
-    filter:
-    saturate(1.05)
-    contrast(1.03);
+    background:#07111d;
 }
 
-/* Holographic overlay */
-
-.profile-inner::after{
-    content:"";
-
-    position:absolute;
-    inset:12px;
-
-    border-radius:20px;
-
-    background:
-    linear-gradient(
-        120deg,
-        transparent 20%,
-        rgba(0,246,255,.12),
-        transparent 45%
-    );
-
-    transform:translateX(-120%);
-
-    animation:scan 4s infinite;
-
-    pointer-events:none;
+@keyframes cardFloat{
+    0%,100%{transform:translateY(0) rotateY(-7deg) rotateX(3deg)}
+    50%{transform:translateY(-14px) rotateY(7deg) rotateX(-2deg)}
 }
 
-@keyframes scan{
-    0%,45%{
-        transform:translateX(-120%);
-    }
-
-    70%,100%{
-        transform:translateX(120%);
-    }
-}
-
-.profile-bottom{
-    padding:17px 10px 10px;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.profile-bottom strong{
-    font-size:17px;
-}
-
-.profile-bottom small{
-    display:block;
-    color:var(--cyan);
-    font-size:11px;
-    letter-spacing:1px;
-}
-
-.availability{
-    padding:6px 10px;
-
-    border-radius:20px;
-
-    color:#00ff9d;
-
-    background:rgba(0,255,157,.06);
-
-    border:1px solid rgba(0,255,157,.2);
-
-    font-size:9px;
-}
-
-/* =========================================================
-   HOLO CARDS
-   ========================================================= */
-
-.holo-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-}
-
-.holo-card{
-    position:relative;
-
-    padding:30px;
-
-    background:
-    linear-gradient(
-        145deg,
-        rgba(12,25,43,.68),
-        rgba(5,10,20,.68)
-    );
-
-    border:1px solid rgba(0,246,255,.13);
-
-    border-radius:18px;
-
-    backdrop-filter:blur(15px);
-
-    overflow:hidden;
-
-    transition:.4s;
-}
-
-.holo-card::before{
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    left:-100%;
-
-    width:70%;
-    height:1px;
-
-    background:linear-gradient(
-        90deg,
-        transparent,
-        var(--cyan),
-        transparent
-    );
-
-    box-shadow:0 0 15px var(--cyan);
-
-    animation:cardScan 5s infinite;
-}
-
-@keyframes cardScan{
-
-    0%{
-        left:-100%;
-    }
-
-    50%,100%{
-        left:150%;
-    }
-}
-
-.holo-card::after{
-    content:"";
-
-    position:absolute;
-
-    width:150px;
-    height:150px;
-
-    right:-80px;
-    bottom:-80px;
-
-    border-radius:50%;
-
-    background:rgba(0,246,255,.08);
-
-    filter:blur(25px);
-}
-
-.holo-card:hover{
-    transform:
-    translateY(-7px)
-    perspective(800px)
-    rotateX(2deg);
-
-    border-color:rgba(0,246,255,.42);
-
-    box-shadow:
-    0 15px 50px rgba(0,0,0,.35),
-    0 0 30px rgba(0,246,255,.08);
-}
-
-.holo-card h3{
-    color:var(--cyan);
-
-    font-size:21px;
-
-    margin-bottom:13px;
-}
-
-.holo-card p{
-    color:#95a7bd;
-}
-
-/* =========================================================
-   STATS
-   ========================================================= */
+/* ================= STATS ================= */
 
 .stats{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:15px;
-
-    margin-top:25px;
+    gap:18px;
+    margin-top:60px;
 }
 
 .stat{
-    position:relative;
-
-    padding:25px 12px;
-
+    padding:25px;
     text-align:center;
-
-    background:rgba(5,12,23,.68);
-
-    border:1px solid rgba(0,246,255,.12);
-
-    border-radius:14px;
-
+    border:1px solid rgba(0,255,255,.15);
+    background:rgba(255,255,255,.035);
+    border-radius:18px;
     backdrop-filter:blur(10px);
-
-    overflow:hidden;
 }
 
 .stat strong{
     display:block;
-
-    font-size:34px;
-
-    color:var(--cyan);
-
-    text-shadow:
-    0 0 14px rgba(0,246,255,.45);
+    color:#00ffff;
+    font-size:30px;
+    margin-bottom:7px;
+    text-shadow:0 0 15px rgba(0,255,255,.5);
 }
 
 .stat span{
-    color:#73859d;
-    font-size:11px;
-    letter-spacing:.5px;
+    color:#8195a3;
+    font-size:13px;
 }
 
-/* =========================================================
-   EXPERIENCE
-   ========================================================= */
+/* ================= GLASS CARDS ================= */
+
+.card{
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.025)
+    );
+    border:1px solid rgba(0,255,255,.14);
+    border-radius:22px;
+    padding:28px;
+    backdrop-filter:blur(15px);
+    box-shadow:inset 0 1px rgba(255,255,255,.05);
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(0,255,255,.4);
+    box-shadow:0 15px 45px rgba(0,255,255,.08);
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.card h3{
+    color:#00ffff;
+    margin-bottom:15px;
+    font-size:21px;
+}
+
+.card p{
+    color:#8fa3af;
+    line-height:1.8;
+}
+
+/* ================= EXPERIENCE ================= */
 
 .timeline{
-    position:relative;
-
-    max-width:950px;
-
+    max-width:900px;
     margin:auto;
+    position:relative;
 }
 
 .timeline::before{
     content:"";
-
     position:absolute;
-
     left:18px;
     top:0;
     bottom:0;
-
-    width:1px;
-
-    background:
-    linear-gradient(
-        to bottom,
-        transparent,
-        var(--cyan),
-        var(--purple),
-        transparent
-    );
-
-    box-shadow:0 0 12px rgba(0,246,255,.4);
+    width:2px;
+    background:linear-gradient(#00ffff,#8b4dff,#00ffff);
+    box-shadow:0 0 12px #00ffff;
 }
 
-.job{
+.experience{
     position:relative;
-
-    margin-bottom:25px;
-
-    padding:27px 30px 27px 60px;
-
-    background:
-    linear-gradient(
-        120deg,
-        rgba(10,22,39,.75),
-        rgba(5,10,20,.65)
-    );
-
-    border:1px solid rgba(0,246,255,.13);
-
-    border-radius:16px;
-
-    backdrop-filter:blur(14px);
-
-    transition:.35s;
+    padding-left:60px;
+    margin-bottom:30px;
 }
 
-.job::before{
-    content:"";
-
+.dot{
     position:absolute;
-
-    left:11px;
-    top:32px;
-
-    width:15px;
-    height:15px;
-
+    left:8px;
+    top:25px;
+    width:22px;
+    height:22px;
     border-radius:50%;
-
-    background:var(--cyan);
-
-    box-shadow:
-    0 0 8px var(--cyan),
-    0 0 22px var(--cyan);
+    background:#00ffff;
+    box-shadow:0 0 20px #00ffff;
 }
 
-.job:hover{
-    transform:translateX(7px);
-
-    border-color:rgba(0,246,255,.4);
-
-    box-shadow:
-    0 10px 40px rgba(0,0,0,.3),
-    0 0 25px rgba(0,246,255,.07);
+.experience h3{
+    color:#fff;
+    margin-bottom:7px;
 }
 
-.job h3{
-    font-size:22px;
+.experience .company{
+    color:#00ffff;
+    font-weight:bold;
+    margin-bottom:10px;
 }
 
-.job .role{
-    color:var(--cyan);
-    font-weight:700;
-    margin:4px 0;
+.experience .date{
+    color:#8b7cff;
+    font-size:13px;
+    margin-bottom:15px;
 }
 
-.job .date{
-    color:#657991;
-    font-size:11px;
-    letter-spacing:1px;
-    margin-bottom:12px;
+.experience ul{
+    padding-left:20px;
+    color:#8fa3af;
+    line-height:1.8;
 }
 
-.job ul{
-    padding-left:18px;
-    color:#94a6bd;
+.experience li{
+    margin-bottom:6px;
 }
 
-.job li{
-    margin:5px 0;
-}
-
-/* =========================================================
-   SKILLS
-   ========================================================= */
+/* ================= SKILLS ================= */
 
 .skills{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:18px;
+    gap:20px;
 }
 
 .skill{
-    position:relative;
-
-    padding:25px;
-
-    background:rgba(7,15,28,.70);
-
-    border:1px solid rgba(0,246,255,.12);
-
-    border-radius:15px;
-
-    transition:.35s;
-
-    overflow:hidden;
-}
-
-.skill:hover{
-    transform:
-    translateY(-7px)
-    rotateX(2deg);
-
-    border-color:rgba(0,246,255,.42);
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,.3),
-    0 0 25px rgba(0,246,255,.07);
-}
-
-.skill-icon{
-    width:43px;
-    height:43px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    margin-bottom:15px;
-
-    border-radius:12px;
-
-    color:var(--cyan);
-
-    background:rgba(0,246,255,.05);
-
-    border:1px solid rgba(0,246,255,.2);
-
-    font-size:19px;
-
-    box-shadow:
-    inset 0 0 15px rgba(0,246,255,.04);
+    padding:22px;
+    border-radius:18px;
+    border:1px solid rgba(0,255,255,.12);
+    background:rgba(255,255,255,.035);
 }
 
 .skill h3{
-    color:#eafaff;
-    margin-bottom:7px;
+    color:#fff;
+    margin-bottom:15px;
 }
 
 .skill p{
-    color:#7f92aa;
-    font-size:13px;
+    color:#8297a5;
+    line-height:1.7;
 }
 
-/* =========================================================
-   CV
-   ========================================================= */
+/* ================= SERVICES ================= */
 
-.cv-box{
-    max-width:850px;
-
-    margin:auto;
-
-    text-align:center;
-
-    padding:45px 25px;
-
-    border-radius:22px;
-
-    background:
-    linear-gradient(
-        135deg,
-        rgba(0,246,255,.07),
-        rgba(155,92,255,.07)
-    );
-
-    border:1px solid rgba(0,246,255,.2);
-
-    box-shadow:
-    inset 0 0 50px rgba(0,246,255,.02),
-    0 20px 70px rgba(0,0,0,.25);
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.cv-box h3{
-    font-size:27px;
+.service-icon{
+    width:48px;
+    height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:14px;
+    background:rgba(0,255,255,.08);
+    border:1px solid rgba(0,255,255,.25);
+    color:#00ffff;
+    font-size:22px;
+    margin-bottom:18px;
 }
 
-.cv-box p{
-    color:#8295ad;
-    margin:10px 0 25px;
+/* ================= EDUCATION ================= */
+
+.education{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-/* =========================================================
-   CONTACT
-   ========================================================= */
+/* ================= CONTACT ================= */
 
 .contact-box{
     max-width:900px;
-
     margin:auto;
-
     text-align:center;
-
-    padding:50px 25px;
-
-    border-radius:22px;
-
-    background:
-    radial-gradient(
-        circle at 50% 0%,
-        rgba(0,246,255,.08),
-        transparent 50%
-    ),
-    rgba(5,12,22,.70);
-
-    border:1px solid rgba(0,246,255,.18);
-
-    backdrop-filter:blur(15px);
 }
 
-.contact-box h2{
-    font-size:35px;
+.contact-box h3{
+    font-size:30px;
+    margin-bottom:15px;
 }
 
 .contact-box p{
-    color:#8193aa;
-
-    max-width:650px;
-
-    margin:12px auto 25px;
+    color:#8498a6;
+    line-height:1.7;
 }
 
-.contact-info{
+.contact-links{
     display:flex;
-    justify-content:center;
     flex-wrap:wrap;
-    gap:12px;
-
-    margin-bottom:25px;
+    justify-content:center;
+    gap:15px;
+    margin-top:30px;
 }
 
-.contact-item{
-    padding:12px 18px;
-
-    border:1px solid rgba(0,246,255,.14);
-
-    border-radius:10px;
-
-    background:rgba(255,255,255,.025);
-
-    color:#cdd9e8;
-
-    font-size:13px;
+.contact-link{
+    padding:14px 20px;
+    color:#dff;
+    text-decoration:none;
+    border:1px solid rgba(0,255,255,.18);
+    border-radius:14px;
+    background:rgba(255,255,255,.035);
+    transition:.3s;
 }
 
-.contact-item span{
-    color:var(--cyan);
+.contact-link:hover{
+    color:#00ffff;
+    border-color:#00ffff;
+    box-shadow:0 0 20px rgba(0,255,255,.15);
 }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
+/* ================= FOOTER ================= */
 
 footer{
     text-align:center;
-
     padding:35px 20px;
-
-    color:#566a82;
-
-    font-size:11px;
-
-    border-top:1px solid rgba(0,246,255,.09);
+    border-top:1px solid rgba(0,255,255,.1);
+    color:#637785;
+    font-size:13px;
 }
 
 footer strong{
-    color:var(--cyan);
+    color:#00ffff;
 }
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:900px){
 
@@ -1113,84 +580,91 @@ footer strong{
         display:none;
     }
 
-    .hero-inner{
+    .hero-content{
         grid-template-columns:1fr;
         text-align:center;
     }
 
-    .hero-description{
+    .hero p{
         margin:auto;
     }
 
-    .hero-buttons{
+    .buttons{
         justify-content:center;
     }
 
-    .profile-wrap{
+    .photo-wrap{
         order:-1;
     }
 
-    .profile-card{
-        width:290px;
+    .photo-card{
+        width:280px;
+        height:350px;
     }
 
-    .skills{
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .skills,
+    .services,
+    .education{
         grid-template-columns:1fr 1fr;
     }
 }
 
-@media(max-width:650px){
+@media(max-width:600px){
 
     section{
-        padding:80px 18px;
+        padding:75px 0;
     }
 
     .hero{
-        padding-top:105px;
-    }
-
-    .hero-inner{
-        padding:0 18px;
+        padding-top:120px;
     }
 
     .hero h1{
-        font-size:45px;
+        font-size:48px;
         letter-spacing:-2px;
     }
 
-    .holo-grid{
-        grid-template-columns:1fr;
+    .hero h2{
+        font-size:18px;
     }
 
-    .skills{
-        grid-template-columns:1fr;
+    .section-title h2{
+        font-size:31px;
     }
 
     .stats{
         grid-template-columns:1fr 1fr;
     }
 
-    .job{
+    .skills,
+    .services,
+    .education{
+        grid-template-columns:1fr;
+    }
+
+    .photo-card{
+        width:245px;
+        height:310px;
+    }
+
+    .experience{
         padding-left:48px;
     }
 
-    .section-title{
-        margin-bottom:45px;
-    }
-}
-
-@media(max-width:400px){
-
-    .hero h1{
-        font-size:39px;
+    .timeline::before{
+        left:13px;
     }
 
-    .stats{
-        gap:8px;
-    }
-
-    .stat{
-        padding:20px 7px;
+    .dot{
+        left:3px;
     }
 }
 </style>
@@ -1198,113 +672,441 @@ footer strong{
 
 <body>
 
-<!-- =====================================================
-     BACKGROUND
-     ===================================================== -->
+<div class="grid"></div>
+<div class="orb one"></div>
+<div class="orb two"></div>
+<div class="orb three"></div>
 
-<canvas id="space"></canvas>
-
-<div class="grid-floor"></div>
-<div class="noise"></div>
-
-
-<!-- =====================================================
-     NAVIGATION
-     ===================================================== -->
+<!-- ================= NAVIGATION ================= -->
 
 <nav>
+    <div class="nav-inner">
+        <div class="logo">ASHIR.HADI</div>
 
-<div class="nav-inner">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
-<div class="logo">
-ASHIR <span>HADI</span>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+<div class="container">
+
+<div class="hero-content">
+
+<div>
+
+<span class="badge">AVAILABLE FOR PROFESSIONAL OPPORTUNITIES</span>
+
+<h1>
+Muhammad<br>
+<span class="cyan">Ashir</span>
+<span class="purple">Hadi</span>
+</h1>
+
+<h2>
+Team Leader • Assistant Supervisor • BMS Operator
+</h2>
+
+<p>
+Professional with experience in team leadership, production and logistics,
+facility operations, BMS operations, computer operations and technical
+support. Experienced in coordinating teams, maintaining operations,
+supporting supervisors and ensuring smooth day-to-day facility and
+production activities.
+</p>
+
+<div class="buttons">
+<a class="btn btn-primary" href="#contact">Contact Me</a>
+
+<a class="btn btn-secondary"
+href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359"
+target="_blank">
+LinkedIn
+</a>
+
+<a class="btn btn-secondary"
+href="https://github.com/ashirhadi"
+target="_blank">
+GitHub
+</a>
+</div>
+
+</div>
+
+
+<div class="photo-wrap">
+
+<div class="photo-card">
+
+<img
+src="./IMG-20250803-WA0006.jpg"
+alt="Muhammad Ashir Hadi"
+onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/ashirhadi/portfolio/main/IMG-20250803-WA0006.jpg';"
+>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="stats">
+
+<div class="stat">
+<strong>4+</strong>
+<span>Years Office & Computer Experience</span>
+</div>
+
+<div class="stat">
+<strong>3+</strong>
+<span>Years Production & Logistics</span>
+</div>
+
+<div class="stat">
+<strong>2+</strong>
+<span>Years Facility Operations</span>
+</div>
+
+<div class="stat">
+<strong>1+</strong>
+<span>Year Team Leadership</span>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Professional <span>Profile</span></h2>
+<p>Operations • Leadership • Technical Support</p>
+</div>
+
+<div class="about-grid">
+
+<div class="card">
+
+<h3>About Me</h3>
+
+<p>
+I am a versatile operations professional with experience across
+team leadership, production and logistics, facility operations,
+computer operations and technical environments.
+</p>
+
+<br>
+
+<p>
+My background includes working with teams, coordinating daily
+operations, supporting supervisors, monitoring facility systems
+and maintaining efficient workplace processes.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Career Objective</h3>
+
+<p>
+To contribute my operational, technical and leadership experience
+to a professional organization where I can take greater responsibility,
+support business operations and continue developing as a Team Leader,
+Assistant Supervisor or Facility Operations professional.
+</p>
+
+<br>
+
+<p>
+I am particularly interested in roles involving operations,
+facility management, BMS operations, production, logistics and
+team coordination.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= EXPERIENCE ================= -->
+
+<section id="experience">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Professional <span>Experience</span></h2>
+<p>My career journey and responsibilities</p>
+</div>
+
+
+<div class="timeline">
+
+
+<div class="experience">
+
+<div class="dot"></div>
+
+<div class="card">
+
+<h3>Team Leader – Production & Logistics</h3>
+
+<div class="company">
+Vision Technology Pakistan
+</div>
+
+<div class="date">
+Approximately 3 Years
 </div>
 
 <ul>
-<li><a href="#about">ABOUT</a></li>
-<li><a href="#experience">EXPERIENCE</a></li>
-<li><a href="#skills">SKILLS</a></li>
-<li><a href="#cv">CV</a></li>
-<li><a href="#contact">CONTACT</a></li>
+<li>Led and coordinated production and logistics activities.</li>
+<li>Supported supervisors with daily operational requirements.</li>
+<li>Coordinated team members and assigned operational tasks.</li>
+<li>Monitored workflow and helped maintain productivity.</li>
+<li>Supported inventory, material movement and logistics coordination.</li>
+<li>Assisted in resolving operational issues and maintaining smooth workflow.</li>
 </ul>
 
 </div>
 
-</nav>
-
-
-<!-- =====================================================
-     HERO
-     ===================================================== -->
-
-<header class="hero">
-
-<div class="hero-inner">
-
-<div>
-
-<div class="status">
-<span class="status-dot"></span>
-OPEN TO PROFESSIONAL OPPORTUNITIES
 </div>
 
-<h1>
-Muhammad<br>
-Ashir Hadi
-</h1>
 
-<div class="hero-role">
-<strong>Assistant Supervisor – FMS</strong><br>
-BMS Operator • Team Leader • Facility Operations
+<div class="experience">
+
+<div class="dot"></div>
+
+<div class="card">
+
+<h3>Dewatering / Pump Operator</h3>
+
+<div class="company">
+Imdaad – UAE
 </div>
 
-<p class="hero-description">
+<div class="date">
+Approximately 2 Years
+</div>
 
-Facility Management • MEP Operations • BMS • Supply Chain
-• Production Coordination • Team Leadership • Operations
+<ul>
+<li>Operated and monitored dewatering and pumping systems.</li>
+<li>Performed routine operational checks and monitoring.</li>
+<li>Reported equipment and operational issues to responsible teams.</li>
+<li>Supported safe and continuous facility operations.</li>
+<li>Maintained awareness of equipment condition and operational requirements.</li>
+</ul>
 
+</div>
+
+</div>
+
+
+<div class="experience">
+
+<div class="dot"></div>
+
+<div class="card">
+
+<h3>BMS Operator / Facility Operations</h3>
+
+<div class="company">
+UAE Facilities Environment
+</div>
+
+<div class="date">
+Operational Experience
+</div>
+
+<ul>
+<li>Monitored building management systems and facility conditions.</li>
+<li>Observed alarms, equipment status and operational parameters.</li>
+<li>Supported facility teams with operational coordination.</li>
+<li>Reported abnormal conditions and equipment issues.</li>
+<li>Maintained communication with technical and operations teams.</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="experience">
+
+<div class="dot"></div>
+
+<div class="card">
+
+<h3>Computer Operator</h3>
+
+<div class="company">
+Pakistan – Office / Operations Environment
+</div>
+
+<div class="date">
+4+ Years Experience
+</div>
+
+<ul>
+<li>Handled computer-based office operations and documentation.</li>
+<li>Managed data entry and digital records.</li>
+<li>Supported administrative and operational activities.</li>
+<li>Worked with Microsoft Office and computer systems.</li>
+<li>Maintained organized records and routine office workflows.</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="experience">
+
+<div class="dot"></div>
+
+<div class="card">
+
+<h3>Assistant Supervisor</h3>
+
+<div class="company">
+Operations & Facility Support
+</div>
+
+<div class="date">
+Supervisory Support Experience
+</div>
+
+<ul>
+<li>Assisted supervisors with daily team coordination.</li>
+<li>Supported staff allocation and task coordination.</li>
+<li>Followed up on operational activities and requirements.</li>
+<li>Helped maintain workplace discipline and productivity.</li>
+<li>Communicated operational issues to management.</li>
+</ul>
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Core <span>Skills</span></h2>
+<p>Professional and technical capabilities</p>
+</div>
+
+
+<div class="skills">
+
+<div class="skill">
+<h3>Team Leadership</h3>
+<p>
+Team coordination, task allocation, workforce support,
+communication and daily operational supervision.
 </p>
+</div>
 
+<div class="skill">
+<h3>Facility Operations</h3>
+<p>
+Facility monitoring, operational coordination, maintenance
+support and issue reporting.
+</p>
+</div>
 
-<div class="hero-buttons">
+<div class="skill">
+<h3>BMS Operations</h3>
+<p>
+Building Management System monitoring, alarms, equipment
+status and operational reporting.
+</p>
+</div>
 
-<a class="btn btn-primary" href="#experience">
-EXPLORE EXPERIENCE →
-</a>
+<div class="skill">
+<h3>Production</h3>
+<p>
+Production coordination, workflow monitoring, productivity
+support and team operations.
+</p>
+</div>
 
-<a class="btn btn-whatsapp"
-href="https://wa.me/971558436330"
-target="_blank">
-WHATSAPP
-</a>
+<div class="skill">
+<h3>Logistics</h3>
+<p>
+Material movement, logistics coordination, operational planning
+and workflow support.
+</p>
+</div>
 
-<a class="btn btn-email"
-href="mailto:mashirhadi@gmail.com">
-EMAIL
-</a>
+<div class="skill">
+<h3>Computer Operations</h3>
+<p>
+Data entry, digital documentation, Microsoft Office,
+computer systems and administrative support.
+</p>
+</div>
 
-<a class="btn btn-glass"
-href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359"
-target="_blank">
-LINKEDIN
-</a>
+<div class="skill">
+<h3>MEP Support</h3>
+<p>
+Technical coordination, facility maintenance support and
+communication with maintenance teams.
+</p>
+</div>
 
+<div class="skill">
+<h3>Problem Solving</h3>
+<p>
+Operational issue identification, reporting, coordination
+and practical problem solving.
+</p>
+</div>
+
+<div class="skill">
+<h3>Communication</h3>
+<p>
+Team communication, supervisor support, reporting and
+cross-functional coordination.
+</p>
 </div>
 
 </div>
 
+</div>
+</section>
 
-<!-- 3D PROFILE -->
 
-<div class="profile-wrap">
+<!-- ================= PROFESSIONAL AREAS ================= -->
 
-<div class="profile-card" id="profileCard">
-
-<div class="profile-glow"></div>
-
-<div class="profile-frame">
-
-<div class="profile-inner">
-
-<img
-src="IMG-20250803-WA0006.jpg
+<section
