@@ -4,797 +4,536 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Muhammad Ashir Hadi | Professional Portfolio</title>
+<title>Muhammad Ashir Hadi | Team Leader & Facility Operations</title>
 
-<meta name="description" content="Muhammad Ashir Hadi - Team Leader, Assistant Supervisor, BMS Operator, Enterprise Systems, Supply Chain, Production, MEP and Facility Operations Professional.">
+<meta name="description" content="Muhammad Ashir Hadi — Team Leader, Assistant Supervisor, BMS Operator, Dewatering/Pump Operator and Facility Operations Professional in UAE.">
+<meta name="author" content="Muhammad Ashir Hadi">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- LinkedIn / Facebook Preview -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ashirhadi.github.io/portfolio/">
+<meta property="og:title" content="Muhammad Ashir Hadi | Team Leader & Facility Operations">
+<meta property="og:description" content="Team Leader | Assistant Supervisor | BMS & Facility Operations | MEP | Dewatering & Pump Operations">
+<meta property="og:image" content="https://ashirhadi.github.io/portfolio/IMG-20250803-WA0006.jpg">
+<meta property="og:image:alt" content="Muhammad Ashir Hadi">
+<meta property="og:site_name" content="Muhammad Ashir Hadi Portfolio">
 
-<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muhammad Ashir Hadi | Professional Portfolio">
+<meta name="twitter:description" content="Team Leader | Assistant Supervisor | BMS & Facility Operations">
+<meta name="twitter:image" content="https://ashirhadi.github.io/portfolio/IMG-20250803-WA0006.jpg">
+
+<meta name="theme-color" content="#050816">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    text-decoration:none;
-    border:none;
-    outline:none;
-    scroll-behavior:smooth;
-}
-
-:root{
-    --bg:#020611;
-    --bg2:#071222;
-    --card:rgba(255,255,255,.045);
-    --text:#f4fcff;
-    --muted:#91a5b5;
-    --cyan:#00f7ff;
-    --blue:#168cff;
-    --purple:#9d5cff;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html{
-    font-size:62.5%;
-    overflow-x:hidden;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:"Poppins",sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    overflow-x:hidden;
+font-family:Arial,Helvetica,sans-serif;
+background:#050816;
+color:#fff;
+line-height:1.6;
+overflow-x:hidden;
 }
 
-/* ================= BACKGROUND ================= */
-
 body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    z-index:-20;
-    background:
-        radial-gradient(circle at 15% 15%,rgba(0,247,255,.14),transparent 25%),
-        radial-gradient(circle at 85% 25%,rgba(157,92,255,.16),transparent 28%),
-        radial-gradient(circle at 50% 90%,rgba(22,140,255,.12),transparent 30%),
-        #020611;
+content:"";
+position:fixed;
+inset:0;
+z-index:-3;
+
+background:
+radial-gradient(circle at 15% 20%,rgba(0,255,255,.14),transparent 30%),
+radial-gradient(circle at 85% 25%,rgba(100,0,255,.14),transparent 30%),
+radial-gradient(circle at 50% 85%,rgba(0,150,255,.12),transparent 35%);
+
+animation:bgMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes bgMove{
+from{transform:scale(1)}
+to{transform:scale(1.15)}
 }
 
 body::after{
-    content:"";
-    position:fixed;
-    inset:0;
-    z-index:-19;
-    background-image:
-        linear-gradient(rgba(0,247,255,.09) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(0,247,255,.09) 1px,transparent 1px);
-    background-size:55px 55px;
-    opacity:.3;
-    transform:perspective(600px) rotateX(60deg) scale(2);
-    transform-origin:center bottom;
-    animation:gridMove 12s linear infinite;
+content:"";
+position:fixed;
+inset:0;
+z-index:-2;
+
+background-image:
+linear-gradient(rgba(0,255,255,.035) 1px,transparent 1px),
+linear-gradient(90deg,rgba(0,255,255,.035) 1px,transparent 1px);
+
+background-size:45px 45px;
 }
 
-@keyframes gridMove{
-    from{
-        transform:perspective(600px) rotateX(60deg) scale(2) translateY(0);
-    }
-    to{
-        transform:perspective(600px) rotateX(60deg) scale(2) translateY(55px);
-    }
+a{
+text-decoration:none;
+color:inherit;
 }
 
-.orb{
-    position:fixed;
-    border-radius:50%;
-    pointer-events:none;
-    filter:blur(5px);
-    opacity:.22;
-    z-index:-10;
-    animation:orbFloat 9s ease-in-out infinite;
+/* NAVBAR */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+
+background:rgba(3,6,20,.78);
+backdrop-filter:blur(16px);
+
+border-bottom:1px solid rgba(0,255,255,.15);
 }
 
-.orb1{
-    width:180px;
-    height:180px;
-    background:var(--cyan);
-    left:-70px;
-    top:15%;
-}
+nav{
+max-width:1200px;
+margin:auto;
+padding:18px 25px;
 
-.orb2{
-    width:230px;
-    height:230px;
-    background:var(--purple);
-    right:-90px;
-    top:45%;
-    animation-delay:2s;
-}
-
-.orb3{
-    width:140px;
-    height:140px;
-    background:var(--blue);
-    left:45%;
-    bottom:-50px;
-    animation-delay:4s;
-}
-
-@keyframes orbFloat{
-    0%,100%{
-        transform:translate(0,0);
-    }
-    50%{
-        transform:translate(40px,-45px);
-    }
-}
-
-/* ================= GENERAL ================= */
-
-section{
-    min-height:100vh;
-    padding:10rem 9% 6rem;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
-}
-
-span{
-    color:var(--cyan);
-}
-
-.heading{
-    text-align:center;
-    font-size:4.5rem;
-    margin-bottom:5rem;
-}
-
-.glass{
-    background:var(--card);
-    border:1px solid rgba(0,247,255,.13);
-    border-radius:2rem;
-    backdrop-filter:blur(18px);
-    box-shadow:
-        inset 0 1px rgba(255,255,255,.05),
-        0 20px 60px rgba(0,0,0,.15);
-}
-
-/* ================= HEADER ================= */
-
-.header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    padding:2rem 9%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:1000;
-    background:rgba(2,6,17,.72);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(0,247,255,.12);
+display:flex;
+align-items:center;
+justify-content:space-between;
 }
 
 .logo{
-    font-size:2.3rem;
-    font-weight:800;
-    letter-spacing:.15rem;
-    color:var(--cyan);
-    text-shadow:0 0 18px rgba(0,247,255,.7);
+font-size:20px;
+font-weight:800;
+color:#00ffff;
+
+text-shadow:
+0 0 10px rgba(0,255,255,.8),
+0 0 25px rgba(0,255,255,.3);
 }
 
-.navbar a{
-    font-size:1.5rem;
-    color:var(--text);
-    margin-left:3rem;
-    transition:.3s;
+.nav-links{
+display:flex;
+gap:25px;
+list-style:none;
 }
 
-.navbar a:hover,
-.navbar a.active{
-    color:var(--cyan);
-    text-shadow:0 0 12px var(--cyan);
+.nav-links a{
+font-size:14px;
+color:#d9ffff;
+transition:.3s;
 }
 
-#menu-icon{
-    display:none;
-    font-size:3.5rem;
-    color:var(--cyan);
-    cursor:pointer;
+.nav-links a:hover{
+color:#00ffff;
+text-shadow:0 0 10px #00ffff;
 }
 
-/* ================= HOME ================= */
+/* HERO */
 
-.home{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8rem;
-    padding-top:12rem;
+.hero{
+min-height:100vh;
+max-width:1200px;
+margin:auto;
+
+padding:140px 25px 80px;
+
+display:grid;
+grid-template-columns:1.2fr .8fr;
+align-items:center;
+gap:50px;
 }
 
-.home-content{
-    flex:1;
+.badge{
+display:inline-block;
+
+padding:7px 15px;
+
+border:1px solid rgba(0,255,255,.4);
+border-radius:30px;
+
+background:rgba(0,255,255,.05);
+color:#00ffff;
+
+font-size:12px;
+letter-spacing:1px;
+
+margin-bottom:20px;
 }
 
-.status{
-    display:inline-block;
-    padding:.8rem 1.5rem;
-    border:1px solid rgba(0,247,255,.35);
-    border-radius:50px;
-    color:var(--cyan);
-    background:rgba(0,247,255,.05);
-    font-size:1.25rem;
-    margin-bottom:2rem;
+h1{
+font-size:clamp(42px,7vw,75px);
+line-height:1.05;
+margin-bottom:20px;
 }
 
-.home-content h3{
-    font-size:2.6rem;
-    font-weight:600;
+h1 span{
+color:#00ffff;
+
+text-shadow:
+0 0 10px rgba(0,255,255,.8),
+0 0 35px rgba(0,255,255,.25);
 }
 
-.home-content h1{
-    font-size:clamp(4.8rem,8vw,8rem);
-    line-height:1;
-    margin:1.2rem 0 2rem;
-    letter-spacing:-.4rem;
+.headline{
+font-size:clamp(20px,3vw,30px);
+color:#b9ffff;
+margin-bottom:20px;
 }
 
-.home-content h1 .purple{
-    color:var(--purple);
-    text-shadow:0 0 25px rgba(157,92,255,.6);
+.hero-text{
+max-width:650px;
+color:#a7b6c9;
+font-size:16px;
+margin-bottom:30px;
 }
 
-.home-content p{
-    color:var(--muted);
-    font-size:1.65rem;
-    line-height:1.8;
-    max-width:700px;
-}
+/* BUTTONS */
 
 .buttons{
-    margin-top:2.5rem;
+display:flex;
+flex-wrap:wrap;
+gap:12px;
 }
 
 .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:1.25rem 2.4rem;
-    margin:.5rem;
-    border-radius:50px;
-    color:#001014;
-    background:var(--cyan);
-    font-size:1.4rem;
-    font-weight:700;
-    box-shadow:0 0 25px rgba(0,247,255,.35);
-    transition:.3s;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:12px 20px;
+
+border-radius:10px;
+
+font-size:14px;
+font-weight:700;
+
+border:1px solid rgba(0,255,255,.4);
+background:rgba(0,255,255,.06);
+
+color:#fff;
+
+transition:.3s;
 }
 
 .btn:hover{
-    transform:translateY(-5px);
-    box-shadow:0 0 40px rgba(0,247,255,.7);
+transform:translateY(-4px);
+background:rgba(0,255,255,.12);
+
+box-shadow:
+0 0 20px rgba(0,255,255,.25);
 }
 
-.btn-outline{
-    background:transparent;
-    color:var(--cyan);
-    border:1px solid var(--cyan);
+.btn-primary{
+background:#00ffff;
+color:#001014;
+
+box-shadow:
+0 0 20px rgba(0,255,255,.3);
 }
 
-/* ================= PHOTO ================= */
-
-.home-img{
-    width:35rem;
-    height:44rem;
-    padding:.8rem;
-    position:relative;
-    border-radius:3rem;
-    background:linear-gradient(
-        135deg,
-        var(--cyan),
-        var(--purple),
-        var(--blue),
-        var(--cyan)
-    );
-    box-shadow:
-        0 0 35px rgba(0,247,255,.4),
-        0 0 100px rgba(157,92,255,.2);
-    animation:photoFloat 5s ease-in-out infinite;
+.btn-primary:hover{
+background:#fff;
+color:#001014;
 }
 
-.home-img::before{
-    content:"";
-    position:absolute;
-    inset:-15px;
-    border-radius:4rem;
-    background:linear-gradient(
-        45deg,
-        var(--cyan),
-        transparent,
-        var(--purple),
-        transparent,
-        var(--cyan)
-    );
-    filter:blur(20px);
-    opacity:.3;
-    z-index:-1;
+/* PROFILE */
+
+.profile-card{
+padding:25px;
+
+border-radius:25px;
+
+background:
+linear-gradient(
+145deg,
+rgba(0,255,255,.10),
+rgba(100,0,255,.08)
+);
+
+border:1px solid rgba(0,255,255,.25);
+
+backdrop-filter:blur(20px);
+
+box-shadow:
+0 0 50px rgba(0,255,255,.08);
+
+animation:floatCard 5s ease-in-out infinite;
 }
 
-.home-img img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:center top;
-    border-radius:2.4rem;
-    display:block;
-    background:#07111f;
+@keyframes floatCard{
+
+0%,100%{
+transform:translateY(0) rotateY(0);
 }
 
-@keyframes photoFloat{
-    0%,100%{
-        transform:translateY(0) rotateY(-4deg);
-    }
-    50%{
-        transform:translateY(-15px) rotateY(4deg);
-    }
+50%{
+transform:translateY(-12px) rotateY(3deg);
 }
 
-/* ================= SOCIAL ================= */
-
-.social-media{
-    margin-top:2.5rem;
 }
 
-.social-media a{
-    display:inline-flex;
-    justify-content:center;
-    align-items:center;
-    width:4.7rem;
-    height:4.7rem;
-    border-radius:50%;
-    color:var(--cyan);
-    border:1px solid rgba(0,247,255,.4);
-    font-size:2.2rem;
-    margin-right:1rem;
-    transition:.3s;
+.profile-img{
+width:100%;
+aspect-ratio:1/1;
+
+object-fit:cover;
+
+border-radius:20px;
+
+border:2px solid rgba(0,255,255,.45);
+
+box-shadow:
+0 0 30px rgba(0,255,255,.25);
 }
 
-.social-media a:hover{
-    color:#001014;
-    background:var(--cyan);
-    box-shadow:0 0 25px var(--cyan);
-    transform:translateY(-5px);
+.profile-name{
+text-align:center;
+font-size:23px;
+font-weight:800;
+margin-top:18px;
 }
 
-/* ================= PROFESSIONAL METRICS ================= */
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:1.5rem;
-    margin-top:5rem;
+.profile-role{
+text-align:center;
+color:#00ffff;
+font-size:14px;
+margin-top:5px;
 }
 
-.stat{
-    min-height:150px;
-    padding:2.2rem 1.5rem;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    text-align:center;
-    border-radius:1.8rem;
-    background:rgba(255,255,255,.035);
-    border:1px solid rgba(0,247,255,.13);
-    transition:.35s;
+/* SECTIONS */
+
+section{
+max-width:1200px;
+margin:auto;
+padding:90px 25px;
 }
 
-.stat:hover{
-    transform:translateY(-7px);
-    border-color:var(--cyan);
-    box-shadow:0 15px 40px rgba(0,247,255,.1);
+.section-title{
+text-align:center;
+font-size:38px;
+margin-bottom:50px;
 }
 
-.stat h3{
-    font-size:3rem;
-    color:var(--cyan);
-    text-shadow:0 0 15px rgba(0,247,255,.5);
+.section-title span{
+color:#00ffff;
+
+text-shadow:
+0 0 15px rgba(0,255,255,.4);
 }
 
-.stat p{
-    color:var(--muted);
-    font-size:1.25rem;
-    line-height:1.5;
-    margin-top:.7rem;
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
 
-/* ================= ABOUT ================= */
+.card{
+padding:25px;
 
-.about{
-    background:rgba(7,18,34,.35);
+border-radius:18px;
+
+background:rgba(255,255,255,.035);
+
+border:1px solid rgba(0,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+transition:.3s;
 }
 
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:2rem;
+.card:hover{
+transform:translateY(-8px);
+
+border-color:rgba(0,255,255,.5);
+
+box-shadow:
+0 15px 40px rgba(0,255,255,.08);
 }
 
-.about-card{
-    padding:3rem;
+.card h3{
+color:#00ffff;
+margin-bottom:10px;
+font-size:20px;
 }
 
-.about-card h3{
-    font-size:2.4rem;
-    color:var(--cyan);
-    margin-bottom:1.5rem;
+.card p{
+color:#a7b6c9;
+font-size:14px;
 }
 
-.about-card p{
-    color:var(--muted);
-    font-size:1.5rem;
-    line-height:1.8;
+/* EXPERIENCE */
+
+.experience{
+display:grid;
+gap:18px;
 }
 
-/* ================= EXPERIENCE ================= */
+.experience-item{
+padding:25px;
 
-.timeline{
-    max-width:950px;
-    margin:auto;
-    position:relative;
+border-left:3px solid #00ffff;
+
+background:rgba(255,255,255,.035);
+
+border-radius:0 15px 15px 0;
+
+transition:.3s;
 }
 
-.timeline::before{
-    content:"";
-    position:absolute;
-    left:2rem;
-    top:0;
-    bottom:0;
-    width:2px;
-    background:linear-gradient(
-        var(--cyan),
-        var(--purple),
-        var(--cyan)
-    );
-    box-shadow:0 0 15px var(--cyan);
+.experience-item:hover{
+transform:translateX(8px);
+background:rgba(0,255,255,.05);
 }
 
-.timeline-item{
-    position:relative;
-    padding-left:7rem;
-    margin-bottom:3rem;
-}
-
-.timeline-dot{
-    position:absolute;
-    left:.9rem;
-    top:2.5rem;
-    width:2.3rem;
-    height:2.3rem;
-    border-radius:50%;
-    background:var(--cyan);
-    box-shadow:0 0 20px var(--cyan);
-}
-
-.timeline-content{
-    padding:3rem;
-}
-
-.timeline-content h3{
-    font-size:2.3rem;
+.experience-item h3{
+margin-bottom:5px;
 }
 
 .company{
-    color:var(--cyan);
-    font-size:1.5rem;
-    font-weight:600;
-    margin:.7rem 0;
+color:#00ffff;
+font-size:14px;
+margin-bottom:8px;
 }
 
-.date{
-    color:var(--purple);
-    font-size:1.3rem;
-    margin-bottom:1.5rem;
+.experience-item p{
+color:#a7b6c9;
+font-size:14px;
 }
 
-.timeline-content ul{
-    padding-left:2rem;
-}
-
-.timeline-content li{
-    color:var(--muted);
-    font-size:1.45rem;
-    line-height:1.8;
-}
-
-/* ================= SKILLS ================= */
+/* SKILLS */
 
 .skills{
-    background:rgba(7,18,34,.35);
-}
-
-.skills-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:2rem;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
 }
 
 .skill{
-    padding:2.5rem;
-    transition:.35s;
+padding:10px 17px;
+
+border-radius:30px;
+
+border:1px solid rgba(0,255,255,.25);
+
+background:rgba(0,255,255,.04);
+
+color:#cfffff;
+
+font-size:13px;
+
+transition:.3s;
 }
 
 .skill:hover{
-    transform:translateY(-8px);
-    border-color:var(--cyan);
-    box-shadow:0 20px 50px rgba(0,247,255,.08);
+background:rgba(0,255,255,.12);
+transform:translateY(-3px);
+box-shadow:0 0 15px rgba(0,255,255,.15);
 }
 
-.skill i{
-    font-size:4rem;
-    color:var(--cyan);
-}
-
-.skill h3{
-    font-size:2rem;
-    margin:1rem 0;
-}
-
-.skill p{
-    color:var(--muted);
-    font-size:1.4rem;
-    line-height:1.7;
-}
-
-/* ================= EDUCATION ================= */
-
-.education-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:2rem;
-}
-
-.education-card{
-    padding:3rem;
-}
-
-.education-card i{
-    color:var(--cyan);
-    font-size:4rem;
-}
-
-.education-card h3{
-    font-size:2rem;
-    margin:1.5rem 0;
-}
-
-.education-card p{
-    color:var(--muted);
-    font-size:1.4rem;
-    line-height:1.7;
-}
-
-/* ================= CONTACT ================= */
-
-.contact{
-    background:rgba(7,18,34,.35);
-}
+/* CONTACT */
 
 .contact-box{
-    max-width:900px;
-    margin:auto;
-    padding:5rem 3rem;
-    text-align:center;
-}
+text-align:center;
 
-.contact-box h3{
-    font-size:3rem;
-    margin-bottom:1.5rem;
+padding:50px 25px;
+
+border-radius:25px;
+
+border:1px solid rgba(0,255,255,.2);
+
+background:rgba(0,255,255,.035);
 }
 
 .contact-box p{
-    color:var(--muted);
-    font-size:1.5rem;
-    line-height:1.8;
+color:#a7b6c9;
+margin-bottom:25px;
 }
 
-.contact-links{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:1rem;
-    margin-top:3rem;
-}
-
-.contact-link{
-    display:inline-flex;
-    align-items:center;
-    gap:.7rem;
-    padding:1.3rem 1.7rem;
-    border-radius:1.2rem;
-    color:white;
-    background:rgba(255,255,255,.04);
-    border:1px solid rgba(0,247,255,.15);
-    font-size:1.35rem;
-    transition:.3s;
-}
-
-.contact-link:hover{
-    color:var(--cyan);
-    border-color:var(--cyan);
-    box-shadow:0 0 20px rgba(0,247,255,.15);
-}
-
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer{
-    padding:3rem 9%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:#01040a;
-    border-top:1px solid rgba(0,247,255,.1);
+text-align:center;
+
+padding:35px 20px;
+
+color:#718096;
+
+border-top:1px solid rgba(0,255,255,.1);
+
+font-size:13px;
 }
 
-footer p{
-    color:var(--muted);
-    font-size:1.3rem;
+/* MOBILE */
+
+@media(max-width:850px){
+
+.nav-links{
+display:none;
 }
 
-footer strong{
-    color:var(--cyan);
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+padding-top:130px;
 }
 
-.top{
-    width:4rem;
-    height:4rem;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:var(--cyan);
-    color:#001014;
-    border-radius:1rem;
-    font-size:2rem;
+.hero-text{
+margin-left:auto;
+margin-right:auto;
 }
 
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:1100px){
-
-    .header{
-        padding:2rem 5%;
-    }
-
-    section{
-        padding:10rem 5% 6rem;
-    }
-
-    .home{
-        gap:4rem;
-    }
-
-    .home-img{
-        width:30rem;
-        height:39rem;
-    }
+.buttons{
+justify-content:center;
 }
 
-@media(max-width:900px){
-
-    #menu-icon{
-        display:block;
-    }
-
-    .navbar{
-        position:absolute;
-        top:100%;
-        left:0;
-        width:100%;
-        padding:1rem 5%;
-        background:rgba(2,6,17,.97);
-        display:none;
-        border-bottom:1px solid rgba(0,247,255,.15);
-    }
-
-    .navbar.active{
-        display:block;
-    }
-
-    .navbar a{
-        display:block;
-        margin:2rem 0;
-        font-size:1.7rem;
-    }
-
-    .home{
-        flex-direction:column-reverse;
-        text-align:center;
-        padding-top:12rem;
-    }
-
-    .home-content p{
-        margin:auto;
-    }
-
-    .home-img{
-        width:28rem;
-        height:36rem;
-    }
-
-    .social-media{
-        display:flex;
-        justify-content:center;
-    }
-
-    .stats{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .about-grid{
-        grid-template-columns:1fr;
-    }
-
-    .skills-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .education-grid{
-        grid-template-columns:1fr 1fr;
-    }
+.profile-card{
+max-width:400px;
+margin:auto;
 }
 
-@media(max-width:600px){
+.cards{
+grid-template-columns:1fr;
+}
 
-    html{
-        font-size:55%;
-    }
+.section-title{
+font-size:30px;
+}
 
-    .home-content h1{
-        font-size:5rem;
-        letter-spacing:-.25rem;
-    }
+}
 
-    .home-img{
-        width:24rem;
-        height:31rem;
-    }
+@media(max-width:500px){
 
-    .stats{
-        grid-template-columns:1fr 1fr;
-    }
+h1{
+font-size:42px;
+}
 
-    .stat{
-        min-height:145px;
-    }
+.headline{
+font-size:20px;
+}
 
-    .skills-grid,
-    .education-grid{
-        grid-template-columns:1fr;
-    }
+section{
+padding:70px 18px;
+}
 
-    .timeline-item{
-        padding-left:5rem;
-    }
+.hero{
+padding-left:18px;
+padding-right:18px;
+}
 
-    .timeline::before{
-        left:1.2rem;
-    }
+.btn{
+width:100%;
+}
 
-    .timeline-dot{
-        left:0;
-    }
-
-    footer{
-        flex-direction:column;
-        gap:2rem;
-        text-align:center;
-    }
 }
 
 </style>
@@ -802,96 +541,103 @@ footer strong{
 
 <body>
 
-<div class="orb orb1"></div>
-<div class="orb orb2"></div>
-<div class="orb orb3"></div>
+<!-- NAVIGATION -->
 
+<header>
 
-<!-- ================= HEADER ================= -->
-
-<header class="header">
+<nav>
 
 <a href="#home" class="logo">
-ASHIR<span>.HADI</span>
+ASHIR HADI
 </a>
 
-<i class='bx bx-menu' id="menu-icon"></i>
+<ul class="nav-links">
 
-<nav class="navbar">
+<li>
+<a href="#home">Home</a>
+</li>
 
-<a href="#home" class="active">Home</a>
+<li>
 <a href="#about">About</a>
+</li>
+
+<li>
 <a href="#experience">Experience</a>
+</li>
+
+<li>
 <a href="#skills">Skills</a>
-<a href="#education">Education</a>
+</li>
+
+<li>
 <a href="#contact">Contact</a>
+</li>
+
+</ul>
 
 </nav>
 
 </header>
 
 
-<!-- ================= HOME ================= -->
+<!-- HERO -->
 
-<section class="home" id="home">
+<main>
 
-<div class="home-content">
+<section class="hero" id="home">
 
-<div class="status">
-AVAILABLE FOR PROFESSIONAL OPPORTUNITIES
+<div>
+
+<div class="badge">
+UAE • FACILITY OPERATIONS • LEADERSHIP
 </div>
-
-<h3>Hello, I'm</h3>
 
 <h1>
 Muhammad
-<br>
-<span>Ashir</span>
-<span class="purple"> Hadi</span>
+<span>Ashir Hadi</span>
 </h1>
 
-<h3>
-I'm a <span class="multiple-text">Team Leader</span>
-</h3>
-
-<p>
-Professional with experience in enterprise systems,
-supply chain and production coordination, MEP and
-facility maintenance oversight, team leadership,
-BMS operations and computer operations.
-</p>
-
-<div class="social-media">
-
-<a href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359"
-target="_blank">
-<i class='bx bxl-linkedin'></i>
-</a>
-
-<a href="https://github.com/ashirhadi"
-target="_blank">
-<i class='bx bxl-github'></i>
-</a>
-
-<a href="https://wa.me/971558436330"
-target="_blank">
-<i class='bx bxl-whatsapp'></i>
-</a>
-
-<a href="mailto:mashirhadi@gmail.com">
-<i class='bx bx-envelope'></i>
-</a>
-
+<div class="headline">
+Team Leader | BMS & Facility Operations
 </div>
+
+<p class="hero-text">
+
+Operations-focused professional with experience in
+team leadership, facility operations, BMS monitoring,
+MEP coordination, production and logistics, and
+dewatering/pump operations.
+
+</p>
 
 <div class="buttons">
 
-<a href="#contact" class="btn">
-Contact Me
+<a
+class="btn btn-primary"
+href="resume.pdf"
+target="_blank">
+📄 View CV
 </a>
 
-<a href="#experience" class="btn btn-outline">
-View Experience
+<a
+class="btn"
+href="https://wa.me/971558436330"
+target="_blank">
+💬 WhatsApp
+</a>
+
+<a
+class="btn"
+href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359/"
+target="_blank">
+LinkedIn
+</a>
+
+<a
+class="btn"
+href="https://github.com/ashirhadi"
+target="_blank">
+GitHub
 </a>
 
 </div>
@@ -899,132 +645,112 @@ View Experience
 </div>
 
 
-<div class="home-img">
+<!-- PROFILE PHOTO -->
+
+<div class="profile-card">
 
 <img
-src="./IMG-20250803-WA0006.jpg"
-alt="Muhammad Ashir Hadi"
-onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/ashirhadi/portfolio/main/IMG-20250803-WA0006.jpg';"
->
+class="profile-img"
+src="IMG-20250803-WA0006.jpg"
+alt="Muhammad Ashir Hadi">
+
+<div class="profile-name">
+Muhammad Ashir Hadi
+</div>
+
+<div class="profile-role">
+Team Leader • Assistant Supervisor
+</div>
 
 </div>
 
 </section>
 
 
-<!-- ================= PROFESSIONAL METRICS ================= -->
+<!-- ABOUT -->
 
-<div class="container">
+<section id="about">
 
-<div class="stats">
-
-<div class="stat">
-
-<h3>2+</h3>
-
-<p>
-Years Enterprise Systems &amp;
-Operations Management
-</p>
-
-</div>
-
-
-<div class="stat">
-
-<h3>3+</h3>
-
-<p>
-Years Supply Chain &amp;
-Production Coordination
-</p>
-
-</div>
-
-
-<div class="stat">
-
-<h3>2+</h3>
-
-<p>
-Years MEP &amp; Facility
-Maintenance Oversight
-</p>
-
-</div>
-
-
-<div class="stat">
-
-<h3>1</h3>
-
-<p>
-Assistant Supervisor
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section class="about" id="about">
-
-<div class="container">
-
-<h2 class="heading">
-About <span>Me</span>
+<h2 class="section-title">
+Professional <span>Profile</span>
 </h2>
 
-<div class="about-grid">
+<div class="cards">
 
-<div class="about-card glass">
+<div class="card">
 
-<h3>Professional Profile</h3>
-
-<p>
-I am an operations professional with experience in
-enterprise systems, supply chain, production coordination,
-MEP and facility maintenance oversight, BMS operations,
-team leadership and computer operations.
-</p>
-
-<br>
+<h3>Team Leadership</h3>
 
 <p>
-My background includes coordinating teams, supporting
-supervisors, monitoring operational activities, assisting
-with facility requirements and maintaining efficient
-workplace processes.
+Team coordination, task allocation,
+workforce support and daily operational
+supervision.
 </p>
 
 </div>
 
 
-<div class="about-card glass">
+<div class="card">
 
-<h3>Career Objective</h3>
-
-<p>
-To contribute my operational, technical and leadership
-experience to a professional organization where I can
-take greater responsibility and continue developing as
-a Team Leader, Assistant Supervisor or Facility
-Operations professional.
-</p>
-
-<br>
+<h3>Facility Operations</h3>
 
 <p>
-Interested in opportunities involving operations,
-facility management, BMS operations, production,
-supply chain, logistics and team coordination.
+Facility operations, MEP coordination,
+maintenance support and operational
+monitoring.
 </p>
 
 </div>
+
+
+<div class="card">
+
+<h3>BMS Operations</h3>
+
+<p>
+Building Management System monitoring,
+alarms, equipment status and operational
+coordination.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Dewatering Operations</h3>
+
+<p>
+Dewatering and pump operation,
+equipment monitoring and operational
+support.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Production & Logistics</h3>
+
+<p>
+Production coordination, logistics
+activities, workflow support and
+team coordination.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Enterprise Operations</h3>
+
+<p>
+Computer operations, enterprise systems,
+reporting, documentation and
+administrative coordination.
+</p>
 
 </div>
 
@@ -1033,201 +759,250 @@ supply chain, logistics and team coordination.
 </section>
 
 
-<!-- ================= EXPERIENCE ================= -->
+<!-- EXPERIENCE -->
 
 <section id="experience">
 
-<div class="container">
-
-<h2 class="heading">
-Professional <span>Experience</span>
+<h2 class="section-title">
+Career <span>Experience</span>
 </h2>
 
-<div class="timeline">
+<div class="experience">
 
 
-<div class="timeline-item">
+<div class="experience-item">
 
-<div class="timeline-dot"></div>
-
-<div class="timeline-content glass">
-
-<h3>Team Leader – Production &amp; Logistics</h3>
+<h3>
+Dewatering / Pump Operator
+</h3>
 
 <div class="company">
-Vision Technology Pakistan
+Imdaad • UAE
 </div>
 
-<div class="date">
-Approximately 3 Years
-</div>
-
-<ul>
-
-<li>
-Led and coordinated production and logistics activities.
-</li>
-
-<li>
-Supported supervisors with daily operational requirements.
-</li>
-
-<li>
-Coordinated team members and assigned operational tasks.
-</li>
-
-<li>
-Monitored workflow and supported productivity.
-</li>
-
-<li>
-Supported material movement and logistics coordination.
-</li>
-
-<li>
-Helped resolve operational issues and maintain smooth workflow.
-</li>
-
-</ul>
-
-</div>
+<p>
+Pump and dewatering operations,
+equipment monitoring, site coordination
+and operational support.
+</p>
 
 </div>
 
 
-<div class="timeline-item">
+<div class="experience-item">
 
-<div class="timeline-dot"></div>
-
-<div class="timeline-content glass">
-
-<h3>Assistant Supervisor</h3>
+<h3>
+BMS Operator
+</h3>
 
 <div class="company">
-Operations &amp; Facility Support
+Facility Operations • UAE
 </div>
 
-<div class="date">
-1 Year
-</div>
-
-<ul>
-
-<li>
-Assisted supervisors with daily team coordination.
-</li>
-
-<li>
-Supported staff allocation and task coordination.
-</li>
-
-<li>
-Followed up on operational activities and requirements.
-</li>
-
-<li>
-Helped maintain workplace discipline and productivity.
-</li>
-
-<li>
-Communicated operational issues to management.
-</li>
-
-</ul>
-
-</div>
+<p>
+BMS monitoring, equipment status,
+alarms, operational coordination and
+facility support.
+</p>
 
 </div>
 
 
-<div class="timeline-item">
+<div class="experience-item">
 
-<div class="timeline-dot"></div>
-
-<div class="timeline-content glass">
-
-<h3>Dewatering / Pump Operator</h3>
+<h3>
+Assistant Supervisor
+</h3>
 
 <div class="company">
-Imdaad – UAE
+Operations & Facility Support
 </div>
 
-<div class="date">
-Approximately 2 Years
-</div>
-
-<ul>
-
-<li>
-Operated and monitored dewatering and pumping systems.
-</li>
-
-<li>
-Performed routine operational checks and monitoring.
-</li>
-
-<li>
-Reported equipment and operational issues.
-</li>
-
-<li>
-Supported safe and continuous facility operations.
-</li>
-
-<li>
-Maintained awareness of equipment condition.
-</li>
-
-</ul>
-
-</div>
+<p>
+Team coordination, daily task support,
+workforce supervision and operational
+reporting.
+</p>
 
 </div>
 
 
-<div class="timeline-item">
+<div class="experience-item">
 
-<div class="timeline-dot"></div>
-
-<div class="timeline-content glass">
-
-<h3>BMS Operator</h3>
+<h3>
+Team Leader
+</h3>
 
 <div class="company">
-Facility Operations – UAE
+Production & Logistics
 </div>
 
-<div class="date">
-Operational Experience
+<p>
+Led production and logistics activities,
+coordinated teams and supported
+supervisors with daily operations.
+</p>
+
 </div>
 
-<ul>
 
-<li>
-Monitored Building Management Systems.
-</li>
+<div class="experience-item">
 
-<li>
-Observed alarms and equipment status.
-</li>
+<h3>
+Computer / Data Operator
+</h3>
 
-<li>
-Supported facility teams with operational coordination.
-</li>
+<div class="company">
+Office & Enterprise Operations
+</div>
 
-<li>
-Reported abnormal conditions and equipment issues.
-</li>
-
-<li>
-Maintained communication with technical teams.
-</li>
-
-</ul>
+<p>
+Data processing, documentation,
+computer operations, reporting and
+office coordination.
+</p>
 
 </div>
 
 </div>
 
+</section>
 
-<div 
+
+<!-- PROFESSIONAL FOCUS -->
+
+<section>
+
+<h2 class="section-title">
+Professional <span>Focus</span>
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>01</h3>
+<p>Operational Leadership</p>
+</div>
+
+<div class="card">
+<h3>02</h3>
+<p>Facility & MEP Coordination</p>
+</div>
+
+<div class="card">
+<h3>03</h3>
+<p>BMS Monitoring</p>
+</div>
+
+<div class="card">
+<h3>04</h3>
+<p>Dewatering & Pump Operations</p>
+</div>
+
+<div class="card">
+<h3>05</h3>
+<p>Production & Logistics</p>
+</div>
+
+<div class="card">
+<h3>06</h3>
+<p>Team Coordination</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="section-title">
+Core <span>Skills</span>
+</h2>
+
+<div class="skills">
+
+<span class="skill">Team Leadership</span>
+<span class="skill">Assistant Supervision</span>
+<span class="skill">BMS Operation</span>
+<span class="skill">Facility Operations</span>
+<span class="skill">MEP Coordination</span>
+<span class="skill">Dewatering</span>
+<span class="skill">Pump Operation</span>
+<span class="skill">Production Coordination</span>
+<span class="skill">Supply Chain</span>
+<span class="skill">Logistics</span>
+<span class="skill">Computer Operations</span>
+<span class="skill">Data Management</span>
+<span class="skill">Reporting</span>
+<span class="skill">Documentation</span>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="contact-box">
+
+<h2 class="section-title">
+Let's <span>Connect</span>
+</h2>
+
+<p>
+Open to professional opportunities in
+facility operations, BMS, supervision,
+team leadership and operations management.
+</p>
+
+<div class="buttons">
+
+<a
+class="btn btn-primary"
+href="https://wa.me/971558436330"
+target="_blank">
+Contact on WhatsApp
+</a>
+
+<a
+class="btn"
+href="mailto:mashirhadi@gmail.com">
+Email Me
+</a>
+
+<a
+class="btn"
+href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359/"
+target="_blank">
+LinkedIn Profile
+</a>
+
+<a
+class="btn"
+href="resume.pdf"
+target="_blank">
+Download CV
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+© 2026 Muhammad Ashir Hadi • Professional Portfolio
+
+</footer>
+
+</body>
+</html>
