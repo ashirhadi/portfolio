@@ -1,389 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ashir Hadi — BMS Operator and Assistant Supervisor portfolio in Dubai, UAE.">
-  <meta name="author" content="Ashir Hadi">
-  <meta property="og:title" content="Ashir Hadi | BMS Operator & Assistant Supervisor">
-  <meta property="og:description" content="Professional portfolio of Ashir Hadi — BMS operations, facility operations, monitoring and team coordination.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="linkedin-preview.jpg">
-  <meta name="theme-color" content="#06111d">
-  <title>Ashir Hadi | BMS Operator & Assistant Supervisor</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ashir Hadi — BMS Operator & Assistant Supervisor portfolio in Dubai, UAE.">
+<meta name="author" content="Ashir Hadi">
+<meta name="theme-color" content="#030a13">
+<meta property="og:title" content="Ashir Hadi | BMS Operator & Assistant Supervisor">
+<meta property="og:description" content="BMS operations, facility operations, maintenance coordination and team support.">
+<meta property="og:image" content="linkedin-preview.jpg">
+<title>Ashir Hadi | BMS Operator & Assistant Supervisor</title>
 
-  <style>
-    :root{
-      --bg:#030b14;
-      --bg2:#061522;
-      --panel:rgba(8,25,40,.72);
-      --panel2:#0a2031;
-      --line:rgba(86,221,255,.16);
-      --cyan:#17d8e8;
-      --cyan2:#00a9ff;
-      --text:#f4f8fb;
-      --muted:#9db0bd;
-      --success:#54e0b5;
-      --shadow:0 20px 70px rgba(0,0,0,.35);
-      --radius:22px;
-      --max:1180px;
-    }
+<style>
+:root{
+  --bg:#020811;
+  --bg2:#061522;
+  --card:rgba(7,24,39,.76);
+  --card2:rgba(8,31,48,.7);
+  --cyan:#13e6ef;
+  --blue:#00a8ff;
+  --white:#f3fbff;
+  --muted:#91aab8;
+  --line:rgba(19,230,239,.18);
+  --glow:rgba(19,230,239,.24);
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  color:var(--white);
+  background:
+    radial-gradient(circle at 80% 10%,rgba(0,176,255,.14),transparent 28%),
+    radial-gradient(circle at 15% 35%,rgba(0,239,239,.07),transparent 26%),
+    linear-gradient(135deg,#01050a,#04131f 55%,#01070d);
+  line-height:1.6;overflow-x:hidden
+}
+a{text-decoration:none;color:inherit}
+button,input,textarea{font:inherit}
+.container{width:min(var(--max),calc(100% - 36px));margin:auto}
+section{padding:100px 0;border-bottom:1px solid rgba(255,255,255,.045)}
+.progress{position:fixed;top:0;left:0;width:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--cyan));z-index:9999;box-shadow:0 0 18px var(--cyan)}
+.grid-bg{
+ position:fixed;inset:0;pointer-events:none;z-index:-3;opacity:.3;
+ background-image:linear-gradient(rgba(19,230,239,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(19,230,239,.045) 1px,transparent 1px);
+ background-size:52px 52px;
+ mask-image:linear-gradient(to bottom,#000,transparent 82%)
+}
+.glow{position:fixed;border-radius:50%;filter:blur(80px);z-index:-2;pointer-events:none;opacity:.16}
+.glow.a{width:320px;height:320px;background:#00dff0;left:-150px;top:18%}
+.glow.b{width:300px;height:300px;background:#006cff;right:-150px;top:55%}
 
-    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-    html{scroll-padding-top:80px}
-    body{
-      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(circle at 80% 10%,rgba(0,190,255,.10),transparent 28%),
-        radial-gradient(circle at 15% 35%,rgba(0,220,220,.07),transparent 30%),
-        linear-gradient(135deg,#02070d,#061522 55%,#02070d);
-      overflow-x:hidden;
-      line-height:1.6;
-    }
+header{
+ position:fixed;top:0;left:0;width:100%;height:74px;z-index:1000;
+ background:rgba(2,8,14,.75);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)
+}
+nav{height:100%;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.08em}
+.logo{
+ width:38px;height:38px;display:grid;place-items:center;color:var(--cyan);font-size:22px;font-weight:900;
+ border:2px solid var(--cyan);clip-path:polygon(50% 0,100% 100%,76% 100%,50% 47%,24% 100%,0 100%)
+}
+.brand small{display:block;color:var(--cyan);font-size:8px;letter-spacing:.3em;margin-top:-3px}
+.nav{display:flex;align-items:center;gap:27px}
+.nav a{font-size:11px;font-weight:800;color:#d6e6ed;position:relative}
+.nav a:after{content:"";position:absolute;left:0;bottom:-9px;width:0;height:2px;background:var(--cyan);transition:.25s}
+.nav a:hover:after,.nav a.active:after{width:100%}
+.cv{
+ padding:10px 15px;border:1px solid var(--cyan);border-radius:11px;font-size:11px;font-weight:900;
+ color:#dffcff;background:rgba(0,214,230,.06);transition:.25s
+}
+.cv:hover{box-shadow:0 0 25px var(--glow);transform:translateY(-2px)}
+.menu{display:none;width:40px;height:40px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:white}
 
-    body.light{
-      --bg:#eef8fb;--bg2:#fff;--panel:rgba(255,255,255,.82);
-      --panel2:#fff;--line:rgba(0,130,160,.18);--text:#07131d;--muted:#526570;
-      background:linear-gradient(135deg,#eefaff,#fff);
-    }
+.hero{min-height:100vh;padding-top:140px;display:flex;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.badge{
+ display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(19,230,239,.5);color:var(--cyan);
+ border-radius:999px;padding:8px 13px;font-size:10px;font-weight:900;letter-spacing:.08em;background:rgba(0,200,220,.04)
+}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
+h1{font-size:clamp(52px,7vw,92px);line-height:.93;letter-spacing:-.055em;margin:22px 0}
+.gradient{background:linear-gradient(90deg,#fff,var(--cyan),#43bfff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cursor{color:var(--cyan);animation:blink 1s infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p{max-width:590px;color:var(--muted);font-size:15px}
+.actions{display:flex;gap:13px;margin:28px 0}
+.btn{
+ display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:11px;
+ border:1px solid var(--line);font-size:11px;font-weight:900;transition:.25s
+}
+.btn.primary{border:0;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#001017}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(0,190,240,.15)}
+.social{display:flex;gap:9px}
+.social a{width:41px;height:41px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:900;color:#d9f4fb}
+.social a:hover{border-color:var(--cyan);color:var(--cyan);box-shadow:0 0 18px var(--glow)}
 
-    a{text-decoration:none;color:inherit}
-    button{font:inherit}
-    img{max-width:100%;display:block}
+.visual{position:relative;min-height:510px;display:grid;place-items:center}
+.hex{
+ width:min(410px,82vw);height:450px;position:relative;display:grid;place-items:center;
+ filter:drop-shadow(0 0 25px rgba(0,220,240,.13))
+}
+.hex:before,.hex:after{
+ content:"";position:absolute;inset:0;border:1px solid var(--cyan);
+ clip-path:polygon(18% 0,82% 0,100% 50%,82% 100%,18% 100%,0 50%);
+}
+.hex:before{transform:scale(1.02);opacity:.7}
+.hex:after{transform:scale(.95);border-color:rgba(0,170,255,.4);opacity:.7}
+.photo{
+ width:330px;height:405px;overflow:hidden;border:1px solid rgba(19,230,239,.35);
+ background:linear-gradient(160deg,#0c3040,#06111b);clip-path:polygon(17% 0,83% 0,100% 50%,83% 100%,17% 100%,0 50%);
+ position:relative;z-index:2
+}
+.photo img{width:100%;height:100%;object-fit:cover}
+.fallback{display:none;position:absolute;inset:0;place-items:center;color:var(--cyan);font-size:75px;font-weight:900}
+.circuit{position:absolute;inset:-20px;z-index:1}
+.circuit span{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
+.c1{top:20%;left:2%}.c2{top:45%;right:0}.c3{bottom:20%;left:8%}.c4{top:10%;right:17%}
+.info{
+ position:absolute;right:-10px;bottom:22px;width:205px;padding:17px;border:1px solid var(--line);
+ border-radius:16px;background:rgba(3,16,26,.88);backdrop-filter:blur(16px);z-index:4
+}
+.row{display:flex;gap:10px;margin:9px 0}.ico{color:var(--cyan);font-weight:900;width:18px}
+.row b{display:block;color:var(--cyan);font-size:9px}.row span{display:block;color:var(--muted);font-size:10px;word-break:break-word}
 
-    .progress{
-      position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--cyan),var(--cyan2));
-      z-index:9999;box-shadow:0 0 18px var(--cyan)
-    }
+.eyebrow{color:var(--cyan);font-size:10px;letter-spacing:.18em;font-weight:900;margin-bottom:10px}
+.section-title{font-size:clamp(30px,4vw,48px);line-height:1.08;letter-spacing:-.03em}
+.section-sub{color:var(--muted);max-width:650px;margin-top:12px;font-size:14px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.about p{color:var(--muted);font-size:14px;margin:18px 0}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{
+ padding:25px;border:1px solid var(--line);border-radius:20px;
+ background:linear-gradient(145deg,rgba(9,33,50,.76),rgba(3,16,27,.68));
+ transition:.3s
+}
+.card:hover{transform:translateY(-5px);border-color:rgba(19,230,239,.45);box-shadow:0 15px 45px rgba(0,0,0,.2)}
+.stat strong{font-size:31px;color:var(--cyan);display:block}.stat span{font-size:12px;color:var(--muted)}
 
-    .bg-grid{
-      position:fixed;inset:0;pointer-events:none;opacity:.25;z-index:-2;
-      background-image:
-        linear-gradient(rgba(32,194,222,.045) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(32,194,222,.045) 1px,transparent 1px);
-      background-size:55px 55px;
-      mask-image:linear-gradient(to bottom,black,transparent 85%);
-    }
+.timeline{display:grid;gap:15px;margin-top:35px}
+.job{position:relative;margin-left:22px;padding-left:30px}
+.job:before{content:"";position:absolute;left:-7px;top:29px;width:11px;height:11px;border-radius:50%;background:#04121d;border:3px solid var(--cyan);box-shadow:0 0 16px var(--cyan)}
+.timeline:before{content:"";position:absolute;width:1px;background:linear-gradient(var(--cyan),transparent);height:100%;margin-left:27px}
+.timeline{position:relative}
+.jobtop{display:flex;justify-content:space-between;gap:20px}.job h3{font-size:17px}.date{color:var(--cyan);font-size:9px;font-weight:900}
+.company{font-size:11px;color:#c4dce5;margin:5px 0 9px}.job p{color:var(--muted);font-size:12px}
 
-    .orb{position:fixed;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:-1;opacity:.16}
-    .orb.one{width:300px;height:300px;background:#00d9ff;top:10%;left:-120px}
-    .orb.two{width:260px;height:260px;background:#0077ff;right:-100px;top:45%}
+.skill-layout{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.skills{display:grid;gap:14px}
+.skill{padding:14px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.02)}
+.skillhead{display:flex;justify-content:space-between;font-size:11px;font-weight:800;margin-bottom:8px}.skillhead b{color:var(--cyan)}
+.bar{height:4px;background:#122b38;border-radius:20px;overflow:hidden}.bar i{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan));transition:1.2s}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.tool{padding:11px 13px;border:1px solid var(--line);border-radius:11px;font-size:11px;font-weight:800;background:rgba(255,255,255,.025)}.tool b{color:var(--cyan);margin-right:5px}
 
-    .container{width:min(var(--max),calc(100% - 40px));margin:auto}
-    section{padding:100px 0;border-bottom:1px solid rgba(255,255,255,.045)}
-    .section-head{margin-bottom:42px}
-    .eyebrow{color:var(--cyan);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800;margin-bottom:10px}
-    .section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1}
-    .section-head p{max-width:650px;color:var(--muted);margin-top:13px}
+.certs{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:30px}.cert{display:flex;gap:13px;align-items:center}.certicon{width:43px;height:43px;border-radius:50%;border:1px solid rgba(19,230,239,.4);display:grid;place-items:center;color:var(--cyan)}.cert h3{font-size:12px}.cert p{font-size:10px;color:var(--muted)}
 
-    header{
-      position:fixed;top:0;left:0;width:100%;height:74px;z-index:1000;
-      background:rgba(2,10,17,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);
-    }
-    body.light header{background:rgba(255,255,255,.78)}
-    nav{height:100%;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.08em}
-    .logo{
-      width:38px;height:38px;display:grid;place-items:center;border:2px solid var(--cyan);
-      color:var(--cyan);clip-path:polygon(50% 0,100% 100%,76% 100%,50% 45%,24% 100%,0 100%);
-      font-size:0;
-    }
-    .brand small{display:block;color:var(--cyan);font-size:.56rem;letter-spacing:.3em;margin-top:-3px}
-    .nav-links{display:flex;gap:26px;align-items:center}
-    .nav-links a{font-size:.78rem;font-weight:700;color:#d7e5eb;position:relative}
-    body.light .nav-links a{color:#243943}
-    .nav-links a:after{content:"";position:absolute;left:0;bottom:-8px;width:0;height:2px;background:var(--cyan);transition:.3s}
-    .nav-links a:hover:after,.nav-links a.active:after{width:100%}
-    .nav-actions{display:flex;gap:8px;align-items:center}
-    .icon-btn,.menu-btn{
-      width:40px;height:40px;border:1px solid var(--line);background:var(--panel);color:var(--text);
-      border-radius:12px;cursor:pointer;display:grid;place-items:center
-    }
-    .menu-btn{display:none}
-    .cv-btn{
-      display:inline-flex;align-items:center;gap:8px;border:1px solid var(--cyan);border-radius:12px;
-      padding:10px 16px;color:#dffcff;font-size:.78rem;font-weight:800;background:rgba(0,180,220,.08)
-    }
-    .cv-btn:hover{box-shadow:0 0 25px rgba(0,216,232,.22);transform:translateY(-2px)}
+.contact{display:grid;grid-template-columns:1fr .9fr;gap:50px}.contact-items{display:grid;gap:12px;margin-top:28px}.contact-item{display:flex;gap:13px;align-items:center;padding:15px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02)}.contact-item .ci{width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line);border-radius:11px;color:var(--cyan)}.contact-item b{font-size:10px}.contact-item span{display:block;color:var(--muted);font-size:11px}
+form{display:grid;gap:12px}input,textarea{width:100%;padding:13px;border:1px solid var(--line);border-radius:11px;background:rgba(255,255,255,.03);color:white;outline:none}textarea{min-height:140px;resize:vertical}input:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(19,230,239,.07)}.note{color:var(--muted);font-size:9px}
 
-    .hero{min-height:100vh;padding-top:150px;display:grid;align-items:center}
-    .hero-grid{display:grid;grid-template-columns:1fr .9fr;gap:70px;align-items:center}
-    .badge{
-      display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(23,216,232,.5);
-      color:var(--cyan);border-radius:999px;padding:8px 13px;font-size:.72rem;font-weight:800;letter-spacing:.06em;
-      background:rgba(0,200,220,.05)
-    }
-    .hero h1{font-size:clamp(3.2rem,7vw,6rem);line-height:.95;letter-spacing:-.055em;margin:22px 0}
-    .gradient{background:linear-gradient(90deg,#fff,var(--cyan),#4bb9ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .cursor{color:var(--cyan);animation:blink 1s infinite}
-    @keyframes blink{50%{opacity:0}}
-    .hero-copy{font-size:1.02rem;color:var(--muted);max-width:610px}
-    .hero-actions{display:flex;gap:14px;margin:28px 0}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:12px;
-      border:1px solid var(--line);font-weight:800;font-size:.82rem;transition:.25s
-    }
-    .btn.primary{background:linear-gradient(135deg,var(--cyan),var(--cyan2));color:#001019;border:0}
-    .btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,190,230,.15)}
-    .socials{display:flex;gap:10px}
-    .socials a{
-      width:43px;height:43px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;
-      color:#cfe6ee;background:rgba(255,255,255,.02);font-weight:800;transition:.25s
-    }
-    .socials a:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-3px)}
+footer{padding:25px 0;color:var(--muted);font-size:10px}.footerrow{display:flex;justify-content:space-between;gap:15px}
+.top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border:1px solid var(--cyan);border-radius:50%;background:#04111c;color:var(--cyan);display:grid;place-items:center;opacity:0;pointer-events:none;transition:.3s;z-index:900}.top.show{opacity:1;pointer-events:auto}
+.reveal{opacity:0;transform:translateY(28px);transition:.7s}.reveal.visible{opacity:1;transform:none}
 
-    .hero-visual{position:relative;min-height:510px;display:grid;place-items:center}
-    .photo-frame{
-      width:min(370px,82vw);height:430px;border-radius:30px;border:1px solid rgba(23,216,232,.6);
-      padding:10px;background:linear-gradient(145deg,rgba(0,210,230,.18),rgba(0,70,110,.08));
-      box-shadow:0 0 80px rgba(0,190,230,.13),inset 0 0 40px rgba(0,200,230,.05);
-      position:relative;overflow:hidden
-    }
-    .photo-frame:before{
-      content:"";position:absolute;inset:15px;border:1px dashed rgba(23,216,232,.2);border-radius:22px;pointer-events:none
-    }
-    .photo-frame img{
-      width:100%;height:100%;object-fit:cover;border-radius:22px;
-      background:linear-gradient(160deg,#102c3b,#06131e);
-    }
-    .photo-fallback{position:absolute;inset:0;display:grid;place-items:center;color:var(--cyan);font-size:5rem;font-weight:900;pointer-events:none}
-    .info-card{
-      position:absolute;right:-5px;bottom:20px;width:210px;padding:18px;border:1px solid var(--line);
-      background:rgba(3,15,25,.85);backdrop-filter:blur(15px);border-radius:17px;box-shadow:var(--shadow)
-    }
-    body.light .info-card{background:rgba(255,255,255,.9)}
-    .info-row{display:flex;gap:10px;margin:10px 0}
-    .info-row b{font-size:.72rem;color:var(--cyan);display:block}
-    .info-row span{font-size:.72rem;color:var(--muted)}
-    .info-icon{color:var(--cyan);font-weight:900}
-
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-    .about-text h3{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15;margin-bottom:18px}
-    .about-text p{color:var(--muted);margin-bottom:16px}
-    .stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .stat,.card{
-      background:linear-gradient(145deg,rgba(11,34,50,.72),rgba(4,18,29,.65));
-      border:1px solid var(--line);border-radius:var(--radius);padding:25px;
-      transition:.3s;box-shadow:0 10px 40px rgba(0,0,0,.1)
-    }
-    body.light .stat,body.light .card{background:rgba(255,255,255,.75)}
-    .stat:hover,.card:hover{transform:translateY(-5px);border-color:rgba(23,216,232,.4)}
-    .stat strong{font-size:2rem;color:var(--cyan);display:block}
-    .stat span{color:var(--muted);font-size:.85rem}
-
-    .timeline{position:relative;display:grid;gap:18px}
-    .timeline:before{content:"";position:absolute;left:15px;top:10px;bottom:10px;width:1px;background:linear-gradient(var(--cyan),transparent)}
-    .job{margin-left:48px;position:relative}
-    .job:before{
-      content:"";position:absolute;left:-41px;top:27px;width:12px;height:12px;border-radius:50%;
-      background:var(--bg);border:3px solid var(--cyan);box-shadow:0 0 15px var(--cyan)
-    }
-    .job-top{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:8px}
-    .job h3{font-size:1.1rem}
-    .date{color:var(--cyan);font-size:.72rem;font-weight:800;white-space:nowrap}
-    .job-company{font-size:.82rem;color:#c4d5dd;margin-bottom:10px}
-    .job p{color:var(--muted);font-size:.82rem}
-
-    .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
-    .skill-list{display:grid;gap:15px}
-    .skill{padding:15px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.02)}
-    .skill-head{display:flex;justify-content:space-between;font-size:.78rem;font-weight:700;margin-bottom:8px}
-    .skill-head span:last-child{color:var(--cyan)}
-    .bar{height:5px;border-radius:20px;background:#122a38;overflow:hidden}
-    .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan2),var(--cyan));border-radius:20px;transition:1.2s}
-    .tools{display:flex;flex-wrap:wrap;gap:12px}
-    .tool{border:1px solid var(--line);padding:13px 15px;border-radius:13px;background:rgba(255,255,255,.025);font-size:.8rem;font-weight:700}
-    .tool span{color:var(--cyan);margin-right:5px}
-
-    .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .cert{display:flex;align-items:center;gap:15px}
-    .cert-icon{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(23,216,232,.4);color:var(--cyan)}
-    .cert h3{font-size:.9rem}.cert p{font-size:.72rem;color:var(--muted);margin-top:3px}
-
-    .contact-grid{display:grid;grid-template-columns:1fr .9fr;gap:50px}
-    .contact-box{display:grid;gap:13px}
-    .contact-item{display:flex;gap:15px;align-items:center;padding:16px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.02)}
-    .contact-item .ci{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;color:var(--cyan);border:1px solid var(--line)}
-    .contact-item b{font-size:.78rem}.contact-item span{display:block;color:var(--muted);font-size:.8rem;margin-top:2px}
-    form{display:grid;gap:13px}
-    input,textarea{
-      width:100%;border:1px solid var(--line);background:rgba(255,255,255,.035);color:var(--text);
-      border-radius:13px;padding:14px;outline:none
-    }
-    input:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(23,216,232,.08)}
-    textarea{min-height:150px;resize:vertical}
-    .notice{font-size:.72rem;color:var(--muted)}
-
-    footer{padding:25px 0;color:var(--muted);font-size:.75rem}
-    .footer-row{display:flex;justify-content:space-between;gap:20px}
-    .back-top{position:fixed;right:20px;bottom:20px;width:45px;height:45px;border-radius:50%;border:1px solid var(--cyan);background:rgba(3,14,23,.85);color:var(--cyan);cursor:pointer;opacity:0;pointer-events:none;transition:.3s;z-index:900}
-    .back-top.show{opacity:1;pointer-events:auto}
-
-    .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
-    .reveal.visible{opacity:1;transform:none}
-
-    @media(max-width:950px){
-      .nav-links{position:fixed;top:74px;left:0;width:100%;display:none;flex-direction:column;padding:25px;background:rgba(2,10,17,.97);border-bottom:1px solid var(--line)}
-      body.light .nav-links{background:rgba(255,255,255,.97)}
-      .nav-links.open{display:flex}.menu-btn{display:grid}
-      .nav-actions .cv-btn{display:none}
-      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
-      .hero{padding-top:125px}.hero-visual{min-height:470px}
-      .info-card{right:0}.skills-grid{grid-template-columns:1fr}
-      .cert-grid{grid-template-columns:1fr 1fr}
-    }
-    @media(max-width:600px){
-      .container{width:min(var(--max),calc(100% - 28px))}
-      section{padding:75px 0}
-      .hero h1{font-size:3.25rem}
-      .hero-actions{flex-wrap:wrap}
-      .hero-visual{min-height:430px}
-      .photo-frame{height:390px;width:310px}
-      .info-card{width:190px;right:0;bottom:0}
-      .stats,.cert-grid{grid-template-columns:1fr}
-      .job-top{align-items:flex-start;flex-direction:column;gap:2px}
-      .footer-row{flex-direction:column}
-    }
-  </style>
+@media(max-width:950px){
+ .nav{position:fixed;top:74px;left:0;width:100%;display:none;flex-direction:column;padding:24px;background:rgba(2,8,14,.97);border-bottom:1px solid var(--line)}.nav.open{display:flex}.menu{display:block}.cv{display:none}
+ .hero-grid,.about,.skill-layout,.contact{grid-template-columns:1fr}.visual{min-height:460px}.info{right:0}.certs{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+ .container{width:calc(100% - 28px)}section{padding:75px 0}.hero{padding-top:120px}.hero h1{font-size:54px}.actions{flex-wrap:wrap}.hex{height:410px}.photo{width:290px;height:370px}.info{width:180px}.stats,.certs{grid-template-columns:1fr}.footerrow{flex-direction:column}.jobtop{flex-direction:column;gap:2px}
+}
+</style>
 </head>
 
 <body>
-  <div class="progress" id="progress"></div>
-  <div class="bg-grid"></div>
-  <div class="orb one"></div><div class="orb two"></div>
+<div class="progress" id="progress"></div>
+<div class="grid-bg"></div><div class="glow a"></div><div class="glow b"></div>
 
-  <header>
-    <nav class="container">
-      <a class="brand" href="#home" aria-label="Ashir Hadi home">
-        <span class="logo">A</span>
-        <span>ASHIR HADI<small>PORTFOLIO</small></span>
-      </a>
+<header>
+<nav class="container">
+<a class="brand" href="#home"><span class="logo">A</span><span>ASHIR HADI<small>PORTFOLIO</small></span></a>
+<div class="nav" id="nav">
+<a href="#home" class="active">HOME</a><a href="#about">ABOUT</a><a href="#experience">EXPERIENCE</a><a href="#skills">SKILLS</a><a href="#certificates">CERTIFICATES</a><a href="#contact">CONTACT</a>
+</div>
+<a class="cv" href="resume.pdf" download>DOWNLOAD CV ↓</a>
+<button class="menu" id="menu" aria-label="Menu">☰</button>
+</nav>
+</header>
 
-      <div class="nav-links" id="navLinks">
-        <a href="#home" class="active">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#experience">EXPERIENCE</a>
-        <a href="#skills">SKILLS</a>
-        <a href="#certificates">CERTIFICATES</a>
-        <a href="#contact">CONTACT</a>
-      </div>
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div class="reveal">
+<div class="badge"><i></i>BMS OPERATOR &amp; ASSISTANT SUPERVISOR</div>
+<h1>Hi, I'm<br><span class="gradient">Ashir Hadi</span><span class="cursor">|</span></h1>
+<p>Results-driven professional with 3+ years of experience in BMS operations, facility operations, maintenance coordination and team support. Focused on safe, reliable and efficient building operations.</p>
+<div class="actions"><a class="btn primary" href="#about">ABOUT ME →</a><a class="btn" href="#contact">CONTACT ME ↗</a></div>
+<div class="social">
+<a href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359" target="_blank" rel="noopener">in</a>
+<a href="https://wa.me/971558436330" target="_blank" rel="noopener">WA</a>
+<a href="mailto:ashirhadi123@gmail.com">@</a>
+</div>
+</div>
 
-      <div class="nav-actions">
-        <a class="cv-btn" href="resume.pdf" download>DOWNLOAD CV ↓</a>
-        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☼</button>
-        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
-      </div>
-    </nav>
-  </header>
+<div class="visual reveal">
+<div class="hex">
+<div class="circuit"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div>
+<div class="photo">
+<img src="IMG-20250803-WA0006.jpg" alt="Ashir Hadi" onerror="this.style.display='none';document.querySelector('.fallback').style.display='grid'">
+<div class="fallback">AH</div>
+</div>
+</div>
+<div class="info">
+<div class="row"><div class="ico">⌖</div><div><b>LOCATION</b><span>Dubai, UAE</span></div></div>
+<div class="row"><div class="ico">▣</div><div><b>EXPERIENCE</b><span>3+ Years</span></div></div>
+<div class="row"><div class="ico">✉</div><div><b>EMAIL</b><span>ashirhadi123@gmail.com</span></div></div>
+<div class="row"><div class="ico">☎</div><div><b>PHONE</b><span>+971 55 843 6330</span></div></div>
+</div>
+</div>
+</div>
+</section>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="reveal">
-          <span class="badge">◉ BMS OPERATOR &amp; ASSISTANT SUPERVISOR</span>
-          <h1>Hi, I'm<br><span class="gradient">Ashir Hadi</span><span class="cursor">|</span></h1>
-          <p class="hero-copy">
-            Results-driven professional with 3+ years of experience in BMS operations,
-            facility operations, maintenance coordination and team support. Focused on
-            safe, reliable and efficient building operations.
-          </p>
+<section id="about">
+<div class="container about">
+<div class="reveal">
+<div class="eyebrow">ABOUT ME</div>
+<h2 class="section-title">Built Around <span class="gradient">Reliability.</span></h2>
+<p>I have hands-on experience in Building Management Systems (BMS), facility operations, monitoring and maintenance coordination. I focus on operational reliability, safety, communication and supporting teams to keep daily activities running smoothly.</p>
+<p>My background also includes team leadership, production/logistics coordination and computer operations.</p>
+<a class="btn" href="#experience">MY EXPERIENCE →</a>
+</div>
+<div class="stats reveal">
+<div class="card stat"><strong>3+</strong><span>Years Professional Experience</span></div>
+<div class="card stat"><strong>1</strong><span>UAE Company — Imdaad</span></div>
+<div class="card stat"><strong>100%</strong><span>Safety &amp; Team Focus</span></div>
+<div class="card stat"><strong>UAE</strong><span>Dubai Based Professional</span></div>
+</div>
+</div>
+</section>
 
-          <div class="hero-actions">
-            <a class="btn primary" href="#about">ABOUT ME →</a>
-            <a class="btn" href="#contact">CONTACT ME ↗</a>
-          </div>
+<section id="experience">
+<div class="container">
+<div class="reveal"><div class="eyebrow">EXPERIENCE</div><h2 class="section-title">Professional <span class="gradient">Journey</span></h2><p class="section-sub">Experience across BMS operations, facility support, supervision and coordination.</p></div>
+<div class="timeline">
+<article class="job card reveal"><div class="jobtop"><h3>BMS Operator</h3><span class="date">UAE EXPERIENCE</span></div><div class="company">Imdaad LLC · Dubai, UAE</div><p>Monitor building systems, alarms, equipment status and operational conditions while supporting safe and smooth facility operations.</p></article>
+<article class="job card reveal"><div class="jobtop"><h3>Assistant Supervisor</h3><span class="date">UAE EXPERIENCE</span></div><div class="company">Imdaad LLC · Dubai, UAE</div><p>Support daily operations, team coordination, maintenance activities, reporting and workplace safety compliance.</p></article>
+<article class="job card reveal"><div class="jobtop"><h3>Dewatering / Pump Operator</h3><span class="date">UAE EXPERIENCE</span></div><div class="company">Imdaad LLC · Dubai, UAE</div><p>Operate and monitor dewatering pumps, check water levels and support continuous operation at assigned sites.</p></article>
+<article class="job card reveal"><div class="jobtop"><h3>Team Leader — Production &amp; Logistics</h3><span class="date">3 YEARS</span></div><div class="company">Vision Technology Pakistan</div><p>Coordinated production and logistics activities, supported supervisors and helped teams complete operational tasks efficiently.</p></article>
+</div>
+</div>
+</section>
 
-          <div class="socials">
-            <a href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-            <a href="https://wa.me/971558436330" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
-            <a href="mailto:ashirhadi123@gmail.com" aria-label="Email">@</a>
-          </div>
-        </div>
+<section id="skills">
+<div class="container">
+<div class="reveal"><div class="eyebrow">MY SKILLS</div><h2 class="section-title">Technical &amp; <span class="gradient">Professional Skills</span></h2></div>
+<div class="skill-layout" style="margin-top:35px">
+<div class="skills reveal">
+<div class="skill"><div class="skillhead"><span>BMS Operations</span><b>90%</b></div><div class="bar"><i data-w="90%"></i></div></div>
+<div class="skill"><div class="skillhead"><span>System Monitoring</span><b>88%</b></div><div class="bar"><i data-w="88%"></i></div></div>
+<div class="skill"><div class="skillhead"><span>Troubleshooting</span><b>90%</b></div><div class="bar"><i data-w="90%"></i></div></div>
+<div class="skill"><div class="skillhead"><span>Team Coordination</span><b>88%</b></div><div class="bar"><i data-w="88%"></i></div></div>
+<div class="skill"><div class="skillhead"><span>Safety Compliance</span><b>90%</b></div><div class="bar"><i data-w="90%"></i></div></div>
+</div>
+<div class="card reveal"><div class="eyebrow">TOOLS &amp; TECHNOLOGIES</div><h3 style="font-size:24px">Tools I Work With</h3><div class="tools">
+<div class="tool"><b>◈</b>Microsoft Office</div><div class="tool"><b>▣</b>Excel</div><div class="tool"><b>◉</b>AutoCAD</div><div class="tool"><b>◆</b>Adobe PDF</div><div class="tool"><b>●</b>MS Teams</div><div class="tool"><b>◇</b>SAP Basic</div><div class="tool"><b>⚙</b>BMS Systems</div><div class="tool"><b>⌘</b>Computer Operations</div>
+</div></div>
+</div>
+</div>
+</section>
 
-        <div class="hero-visual reveal">
-          <div class="photo-frame">
-            <img src="IMG-20250803-WA0006.jpg" alt="Ashir Hadi" onerror="this.style.display='none';document.getElementById('photoFallback').style.display='grid';">
-            <div class="photo-fallback" id="photoFallback" style="display:none">AH</div>
-          </div>
+<section id="certificates">
+<div class="container">
+<div class="reveal"><div class="eyebrow">CERTIFICATES</div><h2 class="section-title">Professional <span class="gradient">Certifications</span></h2></div>
+<div class="certs">
+<div class="cert card reveal"><div class="certicon">◉</div><div><h3>Soft Skill Certification</h3><p>Completed</p></div></div>
+<div class="cert card reveal"><div class="certicon">◉</div><div><h3>Office Management Diploma</h3><p>Completed</p></div></div>
+<div class="cert card reveal"><div class="certicon">◉</div><div><h3>Data Operator Diploma</h3><p>2 Year Diploma</p></div></div>
+</div>
+</div>
+</section>
 
-          <div class="info-card">
-            <div class="info-row"><div class="info-icon">⌖</div><div><b>LOCATION</b><span>Dubai, UAE</span></div></div>
-            <div class="info-row"><div class="info-icon">▣</div><div><b>EXPERIENCE</b><span>3+ Years</span></div></div>
-            <div class="info-row"><div class="info-icon">✉</div><div><b>EMAIL</b><span>ashirhadi123@gmail.com</span></div></div>
-            <div class="info-row"><div class="info-icon">☎</div><div><b>PHONE</b><span>+971 55 843 6330</span></div></div>
-          </div>
-        </div>
-      </div>
-    </section>
+<section id="contact">
+<div class="container contact">
+<div class="reveal">
+<div class="eyebrow">LET'S WORK TOGETHER</div>
+<h2 class="section-title">Ready for the Next <span class="gradient">Opportunity?</span></h2>
+<p class="section-sub">I'm open to professional opportunities in BMS operations, facility management, supervision and related roles.</p>
+<div class="contact-items">
+<a class="contact-item" href="tel:+971558436330"><div class="ci">☎</div><div><b>CALL ME</b><span>+971 55 843 6330</span></div></a>
+<a class="contact-item" href="mailto:ashirhadi123@gmail.com"><div class="ci">✉</div><div><b>EMAIL ME</b><span>ashirhadi123@gmail.com</span></div></a>
+<div class="contact-item"><div class="ci">⌖</div><div><b>LOCATION</b><span>Dubai, UAE</span></div></div>
+</div>
+</div>
+<div class="card reveal">
+<form id="form">
+<input id="name" required placeholder="Your name">
+<input id="email" required type="email" placeholder="Your email">
+<input id="subject" required placeholder="Subject">
+<textarea id="message" required placeholder="Your message"></textarea>
+<button class="btn primary" type="submit">SEND MESSAGE ↗</button>
+<div class="note">The form opens your email app. No server is required.</div>
+</form>
+</div>
+</div>
+</section>
+</main>
 
-    <section id="about">
-      <div class="container about-grid">
-        <div class="about-text reveal">
-          <div class="section-head">
-            <div class="eyebrow">ABOUT ME</div>
-            <h2>A Dedicated Professional Focused on <span class="gradient">Excellence</span></h2>
-          </div>
-          <p>
-            I have hands-on experience in Building Management Systems (BMS), facility
-            operations, monitoring and maintenance coordination. I focus on operational
-            reliability, safety, communication and supporting teams to keep daily
-            activities running smoothly.
-          </p>
-          <p>
-            My background also includes team leadership, production/logistics coordination,
-            computer operations and office management.
-          </p>
-          <a class="btn" href="#experience">VIEW EXPERIENCE →</a>
-        </div>
-
-        <div class="stats reveal">
-          <div class="stat"><strong>3+</strong><span>Years Professional Experience</span></div>
-          <div class="stat"><strong>1</strong><span>UAE Company — Imdaad</span></div>
-          <div class="stat"><strong>100%</strong><span>Safety &amp; Team Focus</span></div>
-          <div class="stat"><strong>UAE</strong><span>Dubai Based Professional</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="eyebrow">EXPERIENCE</div>
-          <h2>My Professional <span class="gradient">Journey</span></h2>
-          <p>A practical background across BMS, facility operations, supervision and coordination.</p>
-        </div>
-
-        <div class="timeline">
-          <article class="job card reveal">
-            <div class="job-top"><h3>BMS Operator</h3><span class="date">UAE EXPERIENCE</span></div>
-            <div class="job-company">Imdaad LLC · Dubai, UAE</div>
-            <p>Monitor building systems, alarms, equipment status and operational conditions while supporting smooth and safe facility operations.</p>
-          </article>
-
-          <article class="job card reveal">
-            <div class="job-top"><h3>Assistant Supervisor</h3><span class="date">UAE EXPERIENCE</span></div>
-            <div class="job-company">Imdaad LLC · Dubai, UAE</div>
-            <p>Support supervisors with daily operations, team coordination, maintenance activities, reporting and compliance with workplace safety standards.</p>
-          </article>
-
-          <article class="job card reveal">
-            <div class="job-top"><h3>Dewatering / Pump Operator</h3><span class="date">UAE EXPERIENCE</span></div>
-            <div class="job-company">Imdaad LLC · Dubai, UAE</div>
-            <p>Operate and monitor dewatering pumps, check water levels and support continuous operation at assigned project and facility sites.</p>
-          </article>
-
-          <article class="job card reveal">
-            <div class="job-top"><h3>Team Leader — Production &amp; Logistics</h3><span class="date">3 YEARS</span></div>
-            <div class="job-company">Vision Technology Pakistan</div>
-            <p>Coordinated production and logistics activities, supported supervisors and helped teams complete operational tasks efficiently.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="eyebrow">MY SKILLS</div>
-          <h2>What I'm <span class="gradient">Good At</span>
+<footer><div class="container footerrow"><span>© <span id="year"></span> Ashir Hadi. All Rights Reserved.</span><span>Designed &amp; Developed by Ashir Hadi</span>
