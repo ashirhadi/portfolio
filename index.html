@@ -3,15 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#05060a">
+<meta name="theme-color" content="#03050a">
 <meta name="color-scheme" content="dark">
-<meta name="description" content="M. Ashir Hadi — Administrative & Operations Professional in Dubai, UAE. Assistant Supervisor, office administration, team coordination, data entry and computer operations.">
+
+<meta name="description" content="M. Ashir Hadi — Administrative & Operations Professional in Dubai, UAE. Assistant Supervisor, team coordination, office administration, data entry and computer operations.">
 <meta name="keywords" content="M Ashir Hadi, Administrative Assistant Dubai, Assistant Supervisor UAE, Operations Coordinator Dubai, Data Entry Operator UAE, Office Administration, Imdaad Dubai">
 <meta name="author" content="M. Ashir Hadi">
+
 <meta property="og:title" content="M. Ashir Hadi | Administrative & Operations Professional">
 <meta property="og:description" content="Dubai-based Administrative & Operations Professional — Assistant Supervisor, office administration, team coordination and data operations.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="linkedin-preview.jpg">
+
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="M. Ashir Hadi | Administrative & Operations Professional">
 <meta name="twitter:description" content="Administrative, operations, supervision and data management professional based in Dubai, UAE.">
@@ -21,1606 +24,1287 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* =========================================================
-   M. ASHIR HADI — PREMIUM HOLO/NEON PORTFOLIO
-   Single-file build: HTML + CSS + JS
-   Assets expected beside this file:
-   - IMG-20250803-WA0006.jpg
-   - resume.pdf
-   - linkedin-preview.jpg
-   ========================================================= */
 
 :root{
-  --bg:#03050a;
-  --bg2:#080d17;
-  --surface:rgba(11,17,29,.70);
-  --surface2:rgba(255,255,255,.045);
-  --line:rgba(255,255,255,.11);
-  --line2:rgba(0,240,255,.25);
-  --text:#f3f7ff;
-  --muted:#8e99ad;
-  --cyan:#00efff;
-  --blue:#4f7cff;
-  --violet:#9b5cff;
-  --pink:#ff39c8;
-  --green:#35f7a5;
-  --display:"Space Grotesk",sans-serif;
-  --body:"Inter",sans-serif;
-  --mono:"JetBrains Mono",monospace;
-  --radius:22px;
-  --max:1180px;
-  --holo:linear-gradient(115deg,var(--cyan),var(--blue) 34%,var(--violet) 66%,var(--pink));
-  --shadow:0 24px 80px rgba(0,0,0,.42);
+    --bg:#03050a;
+    --bg2:#080d17;
+    --surface:rgba(10,17,29,.72);
+    --surface2:rgba(255,255,255,.045);
+    --line:rgba(255,255,255,.11);
+    --cyan:#00efff;
+    --blue:#4f7cff;
+    --violet:#9b5cff;
+    --pink:#ff39c8;
+    --green:#35f7a5;
+    --text:#f3f7ff;
+    --muted:#8e99ad;
+
+    --display:"Space Grotesk",sans-serif;
+    --body:"Inter",sans-serif;
+    --mono:"JetBrains Mono",monospace;
+
+    --radius:22px;
+    --max:1180px;
+
+    --holo:linear-gradient(
+        115deg,
+        var(--cyan),
+        var(--blue) 34%,
+        var(--violet) 66%,
+        var(--pink)
+    );
+
+    --shadow:0 24px 80px rgba(0,0,0,.42);
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  min-height:100vh;
-  overflow-x:hidden;
-  color:var(--text);
-  background:
-    radial-gradient(circle at 15% 10%,rgba(0,239,255,.06),transparent 28%),
-    radial-gradient(circle at 85% 18%,rgba(255,57,200,.055),transparent 30%),
-    var(--bg);
-  font-family:var(--body);
-  line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
-body.menu-open{overflow:hidden}
-a{color:inherit;text-decoration:none}
-button,input,textarea{font:inherit}
-button{border:0}
-img{display:block;max-width:100%}
-ul{list-style:none}
-::selection{background:rgba(0,239,255,.22);color:#fff}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    color:var(--text);
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(0,239,255,.07),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 18%,
+            rgba(255,57,200,.06),
+            transparent 30%
+        ),
+        var(--bg);
+
+    font-family:var(--body);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+}
+
+body.menu-open{
+    overflow:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+textarea{
+    font:inherit;
+}
+
+button{
+    border:0;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+ul{
+    list-style:none;
+}
+
+::selection{
+    background:rgba(0,239,255,.25);
+    color:#fff;
+}
+
+
+/* ==============================
+   BACKGROUND
+============================== */
 
 #spaceCanvas{
-  position:fixed;
-  inset:0;
-  width:100%;
-  height:100%;
-  z-index:-5;
-  pointer-events:none;
-  opacity:.9;
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    z-index:-5;
+    pointer-events:none;
+    opacity:.9;
 }
-.noise{
-  position:fixed;
-  inset:0;
-  z-index:-2;
-  pointer-events:none;
-  opacity:.035;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
-}
-.grid-floor{
-  position:fixed;
-  left:-20%;
-  right:-20%;
-  bottom:-30%;
-  height:70%;
-  z-index:-3;
-  pointer-events:none;
-  opacity:.15;
-  transform:perspective(600px) rotateX(64deg);
-  transform-origin:bottom;
-  background-image:
-    linear-gradient(rgba(0,239,255,.28) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(0,239,255,.28) 1px,transparent 1px);
-  background-size:52px 52px;
-  mask-image:linear-gradient(to top,black,transparent 85%);
-  animation:gridMove 12s linear infinite;
-}
-@keyframes gridMove{to{background-position:0 52px,52px 0}}
 
-.container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
-.section{position:relative;padding:110px 0}
-.section-sm{padding:80px 0}
-.mono{font-family:var(--mono)}
-.muted{color:var(--muted)}
+.noise{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    pointer-events:none;
+    opacity:.035;
+
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+}
+
+.grid-floor{
+    position:fixed;
+    left:-20%;
+    right:-20%;
+    bottom:-30%;
+    height:70%;
+    z-index:-3;
+    pointer-events:none;
+    opacity:.15;
+
+    transform:perspective(600px) rotateX(64deg);
+    transform-origin:bottom;
+
+    background-image:
+        linear-gradient(rgba(0,239,255,.28) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(0,239,255,.28) 1px,transparent 1px);
+
+    background-size:52px 52px;
+
+    mask-image:linear-gradient(to top,black,transparent 85%);
+    -webkit-mask-image:linear-gradient(to top,black,transparent 85%);
+
+    animation:gridMove 12s linear infinite;
+}
+
+@keyframes gridMove{
+    to{
+        background-position:0 52px,52px 0;
+    }
+}
+
+.container{
+    width:min(var(--max),calc(100% - 40px));
+    margin-inline:auto;
+}
+
+.section{
+    position:relative;
+    padding:110px 0;
+}
+
+.section-sm{
+    padding:80px 0;
+}
+
+.mono{
+    font-family:var(--mono);
+}
+
+.muted{
+    color:var(--muted);
+}
 
 .reveal{
-  opacity:0;
-  transform:translateY(28px);
-  transition:opacity .8s ease,transform .8s cubic-bezier(.2,.75,.2,1);
+    opacity:0;
+    transform:translateY(28px);
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.75,.2,1);
 }
-.reveal.visible{opacity:1;transform:none}
+
+.reveal.visible{
+    opacity:1;
+    transform:none;
+}
 
 .holo-line{
-  height:1px;
-  width:100%;
-  background:var(--holo);
-  opacity:.45;
-  box-shadow:0 0 24px rgba(0,239,255,.12);
+    height:1px;
+    width:100%;
+    background:var(--holo);
+    opacity:.45;
+    box-shadow:0 0 24px rgba(0,239,255,.12);
 }
 
-.glow-orb{
-  position:absolute;
-  width:300px;height:300px;
-  border-radius:50%;
-  filter:blur(80px);
-  opacity:.16;
-  pointer-events:none;
-}
-.orb-cyan{background:var(--cyan)}
-.orb-pink{background:var(--pink)}
-.orb-violet{background:var(--violet)}
 
-/* NAV */
+/* ==============================
+   NAVIGATION
+============================== */
+
 .site-header{
-  position:fixed;
-  top:0;left:0;right:0;
-  z-index:1000;
-  padding-top:10px;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+    padding-top:10px;
 }
+
 .nav-shell{
-  height:64px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-  padding:0 10px 0 18px;
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:18px;
-  background:rgba(4,8,15,.64);
-  backdrop-filter:blur(20px) saturate(150%);
-  -webkit-backdrop-filter:blur(20px) saturate(150%);
-  box-shadow:0 14px 50px rgba(0,0,0,.24);
+    height:64px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:18px;
+
+    padding:0 10px 0 18px;
+
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:18px;
+
+    background:rgba(4,8,15,.68);
+
+    backdrop-filter:blur(20px) saturate(150%);
+    -webkit-backdrop-filter:blur(20px) saturate(150%);
+
+    box-shadow:0 14px 50px rgba(0,0,0,.24);
 }
+
 .logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-family:var(--display);
-  font-weight:700;
-  letter-spacing:.4px;
-  white-space:nowrap;
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-family:var(--display);
+    font-weight:700;
+
+    letter-spacing:.4px;
+    white-space:nowrap;
 }
+
 .logo-mark{
-  width:34px;height:34px;
-  display:grid;place-items:center;
-  border-radius:10px;
-  color:#02050a;
-  font-family:var(--mono);
-  font-size:11px;
-  font-weight:800;
-  background:var(--holo);
-  box-shadow:0 0 22px rgba(0,239,255,.18);
+    width:34px;
+    height:34px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:10px;
+
+    color:#02050a;
+
+    font-family:var(--mono);
+    font-size:11px;
+    font-weight:800;
+
+    background:var(--holo);
+
+    box-shadow:0 0 22px rgba(0,239,255,.18);
 }
-.logo-text{font-size:15px}
-.nav-links{display:flex;align-items:center;gap:3px}
+
+.logo-text{
+    font-size:15px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:3px;
+}
+
 .nav-links a{
-  position:relative;
-  padding:10px 12px;
-  border-radius:10px;
-  color:var(--muted);
-  font-family:var(--mono);
-  font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:.65px;
-  transition:.25s ease;
+    position:relative;
+
+    padding:10px 12px;
+    border-radius:10px;
+
+    color:var(--muted);
+
+    font-family:var(--mono);
+    font-size:10px;
+
+    text-transform:uppercase;
+    letter-spacing:.65px;
+
+    transition:.25s ease;
 }
+
 .nav-links a:hover,
 .nav-links a.active{
-  color:#fff;
-  background:rgba(255,255,255,.05);
-}
-.nav-links a.active::after{
-  content:"";
-  position:absolute;
-  left:12px;right:12px;bottom:4px;
-  height:1px;
-  background:var(--holo);
-  box-shadow:0 0 10px var(--cyan);
-}
-.menu-btn{
-  display:none;
-  width:42px;height:42px;
-  border:1px solid var(--line);
-  border-radius:11px;
-  background:rgba(255,255,255,.045);
-  color:#fff;
-  cursor:pointer;
-  font-size:18px;
+    color:#fff;
+    background:rgba(255,255,255,.05);
 }
 
-/* HERO */
+.nav-links a.active::after{
+    content:"";
+
+    position:absolute;
+    left:12px;
+    right:12px;
+    bottom:4px;
+
+    height:1px;
+
+    background:var(--holo);
+
+    box-shadow:0 0 10px var(--cyan);
+}
+
+.menu-btn{
+    display:none;
+
+    width:42px;
+    height:42px;
+
+    border:1px solid var(--line);
+    border-radius:11px;
+
+    background:rgba(255,255,255,.045);
+    color:#fff;
+
+    cursor:pointer;
+    font-size:18px;
+}
+
+
+/* ==============================
+   HERO
+============================== */
+
 .hero{
-  min-height:100svh;
-  display:flex;
-  align-items:center;
-  position:relative;
-  padding:145px 0 80px;
+    min-height:100svh;
+
+    display:flex;
+    align-items:center;
+
+    position:relative;
+
+    padding:145px 0 80px;
 }
+
 .hero-grid{
-  display:grid;
-  grid-template-columns:1.08fr .92fr;
-  gap:70px;
-  align-items:center;
+    display:grid;
+
+    grid-template-columns:1.08fr .92fr;
+
+    gap:70px;
+
+    align-items:center;
 }
+
 .eyebrow{
-  display:inline-flex;
-  align-items:center;
-  gap:9px;
-  padding:8px 12px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:rgba(255,255,255,.035);
-  color:#b8c2d4;
-  font:500 10px var(--mono);
-  letter-spacing:1px;
-  text-transform:uppercase;
-  margin-bottom:22px;
+    display:inline-flex;
+    align-items:center;
+
+    gap:9px;
+
+    padding:8px 12px;
+
+    border:1px solid var(--line);
+    border-radius:999px;
+
+    background:rgba(255,255,255,.035);
+
+    color:#b8c2d4;
+
+    font:500 10px var(--mono);
+
+    letter-spacing:1px;
+    text-transform:uppercase;
+
+    margin-bottom:22px;
 }
+
 .status-dot{
-  width:7px;height:7px;
-  border-radius:50%;
-  background:var(--green);
-  box-shadow:0 0 10px var(--green),0 0 22px rgba(53,247,165,.6);
-  animation:statusPulse 1.7s ease-in-out infinite;
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    box-shadow:
+        0 0 10px var(--green),
+        0 0 22px rgba(53,247,165,.6);
+
+    animation:statusPulse 1.7s ease-in-out infinite;
 }
-@keyframes statusPulse{50%{opacity:.35;transform:scale(.72)}}
+
+@keyframes statusPulse{
+    50%{
+        opacity:.35;
+        transform:scale(.72);
+    }
+}
 
 .hero h1{
-  max-width:760px;
-  font:700 clamp(48px,7vw,86px)/.94 var(--display);
-  letter-spacing:-3.8px;
-  margin-bottom:20px;
+    max-width:760px;
+
+    font:700 clamp(48px,7vw,86px)/.94 var(--display);
+
+    letter-spacing:-3.8px;
+
+    margin-bottom:20px;
 }
+
 .gradient-text{
-  background:var(--holo);
-  background-size:220% auto;
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-  animation:holoFlow 7s linear infinite;
+    background:var(--holo);
+    background-size:220% auto;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+
+    animation:holoFlow 7s linear infinite;
 }
-@keyframes holoFlow{to{background-position:220% center}}
+
+@keyframes holoFlow{
+    to{
+        background-position:220% center;
+    }
+}
 
 .hero-role{
-  color:var(--cyan);
-  font:600 12px var(--mono);
-  letter-spacing:.75px;
-  margin-bottom:18px;
+    color:var(--cyan);
+
+    font:600 12px var(--mono);
+
+    letter-spacing:.75px;
+
+    margin-bottom:18px;
 }
+
 .hero-copy{
-  max-width:650px;
-  color:var(--muted);
-  font-size:15px;
-  line-height:1.8;
-  margin-bottom:30px;
+    max-width:650px;
+
+    color:var(--muted);
+
+    font-size:15px;
+    line-height:1.8;
+
+    margin-bottom:30px;
 }
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+.hero-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
 .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:9px;
-  min-height:48px;
-  padding:0 20px;
-  border-radius:13px;
-  cursor:pointer;
-  font-size:13px;
-  font-weight:700;
-  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,background .25s ease;
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:9px;
+
+    min-height:48px;
+
+    padding:0 20px;
+
+    border-radius:13px;
+
+    cursor:pointer;
+
+    font-size:13px;
+    font-weight:700;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease,
+        background .25s ease;
 }
-.btn:hover{transform:translateY(-3px)}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
 .btn-primary{
-  color:#02050a;
-  background:var(--holo);
-  box-shadow:0 10px 35px rgba(0,239,255,.12);
+    color:#02050a;
+
+    background:var(--holo);
+
+    box-shadow:0 10px 35px rgba(0,239,255,.12);
 }
-.btn-primary:hover{box-shadow:0 16px 45px rgba(139,92,246,.25)}
+
+.btn-primary:hover{
+    box-shadow:0 16px 45px rgba(139,92,246,.25);
+}
+
 .btn-ghost{
-  color:#eaf1ff;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.035);
+    color:#eaf1ff;
+
+    border:1px solid var(--line);
+
+    background:rgba(255,255,255,.035);
 }
-.btn-ghost:hover{border-color:rgba(0,239,255,.55);color:var(--cyan)}
-.btn-small{min-height:40px;padding:0 14px;font-size:11px}
+
+.btn-ghost:hover{
+    border-color:rgba(0,239,255,.55);
+    color:var(--cyan);
+}
+
+.btn-small{
+    min-height:40px;
+    padding:0 14px;
+    font-size:11px;
+}
 
 .hero-meta{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px 22px;
-  margin-top:26px;
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:12px 22px;
+
+    margin-top:26px;
 }
+
 .meta-item{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  color:#a9b3c5;
-  font-size:11px;
+    display:flex;
+    align-items:center;
+
+    gap:8px;
+
+    color:#a9b3c5;
+
+    font-size:11px;
 }
-.meta-icon{color:var(--cyan)}
+
+.meta-icon{
+    color:var(--cyan);
+}
+
+
+/* ==============================
+   PROFILE CARD
+============================== */
 
 .holo-card{
-  position:relative;
-  padding:1px;
-  border-radius:28px;
-  background:conic-gradient(from var(--spin,0deg),var(--cyan),var(--violet),var(--pink),var(--cyan));
-  animation:cardSpin 8s linear infinite;
-  box-shadow:0 25px 100px rgba(0,0,0,.45),0 0 55px rgba(0,239,255,.07);
+    position:relative;
+
+    padding:1px;
+
+    border-radius:28px;
+
+    background:conic-gradient(
+        from var(--spin,0deg),
+        var(--cyan),
+        var(--violet),
+        var(--pink),
+        var(--cyan)
+    );
+
+    animation:cardSpin 8s linear infinite;
+
+    box-shadow:
+        0 25px 100px rgba(0,0,0,.45),
+        0 0 55px rgba(0,239,255,.07);
 }
-@keyframes cardSpin{to{--spin:360deg}}
+
+@keyframes cardSpin{
+    to{
+        --spin:360deg;
+    }
+}
+
 .holo-inner{
-  height:100%;
-  border-radius:27px;
-  background:
-    radial-gradient(circle at 80% 15%,rgba(0,239,255,.08),transparent 25%),
-    linear-gradient(145deg,rgba(12,19,32,.96),rgba(5,8,15,.98));
-  overflow:hidden;
+    height:100%;
+
+    border-radius:27px;
+
+    background:
+        radial-gradient(
+            circle at 80% 15%,
+            rgba(0,239,255,.08),
+            transparent 25%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(12,19,32,.96),
+            rgba(5,8,15,.98)
+        );
+
+    overflow:hidden;
 }
-.profile-card{padding:18px}
+
+.profile-card{
+    padding:18px;
+}
+
 .profile-top{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:4px 3px 14px;
-  color:#7f8ba0;
-  font:500 9px var(--mono);
-  letter-spacing:1.1px;
-  text-transform:uppercase;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:4px 3px 14px;
+
+    color:#7f8ba0;
+
+    font:500 9px var(--mono);
+
+    letter-spacing:1.1px;
+    text-transform:uppercase;
 }
-.profile-id{color:var(--cyan)}
+
+.profile-id{
+    color:var(--cyan);
+}
+
 .profile-photo{
-  position:relative;
-  aspect-ratio:4/4.65;
-  border:1px solid var(--line);
-  border-radius:18px;
-  overflow:hidden;
-  background:#0a101b;
-}
-.profile-photo img{
-  width:100%;height:100%;
-  object-fit:cover;
-  object-position:center top;
-  filter:saturate(.95) contrast(1.04);
-}
-.profile-photo::before{
-  content:"";
-  position:absolute;inset:0;z-index:2;
-  background:
-    linear-gradient(115deg,transparent 0 35%,rgba(0,239,255,.08) 50%,transparent 65%),
-    linear-gradient(to top,rgba(3,5,10,.78),transparent 45%);
-  pointer-events:none;
-}
-.scan-line{
-  position:absolute;
-  z-index:3;
-  left:0;right:0;top:0;
-  height:1px;
-  background:var(--cyan);
-  box-shadow:0 0 15px var(--cyan);
-  animation:scan 3.8s ease-in-out infinite;
-}
-@keyframes scan{0%,100%{top:8%}50%{top:91%}}
-.verified{
-  position:absolute;
-  z-index:4;
-  right:13px;top:13px;
-  display:flex;align-items:center;gap:7px;
-  padding:6px 9px;
-  border:1px solid rgba(53,247,165,.45);
-  border-radius:999px;
-  background:rgba(2,7,10,.68);
-  color:var(--green);
-  font:600 9px var(--mono);
-  text-transform:uppercase;
-}
-.verified i{width:5px;height:5px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}
-.profile-bottom{
-  display:flex;align-items:flex-end;justify-content:space-between;
-  padding:15px 3px 3px;
-}
-.profile-name{font:600 17px var(--display)}
-.profile-title{margin-top:2px;color:var(--muted);font-size:10px}
-.online{display:flex;align-items:center;gap:6px;color:var(--green);font:500 9px var(--mono)}
-.online::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}
-.profile-footer{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:8px;
-  padding-top:15px;
-  margin-top:4px;
-  border-top:1px solid var(--line);
-}
-.mini-stat{padding:10px;border:1px solid rgba(255,255,255,.07);border-radius:12px;background:rgba(255,255,255,.025)}
-.mini-stat strong{display:block;font:700 13px var(--display)}
-.mini-stat span{display:block;margin-top:2px;color:var(--muted);font:9px var(--mono);text-transform:uppercase}
+    position:relative;
 
-/* STATS */
-.stats-bar{
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  background:rgba(255,255,255,.018);
-  backdrop-filter:blur(10px);
-}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.stat{
-  padding:25px 18px;
-  text-align:center;
-  border-left:1px solid var(--line);
-}
-.stat:first-child{border-left:0}
-.stat strong{
-  display:block;
-  font:700 27px var(--display);
-  background:var(--holo);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-.stat span{
-  color:var(--muted);
-  font:9px var(--mono);
-  letter-spacing:1px;
-  text-transform:uppercase;
-}
+    aspect-ratio:4/4.65;
 
-/* SECTION HEAD */
-.section-head{max-width:760px;margin-bottom:44px}
-.section-kicker{
-  display:block;
-  margin-bottom:10px;
-  color:var(--cyan);
-  font:600 10px var(--mono);
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-}
-.section-title{
-  font:600 clamp(30px,4vw,44px)/1.1 var(--display);
-  letter-spacing:-1.5px;
-  margin-bottom:12px;
-}
-.section-desc{color:var(--muted);font-size:14px;max-width:690px}
-
-/* CARDS */
-.card{
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.018));
-  backdrop-filter:blur(15px);
-  -webkit-backdrop-filter:blur(15px);
-  box-shadow:var(--shadow);
-}
-.card-hover{
-  transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;
-}
-.card-hover:hover{
-  transform:translateY(-5px);
-  border-color:rgba(0,239,255,.28);
-  box-shadow:0 30px 90px rgba(0,0,0,.48),0 0 30px rgba(0,239,255,.06);
-}
-
-/* ABOUT */
-.about-grid{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:20px;
-}
-.about-card{padding:30px}
-.about-card p{color:var(--muted);font-size:14px;line-height:1.85;margin-bottom:16px}
-.about-card p:last-child{margin-bottom:0}
-.about-highlight{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-  margin-top:25px;
-}
-.highlight{
-  padding:15px;
-  border:1px solid var(--line);
-  border-radius:14px;
-  background:rgba(255,255,255,.025);
-}
-.highlight strong{display:block;font:600 13px var(--display)}
-.highlight span{display:block;color:var(--muted);font-size:10px;margin-top:3px}
-
-.strength-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.strength{
-  padding:21px;
-  border:1px solid var(--line);
-  border-radius:17px;
-  background:rgba(255,255,255,.025);
-  transition:.25s ease;
-}
-.strength:hover{border-color:rgba(255,57,200,.35);transform:translateY(-3px)}
-.strength-code{display:block;color:var(--pink);font:600 9px var(--mono);letter-spacing:1px;margin-bottom:10px}
-.strength h3{font:600 14px var(--display);margin-bottom:6px}
-.strength p{color:var(--muted);font-size:11px;line-height:1.65}
-
-/* SKILLS */
-.skills-card{padding:30px}
-.skill-group{margin-bottom:28px}
-.skill-group:last-child{margin-bottom:0}
-.skill-label{
-  display:flex;justify-content:space-between;gap:12px;
-  margin-bottom:11px;
-  color:#c8d0de;
-  font:600 10px var(--mono);
-  letter-spacing:1px;
-  text-transform:uppercase;
-}
-.skill-label span{color:var(--cyan)}
-.skill-tags{display:flex;flex-wrap:wrap;gap:9px}
-.skill{
-  padding:9px 13px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:rgba(255,255,255,.025);
-  color:#dbe3f1;
-  font:500 10.5px var(--mono);
-  transition:.2s ease;
-}
-.skill:hover{color:var(--cyan);border-color:rgba(0,239,255,.45);box-shadow:0 0 20px rgba(0,239,255,.08)}
-.langs{display:flex;gap:10px;flex-wrap:wrap}
-.lang{
-  display:flex;align-items:center;gap:10px;
-  padding:11px 14px;
-  border:1px solid var(--line);
-  border-radius:13px;
-  background:rgba(255,255,255,.025);
-}
-.lang strong{font:600 12px var(--display)}
-.lang span{color:var(--muted);font:9px var(--mono)}
-
-/* EXPERIENCE */
-.timeline{position:relative;margin-left:9px;padding-left:28px}
-.timeline::before{
-  content:"";
-  position:absolute;
-  left:0;top:8px;bottom:8px;width:1px;
-  background:linear-gradient(var(--cyan),var(--violet),var(--pink),transparent);
-  box-shadow:0 0 12px rgba(0,239,255,.25);
-}
-.experience-item{position:relative;margin-bottom:18px}
-.experience-item:last-child{margin-bottom:0}
-.timeline-dot{
-  position:absolute;
-  left:-34px;top:27px;
-  width:12px;height:12px;
-  border-radius:50%;
-  background:var(--bg);
-  border:2px solid var(--cyan);
-  box-shadow:0 0 14px rgba(0,239,255,.8);
-}
-.exp-card{padding:26px}
-.exp-top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
-.exp-code{color:var(--cyan);font:600 9px var(--mono);letter-spacing:1px}
-.exp-date{
-  color:var(--muted);
-  font:500 9px var(--mono);
-  padding:6px 9px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  white-space:nowrap;
-}
-.exp-card h3{font:600 20px var(--display);margin:10px 0 3px}
-.exp-company{color:var(--pink);font-size:12px;font-weight:600;margin-bottom:15px}
-.exp-card ul{display:grid;gap:7px}
-.exp-card li{
-  position:relative;
-  padding-left:17px;
-  color:var(--muted);
-  font-size:12.5px;
-}
-.exp-card li::before{
-  content:"";
-  position:absolute;
-  left:0;top:.72em;
-  width:5px;height:5px;border-radius:50%;
-  background:var(--cyan);
-  box-shadow:0 0 8px rgba(0,239,255,.7);
-}
-
-/* CREDENTIALS */
-.edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:18px}
-.edu{
-  display:flex;justify-content:space-between;align-items:center;gap:15px;
-  padding:21px 23px;
-  border:1px solid var(--line);
-  border-radius:17px;
-  background:rgba(255,255,255,.025);
-}
-.edu h3{font:600 14px var(--display);margin-bottom:4px}
-.edu p{color:var(--muted);font-size:11px}
-.grade{
-  padding:5px 9px;
-  border:1px solid rgba(53,247,165,.4);
-  border-radius:999px;
-  color:var(--green);
-  font:600 9px var(--mono);
-  white-space:nowrap;
-}
-.cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.cred{
-  min-height:175px;
-  padding:21px;
-  border:1px solid var(--line);
-  border-radius:17px;
-  background:rgba(255,255,255,.025);
-  transition:.25s ease;
-}
-.cred:hover{transform:translateY(-4px);border-color:rgba(0,239,255,.32)}
-.cred-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
-.cred-icon{
-  width:34px;height:34px;
-  display:grid;place-items:center;
-  border-radius:10px;
-  background:var(--holo);
-  color:#03050a;
-  font-weight:900;
-}
-.cred-date{color:var(--muted);font:9px var(--mono)}
-.cred h3{font:600 14px var(--display);line-height:1.35;margin-bottom:6px}
-.cred p{color:var(--muted);font-size:11px;line-height:1.6}
-
-/* SERVICES */
-.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
-.service{
-  padding:23px;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:rgba(255,255,255,.025);
-}
-.service-number{color:var(--cyan);font:600 9px var(--mono);letter-spacing:1px}
-.service h3{font:600 15px var(--display);margin:15px 0 7px}
-.service p{color:var(--muted);font-size:11px;line-height:1.7}
-
-/* CONTACT */
-.contact-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:20px}
-.contact-list{display:grid;gap:10px}
-.contact-item{
-  display:flex;align-items:center;gap:13px;
-  padding:15px;
-  border:1px solid var(--line);
-  border-radius:15px;
-  background:rgba(255,255,255,.025);
-  transition:.2s ease;
-}
-.contact-item:hover{border-color:rgba(0,239,255,.4)}
-.contact-icon{
-  width:41px;height:41px;
-  display:grid;place-items:center;
-  border-radius:11px;
-  color:#03050a;
-  background:var(--holo);
-  font-weight:800;
-  flex:none;
-}
-.contact-item small{
-  display:block;
-  color:var(--muted);
-  font:9px var(--mono);
-  letter-spacing:1px;
-  text-transform:uppercase;
-}
-.contact-item strong{display:block;margin-top:2px;font-size:12.5px;word-break:break-word}
-.contact-note{
-  margin-top:14px;
-  padding:15px;
-  border-left:2px solid var(--cyan);
-  color:var(--muted);
-  font-size:11px;
-  background:rgba(0,239,255,.025);
-}
-.form-card{padding:27px}
-form{display:grid;gap:14px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-label{
-  display:block;
-  color:#9da8ba;
-  font:600 9px var(--mono);
-  letter-spacing:1px;
-  text-transform:uppercase;
-  margin-bottom:7px;
-}
-input,textarea{
-  width:100%;
-  border:1px solid var(--line);
-  border-radius:12px;
-  background:rgba(255,255,255,.025);
-  color:#fff;
-  outline:none;
-  padding:13px 14px;
-  font-size:13px;
-  transition:.2s ease;
-}
-input:focus,textarea:focus{
-  border-color:rgba(0,239,255,.65);
-  box-shadow:0 0 0 3px rgba(0,239,255,.09),0 0 25px rgba(0,239,255,.06);
-}
-textarea{min-height:130px;resize:vertical}
-.form-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.form-note{color:var(--muted);font-size:10px}
-
-/* FOOTER */
-footer{
-  padding:28px 0 calc(28px + env(safe-area-inset-bottom));
-  border-top:1px solid var(--line);
-}
-.footer{
-  display:flex;align-items:center;justify-content:space-between;gap:20px;
-}
-.footer-copy{color:var(--muted);font:9.5px var(--mono)}
-.socials{display:flex;gap:8px}
-.social{
-  width:37px;height:37px;
-  display:grid;place-items:center;
-  border:1px solid var(--line);
-  border-radius:10px;
-  color:var(--muted);
-  transition:.2s ease;
-}
-.social:hover{color:var(--cyan);border-color:var(--cyan);box-shadow:0 0 18px rgba(0,239,255,.12)}
-
-/* BACK TO TOP */
-#topBtn{
-  position:fixed;
-  right:18px;
-  bottom:calc(18px + env(safe-area-inset-bottom));
-  z-index:850;
-  width:44px;height:44px;
-  display:grid;place-items:center;
-  border:1px solid var(--line);
-  border-radius:13px;
-  color:var(--cyan);
-  background:rgba(5,9,16,.78);
-  backdrop-filter:blur(12px);
-  cursor:pointer;
-  opacity:0;
-  visibility:hidden;
-  transform:translateY(10px);
-  transition:.25s ease;
-}
-#topBtn.show{opacity:1;visibility:visible;transform:none}
-
-/* RESPONSIVE */
-@media(max-width:980px){
-  .hero-grid{grid-template-columns:1fr;gap:45px}
-  .hero-copy{max-width:700px}
-  .holo-card{max-width:460px;width:100%;margin:auto}
-  .about-grid{grid-template-columns:1fr}
-  .service-grid{grid-template-columns:repeat(2,1fr)}
-  .cred-grid{grid-template-columns:repeat(2,1fr)}
-  .contact-grid{grid-template-columns:1fr}
-}
-@media(max-width:760px){
-  .container{width:min(var(--max),calc(100% - 28px))}
-  .site-header{padding-top:8px}
-  .nav-shell{height:58px;border-radius:15px;padding-left:13px}
-  .logo-text{font-size:13px}
-  .logo-mark{width:31px;height:31px}
-  .menu-btn{display:grid;place-items:center}
-  .nav-links{
-    position:fixed;
-    top:73px;
-    left:14px;right:14px;
-    display:none;
-    flex-direction:column;
-    align-items:stretch;
-    padding:9px;
     border:1px solid var(--line);
-    border-radius:16px;
-    background:rgba(5,9,16,.94);
-    backdrop-filter:blur(22px);
-    box-shadow:0 25px 80px rgba(0,0,0,.55);
-  }
-  .nav-links.open{display:flex}
-  .nav-links a{padding:13px}
-  .nav-links a.active::after{display:none}
-  .hero{padding:125px 0 70px}
-  .hero h1{font-size:clamp(46px,14vw,72px);letter-spacing:-3px}
-  .hero-copy{font-size:13.5px}
-  .section{padding:78px 0}
-  .stats-grid{grid-template-columns:1fr 1fr}
-  .stat{padding:19px 10px}
-  .stat:nth-child(3){border-left:0;border-top:1px solid var(--line)}
-  .stat:nth-child(4){border-top:1px solid var(--line)}
-  .strength-grid{grid-template-columns:1fr}
-  .edu-grid{grid-template-columns:1fr}
-  .cred-grid{grid-template-columns:1fr}
-  .form-row{grid-template-columns:1fr}
-  .footer{flex-direction:column;align-items:flex-start}
-}
-@media(max-width:520px){
-  .hero-actions .btn{width:100%}
-  .hero-meta{display:grid;gap:10px}
-  .profile-card{padding:12px}
-  .profile-photo{border-radius:14px}
-  .profile-footer{grid-template-columns:1fr 1fr}
-  .profile-footer .mini-stat:last-child{grid-column:1/-1}
-  .service-grid{grid-template-columns:1fr}
-  .exp-top{display:block}
-  .exp-date{display:inline-flex;margin-top:9px}
-  .exp-card{padding:20px}
-  .timeline{margin-left:6px;padding-left:23px}
-  .timeline-dot{left:-29px}
-}
-@media(max-width:380px){
-  .container{width:calc(100% - 22px)}
-  .hero h1{font-size:43px}
-  .section-title{font-size:28px}
+    border-radius:18px;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at 50% 25%,#162238,#070a11);
 }
 
-/* ACCESSIBILITY / REDUCED MOTION */
-:focus-visible{
-  outline:2px solid var(--cyan);
-  outline-offset:3px;
-}
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{
-    animation-duration:.001ms!important;
-    animation-iteration-count:1!important;
-    scroll-behavior:auto!important;
-    transition-duration:.001ms!important;
-  }
-  #spaceCanvas{display:none}
-}
-</style>
-</head>
+.profile-photo img{
+    width:100%;
+    height:100%;
 
-<body>
-<canvas id="spaceCanvas" aria-hidden="true"></canvas>
-<div class="noise" aria-hidden="true"></div>
-<div class="grid-floor" aria-hidden="true"></div>
+    object-fit:cover;
+    object-position:center top;
 
-<header class="site-header">
-  <div class="container">
-    <nav class="nav-shell" aria-label="Main navigation">
-      <a class="logo" href="#home" aria-label="M. Ashir Hadi home">
-        <span class="logo-mark">AH</span>
-        <span class="logo-text">ASHIR.HADI</span>
-      </a>
-
-      <div class="nav-links" id="navLinks">
-        <a class="active" href="#home">Home</a>
-        <a href="#profile">Profile</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#credentials">Credentials</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
-        ☰
-      </button>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="glow-orb orb-cyan" style="left:-160px;top:15%"></div>
-    <div class="glow-orb orb-pink" style="right:-160px;top:28%"></div>
-
-    <div class="container hero-grid">
-      <div class="reveal">
-        <div class="eyebrow">
-          <span class="status-dot"></span>
-          Available for UAE opportunities
-        </div>
-
-        <h1>
-          M. Ashir<br>
-          <span class="gradient-text">Hadi</span>
-        </h1>
-
-        <div class="hero-role">// ADMINISTRATIVE &amp; OPERATIONS PROFESSIONAL</div>
-
-        <p class="hero-copy">
-          Detail-focused professional with experience in administrative support,
-          team supervision, data entry, documentation and day-to-day operations.
-          Based in Dubai, UAE, with practical GCC experience and a strong
-          Microsoft Office foundation.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Let's Connect <span>↗</span></a>
-          <a class="btn btn-ghost" href="resume.pdf" download>Download CV <span>↓</span></a>
-        </div>
-
-        <div class="hero-meta">
-          <div class="meta-item"><span class="meta-icon">⌖</span> Dubai, UAE</div>
-          <div class="meta-item"><span class="meta-icon">▣</span> Admin • Operations • Supervision</div>
-          <div class="meta-item"><span class="meta-icon">◈</span> MS Office • Data • Coordination</div>
-        </div>
-      </div>
-
-      <div class="holo-card reveal">
-        <div class="holo-inner profile-card">
-          <div class="profile-top">
-            <span>Professional Profile</span>
-            <span class="profile-id">AH / 01</span>
-          </div>
-
-          <div class="profile-photo">
-            <img src="IMG-20250803-WA0006.jpg" alt="M. Ashir Hadi professional portrait" loading="eager">
-            <span class="scan-line"></span>
-            <span class="verified"><i></i> Verified Profile</span>
-          </div>
-
-          <div class="profile-bottom">
-            <div>
-              <div class="profile-name">M. Ashir Hadi</div>
-              <div class="profile-title">Administrative &amp; Operations Professional</div>
-            </div>
-            <div class="online">OPEN</div>
-          </div>
-
-          <div class="profile-footer">
-            <div class="mini-stat"><strong>UAE</strong><span>Experience</span></div>
-            <div class="mini-stat"><strong>MS</strong><span>Office</span></div>
-            <div class="mini-stat"><strong>OPS</strong><span>Coordination</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <div class="stats-bar">
-    <div class="container stats-grid">
-      <div class="stat"><strong>2+</strong><span>Years UAE Experience</span></div>
-      <div class="stat"><strong>4</strong><span>Core Roles</span></div>
-      <div class="stat"><strong>5</strong><span>Credentials</span></div>
-      <div class="stat"><strong>2</strong><span>Languages</span></div>
-    </div>
-  </div>
-
-  <!-- PROFILE -->
-  <section class="section" id="profile">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-kicker">// 01_profile</span>
-        <h2 class="section-title">Organized, adaptable and operations-minded.</h2>
-        <p class="section-desc">
-          A professional profile combining office administration, data handling,
-          team supervision and hands-on operational experience.
-        </p>
-      </div>
-
-      <div class="about-grid">
-        <article class="card about-card card-hover reveal">
-          <p>
-            I'm M. Ashir Hadi, a Dubai-based Administrative &amp; Operations
-            Professional with experience across office administration, team
-            coordination, data management, computer operations and on-site
-            supervision.
-          </p>
-          <p>
-            My background includes administrative support, data entry and
-            operational supervision. This allows me to work comfortably with
-            documentation and reports while also understanding the practical
-            requirements of managing people, tasks and daily workflows.
-          </p>
-          <p>
-            My current UAE experience with Imdaad LLC has strengthened my
-            supervision, workforce coordination, daily roster and operational
-            management capabilities.
-          </p>
-
-          <div class="about-highlight">
-            <div class="highlight">
-              <strong>UAE / GCC Focus</strong>
-              <span>Dubai-based professional experience</span>
-            </div>
-            <div class="highlight">
-              <strong>Office Tools</strong>
-              <span>Word, Excel &amp; PowerPoint</span>
-            </div>
-            <div class="highlight">
-              <strong>Team Coordination</strong>
-              <span>Task allocation &amp; daily supervision</span>
-            </div>
-            <div class="highlight">
-              <strong>Data Operations</strong>
-              <span>Records, reports &amp; data entry</span>
-            </div>
-          </div>
-        </article>
-
-        <div class="strength-grid reveal">
-          <article class="strength">
-            <span class="strength-code">ADM / 01</span>
-            <h3>Administrative Support</h3>
-            <p>Documentation, correspondence, reports, filing and day-to-day office coordination.</p>
-          </article>
-          <article class="strength">
-            <span class="strength-code">OPS / 02</span>
-            <h3>Operations Coordination</h3>
-            <p>Daily task coordination, workforce support, scheduling and operational follow-up.</p>
-          </article>
-          <article class="strength">
-            <span class="strength-code">SUP / 03</span>
-            <h3>Team Supervision</h3>
-            <p>Team management, daily rosters, task allocation and on-site coordination.</p>
-          </article>
-          <article class="strength">
-            <span class="strength-code">DATA / 04</span>
-            <h3>Records &amp; Data</h3>
-            <p>Accurate data entry, employee records, reports and organized information management.</p>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="section-sm" id="skills">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-kicker">// 02_capabilities</span>
-        <h2 class="section-title">Tools, skills &amp; working strengths.</h2>
-        <p class="section-desc">
-          Practical capabilities for administrative, coordination, operations
-          and data-focused roles.
-        </p>
-      </div>
-
-      <div class="card skills-card card-hover reveal">
-        <div class="skill-group">
-          <div class="skill-label"><span>Office &amp; Data</span><span>CORE</span></div>
-          <div class="skill-tags">
-            <span class="skill">Microsoft Word</span>
-            <span class="skill">Microsoft Excel</span>
-            <span class="skill">Microsoft PowerPoint</span>
-            <span class="skill">Data Entry</span>
-            <span class="skill">Documentation</span>
-            <span class="skill">Reports</span>
-            <span class="skill">Filing &amp; Records</span>
-            <span class="skill">Data Management</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-label"><span>Operations &amp; Coordination</span><span>FIELD</span></div>
-          <div class="skill-tags">
-            <span class="skill">Team Supervision</span>
-            <span class="skill">Daily Roster</span>
-            <span class="skill">Task Allocation</span>
-            <span class="skill">Workforce Coordination</span>
-            <span class="skill">Office Coordination</span>
-            <span class="skill">Time Management</span>
-            <span class="skill">Communication</span>
-            <span class="skill">Operational Reporting</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-label"><span>Additional Knowledge</span><span>GROWING</span></div>
-          <div class="skill-tags">
-            <span class="skill">Computer Operations</span>
-            <span class="skill">Data Analytics Fundamentals</span>
-            <span class="skill">Business Intelligence Fundamentals</span>
-            <span class="skill">General IT Support</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-label"><span>Languages</span><span>COMMUNICATION</span></div>
-          <div class="langs">
-            <div class="lang"><strong>English</strong><span>Basic – Intermediate</span></div>
-            <div class="lang"><strong>Urdu</strong><span>Fluent</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES / TARGET ROLES -->
-  <section class="section-sm">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-kicker">// 03_role_fit</span>
-        <h2 class="section-title">Where I can add value.</h2>
-        <p class="section-desc">
-          Roles aligned with my administrative, operational, supervisory and
-          data-handling experience.
-        </p>
-      </div>
-
-      <div class="service-grid">
-        <article class="service reveal card-hover">
-          <span class="service-number">01 / ADMIN</span>
-          <h3>Administrative Assistant</h3>
-          <p>Office documentation, records, reports, coordination and daily administrative support.</p>
-        </article>
-        <article class="service reveal card-hover">
-          <span class="service-number">02 / OPS</span>
-          <h3>Operations Coordinator</h3>
-          <p>Task follow-up, communication, scheduling and keeping operational activities organized.</p>
-        </article>
-        <article class="service reveal card-hover">
-          <span class="service-number">03 / SUP</span>
-          <h3>Assistant Supervisor</h3>
-          <p>Team supervision, daily rosters, task allocation and practical site coordination.</p>
-        </article>
-        <article class="service reveal card-hover">
-          <span class="service-number">04 / DATA</span>
-          <h3>Data Entry / Office Support</h3>
-          <p>Accurate data entry, Excel records, documentation and structured information handling.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section class="section" id="experience">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-kicker">// 04_work_record</span>
-        <h2 class="section-title">Experience on file.</h2>
-        <p class="section-desc">
-          A career path combining UAE operational experience with administration,
-          supervision and data entry.
-        </p>
-      </div>
-
-      <div class="timeline">
-
-        <article class="experience-item reveal">
-          <span class="timeline-dot"></span>
-          <div class="card exp-card card-hover">
-            <div class="exp-top">
-              <span class="exp-code">UAE / OPS-01</span>
-              <span class="exp-date">2+ Years</span>
-            </div>
-            <h3>Assistant Supervisor</h3>
-            <div class="exp-company">Imdaad LLC — Dubai, UAE</div>
-            <ul>
-              <li>Supervised daily workforce activities and supported smooth site operations.</li>
-              <li>Managed team coordination and daily workforce roster activities.</li>
-              <li>Allocated tasks and followed up on completion and operational requirements.</li>
-              <li>Supported grass cutting, loading/unloading, landscaping, steamer and lake-area cleaning and maintenance activities.</li>
-              <li>Coordinated with team members to maintain productivity, discipline and work standards.</li>
-              <li>Supported management with daily operational follow-up and team communication.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="experience-item reveal">
-          <span class="timeline-dot"></span>
-          <div class="card exp-card card-hover">
-            <div class="exp-top">
-              <span class="exp-code">PK / ADM-02</span>
-              <span class="exp-date">2.5 Years</span>
-            </div>
-            <h3>Assistant Admin</h3>
-            <div class="exp-company">Vision Technology Pvt Ltd</div>
-            <ul>
-              <li>Managed office documentation, reports and administrative records.</li>
-              <li>Assisted with daily administrative and operational activities.</li>
-              <li>Maintained employee records, attendance and filing systems.</li>
-              <li>Coordinated communication between departments and staff.</li>
-              <li>Prepared reports using Microsoft Word and Microsoft Excel.</li>
-              <li>Supported management with scheduling and office coordination tasks.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="experience-item reveal">
-          <span class="timeline-dot"></span>
-          <div class="card exp-card card-hover">
-            <div class="exp-top">
-              <span class="exp-code">PK / SUP-03</span>
-              <span class="exp-date">1 Year</span>
-            </div>
-            <h3>Foreman / Team Supervision</h3>
-            <div class="exp-company">Vision Technology Pvt Ltd</div>
-            <ul>
-              <li>Supervised daily workforce activities and ensured smooth operations.</li>
-              <li>Monitored task completion and maintained productivity standards.</li>
-              <li>Coordinated team members to meet operational deadlines.</li>
-              <li>Supported task allocation, workplace discipline and daily follow-up.</li>
-              <li>Assisted management with operational reporting and team supervision.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="experience-item reveal">
-          <span class="timeline-dot"></span>
-          <div class="card exp-card card-hover">
-            <div class="exp-top">
-              <span class="exp-code">PK / DATA-04</span>
-              <span class="exp-date">1 Year</span>
-            </div>
-            <h3>Data Entry Operator</h3>
-            <div class="exp-company">Green Field School — Sialkot, Pakistan</div>
-            <ul>
-              <li>Entered and managed academic records using Microsoft Word and Excel.</li>
-              <li>Maintained accurate and organized data storage systems.</li>
-              <li>Assisted in preparing official documents and reports.</li>
-              <li>Collaborated with staff to improve record management processes.</li>
-            </ul>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CREDENTIALS -->
-  <section class="section-sm" id="credentials">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-kicker">// 05_credentials</span>
-        <h2 class="section-title">Education &amp; certifications.</h2>
-        <p class="section-desc">
-          Formal education plus professional learning in business, IT,
-          Microsoft Office, soft skills and data analytics.
-        </p>
-      </div>
-
-      <div class="edu-grid reveal">
-        <div class="edu">
-          <div>
-            <h3>FSC Pre-Engineering</h3>
-            <p>Punjab College for Boys, Sialkot</p>
-          </div>
-          <span class="grade">Grade B</span>
-        </div>
-        <div class="edu">
-          <div>
-            <h3>Matriculation</h3>
-            <p>Secondary School Certificate</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="cred-grid">
-        <article class="cred reveal card-hover">
-          <div class="cred-top"><span class="cred-icon">◆</span><span class="cred-date">2025–2026</span></div>
-          <h3>Data Analytics &amp; Business Intelligence</h3>
-          <p>DigiSkills.pk Training Program, Virtual University</p>
-        </article>
-
-        <article class="cred reveal card-hover">
-          <div class="cred-top"><span class="cred-icon">◆</span><span class="cred-date">May 2026</span></div>
-          <h3>IT for Business Success</h3>
-          <p>HP LIFE, HP Foundation</p>
-        </article>
-
-        <article class="cred reveal card-hover">
-          <div class="cred-top"><span class="cred-icon">◆</span><span class="cred-date">May 2026</span></div>
-          <h3>Microsoft Office 2010</h3>
-          <p>Alison, CPD Certified</p>
-        </article>
-
-        <article class="cred reveal card-hover">
-          <div class="cred-top"><span class="cred-icon">◆</span><span class="cred-date">Nov 2025</span></div>
-          <h3>Soft Skills Training</h3>
-          <p>ICMPD &amp; OEC — 8 hour program</p>
-        </article>
-
-        <article class="cred reveal card-hover">
-          <div class="cred-top"><span class="cred-icon">◆</span><span class="cred-date">On file</span></div>
-          <h3>Diploma in Computer Operator</h3>
-          <p>CBT Level 2</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-kicker">// 06_contact</span>
-        <h2 class="section-title">Let's build the next step.</h2>
-        <p class="section-desc">
-          Open to administrative, operations, coordination and supervision
-          opportunities across Dubai, UAE and the wider GCC.
-        </p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="reveal">
-          <div class="contact-list">
-            <a class="contact-item" href="mailto:mashirhadi@gmail.com">
-              <span class="contact-icon">✉</span>
-              <span><small>Email</small><strong>mashirhadi@gmail.com</strong></span>
-            </a>
-
-            <a class="contact-item" href="tel:+971589267801">
-              <span class="contact-icon">☎</span>
-              <span><small>Phone</small><strong>+971 58 926 7801</strong></span>
-            </a>
-
-            <div class="contact-item">
-              <span class="contact-icon">⌖</span>
-              <span><small>Location</small><strong>Dubai, UAE</strong></span>
-            </div>
-
-            <a class="contact-item" href="https://wa.me/971589267801" target="_blank" rel="noopener">
-              <span class="contact-icon">W</span>
-              <span><small>WhatsApp</small><strong>Message on WhatsApp</strong></span>
-            </a>
-          </div>
-
-          <div class="contact-note">
-            For recruitment, employment opportunities or professional enquiries,
-            email or WhatsApp is the fastest way to reach me.
-          </div>
-        </div>
-
-        <div class="card form-card reveal">
-          <form id="contactForm">
-            <div class="form-row">
-              <div>
-                <label for="name">Your Name</label>
-                <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
-              </div>
-              <div>
-                <label for="email">Your Email</label>
-                <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
-              </div>
-            </div>
-
-            <div>
-              <label for="subject">Subject</label>
-              <input id="subject" name="subject" type="text" placeholder="Job opportunity / enquiry" required>
-            </div>
-
-            <div>
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
-            </div>
-
-            <div class="form-actions">
-              <button class="btn btn-primary" type="submit">Open Email App ↗</button>
-              <a class="btn btn-ghost" href="resume.pdf" download>Get CV ↓</a>
-            </div>
-
-            <p class="form-note">
-              The form opens your default email application with the message prepared.
-            </p>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container footer">
-    <div class="footer-copy">© <span id="year">2026</span> M. Ashir Hadi — Administrative &amp; Operations Professional</div>
-    <div class="socials">
-      <a class="social" href="mailto:mashirhadi@gmail.com" aria-label="Email">✉</a>
-      <a class="social" href="tel:+971589267801" aria-label="Phone">☎</a>
-      <a class="social" href="https://wa.me/971589267801" target="_blank" rel="noopener" aria-label="WhatsApp">W</a>
-    </div>
-  </div>
-</footer>
-
-<button id="topBtn" aria-label="Back to top">↑</button>
-
-<script>
-/* =========================================================
-   MOBILE MENU
-   ========================================================= */
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
-
-menuBtn.addEventListener("click", () => {
-  const open = navLinks.classList.toggle("open");
-  menuBtn.setAttribute("aria-expanded", String(open));
-  menuBtn.textContent = open ? "×" : "☰";
-  document.body.classList.toggle("menu-open", open);
-});
-
-navLinks.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuBtn.setAttribute("aria-expanded", "false");
-    menuBtn.textContent = "☰";
-    document.body.classList.remove("menu-open");
-  });
-});
-
-/* =========================================================
-   ACTIVE NAV
-   ========================================================= */
-const sections = [...document.querySelectorAll("main section[id]")];
-const navItems = [...document.querySelectorAll(".nav-links a")];
-
-const sectionObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    navItems.forEach(a => a.classList.remove("active"));
-    const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-    if (active) active.classList.add("active");
-  });
-}, {rootMargin:"-35% 0px -55% 0px", threshold:0});
-
-sections.forEach(section => sectionObserver.observe(section));
-
-/* =========================================================
-   SCROLL REVEAL
-   ========================================================= */
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, {threshold:.12});
-
-document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
-
-/* =========================================================
-   BACK TO TOP
-   ========================================================= */
-const topBtn = document.getElementById("topBtn");
-
-window.addEventListener("scroll", () => {
-  topBtn.classList.toggle("show", window.scrollY > 650);
-}, {passive:true});
-
-topBtn.addEventListener("click", () => {
-  window.scrollTo({top:0, behavior:"smooth"});
-});
-
-/* =========================================================
-   CONTACT FORM -> MAILTO
-   ========================================================= */
-document.getElementById("contactForm").addEventListener("submit", e => {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const subject = document.getElementById("subject").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  const body =
-`Hello M. Ashir Hadi,
-
-Name: ${name}
-Email: ${email}
-
-${message}
-
-Sent from your portfolio website.`;
-
-  const mailto =
-    `mailto:mashirhadi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-  window.location.href = mailto;
-});
-
-/* =========================================================
-   YEAR
-   ========================================================= */
-document.getElementById("year").textContent = new Date().getFullYear();
-
-/* =========================================================
-   MOVING NEON PARTICLE / STAR BACKGROUND
-   ========================================================= */
-const canvas = document.getElementById("spaceCanvas");
-const ctx = canvas.getContext("2d", {alpha:true});
-
-let width = 0;
-let height = 0;
-let dpr = Math.min(window.devicePixelRatio || 1, 2);
-let particles = [];
-let mouse = {x:-9999, y:-9999};
-
-function resizeCanvas(){
-  width = window.innerWidth;
-  height = window.innerHeight;
-  dpr = Math.min(window.devicePixelRatio || 1, 2);
-
-  canvas.width = Math.floor(width * dpr);
-  canvas.height = Math.floor(height * dpr);
-  canvas.style.width = width + "px";
-  canvas.style.height = height + "px";
-  ctx.setTransform(dpr,0,0,dpr,0,0);
-
-  const count = Math.min(105, Math.max(45, Math.floor((width * height) / 14500)));
-
-  particles = Array.from({length:count}, () => ({
-    x:Math.random() * width,
-    y:Math.random() * height,
-    vx:(Math.random()-.5) * .18,
-    vy:(Math.random()-.5) * .18,
-    r:Math.random() * 1.4 + .25,
-    a:Math.random() * .55 + .12,
-    phase:Math.random() * Math.PI * 2,
-    hue:Math.random() < .55 ? 190 : (Math.random() < .5 ? 265 : 315)
-  }));
+    filter:saturate(.95) contrast(1.04);
 }
 
-window.addEventListener("resize", resizeCanvas, {passive:true});
+.profile-photo::before{
+    content:"";
 
-window.addEventListener("pointermove", e => {
-  mouse.x = e.clientX;
-  mouse.y = e.clientY;
-}, {passive:true});
+    position:absolute;
+    inset:0;
+    z-index:2;
 
-window.addEventListener("pointerleave", () => {
-  mouse.x = -9999;
-  mouse.y = -9999;
-});
+    background:
+        linear-gradient(
+            115deg,
+            transparent 0 35%,
+            rgba(0,239,255,.08) 50%,
+            transparent 65%
+        ),
+        linear-gradient(
+            to top,
+            rgba(3,5,10,.78),
+            transparent 45%
+        );
 
-function drawBackground(time){
-  ctx.clearRect(0,0,width,height);
+    pointer-events:none;
+}
 
-  const gradient = ctx.createRadialGradient(
-    width*.5,height*.2,0,
-    width*.5,height*.2,Math.max(width,height)*.75
-  );
-  gradient.addColorStop(0,"rgba(0,239,255,.025)");
-  gradient.addColorStop(.45,"rgba(100,70,255,.012)");
-  gradient.addColorStop(1,"rgba(0,0,0,0)");
-  ctx.fillStyle = gradient;
-  ctx.fillRect(0,0,width,height);
+.scan-line{
+    position:absolute;
 
-  for(const p of particles){
-    p.x += p.vx;
-    p.y += p.vy;
-    p.phase += .012;
+    z-index:3;
 
-    if(p.x < -20) p.x = width + 20;
-    if(p.x > width + 20) p.x = -20;
-    if(p.y < -20) p.y = height + 20;
-    if(p.y > height + 20) p.y = -20;
+    left:0;
+    right:0;
+    top:0;
 
-    const dx = p.x - mouse.x;
-    const dy = p.y - mouse.y;
-    const dist = Math.hypot(dx,dy);
+    height:1px;
 
-    if(dist < 130 && dist > 0){
-      const force = (130-dist)/130;
-      p.x += (dx/dist) * force * .35;
-      p.y += (dy/dist) * force * .35;
+    background:var(--cyan);
+
+    box-shadow:0 0 15px var(--cyan);
+
+    animation:scan 3.8s ease-in-out infinite;
+}
+
+@keyframes scan{
+    0%,100%{
+        top:8%;
     }
 
-    const pulse = .72 + Math.sin(p.phase) * .28;
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fillStyle = `hsla(${p.hue},100%,70%,${p.a*pulse})`;
-    ctx.fill();
-
-    if(dist < 110){
-      ctx.beginPath();
-      ctx.moveTo(p.x,p.y);
-      ctx.lineTo(mouse.x,mouse.y);
-      ctx.strokeStyle = `hsla(${p.hue},100%,65%,${(1-dist/110)*.07})`;
-      ctx.lineWidth = 1;
-      ctx.stroke();
+    50%{
+        top:91%;
     }
-  }
-
-  requestAnimationFrame(drawBackground);
 }
 
-resizeCanvas();
-requestAnimationFrame(drawBackground);
+.verified{
+    position:absolute;
 
-/* =========================================================
-   HOLO POINTER GLOW ON CARDS
-   ========================================================= */
-document.querySelectorAll(".card-hover, .holo-card").forEach(card => {
-  card.addEventListener("pointermove", e => {
-    const r = card.getBoundingClientRect();
-    const x = ((e.clientX-r.left)/r.width)*100;
-    const y = ((e.clientY-r.top)/r.height)*100;
-    card.style.background = `
-      radial-gradient(circle at ${x}% ${y}%, rgba(0,239,255,.075), transparent 28%),
-      linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.018))
-    `;
-  });
+    z-index:4;
 
-  card.addEventListener("pointerleave", () => {
-    card.style.background = "";
-  });
-});
-</script>
-</body>
-</html>
+    right:13px;
+    top:13px;
+
+    display:flex;
+    align-items:center;
+
+    gap:7px;
+
+    padding:6px 9px;
+
+    border:1px solid rgba(53,247,165,.45);
+    border-radius:999px;
+
+    background:rgba(2,7,10,.68);
+
+    color:var(--green);
+
+    font:600 9px var(--mono);
+
+    text-transform:uppercase;
+}
+
+.verified i{
+    width:5px;
+    height:5px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    box-shadow:0 0 8px var(--green);
+}
+
+.profile-bottom{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+
+    padding:15px 3px 3px;
+}
+
+.profile-name{
+    font:600 17px var(--display);
+}
+
+.profile-title{
+    margin-top:2px;
+
+    color:var(--muted);
+
+    font-size:10px;
+}
+
+.online{
+    display:flex;
+    align-items:center;
+
+    gap:6px;
+
+    color:var(--green);
+
+    font:500 9px var(--mono);
+}
+
+.online::before{
+    content:"";
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    box-shadow:0 0 8px var(--green);
+}
+
+.profile-footer{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:8px;
+
+    padding-top:15px;
+
+    margin-top:4px;
+
+    border-top:1px solid var(--line);
+}
+
+.mini-stat{
+    padding:10px;
+
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:12px;
+
+    background:rgba(255,255,255,.025);
+}
+
+.mini-stat strong{
+    display:block;
+
+    font:700 13px var(--display);
+}
+
+.mini-stat span{
+    display:block;
+
+    margin-top:2px;
+
+    color:var(--muted);
+
+    font:9px var(--mono);
+
+    text-transform:uppercase;
+}
+
+
+/* ==============================
+   STATS
+============================== */
+
+.stats-bar{
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+
+    background:rgba(255,255,255,.018);
+
+    backdrop-filter:blur(10px);
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+    padding:25px 18px;
+
+    text-align:center;
+
+    border-left:1px solid var(--line);
+}
+
+.stat:first-child{
+    border-left:0;
+}
+
+.stat strong{
+    display:block;
+
+    font:700 27px var(--display);
+
+    background:var(--holo);
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+}
+
+.stat span{
+    color:var(--muted);
+
+    font:9px var(--mono);
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+
+/* ==============================
+   SECTION HEAD
+============================== */
+
+.section-head{
+    max-width:760px;
+
+    margin-bottom:44px;
+}
+
+.section-kicker{
+    display:block;
+
+    margin-bottom:10px;
+
+    color:var(--cyan);
+
+    font:600 10px var(--mono);
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+}
+
+.section-title{
+    font:600 clamp(30px,4vw,44px)/1.1 var(--display);
+
+    letter-spacing:-1.5px;
+
+    margin-bottom:12px;
+}
+
+.section-desc{
+    color:var(--muted);
+
+    font-size:14px;
+
+    max-width:690px;
+}
+
+
+/* ==============================
+   CARDS
+============================== */
+
+.card{
+    border:1px solid var(--line);
+
+    border-radius:var(--radius);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.05),
+            rgba(255,255,255,.018)
+        );
+
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    box-shadow:var(--shadow);
+}
+
+.card-hover{
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+.card-hover:hover{
+    transform:translateY(-5px);
+
+    border-color:rgba(0,239,255,.28);
+
+    box-shadow:
+        0 30px 90px rgba(0,0,0,.48),
+        0 0 30px rgba(0,239,255,.06);
+}
+
+
+/* ==============================
+   ABOUT
+============================== */
+
+.about-grid{
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:20px;
+}
+
+.about-card{
+    padding:30px;
+}
+
+.about-card p{
+    color:var(--muted);
+
+    font-size:14px;
+    line-height:1.85;
+
+    margin-bottom:16px;
+}
+
+.about-card p:last-child{
+    margin-bottom:0;
+}
+
+.about-highlight{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+    margin-top:25px;
+}
+
+.highlight{
+    padding:15px;
+
+    border:1px solid var(--line);
+    border-radius:14px;
+
+    background:rgba(255,255,255,.025);
+}
+
+.highlight strong{
+    display:block;
+
+    font:600 13px var(--display);
+}
+
+.highlight span{
+    display:block;
+
+    color:var(--muted);
+
+    font-size:10px;
+
+    margin-top:3px;
+}
+
+.strength-grid{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+}
+
+.strength{
+    padding:21px;
+
+    border:1px solid var(--line);
+    border-radius:17px;
+
+    background:rgba(255,255,255,.025);
+
+    transition:.25s ease;
+}
+
+.strength:hover{
+    border-color:rgba(255,57,200,.35);
+
+    transform:translateY(-3px);
+}
+
+.strength-code{
+    display:block;
+
+    color:var(--pink);
+
+    font:600 9px var(--mono);
+
+    letter-spacing:1px;
+
+    margin-bottom:10px;
+}
+
+.strength h3{
+    font:600 14px var(--display);
+
+    margin-bottom:6px;
+}
+
+.strength p{
+    color:var(--muted);
+
+    font-size:11px;
+
+    line-height:1.65;
+}
+
+
+/* ==============================
+   SKILLS
+============================== */
+
+.skills-card{
+    padding:30px;
+}
+
+.skill-group{
+    margin-bottom:28px;
+}
+
+.skill-group:last-child{
+    margin-bottom:0;
+}
+
+.skill-label{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:12px;
+
+    margin-bottom:11px;
+
+    color:#c8d0de;
+
+    font:600 10px var(--mono);
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+.skill-label span{
+    color:var(--cyan);
+}
+
+.skill-tags{
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:9px;
+}
+
+.skill{
+    padding:9px 13px;
+
+    border:1px solid var(--line);
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.025);
+
+    color:#dbe3f1;
+
+    font:500 10.5px var(--mono);
+
+    transition:.2s ease;
+}
+
+.skill:hover{
+    color:var(--cyan);
+
+    border-color:rgba(0,239,255,.45);
+
+    box-shadow:0 0 20px rgba(0,239,255,.08);
+}
+
+.langs{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.lang{
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:11px 14px;
+
+    border:1px solid var(--line);
+
+    border-radius:13px;
+
+    background:rgba(255,255,255,.025);
+}
+
+.lang strong{
+    font:600 12px var(--display);
+}
+
+.lang span{
+    color:var(--muted);
+
+    font:9px var(--mono);
+}
+
+
+/* ==============================
+   EXPERIENCE
+============================== */
+
+.timeline{
+    position:relative;
+
+    margin-left:9px;
+
+    padding-left:28px;
+}
+
+.timeline::before{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:8px;
+    bottom:8px;
+
+    width:1px;
+
+    background:
+        linear-gradient(
+            var(--cyan),
+            var(--violet),
+            var(--pink),
+            transparent
+        );
+
+    box-shadow:0 0 12px rgba(0,239,255,.25);
+}
+
+.experience-item{
+    position:relative;
+
+    margin-bottom:18px;
+}
+
+.experience-item:last-child{
+    margin-bottom:0;
+}
+
+.timeline-dot{
+    position:absolute;
+
+    left:-34px;
+    top:27px;
+
+    width:12px;
+    height:12px;
+
+    border-radius:50%;
+
+    background:var(--bg);
+
+    border:2px solid var(--cyan);
+
+    box-shadow:0 0 14px rgba(0,239,255,.8);
+}
+
+.exp-card{
+    padding:26px;
+}
+
+.exp-top{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:16px;
+
+    align-items:flex-start;
+}
+
+.exp-code{
+    color:var(--cyan);
+
+    font:600 9px var(--mono);
+
+    letter-spacing:1px;
+}
+
+.exp-date{
+    color:var(--muted);
+
+    font:500 9px var(--mono);
+
+    padding:6px 9px;
+
+    border:1px solid var(--line);
+
+    border-radius:999px;
+
+    white-space:nowrap;
+}
+
+.exp-card h3{
+    font:600 20px var(--display);
+
+    margin:10px 0 3px;
+}
+
+.exp-company{
+    color:var(--pink);
+
+    font-size:12px;
+
+    font-weight:600;
+
+    marg
