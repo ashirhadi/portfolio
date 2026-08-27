@@ -2095,4 +2095,2752 @@ gap:13px;
 padding:15px;
 
 border:
-1px solid var(--line)
+1px solid var(--line);
+
+border-radius:15px;
+
+background:
+rgba(255,255,255,.025);
+
+transition:.2s ease;
+
+}
+
+
+.contact-item:hover{
+
+border-color:
+rgba(0,239,255,.4);
+
+transform:
+translateX(3px);
+
+}
+
+
+.contact-icon{
+
+width:41px;
+height:41px;
+
+display:grid;
+
+place-items:center;
+
+border-radius:11px;
+
+color:#03050a;
+
+background:var(--holo);
+
+font-weight:800;
+
+flex:none;
+
+}
+
+
+.contact-item small{
+
+display:block;
+
+color:var(--muted);
+
+font:
+9px var(--mono);
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+}
+
+
+.contact-item strong{
+
+display:block;
+
+margin-top:2px;
+
+font-size:12.5px;
+
+word-break:break-word;
+
+}
+
+
+.contact-note{
+
+margin-top:14px;
+
+padding:15px;
+
+border-left:
+2px solid var(--cyan);
+
+color:var(--muted);
+
+font-size:11px;
+
+background:
+rgba(0,239,255,.025);
+
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-card{
+
+padding:27px;
+
+}
+
+
+form{
+
+display:grid;
+
+gap:14px;
+
+}
+
+
+.form-row{
+
+display:grid;
+
+grid-template-columns:
+repeat(2,1fr);
+
+gap:14px;
+
+}
+
+
+.field{
+
+display:grid;
+
+gap:7px;
+
+}
+
+
+.field label{
+
+color:#b9c4d7;
+
+font:
+600 10px var(--mono);
+
+letter-spacing:.8px;
+
+text-transform:uppercase;
+
+}
+
+
+.field input,
+.field textarea{
+
+width:100%;
+
+border:
+1px solid var(--line);
+
+border-radius:12px;
+
+background:
+rgba(0,0,0,.2);
+
+color:white;
+
+padding:
+13px 14px;
+
+outline:none;
+
+transition:.2s ease;
+
+}
+
+
+.field input{
+
+height:48px;
+
+}
+
+
+.field textarea{
+
+min-height:140px;
+
+resize:vertical;
+
+}
+
+
+.field input:focus,
+.field textarea:focus{
+
+border-color:
+rgba(0,239,255,.55);
+
+box-shadow:
+0 0 25px rgba(0,239,255,.06);
+
+}
+
+
+.form-status{
+
+display:none;
+
+padding:12px;
+
+border:
+1px solid rgba(53,247,165,.3);
+
+border-radius:10px;
+
+color:var(--green);
+
+font-size:11px;
+
+background:
+rgba(53,247,165,.04);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+border-top:
+1px solid var(--line);
+
+padding:
+35px 0;
+
+background:
+rgba(255,255,255,.015);
+
+}
+
+
+.footer-inner{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:20px;
+
+}
+
+
+.footer-copy{
+
+color:var(--muted);
+
+font-size:10px;
+
+font-family:var(--mono);
+
+}
+
+
+.footer-links{
+
+display:flex;
+
+gap:8px;
+
+}
+
+
+.footer-links a{
+
+width:34px;
+height:34px;
+
+display:grid;
+
+place-items:center;
+
+border:
+1px solid var(--line);
+
+border-radius:9px;
+
+color:var(--muted);
+
+font:
+600 10px var(--mono);
+
+transition:.2s ease;
+
+}
+
+
+.footer-links a:hover{
+
+color:var(--cyan);
+
+border-color:
+rgba(0,239,255,.4);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:950px){
+
+.hero-grid{
+
+grid-template-columns:1fr;
+
+gap:50px;
+
+}
+
+.hero-copy{
+
+max-width:700px;
+
+}
+
+.profile-card{
+
+max-width:520px;
+
+margin:auto;
+
+}
+
+.about-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.service-grid{
+
+grid-template-columns:
+repeat(2,1fr);
+
+}
+
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+@media(max-width:760px){
+
+.container{
+
+width:
+calc(100% - 28px);
+
+}
+
+
+.section{
+
+padding:80px 0;
+
+}
+
+
+.section-sm{
+
+padding:65px 0;
+
+}
+
+
+.nav-links{
+
+position:fixed;
+
+top:82px;
+
+left:14px;
+right:14px;
+
+display:none;
+
+flex-direction:column;
+
+align-items:stretch;
+
+padding:10px;
+
+border:
+1px solid var(--line);
+
+border-radius:16px;
+
+background:
+rgba(4,8,15,.95);
+
+backdrop-filter:
+blur(20px);
+
+box-shadow:
+0 25px 70px rgba(0,0,0,.45);
+
+}
+
+
+.nav-links.open{
+
+display:flex;
+
+}
+
+
+.nav-links a{
+
+padding:
+14px;
+
+}
+
+
+.menu-btn{
+
+display:block;
+
+}
+
+
+.hero{
+
+padding-top:125px;
+
+}
+
+
+.hero h1{
+
+font-size:
+clamp(43px,14vw,70px);
+
+letter-spacing:
+-2.8px;
+
+}
+
+
+.hero-copy{
+
+font-size:14px;
+
+}
+
+
+.stats-grid{
+
+grid-template-columns:
+repeat(2,1fr);
+
+}
+
+
+.stat{
+
+border-bottom:
+1px solid var(--line);
+
+}
+
+
+.stat:nth-child(odd){
+
+border-left:0;
+
+}
+
+
+.stat:nth-child(n+3){
+
+border-bottom:0;
+
+}
+
+
+.edu-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.service-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.form-row{
+
+grid-template-columns:1fr;
+
+}
+
+
+.footer-inner{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+
+}
+
+
+@media(max-width:500px){
+
+.hero-actions{
+
+flex-direction:column;
+
+}
+
+
+.hero-actions .btn{
+
+width:100%;
+
+}
+
+
+.profile-footer{
+
+grid-template-columns:
+repeat(3,1fr);
+
+}
+
+
+.mini-stat{
+
+padding:8px;
+
+}
+
+
+.mini-stat strong{
+
+font-size:11px;
+
+}
+
+
+.mini-stat span{
+
+font-size:7px;
+
+}
+
+
+.strength-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.about-highlight{
+
+grid-template-columns:1fr;
+
+}
+
+
+.exp-top{
+
+flex-direction:column;
+
+}
+
+
+.timeline{
+
+padding-left:22px;
+
+}
+
+
+.exp-card{
+
+padding:21px;
+
+}
+
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<canvas id="spaceCanvas"></canvas>
+
+<div class="noise"></div>
+
+<div class="grid-floor"></div>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="site-header">
+
+<div class="container">
+
+<nav class="nav-shell">
+
+<a href="#home" class="logo">
+
+<span class="logo-mark">
+AH
+</span>
+
+<span class="logo-text">
+M. Ashir Hadi
+</span>
+
+</a>
+
+
+<div class="nav-links" id="navLinks">
+
+<a href="#home" class="active">
+Home
+</a>
+
+<a href="#about">
+About
+</a>
+
+<a href="#skills">
+Skills
+</a>
+
+<a href="#experience">
+Experience
+</a>
+
+<a href="#services">
+Services
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+</div>
+
+
+<button
+class="menu-btn"
+id="menuBtn"
+aria-label="Open menu"
+>
+☰
+</button>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main id="home">
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-grid">
+
+
+<div class="reveal">
+
+<div class="eyebrow">
+
+<span class="status-dot"></span>
+
+Available for opportunities
+
+</div>
+
+
+<h1>
+
+M. Ashir
+
+<span class="gradient-text">
+Hadi
+</span>
+
+</h1>
+
+
+<div class="hero-role">
+
+ADMINISTRATIVE & OPERATIONS PROFESSIONAL
+
+</div>
+
+
+<p class="hero-copy">
+
+Dubai-based professional with experience in
+team supervision, operations support,
+office administration, data entry,
+computer operations and facility services.
+
+Focused on organized execution,
+team coordination, accurate reporting
+and reliable day-to-day operations.
+
+</p>
+
+
+<div class="hero-actions">
+
+
+<a
+href="#contact"
+class="btn btn-primary"
+>
+Let's Connect →
+</a>
+
+
+<a
+href="resume.pdf"
+class="btn btn-ghost"
+download
+>
+Download CV
+</a>
+
+
+<a
+href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-ghost"
+>
+LinkedIn ↗
+</a>
+
+
+</div>
+
+
+<div class="hero-meta">
+
+
+<div class="meta-item">
+
+<span class="meta-icon">
+●
+</span>
+
+Dubai, UAE
+
+</div>
+
+
+<div class="meta-item">
+
+<span class="meta-icon">
+◆
+</span>
+
+Assistant Supervisor
+
+</div>
+
+
+<div class="meta-item">
+
+<span class="meta-icon">
+✓
+</span>
+
+Operations & Administration
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- PROFILE -->
+
+<div class="holo-card reveal">
+
+<div class="holo-inner">
+
+<div class="profile-card">
+
+
+<div class="profile-top">
+
+<span>
+Professional Profile
+</span>
+
+<span class="profile-id">
+AH-2026
+</span>
+
+</div>
+
+
+<div class="profile-photo">
+
+<img
+src="IMG-20250803-WA0006.jpg"
+alt="M. Ashir Hadi"
+onerror="this.style.display='none'"
+>
+
+
+<div class="scan-line"></div>
+
+
+<div class="verified">
+
+<i></i>
+
+Verified Profile
+
+</div>
+
+</div>
+
+
+<div class="profile-bottom">
+
+<div>
+
+<div class="profile-name">
+M. Ashir Hadi
+</div>
+
+<div class="profile-title">
+Administrative & Operations
+</div>
+
+</div>
+
+
+<div class="online">
+AVAILABLE
+</div>
+
+</div>
+
+
+<div class="profile-footer">
+
+
+<div class="mini-stat">
+
+<strong>
+UAE
+</strong>
+
+<span>
+Location
+</span>
+
+</div>
+
+
+<div class="mini-stat">
+
+<strong>
+Ops
+</strong>
+
+<span>
+Focus
+</span>
+
+</div>
+
+
+<div class="mini-stat">
+
+<strong>
+2026
+</strong>
+
+<span>
+Profile
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<div class="stats-bar">
+
+<div class="container">
+
+<div class="stats-grid">
+
+
+<div class="stat">
+
+<strong>
+2+
+</strong>
+
+<span>
+Years UAE Experience
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>
+20+
+</strong>
+
+<span>
+Team Coordination
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>
+MS Office
+</strong>
+
+<span>
+Core Tools
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>
+UAE
+</strong>
+
+<span>
+Based in Dubai
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="section" id="about">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+<span class="section-kicker">
+01 / About
+</span>
+
+<h2 class="section-title">
+Professional mindset.
+Operational discipline.
+</h2>
+
+<p class="section-desc">
+
+A practical professional focused on
+organization, people coordination,
+documentation and smooth daily operations.
+
+</p>
+
+</div>
+
+
+
+<div class="about-grid">
+
+
+<div class="card about-card card-hover reveal">
+
+<p>
+
+I am <strong>M. Ashir Hadi</strong>,
+an Administrative & Operations Professional
+based in Dubai, UAE.
+
+</p>
+
+
+<p>
+
+My experience includes assistant supervision,
+team coordination, daily roster management,
+facility operations, data entry, computer
+operations and administrative support.
+
+</p>
+
+
+<p>
+
+I combine field experience with computer
+and office skills to help teams work more
+efficiently and maintain accurate records.
+
+</p>
+
+
+<div class="about-highlight">
+
+
+<div class="highlight">
+
+<strong>
+Team Coordination
+</strong>
+
+<span>
+Daily workforce organization
+</span>
+
+</div>
+
+
+<div class="highlight">
+
+<strong>
+Administration
+</strong>
+
+<span>
+Records, reports & documentation
+</span>
+
+</div>
+
+
+<div class="highlight">
+
+<strong>
+Data Operations
+</strong>
+
+<span>
+Data entry & Excel support
+</span>
+
+</div>
+
+
+<div class="highlight">
+
+<strong>
+Facility Operations
+</strong>
+
+<span>
+Site support & coordination
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<div class="strength-grid">
+
+
+<div class="strength reveal">
+
+<span class="strength-code">
+CORE / 01
+</span>
+
+<h3>
+Team Leadership
+</h3>
+
+<p>
+Supporting teams, assigning work,
+monitoring daily activities and
+maintaining discipline.
+</p>
+
+</div>
+
+
+<div class="strength reveal">
+
+<span class="strength-code">
+CORE / 02
+</span>
+
+<h3>
+Administration
+</h3>
+
+<p>
+Handling records, documentation,
+daily reports and operational
+information.
+</p>
+
+</div>
+
+
+<div class="strength reveal">
+
+<span class="strength-code">
+CORE / 03
+</span>
+
+<h3>
+Computer Operations
+</h3>
+
+<p>
+MS Office, Excel, Word, data entry
+and digital documentation.
+</p>
+
+</div>
+
+
+<div class="strength reveal">
+
+<span class="strength-code">
+CORE / 04
+</span>
+
+<h3>
+Operations Support
+</h3>
+
+<p>
+Helping teams deliver daily tasks
+safely, efficiently and consistently.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section class="section" id="skills">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+<span class="section-kicker">
+02 / Skills
+</span>
+
+<h2 class="section-title">
+Tools & capabilities.
+</h2>
+
+<p class="section-desc">
+
+A combination of administrative,
+technical, operational and coordination
+skills developed through professional experience.
+
+</p>
+
+</div>
+
+
+
+<div class="card skills-card reveal">
+
+
+<div class="skill-group">
+
+<div class="skill-label">
+
+<span>
+Administration
+</span>
+
+<span>
+01
+</span>
+
+</div>
+
+
+<div class="skill-tags">
+
+<span class="skill">
+Office Administration
+</span>
+
+<span class="skill">
+Documentation
+</span>
+
+<span class="skill">
+Data Entry
+</span>
+
+<span class="skill">
+Record Management
+</span>
+
+<span class="skill">
+Daily Reporting
+</span>
+
+<span class="skill">
+Roster Management
+</span>
+
+</div>
+
+</div>
+
+
+
+<div class="skill-group">
+
+<div class="skill-label">
+
+<span>
+Computer & Software
+</span>
+
+<span>
+02
+</span>
+
+</div>
+
+
+<div class="skill-tags">
+
+<span class="skill">
+Microsoft Word
+</span>
+
+<span class="skill">
+Microsoft Excel
+</span>
+
+<span class="skill">
+Microsoft Office
+</span>
+
+<span class="skill">
+Email
+</span>
+
+<span class="skill">
+Internet Operations
+</span>
+
+<span class="skill">
+Digital Documentation
+</span>
+
+</div>
+
+</div>
+
+
+
+<div class="skill-group">
+
+<div class="skill-label">
+
+<span>
+Operations
+</span>
+
+<span>
+03
+</span>
+
+</div>
+
+
+<div class="skill-tags">
+
+<span class="skill">
+Team Coordination
+</span>
+
+<span class="skill">
+Workforce Management
+</span>
+
+<span class="skill">
+Facility Support
+</span>
+
+<span class="skill">
+Site Operations
+</span>
+
+<span class="skill">
+Task Monitoring
+</span>
+
+<span class="skill">
+Safety Awareness
+</span>
+
+</div>
+
+</div>
+
+
+
+<div class="skill-group">
+
+<div class="skill-label">
+
+<span>
+Languages
+</span>
+
+<span>
+04
+</span>
+
+</div>
+
+
+<div class="langs">
+
+
+<div class="lang">
+
+<strong>
+English
+</strong>
+
+<span>
+Professional
+</span>
+
+</div>
+
+
+<div class="lang">
+
+<strong>
+Urdu
+</strong>
+
+<span>
+Native
+</span>
+
+</div>
+
+
+<div class="lang">
+
+<strong>
+Hindi
+</strong>
+
+<span>
+Conversational
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+
+<section class="section" id="experience">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+<span class="section-kicker">
+03 / Experience
+</span>
+
+<h2 class="section-title">
+Professional experience.
+</h2>
+
+<p class="section-desc">
+
+Experience across facility operations,
+team supervision, administration and
+computer-based work.
+
+</p>
+
+</div>
+
+
+
+<div class="timeline">
+
+
+<div class="experience-item reveal">
+
+<span class="timeline-dot"></span>
+
+
+<div class="card exp-card card-hover">
+
+
+<div class="exp-top">
+
+<span class="exp-code">
+EXPERIENCE / 01
+</span>
+
+<span class="exp-date">
+Dubai, UAE
+</span>
+
+</div>
+
+
+<h3>
+Assistant Supervisor
+</h3>
+
+
+<div class="exp-company">
+Imdaad LLC — Dubai
+</div>
+
+
+<ul>
+
+<li>
+Supervised and coordinated daily team activities.
+</li>
+
+<li>
+Prepared and maintained daily workforce rosters.
+</li>
+
+<li>
+Supported site operations and task allocation.
+</li>
+
+<li>
+Monitored completion of assigned operational tasks.
+</li>
+
+<li>
+Supported facility cleaning and maintenance activities.
+</li>
+
+<li>
+Coordinated grass cutting, loading and unloading
+and outdoor area maintenance activities.
+</li>
+
+<li>
+Maintained communication between workers
+and supervisors.
+</li>
+
+<li>
+Supported daily reporting and operational documentation.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+<div class="experience-item reveal">
+
+<span class="timeline-dot"></span>
+
+
+<div class="card exp-card card-hover">
+
+
+<div class="exp-top">
+
+<span class="exp-code">
+EXPERIENCE / 02
+</span>
+
+<span class="exp-date">
+Pakistan
+</span>
+
+</div>
+
+
+<h3>
+Computer Operator / Data Entry
+</h3>
+
+
+<div class="exp-company">
+Computer & Office Operations
+</div>
+
+
+<ul>
+
+<li>
+Performed computer-based data entry and documentation.
+</li>
+
+<li>
+Worked with Microsoft Word and Excel.
+</li>
+
+<li>
+Maintained digital and office records.
+</li>
+
+<li>
+Prepared documents and basic reports.
+</li>
+
+<li>
+Supported day-to-day office administration.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EDUCATION
+===================================================== -->
+
+<section class="section" id="education">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+<span class="section-kicker">
+04 / Education
+</span>
+
+<h2 class="section-title">
+Education & development.
+</h2>
+
+</div>
+
+
+
+<div class="edu-grid">
+
+
+<div class="edu reveal">
+
+<div>
+
+<h3>
+Graduation
+</h3>
+
+<p>
+Academic qualification
+</p>
+
+</div>
+
+<span class="grade">
+COMPLETED
+</span>
+
+</div>
+
+
+<div class="edu reveal">
+
+<div>
+
+<h3>
+Computer & Office Skills
+</h3>
+
+<p>
+MS Office, Word, Excel & Data Entry
+</p>
+
+</div>
+
+<span class="grade">
+SKILLED
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section class="section" id="services">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+<span class="section-kicker">
+05 / Services
+</span>
+
+<h2 class="section-title">
+What I can contribute.
+</h2>
+
+<p class="section-desc">
+
+Professional support across administration,
+operations and workforce coordination.
+
+</p>
+
+</div>
+
+
+
+<div class="service-grid">
+
+
+<div class="service reveal">
+
+<div class="service-number">
+01 / ADMIN
+</div>
+
+<h3>
+Office Administration
+</h3>
+
+<p>
+Documentation, records,
+data entry, reporting and
+general administrative support.
+</p>
+
+</div>
+
+
+<div class="service reveal">
+
+<div class="service-number">
+02 / OPS
+</div>
+
+<h3>
+Operations Support
+</h3>
+
+<p>
+Daily operational coordination,
+task monitoring and site support.
+</p>
+
+</div>
+
+
+<div class="service reveal">
+
+<div class="service-number">
+03 / TEAM
+</div>
+
+<h3>
+Team Coordination
+</h3>
+
+<p>
+Workforce organization,
+roster management and
+daily task coordination.
+</p>
+
+</div>
+
+
+<div class="service reveal">
+
+<div class="service-number">
+04 / DATA
+</div>
+
+<h3>
+Data & Reporting
+</h3>
+
+<p>
+Excel data entry, digital records,
+reports and organized information.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="section section-sm" id="contact">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+<span class="section-kicker">
+06 / Contact
+</span>
+
+<h2 class="section-title">
+Let's connect.
+</h2>
+
+<p class="section-desc">
+
+For career opportunities, professional
+networking or collaboration, feel free
+to contact me.
+
+</p>
+
+</div>
+
+
+
+<div class="contact-grid">
+
+
+<div class="contact-list reveal">
+
+
+<a
+class="contact-item"
+href="mailto:mashirhadi@gmail.com"
+>
+
+<div class="contact-icon">
+@
+</div>
+
+<div>
+
+<small>
+Email
+</small>
+
+<strong>
+mashirhadi@gmail.com
+</strong>
+
+</div>
+
+</a>
+
+
+
+<a
+class="contact-item"
+href="tel:+971558436330"
+>
+
+<div class="contact-icon">
+☎
+</div>
+
+<div>
+
+<small>
+Phone
+</small>
+
+<strong>
++971 55 843 6330
+</strong>
+
+</div>
+
+</a>
+
+
+
+<a
+class="contact-item"
+href="https://wa.me/971558436330"
+target="_blank"
+rel="noopener noreferrer"
+>
+
+<div class="contact-icon">
+W
+</div>
+
+<div>
+
+<small>
+WhatsApp
+</small>
+
+<strong>
+Chat on WhatsApp
+</strong>
+
+</div>
+
+</a>
+
+
+
+<a
+class="contact-item"
+href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359"
+target="_blank"
+rel="noopener noreferrer"
+>
+
+<div class="contact-icon">
+in
+</div>
+
+<div>
+
+<small>
+LinkedIn
+</small>
+
+<strong>
+M. Ashir Hadi
+</strong>
+
+</div>
+
+</a>
+
+
+
+<div class="contact-note">
+
+<strong>
+Dubai, UAE
+</strong>
+
+<br>
+
+Open to suitable administrative,
+operations, coordination and
+professional opportunities.
+
+</div>
+
+
+</div>
+
+
+
+<div class="card form-card reveal">
+
+
+<form id="contactForm">
+
+
+<div class="form-row">
+
+
+<div class="field">
+
+<label for="name">
+Your Name
+</label>
+
+<input
+id="name"
+name="name"
+type="text"
+placeholder="Enter your name"
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label for="email">
+Your Email
+</label>
+
+<input
+id="email"
+name="email"
+type="email"
+placeholder="name@example.com"
+required
+>
+
+</div>
+
+
+</div>
+
+
+
+<div class="field">
+
+<label for="subject">
+Subject
+</label>
+
+<input
+id="subject"
+name="subject"
+type="text"
+placeholder="Job opportunity / Collaboration"
+required
+>
+
+</div>
+
+
+
+<div class="field">
+
+<label for="message">
+Message
+</label>
+
+<textarea
+id="message"
+name="message"
+placeholder="Write your message..."
+required
+></textarea>
+
+</div>
+
+
+
+<button
+type="submit"
+class="btn btn-primary"
+>
+
+Send Message →
+
+</button>
+
+
+<div
+class="form-status"
+id="formStatus"
+>
+
+Opening your email application...
+
+</div>
+
+
+</form>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-inner">
+
+
+<div class="footer-copy">
+
+© <span id="year"></span>
+M. Ashir Hadi.
+All rights reserved.
+
+</div>
+
+
+<div class="footer-links">
+
+
+<a
+href="mailto:mashirhadi@gmail.com"
+aria-label="Email"
+>
+@
+</a>
+
+
+<a
+href="https://wa.me/971558436330"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="WhatsApp"
+>
+W
+</a>
+
+
+<a
+href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="LinkedIn"
+>
+in
+</a>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+const navLinks =
+document.getElementById("navLinks");
+
+
+menuBtn.addEventListener("click", () => {
+
+navLinks.classList.toggle("open");
+
+document.body.classList.toggle(
+"menu-open"
+);
+
+});
+
+
+document.querySelectorAll(
+".nav-links a"
+).forEach(link => {
+
+link.addEventListener(
+"click",
+() => {
+
+navLinks.classList.remove("open");
+
+document.body.classList.remove(
+"menu-open"
+);
+
+});
+
+});
+
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+const observer =
+new IntersectionObserver(
+
+entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+entry.target.classList.add(
+"visible"
+);
+
+observer.unobserve(
+entry.target
+);
+
+}
+
+});
+
+},
+
+{
+threshold:.12
+}
+
+);
+
+
+document.querySelectorAll(
+".reveal"
+).forEach(element => {
+
+observer.observe(element);
+
+});
+
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+const sections =
+document.querySelectorAll(
+"main section[id]"
+);
+
+const navItems =
+document.querySelectorAll(
+".nav-links a"
+);
+
+
+const navObserver =
+new IntersectionObserver(
+
+entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+navItems.forEach(link => {
+
+link.classList.remove(
+"active"
+);
+
+if(
+link.getAttribute("href")
+===
+"#" + entry.target.id
+){
+
+link.classList.add(
+"active"
+);
+
+}
+
+});
+
+}
+
+});
+
+},
+
+{
+rootMargin:
+"-35% 0px -55% 0px"
+}
+
+);
+
+
+sections.forEach(section => {
+
+navObserver.observe(section);
+
+});
+
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+const contactForm =
+document.getElementById(
+"contactForm"
+);
+
+const formStatus =
+document.getElementById(
+"formStatus"
+);
+
+
+contactForm.addEventListener(
+"submit",
+function(event){
+
+event.preventDefault();
+
+
+const name =
+document.getElementById(
+"name"
+).value.trim();
+
+
+const email =
+document.getElementById(
+"email"
+).value.trim();
+
+
+const subject =
+document.getElementById(
+"subject"
+).value.trim();
+
+
+const message =
+document.getElementById(
+"message"
+).value.trim();
+
+
+const mailSubject =
+encodeURIComponent(
+subject ||
+"Portfolio Contact"
+);
+
+
+const mailBody =
+encodeURIComponent(
+
+"Hello M. Ashir Hadi,\n\n" +
+
+"Name: " + name + "\n" +
+
+"Email: " + email + "\n\n" +
+
+"Message:\n" +
+message
+
+);
+
+
+const mailto =
+"mailto:mashirhadi@gmail.com" +
+"?subject=" +
+mailSubject +
+"&body=" +
+mailBody;
+
+
+formStatus.style.display =
+"block";
+
+
+window.location.href =
+mailto;
+
+});
+
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+document.getElementById(
+"year"
+).textContent =
+new Date().getFullYear();
+
+
+
+/* =========================================================
+   HOLO SPACE BACKGROUND
+========================================================= */
+
+const canvas =
+document.getElementById(
+"spaceCanvas"
+);
+
+const ctx =
+canvas.getContext("2d");
+
+
+let stars = [];
+
+let mouseX = 0;
+let mouseY = 0;
+
+
+function resizeCanvas(){
+
+canvas.width =
+window.innerWidth *
+Math.min(
+window.devicePixelRatio || 1,
+2
+);
+
+canvas.height =
+window.innerHeight *
+Math.min(
+window.devicePixelRatio || 1,
+2
+);
+
+canvas.style.width =
+window.innerWidth + "px";
+
+canvas.style.height =
+window.innerHeight + "px";
+
+createStars();
+
+}
+
+
+function createStars(){
+
+const count =
+window.innerWidth < 600
+? 80
+: 150;
+
+
+stars =
+Array.from(
+{length:count},
+() => ({
+
+x:Math.random() *
+window.innerWidth,
+
+y:Math.random() *
+window.innerHeight,
+
+r:Math.random() *
+1.4 + .2,
+
+speed:
+Math.random() *
+.25 + .05,
+
+alpha:
+Math.random() *
+.7 + .15,
+
+phase:
+Math.random() *
+Math.PI * 2
+
+})
+
+);
+
+}
+
+
+function drawStars(time){
+
+ctx.clearRect(
+0,
+0,
+canvas.width,
+canvas.height
+);
+
+
+const dpr =
+Math.min(
+window.devicePixelRatio || 1,
+2
+);
+
+
+ctx.save();
+
+ctx.scale(
+dpr,
+dpr
+);
+
+
+stars.forEach(star => {
+
+star.y +=
+star.speed;
+
+
+if(
+star.y >
+window.innerHeight
+){
+
+star.y = -5;
+
+star.x =
+Math.random() *
+window.innerWidth;
+
+}
+
+
+const twinkle =
+star.alpha *
+(
+.65 +
+Math.sin(
+time * .0015 +
+star.phase
+) * .35
+);
+
+
+ctx.beginPath();
+
+ctx.arc(
+star.x,
+star.y,
+star.r,
+0,
+Math.PI * 2
+);
+
+
+ctx.fillStyle =
+"rgba(130,220,255," +
+twinkle +
+")";
+
+
+ctx.fill();
+
+});
+
+
+/* moving glow */
+
+const gx =
+window.innerWidth * .72 +
+mouseX * .025;
+
+const gy =
+window.innerHeight * .25 +
+mouseY * .025;
+
+
+const gradient =
+ctx.createRadialGradient(
+gx,
+gy,
+0,
+gx,
+gy,
+260
+);
+
+
+gradient.addColorStop(
+0,
+"rgba(0,239,255,.10)"
+);
+
+gradient.addColorStop(
+1,
+"rgba(0,239,255,0)"
+);
+
+
+ctx.fillStyle =
+gradient;
+
+ctx.fillRect(
+0,
+0,
+window.innerWidth,
+window.innerHeight
+);
+
+
+ctx.restore();
+
+
+requestAnimationFrame(
+drawStars
+);
+
+}
+
+
+window.addEventListener(
+"resize",
+resizeCanvas
+);
+
+
+window.addEventListener(
+"mousemove",
+event => {
+
+mouseX =
+event.clientX -
+window.innerWidth / 2;
+
+mouseY =
+event.clientY -
+window.innerHeight / 2;
+
+});
+
+
+resizeCanvas();
+
+requestAnimationFrame(
+drawStars
+);
+
+
+/* =========================================================
+   3D PROFILE CARD MOVEMENT
+========================================================= */
+
+const profileCard =
+document.querySelector(
+".holo-card"
+);
+
+
+if(
+profileCard &&
+window.matchMedia(
+"(pointer:fine)"
+).matches
+){
+
+profileCard.addEventListener(
+"mousemove",
+event => {
+
+const rect =
+profileCard.getBoundingClientRect();
+
+const x =
+event.clientX -
+rect.left;
+
+const y =
+event.clientY -
+rect.top;
+
+const rotateY =
+(x / rect.width - .5) * 8;
+
+const rotateX =
+-(y / rect.height - .5) * 8;
+
+
+profileCard.style.transform =
+"perspective(900px)" +
+" rotateX(" +
+rotateX +
+"deg)" +
+" rotateY(" +
+rotateY +
+"deg)";
+
+});
+
+
+profileCard.addEventListener(
+"mouseleave",
+() => {
+
+profileCard.style.transform =
+"";
+
+});
+
+}
+
+
+</script>
+
+
+</body>
+</html>
