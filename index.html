@@ -18,7 +18,12 @@
 <meta property="og:description" content="Dubai-based Administrative & Operations Professional — Assistant Supervisor, team coordination, administration and data operations.">
 <meta property="og:type" content="website">
 
-<title>M. Ashir Hadi | Administrative & Operations Professional</title>
+<title>M. Ashir Hadi | BMS & Operations Professional</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="IMG-20250803-WA0006.jpg">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -2703,6 +2708,62 @@ padding:21px;
 }
 
 
+
+/* =========================================================
+   2026 UPGRADE: TOOLS / BMS LAB / AI ASSISTANT
+========================================================= */
+.nav-tools{display:flex;align-items:center;gap:6px;margin-left:auto}
+.tool-btn,.lang-btn{width:34px;height:34px;border:1px solid var(--line);border-radius:9px;background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font:700 10px var(--mono);transition:.2s}
+.tool-btn:hover,.lang-btn:hover{border-color:rgba(0,239,255,.55);color:var(--cyan)}
+.lang-btn{padding:0 7px;width:auto}
+body.light-mode{--bg:#f5f8fc;--bg2:#e9eef6;--surface:rgba(255,255,255,.82);--surface2:rgba(0,0,0,.035);--line:rgba(10,25,45,.12);--text:#102034;--muted:#5d6b7d;--shadow:0 25px 80px rgba(40,65,100,.16)}
+body.light-mode .nav-shell{background:rgba(255,255,255,.76)}
+body.light-mode .holo-inner,body.light-mode .ai-panel,body.light-mode .bms-shell{background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(239,245,252,.98))}
+body.light-mode .field input,body.light-mode .field textarea{color:#102034;background:rgba(255,255,255,.75)}
+body.light-mode .grid-floor{opacity:.07}
+body.rtl{direction:rtl}
+body.rtl .nav-links,body.rtl .hero-actions,body.rtl .hero-meta{direction:rtl}
+body.rtl .timeline{padding-left:0;padding-right:32px}
+body.rtl .timeline-dot{left:auto;right:-7px}
+body.rtl .contact-note{border-left:0;border-right:2px solid var(--cyan)}
+body.rtl .contact-item:hover{transform:translateX(-3px)}
+.bms-shell{padding:16px;border:1px solid rgba(0,239,255,.18);border-radius:24px;background:linear-gradient(145deg,rgba(8,18,31,.96),rgba(3,7,13,.98));box-shadow:var(--shadow)}
+.bms-topbar{display:flex;justify-content:space-between;align-items:center;padding:10px 12px 15px;color:var(--muted);font-size:10px}
+.live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green);margin-right:8px}
+.bms-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:12px}
+.bms-panel{border:1px solid var(--line);border-radius:16px;padding:15px;background:rgba(255,255,255,.025)}
+.panel-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px;color:#aab6c9;font:600 9px var(--mono);letter-spacing:.8px}
+.status-ok{color:var(--green)}.alarm-count{color:#ffd166}
+.floor-stack,.equipment{display:grid;gap:8px}
+.floor,.equip{display:grid;grid-template-columns:34px 1fr auto;gap:8px;align-items:center;text-align:left;border:1px solid transparent;border-radius:10px;background:rgba(255,255,255,.035);color:var(--text);padding:10px;cursor:pointer}
+.floor:hover,.floor.active,.equip:hover,.equip.active{border-color:rgba(0,239,255,.35);background:rgba(0,239,255,.05)}
+.floor span,.equip span{font:700 10px var(--mono);color:var(--cyan)}
+.floor b,.equip b{font-size:10px}.floor i,.equip i{font:600 8px var(--mono);font-style:normal;color:var(--green)}
+.metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.metric{border:1px solid var(--line);border-radius:11px;padding:10px;background:rgba(255,255,255,.025)}
+.metric span,.metric small{display:block;color:var(--muted);font:500 8px var(--mono)}
+.metric strong{display:block;margin:6px 0;font:700 16px var(--display)}
+.chart{height:85px;margin-top:12px;display:flex;align-items:end;padding:8px;border-radius:12px;background:linear-gradient(to top,rgba(0,239,255,.07),transparent)}
+.bars{display:flex;align-items:end;gap:5px;width:100%;height:100%}.bar{flex:1;border-radius:4px 4px 1px 1px;background:var(--holo);min-height:12px;animation:barPulse 2.5s ease-in-out infinite alternate}
+@keyframes barPulse{to{opacity:.65}}
+.alarms-panel{grid-column:1/-1}.alarm{display:flex;gap:10px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}.alarm:first-of-type{border-top:0}
+.alarm-sev{font:700 8px var(--mono);padding:5px 6px;border-radius:6px;background:rgba(255,193,7,.1);color:#ffd166}
+.alarm b,.alarm small{display:block}.alarm b{font-size:10px}.alarm small{font:500 8px var(--mono);color:var(--muted)}
+.clear-alarms{margin-top:10px;border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--muted);padding:7px 10px;font:600 9px var(--mono);cursor:pointer}
+.bms-foot{padding:12px 4px 2px;text-align:center;color:#66748a;font-size:8px}
+.ai-fab{position:fixed;right:20px;bottom:20px;z-index:1100;display:flex;align-items:center;gap:8px;border:1px solid rgba(0,239,255,.45);border-radius:999px;padding:12px 16px;color:#02050a;background:var(--holo);box-shadow:0 15px 45px rgba(0,0,0,.35);cursor:pointer;font:700 11px var(--mono)}
+.ai-fab span{font-size:15px}
+.ai-panel{position:fixed;right:20px;bottom:78px;width:min(390px,calc(100vw - 28px));z-index:1100;border:1px solid rgba(0,239,255,.25);border-radius:20px;background:rgba(5,10,18,.97);box-shadow:0 25px 90px rgba(0,0,0,.55);overflow:hidden;display:none}
+.ai-panel.open{display:block;animation:aiIn .25s ease}
+@keyframes aiIn{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+.ai-head{display:flex;justify-content:space-between;align-items:center;padding:15px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.025)}
+.ai-head strong{display:block;font:700 13px var(--display)}.ai-head small{display:block;color:var(--muted);font:500 8px var(--mono);margin-top:3px}.ai-head button{background:none;color:var(--muted);font-size:22px;cursor:pointer}
+.ai-messages{height:245px;overflow:auto;padding:14px;display:grid;align-content:start;gap:9px}
+.ai-msg{max-width:88%;padding:9px 11px;border-radius:12px;font-size:11px;line-height:1.55}.ai-msg.bot{background:rgba(255,255,255,.05);border:1px solid var(--line)}.ai-msg.user{justify-self:end;background:rgba(0,239,255,.09);border:1px solid rgba(0,239,255,.18)}
+.ai-suggestions{display:flex;gap:6px;padding:0 12px 10px;overflow:auto}.ai-suggestions button{white-space:nowrap;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--muted);padding:6px 9px;font:500 8px var(--mono);cursor:pointer}
+.ai-input{display:flex;gap:7px;padding:10px;border-top:1px solid var(--line)}.ai-input input{min-width:0;flex:1;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.04);color:var(--text);padding:10px;outline:none;font-size:11px}.ai-input button{width:40px;border-radius:10px;background:var(--holo);color:#02050a;font-weight:800;cursor:pointer}
+@media(max-width:760px){.nav-tools{margin-left:0}.bms-grid{grid-template-columns:1fr}.metric-grid{grid-template-columns:repeat(2,1fr)}.alarms-panel{grid-column:auto}.ai-fab{right:14px;bottom:14px}.ai-panel{right:14px;bottom:68px}.bms-shell{padding:10px}}
+
 </style>
 
 </head>
@@ -2759,6 +2820,10 @@ Skills
 Experience
 </a>
 
+<a href="#bms">
+BMS Lab
+</a>
+
 <a href="#services">
 Services
 </a>
@@ -2769,6 +2834,12 @@ Contact
 
 </div>
 
+
+<div class="nav-tools">
+<button class="tool-btn" id="themeBtn" type="button" aria-label="Toggle theme">☾</button>
+<button class="lang-btn" id="langBtn" type="button" aria-label="Switch language">AR</button>
+<button class="tool-btn" id="installBtn" type="button" aria-label="Install portfolio" hidden>＋</button>
+</div>
 
 <button
 class="menu-btn"
@@ -2823,21 +2894,18 @@ Hadi
 
 <div class="hero-role">
 
-ADMINISTRATIVE & OPERATIONS PROFESSIONAL
+BMS • FACILITY OPERATIONS • ADMINISTRATION
 
 </div>
 
 
 <p class="hero-copy">
 
-Dubai-based professional with experience in
-team supervision, operations support,
-office administration, data entry,
-computer operations and facility services.
-
-Focused on organized execution,
-team coordination, accurate reporting
-and reliable day-to-day operations.
+Dubai-based professional combining facility operations,
+BMS awareness, team supervision, administration and
+computer-based reporting. This portfolio now includes
+an interactive Smart Building demo and a personal
+AI-style assistant for recruiters and employers.
 
 </p>
 
@@ -2861,6 +2929,8 @@ download
 Download CV
 </a>
 
+
+<button class="btn btn-ghost" type="button" id="askHeroBtn">Ask Ashir AI</button>
 
 <a
 href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359"
@@ -3825,6 +3895,70 @@ SKILLED
 
 
 
+
+<!-- =====================================================
+     BMS LAB / INTERACTIVE DEMO
+===================================================== -->
+<section class="section" id="bms">
+<div class="container">
+  <div class="section-head reveal">
+    <span class="section-kicker">05 / BMS Lab</span>
+    <h2 class="section-title">Interactive smart building control room.</h2>
+    <p class="section-desc">A portfolio demonstration of how a modern BMS interface can monitor HVAC, energy, alarms and equipment status.</p>
+  </div>
+
+  <div class="bms-shell reveal">
+    <div class="bms-topbar">
+      <div><span class="live-dot"></span><span class="mono">BUILDING / CONTROL ROOM</span></div>
+      <div class="mono" id="bmsClock">--:--:--</div>
+    </div>
+
+    <div class="bms-grid">
+      <div class="bms-panel building-panel">
+        <div class="panel-title"><span>BUILDING OVERVIEW</span><span class="mono">LEVEL 01–12</span></div>
+        <div class="floor-stack">
+          <button class="floor active" data-floor="1"><span>01</span><b>Lobby & Reception</b><i>NORMAL</i></button>
+          <button class="floor" data-floor="2"><span>02</span><b>Office Floors</b><i>NORMAL</i></button>
+          <button class="floor" data-floor="3"><span>03</span><b>Plant Room</b><i>MONITOR</i></button>
+          <button class="floor" data-floor="4"><span>04</span><b>Roof / External</b><i>NORMAL</i></button>
+        </div>
+      </div>
+
+      <div class="bms-panel">
+        <div class="panel-title"><span>HVAC STATUS</span><span class="status-ok">● ONLINE</span></div>
+        <div class="metric-grid">
+          <div class="metric"><span>SUPPLY AIR</span><strong id="tempMetric">23.5°C</strong><small>Target 22–24°C</small></div>
+          <div class="metric"><span>HUMIDITY</span><strong id="humMetric">48%</strong><small>Comfort range</small></div>
+          <div class="metric"><span>CHILLER</span><strong>RUNNING</strong><small>Load 68%</small></div>
+          <div class="metric"><span>AHU-01</span><strong>RUNNING</strong><small>Fan 74%</small></div>
+        </div>
+        <div class="chart">
+          <div class="bars" id="chartBars"></div>
+        </div>
+      </div>
+
+      <div class="bms-panel">
+        <div class="panel-title"><span>EQUIPMENT</span><span class="mono">8 POINTS</span></div>
+        <div class="equipment">
+          <button class="equip active" data-equip="AHU-01"><span>🌀</span><b>AHU-01</b><i>RUN</i></button>
+          <button class="equip active" data-equip="CH-01"><span>❄</span><b>CHILLER-01</b><i>RUN</i></button>
+          <button class="equip active" data-equip="P-01"><span>↻</span><b>PUMP-01</b><i>RUN</i></button>
+          <button class="equip" data-equip="EX-01"><span>⇅</span><b>EXHAUST-01</b><i>STBY</i></button>
+        </div>
+      </div>
+
+      <div class="bms-panel alarms-panel">
+        <div class="panel-title"><span>ALARMS & EVENTS</span><span class="alarm-count" id="alarmCount">02</span></div>
+        <div class="alarm"><span class="alarm-sev">WARN</span><div><b>Filter differential pressure</b><small>AHU-02 • 2 min ago</small></div></div>
+        <div class="alarm"><span class="alarm-sev">INFO</span><div><b>Scheduled inspection due</b><small>Chiller plant • Today</small></div></div>
+        <button class="clear-alarms" id="clearAlarms" type="button">Acknowledge events</button>
+      </div>
+    </div>
+    <div class="bms-foot mono">DEMO MODE • Values are simulated for portfolio presentation • No live building systems connected</div>
+  </div>
+</div>
+</section>
+
 <!-- =====================================================
      SERVICES
 ===================================================== -->
@@ -4214,6 +4348,30 @@ Opening your email application...
 </section>
 
 
+
+
+<!-- AI ASSISTANT -->
+<button class="ai-fab" id="aiFab" type="button" aria-label="Open Ashir AI">
+  <span>✦</span><b>Ask Ashir AI</b>
+</button>
+<div class="ai-panel" id="aiPanel" aria-hidden="true">
+  <div class="ai-head">
+    <div><strong>✦ Ashir AI</strong><small>Portfolio assistant • Demo mode</small></div>
+    <button id="aiClose" type="button" aria-label="Close">×</button>
+  </div>
+  <div class="ai-messages" id="aiMessages">
+    <div class="ai-msg bot">Hi! I can answer questions about Ashir's experience, BMS interests, skills, CV and contact details.</div>
+  </div>
+  <div class="ai-suggestions">
+    <button data-q="What is Ashir's experience?">Experience</button>
+    <button data-q="What BMS skills does Ashir have?">BMS</button>
+    <button data-q="Show contact details">Contact</button>
+  </div>
+  <form class="ai-input" id="aiForm">
+    <input id="aiInput" autocomplete="off" placeholder="Ask about Ashir..." aria-label="Ask Ashir AI">
+    <button type="submit">→</button>
+  </form>
+</div>
 
 <!-- =====================================================
      FOOTER
@@ -4838,6 +4996,65 @@ profileCard.style.transform =
 
 }
 
+
+
+
+/* =========================================================
+   2026 UPGRADE JS
+========================================================= */
+const themeBtn=document.getElementById("themeBtn");
+const langBtn=document.getElementById("langBtn");
+const installBtn=document.getElementById("installBtn");
+const savedTheme=localStorage.getItem("ashir-theme");
+if(savedTheme==="light"){document.body.classList.add("light-mode");themeBtn.textContent="☀";}
+themeBtn?.addEventListener("click",()=>{document.body.classList.toggle("light-mode");const light=document.body.classList.contains("light-mode");themeBtn.textContent=light?"☀":"☾";localStorage.setItem("ashir-theme",light?"light":"dark")});
+
+const translations={
+en:{heroRole:"BMS • FACILITY OPERATIONS • ADMINISTRATION",ask:"Ask Ashir AI",download:"Download CV"},
+ar:{heroRole:"أنظمة إدارة المباني • تشغيل المرافق • الإدارة",ask:"اسأل مساعد أشير",download:"تحميل السيرة الذاتية"}
+};
+let currentLang="en";
+langBtn?.addEventListener("click",()=>{
+ currentLang=currentLang==="en"?"ar":"en";
+ document.body.classList.toggle("rtl",currentLang==="ar");
+ langBtn.textContent=currentLang==="ar"?"EN":"AR";
+ const role=document.querySelector(".hero-role"); if(role) role.textContent=translations[currentLang].heroRole;
+ const ask=document.getElementById("askHeroBtn"); if(ask) ask.textContent=translations[currentLang].ask;
+ document.documentElement.lang=currentLang;
+});
+
+let deferredInstall;
+window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredInstall=e;if(installBtn) installBtn.hidden=false});
+installBtn?.addEventListener("click",async()=>{if(!deferredInstall)return;deferredInstall.prompt();deferredInstall=null;installBtn.hidden=true});
+if("serviceWorker" in navigator) window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+
+/* BMS simulated dashboard */
+const chartBars=document.getElementById("chartBars");
+if(chartBars){for(let i=0;i<18;i++){const b=document.createElement("i");b.className="bar";b.style.height=(25+Math.random()*70)+"%";b.style.animationDelay=(i*.08)+"s";chartBars.appendChild(b)}}
+const bmsClock=document.getElementById("bmsClock");
+setInterval(()=>{if(bmsClock)bmsClock.textContent=new Date().toLocaleTimeString([], {hour12:false})},1000);
+document.querySelectorAll(".floor").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".floor").forEach(x=>x.classList.remove("active"));btn.classList.add("active")}));
+document.querySelectorAll(".equip").forEach(btn=>btn.addEventListener("click",()=>{btn.classList.toggle("active");const i=btn.querySelector("i");if(i){const on=btn.classList.contains("active");i.textContent=on?"RUN":"STBY";i.style.color=on?"var(--green)":"var(--muted)"}}));
+document.getElementById("clearAlarms")?.addEventListener("click",()=>{document.getElementById("alarmCount").textContent="00";document.querySelectorAll(".alarm").forEach(x=>x.style.opacity=".45")});
+setInterval(()=>{const t=document.getElementById("tempMetric"),h=document.getElementById("humMetric");if(t)t.textContent=(23.1+Math.random()*.8).toFixed(1)+"°C";if(h)h.textContent=Math.round(46+Math.random()*5)+"%"},3000);
+
+/* AI portfolio assistant — grounded in this portfolio */
+const aiFab=document.getElementById("aiFab"), aiPanel=document.getElementById("aiPanel"), aiClose=document.getElementById("aiClose"), aiForm=document.getElementById("aiForm"), aiInput=document.getElementById("aiInput"), aiMessages=document.getElementById("aiMessages");
+function openAI(){aiPanel?.classList.add("open");aiPanel?.setAttribute("aria-hidden","false");aiInput?.focus()}
+aiFab?.addEventListener("click",openAI); document.getElementById("askHeroBtn")?.addEventListener("click",openAI); aiClose?.addEventListener("click",()=>{aiPanel.classList.remove("open");aiPanel.setAttribute("aria-hidden","true")});
+function addMsg(text,who="bot"){const d=document.createElement("div");d.className="ai-msg "+who;d.textContent=text;aiMessages.appendChild(d);aiMessages.scrollTop=aiMessages.scrollHeight}
+function answer(q){
+ const s=q.toLowerCase();
+ if(/bms|hvac|ahu|chiller|building/.test(s)) return "Ashir's portfolio now includes a BMS-focused interactive lab covering HVAC, AHU, chiller, pumps, alarms, energy-style monitoring and simulated building controls. The dashboard is a demo, not a live building connection.";
+ if(/experience|work|job|career|supervis/.test(s)) return "Ashir is based in Dubai and presents experience in Assistant Supervisor responsibilities, team coordination, facility/site operations, roster management, reporting, administration and computer/data-entry work.";
+ if(/skill|excel|office|computer|administr/.test(s)) return "Key skills include team coordination, workforce management, facility support, office administration, documentation, data entry, Microsoft Word, Microsoft Excel, reporting and digital records.";
+ if(/cv|resume|download/.test(s)) return "You can use the Download CV button in the hero section to open Ashir's resume.pdf.";
+ if(/contact|email|phone|whatsapp|linkedin/.test(s)) return "Email: mashirhadi@gmail.com • Phone/WhatsApp: +971 55 843 6330 • LinkedIn: linkedin.com/in/muhammad-ashir-hadi-6434a8359";
+ if(/about|who/.test(s)) return "M. Ashir Hadi is a Dubai-based Administrative & Operations Professional with a growing focus on BMS, facility operations, team coordination and digital tools.";
+ return "I can help with Ashir's BMS interests, experience, skills, CV or contact details. Try: “What BMS skills does Ashir have?”";
+}
+aiForm?.addEventListener("submit",e=>{e.preventDefault();const q=aiInput.value.trim();if(!q)return;addMsg(q,"user");aiInput.value="";setTimeout(()=>addMsg(answer(q)),250)});
+document.querySelectorAll(".ai-suggestions button").forEach(b=>b.addEventListener("click",()=>{openAI();addMsg(b.dataset.q,"user");setTimeout(()=>addMsg(answer(b.dataset.q)),250)}));
 
 </script>
 
