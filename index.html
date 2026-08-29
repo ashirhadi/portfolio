@@ -3,305 +3,152 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#03050a">
+<meta name="theme-color" content="#02030a">
 <meta name="color-scheme" content="dark">
 <meta name="description" content="M. Ashir Hadi — Administrative & Operations Professional in Dubai, UAE. BMS Operator, Assistant Supervisor, administration, facility operations and team coordination.">
 <title>M. Ashir Hadi | Administrative & Operations Professional</title>
-
 <style>
-:root{
- --bg:#03050a;--panel:rgba(255,255,255,.045);--panel2:rgba(255,255,255,.065);
- --line:rgba(255,255,255,.11);--text:#f6f7fb;--muted:rgba(246,247,251,.68);
- --soft:rgba(246,247,251,.46);--accent:#9fb7ff;--max:1120px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
- font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
- color:var(--text);background:
- radial-gradient(circle at 85% 0%,rgba(91,113,255,.13),transparent 34rem),
- radial-gradient(circle at 0% 45%,rgba(120,80,255,.07),transparent 30rem),var(--bg);
- line-height:1.6;overflow-x:hidden;
-}
-a{color:inherit;text-decoration:none}.container{width:min(calc(100% - 36px),var(--max));margin:auto}
-nav{position:fixed;inset:0 0 auto;z-index:100;background:rgba(3,5,10,.76);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:800;letter-spacing:-.03em}.logo span{color:var(--accent)}
-.navlinks{display:flex;gap:24px;color:var(--muted);font-size:14px}.navlinks a:hover{color:#fff}
-.hero{min-height:100vh;display:grid;align-items:center;padding:120px 0 70px}
-.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:center}
-.eyebrow,.kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--soft);font-weight:700}
-h1{font-size:clamp(48px,7vw,86px);line-height:.98;letter-spacing:-.055em;margin-top:15px}
-.accent{color:var(--accent)}.lead{font-size:18px;color:var(--muted);max-width:700px;margin-top:24px}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.btn{display:inline-flex;padding:12px 18px;border:1px solid var(--line);border-radius:999px;font-size:14px;transition:.2s}
-.btn:hover{transform:translateY(-2px)}.primary{background:#fff;color:#03050a;border-color:#fff}
-.profile{width:min(330px,80vw);aspect-ratio:1;margin:auto;border:1px solid var(--line);border-radius:28px;overflow:hidden;background:var(--panel);box-shadow:0 25px 80px rgba(0,0,0,.35)}
-.profile img{width:100%;height:100%;object-fit:cover;display:block}
-section{padding:100px 0}.heading{max-width:760px;margin-bottom:42px}
-.heading h2{font-size:clamp(32px,5vw,52px);line-height:1.05;letter-spacing:-.045em;margin-top:9px}
-.heading p{color:var(--muted);margin-top:14px}
-.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:45px}
-.about-copy p{color:var(--muted);margin-bottom:18px}.cards{display:grid;gap:13px}
-.card{padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
-.card h3{font-size:16px;margin-bottom:6px}.card p{font-size:14px;color:var(--muted)}
-.card:first-child{box-shadow:inset 0 0 35px rgba(80,180,255,.045)}
-.timeline{position:relative;max-width:1000px}.timeline:before{content:"";position:absolute;left:9px;top:10px;bottom:10px;width:1px;background:var(--line)}
-.item{position:relative;padding-left:42px;margin-bottom:28px}.dot{position:absolute;left:0;top:14px;width:19px;height:19px;border-radius:50%;background:#fff;border:4px solid var(--bg)}
-.exp{padding:29px;border:1px solid var(--line);border-radius:20px;background:var(--panel)}
-.exp-top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
-.exp-code{font-size:10px;letter-spacing:.16em;color:var(--soft);text-transform:uppercase}
-.exp h3{font-size:25px;margin-top:5px}.company{color:var(--accent);margin-top:2px;font-size:14px}
-.date{padding:6px 11px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:11px;white-space:nowrap}
-.summary{color:var(--muted);margin-top:15px}.exp ul{margin:18px 0 0 20px;color:var(--muted)}
-.exp li{margin:8px 0}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:21px}
-.tags span{padding:6px 10px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.05);border-radius:999px;color:var(--muted);font-size:11px}
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.skill{padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
-.skill strong{display:block;margin-bottom:6px}.skill span{color:var(--muted);font-size:14px}
-.services{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.service{padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
-.service .num{font-size:11px;color:var(--soft);letter-spacing:.15em}.service h3{margin:8px 0 5px}.service p{color:var(--muted);font-size:14px}
-.contact{padding:42px;border:1px solid var(--line);border-radius:24px;background:var(--panel2)}.contact p{color:var(--muted);max-width:680px;margin-top:12px}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:28px}.contact-item{padding:18px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}
-.contact-item small{display:block;color:var(--soft);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.contact-item a{display:block;margin-top:4px}
-footer{padding:30px 0 45px;border-top:1px solid rgba(255,255,255,.06);color:var(--soft);font-size:12px}
-@media(max-width:780px){
- .navlinks{display:none}.hero-grid,.about-grid{grid-template-columns:1fr;gap:38px}
- .profile{width:235px}.profile-wrap{order:-1}section{padding:75px 0}
- .skills,.services,.contact-grid{grid-template-columns:1fr}.exp-top{flex-direction:column}.date{white-space:normal}
-}
+:root{--bg:#02030a;--panel:rgba(10,16,35,.62);--line:rgba(120,180,255,.18);--text:#f7f9ff;--muted:#aab4cf;--cyan:#00eaff;--blue:#537cff;--purple:#a855f7;--pink:#ff3cac;--green:#00ffa3;--max:1180px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:radial-gradient(circle at 15% 15%,rgba(0,234,255,.10),transparent 28rem),radial-gradient(circle at 85% 10%,rgba(168,85,247,.12),transparent 30rem),radial-gradient(circle at 50% 90%,rgba(83,124,255,.10),transparent 30rem),var(--bg);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}button{font:inherit}
+#particles{position:fixed;inset:0;width:100%;height:100%;z-index:-5;pointer-events:none}
+.grid-bg{position:fixed;inset:0;z-index:-4;pointer-events:none;background-image:linear-gradient(rgba(0,234,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(0,234,255,.045) 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(to bottom,black,transparent 85%);-webkit-mask-image:linear-gradient(to bottom,black,transparent 85%);animation:gridMove 18s linear infinite}
+@keyframes gridMove{from{transform:translateY(0)}to{transform:translateY(55px)}}
+.orb{position:fixed;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:-3;opacity:.20}.orb.one{width:300px;height:300px;background:var(--cyan);left:-100px;top:20%;animation:orbOne 12s ease-in-out infinite alternate}.orb.two{width:360px;height:360px;background:var(--purple);right:-120px;top:10%;animation:orbTwo 15s ease-in-out infinite alternate}
+@keyframes orbOne{to{transform:translate(130px,-100px) scale(1.2)}}@keyframes orbTwo{to{transform:translate(-130px,150px) scale(.8)}}
+.cursor-glow{position:fixed;width:280px;height:280px;border-radius:50%;pointer-events:none;z-index:999;background:radial-gradient(circle,rgba(0,234,255,.11),rgba(83,124,255,.04) 40%,transparent 70%);transform:translate(-50%,-50%);mix-blend-mode:screen}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(2,3,10,.70);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid rgba(0,234,255,.10)}
+.nav{width:min(calc(100% - 32px),var(--max));margin:auto;height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:900;letter-spacing:-.03em}.logo-mark{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;color:var(--cyan);background:linear-gradient(135deg,rgba(0,234,255,.18),rgba(168,85,247,.18));border:1px solid rgba(0,234,255,.30);box-shadow:0 0 20px rgba(0,234,255,.16),inset 0 0 15px rgba(0,234,255,.06)}.logo-text span{color:var(--cyan)}
+.navlinks{display:flex;align-items:center;gap:22px}.navlinks a{position:relative;color:#9da8c2;font-size:12px;font-weight:700;transition:.25s}.navlinks a::after{content:"";position:absolute;left:0;bottom:-8px;width:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--purple));box-shadow:0 0 10px var(--cyan);transition:.25s}.navlinks a:hover{color:#fff}.navlinks a:hover::after{width:100%}
+.menu-btn{display:none;width:42px;height:42px;border-radius:12px;border:1px solid var(--line);color:#fff;background:rgba(255,255,255,.04)}
+.container{width:min(calc(100% - 36px),var(--max));margin:auto}section{position:relative;padding:110px 0}
+.kicker{display:inline-flex;align-items:center;gap:9px;color:var(--cyan);font-size:10px;font-weight:900;letter-spacing:.20em;text-transform:uppercase}.kicker::before{content:"";width:28px;height:1px;background:linear-gradient(90deg,var(--cyan),transparent)}
+.heading{max-width:780px;margin-bottom:48px}.heading h2{margin-top:10px;font-size:clamp(34px,5vw,58px);line-height:1.03;letter-spacing:-.055em;background:linear-gradient(90deg,#fff,#dbe5ff 50%,#93f7ff);-webkit-background-clip:text;background-clip:text;color:transparent}.heading p{margin-top:16px;color:var(--muted);max-width:700px}
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:130px 0 90px}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:80px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid rgba(0,234,255,.20);border-radius:999px;background:rgba(0,234,255,.045);color:#aeefff;font-size:10px;font-weight:800;letter-spacing:.10em;text-transform:uppercase;box-shadow:0 0 25px rgba(0,234,255,.05),inset 0 0 20px rgba(0,234,255,.03)}.status-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green),0 0 18px var(--green);animation:pulse 1.5s ease-in-out infinite}@keyframes pulse{50%{opacity:.35;transform:scale(.65)}}
+.hero h1{margin-top:20px;font-size:clamp(50px,8vw,94px);line-height:.91;letter-spacing:-.075em;max-width:850px}.hero-name{background:linear-gradient(90deg,#fff 0%,#b9f9ff 25%,#6ee7ff 48%,#a855f7 75%,#fff 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:holoText 5s linear infinite}@keyframes holoText{to{background-position:200% center}}
+.hero-role{margin-top:20px;font-size:clamp(14px,2vw,19px);font-weight:800;letter-spacing:.06em;color:var(--cyan);text-shadow:0 0 12px rgba(0,234,255,.55),0 0 35px rgba(0,234,255,.15)}.typing-cursor{display:inline-block;width:2px;height:1em;margin-left:4px;vertical-align:-2px;background:var(--cyan);animation:blink .7s infinite}@keyframes blink{50%{opacity:0}}
+.lead{max-width:720px;margin-top:25px;color:#aeb8d0;font-size:17px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 19px;border:1px solid rgba(120,180,255,.22);border-radius:13px;background:rgba(255,255,255,.035);color:#dfe7ff;font-size:12px;font-weight:800;transition:.3s;box-shadow:inset 0 0 18px rgba(255,255,255,.015)}.btn::before{content:"";position:absolute;top:0;left:-100%;width:70%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);transform:skewX(-20deg);transition:.6s}.btn:hover::before{left:140%}.btn:hover{transform:translateY(-4px);border-color:rgba(0,234,255,.55);box-shadow:0 12px 35px rgba(0,234,255,.10),0 0 20px rgba(0,234,255,.08)}.btn.primary{color:#001016;border-color:var(--cyan);background:linear-gradient(135deg,#dfffff,#70f5ff);box-shadow:0 0 25px rgba(0,234,255,.22)}.btn.primary:hover{box-shadow:0 0 35px rgba(0,234,255,.45),0 15px 40px rgba(0,234,255,.12)}
+.profile-wrap{position:relative;display:grid;place-items:center}.holo-ring{position:absolute;width:min(410px,90vw);aspect-ratio:1;border-radius:50%;background:conic-gradient(from 0deg,transparent,var(--cyan),transparent 25%,var(--purple),transparent 50%,var(--pink),transparent 75%,var(--cyan));opacity:.50;filter:blur(1px);animation:spin 12s linear infinite;mask-image:radial-gradient(transparent 63%,black 64%,black 66%,transparent 67%);-webkit-mask-image:radial-gradient(transparent 63%,black 64%,black 66%,transparent 67%)}.holo-ring::after{content:"";position:absolute;inset:15px;border:1px dashed rgba(0,234,255,.25);border-radius:50%}@keyframes spin{to{transform:rotate(360deg)}}
+.profile{position:relative;width:min(340px,76vw);aspect-ratio:1;padding:8px;border-radius:32px;background:linear-gradient(135deg,rgba(0,234,255,.60),rgba(83,124,255,.15) 35%,rgba(168,85,247,.60));box-shadow:0 0 40px rgba(0,234,255,.14),0 0 100px rgba(168,85,247,.10);transform-style:preserve-3d;transition:transform .15s ease-out}.profile::before{content:"";position:absolute;inset:-2px;border-radius:34px;background:linear-gradient(120deg,var(--cyan),transparent 35%,var(--purple),transparent 70%,var(--cyan));filter:blur(18px);opacity:.45;z-index:-1}.profile-inner{width:100%;height:100%;overflow:hidden;border-radius:26px;background:#070b16;border:1px solid rgba(255,255,255,.12);position:relative}.profile img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.08) contrast(1.05)}.profile-scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0,transparent 5px,rgba(0,234,255,.035) 6px,transparent 7px);pointer-events:none}.profile-scan::after{content:"";position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);box-shadow:0 0 18px var(--cyan);animation:scan 4s ease-in-out infinite}@keyframes scan{0%,100%{top:5%}50%{top:95%}}.holo-label{position:absolute;right:-20px;bottom:30px;padding:10px 13px;border:1px solid rgba(0,234,255,.25);border-radius:12px;background:rgba(2,5,14,.78);backdrop-filter:blur(15px);color:#aefaff;font-size:9px;font-weight:900;letter-spacing:.14em;box-shadow:0 0 25px rgba(0,234,255,.10)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:45px;max-width:720px}.stat{padding:18px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025);box-shadow:inset 0 0 25px rgba(0,234,255,.02)}.stat strong{display:block;font-size:27px;line-height:1;color:#fff}.stat span{display:block;margin-top:6px;color:#687493;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.cards{display:grid;gap:14px}.card,.skill,.service,.exp,.contact{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:inset 0 0 35px rgba(0,234,255,.015),0 20px 60px rgba(0,0,0,.18);transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}.card::before,.skill::before,.service::before,.exp::before,.contact::before{content:"";position:absolute;top:-100%;left:-30%;width:70%;height:250%;background:linear-gradient(90deg,transparent,rgba(0,234,255,.07),transparent);transform:rotate(25deg);transition:.8s}.card:hover::before,.skill:hover::before,.service:hover::before,.exp:hover::before,.contact:hover::before{left:110%}.card:hover,.skill:hover,.service:hover{transform:translateY(-7px);border-color:rgba(0,234,255,.32);box-shadow:0 20px 50px rgba(0,0,0,.25),0 0 30px rgba(0,234,255,.06)}.card{padding:22px}.card h3{font-size:16px;margin-bottom:7px}.card p{color:var(--muted);font-size:13px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px}.about-copy p{color:var(--muted);margin-bottom:19px}.about-copy strong{color:#eafcff}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill{padding:23px}.skill strong{display:block;margin-bottom:8px}.skill span{color:var(--muted);font-size:13px}.skill-bar{height:4px;margin-top:18px;border-radius:99px;background:rgba(255,255,255,.06);overflow:hidden}.skill-bar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--cyan),var(--purple));box-shadow:0 0 10px rgba(0,234,255,.55);transition:width 1.5s cubic-bezier(.2,.8,.2,1)}
+.timeline{position:relative;max-width:1050px}.timeline::before{content:"";position:absolute;left:10px;top:12px;bottom:12px;width:1px;background:linear-gradient(to bottom,var(--cyan),rgba(168,85,247,.5),transparent);box-shadow:0 0 12px rgba(0,234,255,.35)}.item{position:relative;padding-left:46px;margin-bottom:30px}.dot{position:absolute;left:0;top:14px;width:21px;height:21px;border-radius:50%;background:#02030a;border:5px solid var(--cyan);box-shadow:0 0 10px var(--cyan),0 0 25px rgba(0,234,255,.45);z-index:2}.exp{padding:30px}.exp-top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}.exp-code{color:#6e7b9a;font-size:9px;font-weight:900;letter-spacing:.16em}.exp h3{margin-top:5px;font-size:25px;letter-spacing:-.03em}.company{margin-top:2px;color:var(--cyan);font-size:13px;font-weight:700}.date{flex-shrink:0;padding:6px 10px;border:1px solid rgba(0,234,255,.16);border-radius:999px;color:#8feeff;background:rgba(0,234,255,.035);font-size:9px;font-weight:900;letter-spacing:.08em}.summary{margin-top:16px;color:var(--muted)}.exp ul{margin:18px 0 0 20px;color:var(--muted)}.exp li{margin:8px 0;padding-left:4px}.exp li::marker{color:var(--cyan)}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.tags span{padding:6px 10px;border:1px solid rgba(0,234,255,.10);border-radius:999px;background:rgba(0,234,255,.025);color:#91a0bd;font-size:10px;transition:.25s}.tags span:hover{color:#dfffff;border-color:rgba(0,234,255,.35);background:rgba(0,234,255,.07)}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.service{padding:26px}.service .num{color:var(--cyan);font-size:9px;font-weight:900;letter-spacing:.16em}.service h3{margin:9px 0 6px;font-size:19px}.service p{color:var(--muted);font-size:13px}
+.contact{padding:45px}.contact h2{margin-top:8px;font-size:clamp(34px,5vw,58px);line-height:1;letter-spacing:-.055em}.contact>p{margin-top:14px;max-width:700px;color:var(--muted)}.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:30px}.contact-item{padding:18px;border:1px solid rgba(120,180,255,.12);border-radius:15px;background:rgba(255,255,255,.025);transition:.25s}.contact-item:hover{border-color:rgba(0,234,255,.30);transform:translateY(-3px)}.contact-item small{display:block;color:#63708e;font-size:9px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.contact-item a,.contact-item span{display:block;margin-top:4px;color:#e8efff;font-size:13px}
+footer{position:relative;padding:35px 0 50px;border-top:1px solid rgba(120,180,255,.08);color:#59647e;font-size:11px;text-align:center}.footer-neon{width:80px;height:1px;margin:0 auto 18px;background:linear-gradient(90deg,transparent,var(--cyan),var(--purple),transparent);box-shadow:0 0 12px var(--cyan)}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}.reveal.show{opacity:1;transform:none}
+.mobile-menu{display:none;position:fixed;top:76px;left:16px;right:16px;z-index:499;padding:15px;border:1px solid rgba(0,234,255,.16);border-radius:18px;background:rgba(3,6,16,.94);backdrop-filter:blur(25px);box-shadow:0 20px 60px rgba(0,0,0,.45)}.mobile-menu.open{display:block}.mobile-menu a{display:block;padding:12px 10px;color:#aeb8d0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;font-weight:700}.mobile-menu a:last-child{border-bottom:0}
+@media(max-width:900px){.navlinks{display:none}.menu-btn{display:grid;place-items:center}.hero-grid{grid-template-columns:1fr;gap:60px}.profile-wrap{order:-1}.profile{width:min(290px,75vw)}.holo-label{right:0}.about-grid{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.container{width:min(calc(100% - 28px),var(--max))}section{padding:78px 0}.hero{padding-top:115px}.hero h1{font-size:clamp(48px,15vw,72px)}.lead{font-size:15px}.actions{flex-direction:column}.btn{width:100%}.stats{grid-template-columns:1fr}.skills,.services,.contact-grid{grid-template-columns:1fr}.exp-top{flex-direction:column}.exp{padding:23px}.contact{padding:28px 21px}.holo-ring{width:330px}.profile{width:240px}.cursor-glow{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.grid-bg{animation:none}}
 </style>
 </head>
-
 <body>
-<nav>
-<div class="container nav">
-<a class="logo" href="#home">AH <span>M. Ashir Hadi</span></a>
-<div class="navlinks">
-<a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
-<a href="#experience">Experience</a><a href="#bms">BMS Lab</a><a href="#services">Services</a><a href="#contact">Contact</a>
-</div>
-</div>
-</nav>
+<canvas id="particles"></canvas><div class="grid-bg"></div><div class="orb one"></div><div class="orb two"></div><div class="cursor-glow" id="cursorGlow"></div>
 
-<main id="home">
+<nav><div class="nav">
+<a class="logo" href="#home"><div class="logo-mark">AH</div><div class="logo-text">M. Ashir <span>Hadi</span></div></a>
+<div class="navlinks"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#bms">BMS Lab</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+</div></nav>
 
-<section class="hero">
-<div class="container hero-grid">
-<div>
-<div class="eyebrow">Available for opportunities · Dubai, UAE</div>
-<h1>M. Ashir Hadi</h1>
-<div class="eyebrow" style="margin-top:14px;color:var(--accent)">Administrative &amp; Operations Professional</div>
-<p class="lead">
-Dubai-based professional with experience in BMS operations, team supervision,
-operations support, office administration, data entry, computer operations and
-facility services. Focused on organized execution, team coordination, accurate
-reporting and reliable day-to-day operations.
-</p>
-<div class="actions">
-<a class="btn primary" href="#contact">Let's Connect →</a>
-<a class="btn" href="resume.pdf">Download CV</a>
-<a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
-</div>
-</div>
-<div class="profile-wrap">
-<div class="profile"><img src="linkedin-preview.jpg" alt="M. Ashir Hadi"></div>
-</div>
-</div>
-</section>
+<div class="mobile-menu" id="mobileMenu"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#bms">BMS Lab</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
 
-<section id="about">
-<div class="container">
-<div class="heading">
-<div class="kicker">01 / About</div>
-<h2>Professional mindset. Operational discipline.</h2>
-<p>A practical professional focused on organization, people coordination, documentation and smooth daily operations.</p>
+<main>
+<section class="hero" id="home"><div class="container hero-grid">
+<div class="reveal">
+<div class="status"><span class="status-dot"></span>Available for opportunities · Dubai, UAE</div>
+<h1><span class="hero-name">M. Ashir Hadi</span></h1>
+<div class="hero-role"><span id="typing"></span><span class="typing-cursor"></span></div>
+<p class="lead">Dubai-based professional with experience in BMS operations, team supervision, operations support, office administration, data entry, computer operations and facility services. Focused on organized execution, team coordination, accurate reporting and reliable day-to-day operations.</p>
+<div class="actions"><a class="btn primary" href="#contact">Let's Connect →</a><a class="btn" href="resume.pdf">Download CV ↓</a><a class="btn" href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+<div class="stats"><div class="stat"><strong class="counter" data-target="2">0</strong><span>Years UAE BMS</span></div><div class="stat"><strong>UAE</strong><span>Professional Experience</span></div><div class="stat"><strong>24/7</strong><span>Operations Mindset</span></div></div>
 </div>
-<div class="about-grid">
-<div class="about-copy">
-<p>I am M. Ashir Hadi, an Administrative &amp; Operations Professional based in Dubai, UAE.</p>
-<p>My experience includes <strong>BMS operations, assistant supervision, team coordination, daily roster management, facility operations, data entry, computer operations and administrative support.</strong></p>
-<p>I combine field experience with computer and office skills to help teams work efficiently, maintain accurate records and support safe, reliable day-to-day operations.</p>
-</div>
-<div class="cards">
-<div class="card"><h3>BMS Operations</h3><p>Monitoring BMS, HVAC, AHU, FCU, alarms, building parameters and operational conditions.</p></div>
-<div class="card"><h3>Team Leadership</h3><p>Supporting teams, assigning work, monitoring daily activities and maintaining discipline.</p></div>
-<div class="card"><h3>Administration</h3><p>Handling records, documentation, daily reports and operational information.</p></div>
-<div class="card"><h3>Computer Operations</h3><p>MS Office, Excel, Word, data entry and digital documentation.</p></div>
-<div class="card"><h3>MEP Coordination</h3><p>Coordinating maintenance issues, corrective actions, preventive maintenance and escalation.</p></div>
-<div class="card"><h3>Facility Operations</h3><p>Supporting safe, reliable and efficient day-to-day facility operations.</p></div>
-</div>
-</div>
-</div>
-</section>
+<div class="profile-wrap reveal"><div class="holo-ring"></div><div class="profile" id="profileCard"><div class="profile-inner"><img src="linkedin-preview.jpg" alt="M. Ashir Hadi"><div class="profile-scan"></div></div></div><div class="holo-label">● BMS / OPERATIONS</div></div>
+</div></section>
 
-<section id="skills">
-<div class="container">
-<div class="heading"><div class="kicker">02 / Skills</div><h2>Tools &amp; capabilities.</h2><p>A combination of administrative, technical, operational and coordination skills developed through professional experience.</p></div>
+<section id="about"><div class="container"><div class="heading reveal"><div class="kicker">01 / About</div><h2>Professional mindset. Operational discipline.</h2><p>A practical professional focused on organization, people coordination, documentation and smooth daily operations.</p></div>
+<div class="about-grid"><div class="about-copy reveal"><p>I am M. Ashir Hadi, an Administrative &amp; Operations Professional based in Dubai, UAE.</p><p>My experience includes <strong>BMS operations, assistant supervision, team coordination, daily roster management, facility operations, data entry, computer operations and administrative support.</strong></p><p>I combine field experience with computer and office skills to help teams work efficiently, maintain accurate records and support safe, reliable day-to-day operations.</p></div>
+<div class="cards"><div class="card reveal"><h3>⚡ BMS Operations</h3><p>Monitoring BMS, HVAC, AHU, FCU, alarms, building parameters and operational conditions.</p></div><div class="card reveal"><h3>◈ Team Leadership</h3><p>Supporting teams, assigning work, monitoring daily activities and maintaining discipline.</p></div><div class="card reveal"><h3>▣ Administration</h3><p>Handling records, documentation, daily reports and operational information.</p></div><div class="card reveal"><h3>⌘ Computer Operations</h3><p>MS Office, Excel, Word, data entry and digital documentation.</p></div><div class="card reveal"><h3>⚙ MEP Coordination</h3><p>Coordinating maintenance issues, corrective actions, preventive maintenance and escalation.</p></div><div class="card reveal"><h3>◆ Facility Operations</h3><p>Supporting safe, reliable and efficient day-to-day facility operations.</p></div></div></div></div></section>
+
+<section id="skills"><div class="container"><div class="heading reveal"><div class="kicker">02 / Skills</div><h2>Tools &amp; capabilities.</h2><p>A combination of administrative, technical, operational and coordination skills developed through professional experience.</p></div>
 <div class="skills">
-<div class="skill"><strong>Administration</strong><span>Office Administration · Documentation · Data Entry · Record Management · Daily Reporting · Roster Management</span></div>
-<div class="skill"><strong>Computer &amp; Software</strong><span>Microsoft Word · Microsoft Excel · Microsoft Office · Email · Internet Operations · Digital Documentation</span></div>
-<div class="skill"><strong>Operations</strong><span>Team Coordination · Workforce Management · Facility Support · Site Operations · Task Monitoring · Safety Awareness</span></div>
-<div class="skill"><strong>BMS &amp; Facilities</strong><span>BMS Monitoring · HVAC · AHU · FCU · Alarm Monitoring · Building Parameters · Facility Operations</span></div>
-<div class="skill"><strong>MEP Coordination</strong><span>Maintenance Coordination · Corrective Actions · Preventive Maintenance · Reactive Maintenance · Issue Escalation</span></div>
-<div class="skill"><strong>Languages</strong><span>English — Professional · Urdu — Native · Hindi — Conversational</span></div>
-</div>
-</div>
-</section>
+<div class="skill reveal"><strong>Administration</strong><span>Office Administration · Documentation · Data Entry · Record Management · Daily Reporting · Roster Management</span><div class="skill-bar"><i data-width="90%"></i></div></div>
+<div class="skill reveal"><strong>Computer &amp; Software</strong><span>Microsoft Word · Microsoft Excel · Microsoft Office · Email · Internet Operations · Digital Documentation</span><div class="skill-bar"><i data-width="92%"></i></div></div>
+<div class="skill reveal"><strong>Operations</strong><span>Team Coordination · Workforce Management · Facility Support · Site Operations · Task Monitoring · Safety Awareness</span><div class="skill-bar"><i data-width="88%"></i></div></div>
+<div class="skill reveal"><strong>BMS &amp; Facilities</strong><span>BMS Monitoring · HVAC · AHU · FCU · Alarm Monitoring · Building Parameters · Facility Operations</span><div class="skill-bar"><i data-width="86%"></i></div></div>
+<div class="skill reveal"><strong>MEP Coordination</strong><span>Maintenance Coordination · Corrective Actions · Preventive Maintenance · Reactive Maintenance · Issue Escalation</span><div class="skill-bar"><i data-width="82%"></i></div></div>
+<div class="skill reveal"><strong>Languages</strong><span>English — Professional · Urdu — Native · Hindi — Conversational</span><div class="skill-bar"><i data-width="90%"></i></div></div>
+</div></div></section>
 
-<section id="experience">
-<div class="container">
-<div class="heading">
-<div class="kicker">03 / Experience</div>
-<h2>Professional experience.</h2>
-<p>Experience across BMS and facility operations, team supervision, administration and computer-based work.</p>
-</div>
+<section id="experience"><div class="container"><div class="heading reveal"><div class="kicker">03 / Experience</div><h2>Professional experience.</h2><p>Experience across BMS and facility operations, team supervision, administration and computer-based work.</p></div><div class="timeline">
 
-<div class="timeline">
+<article class="item reveal"><span class="dot"></span><div class="exp"><div class="exp-top"><div><span class="exp-code">EXPERIENCE / 01 · BMS OPERATIONS · UAE</span><h3>BMS Operator</h3><div class="company">Imdaad LLC · Dubai, UAE</div></div><span class="date">2+ YEARS</span></div><p class="summary">Responsible for monitoring and operating Building Management Systems to support efficient, safe and reliable building operations, with hands-on monitoring of HVAC equipment and coordination with MEP and maintenance teams.</p><ul><li>Monitor and operate <strong>Building Management Systems (BMS)</strong> to support efficient and reliable building operations.</li><li>Monitor <strong>HVAC systems, AHUs, FCUs</strong> and related building equipment through BMS.</li><li>Monitor system alarms, equipment status and abnormal operating conditions and take appropriate action.</li><li>Coordinate with <strong>MEP and maintenance teams</strong> for troubleshooting, corrective actions and service requests.</li><li>Monitor building parameters and equipment performance to support safe and efficient facility operations.</li><li>Record alarms, incidents, equipment conditions and operational activities in <strong>shift logs and reports</strong>.</li><li>Support <strong>preventive and reactive maintenance</strong> activities by identifying system issues and communicating them to the responsible maintenance team.</li><li>Follow facility procedures, safety requirements and operational standards during daily BMS operations.</li></ul><div class="tags"><span>BMS</span><span>HVAC</span><span>AHU</span><span>FCU</span><span>MEP Coordination</span><span>Alarm Monitoring</span><span>Preventive Maintenance</span><span>Reactive Maintenance</span><span>Shift Logs</span><span>Facility Operations</span><span>Safety</span></div></div></article>
 
-<!-- BMS OPERATOR — THIS IS THE EXPERIENCE THAT WAS MISSING FROM THE LIVE PAGE -->
-<article class="item">
-<span class="dot"></span>
-<div class="exp">
-<div class="exp-top">
-<div>
-<span class="exp-code">EXPERIENCE / 01 · BMS OPERATIONS · UAE</span>
-<h3>BMS Operator</h3>
-<div class="company">Imdaad LLC · Dubai, UAE</div>
-</div>
-<span class="date">2+ YEARS</span>
-</div>
-<p class="summary">
-Responsible for monitoring and operating Building Management Systems to support
-efficient, safe and reliable building operations, with hands-on monitoring of
-HVAC equipment and coordination with MEP and maintenance teams.
-</p>
-<ul>
-<li>Monitor and operate <strong>Building Management Systems (BMS)</strong> to support efficient and reliable building operations.</li>
-<li>Monitor <strong>HVAC systems, AHUs, FCUs</strong> and related building equipment through BMS.</li>
-<li>Monitor system alarms, equipment status and abnormal operating conditions and take appropriate action.</li>
-<li>Coordinate with <strong>MEP and maintenance teams</strong> for troubleshooting, corrective actions and service requests.</li>
-<li>Monitor building parameters and equipment performance to support safe and efficient facility operations.</li>
-<li>Record alarms, incidents, equipment conditions and operational activities in <strong>shift logs and reports</strong>.</li>
-<li>Support <strong>preventive and reactive maintenance</strong> activities by identifying system issues and communicating them to the responsible maintenance team.</li>
-<li>Follow facility procedures, safety requirements and operational standards during daily BMS operations.</li>
-</ul>
-<div class="tags">
-<span>BMS</span><span>HVAC</span><span>AHU</span><span>FCU</span><span>MEP Coordination</span>
-<span>Alarm Monitoring</span><span>Preventive Maintenance</span><span>Reactive Maintenance</span>
-<span>Shift Logs</span><span>Facility Operations</span><span>Safety</span>
-</div>
-</div>
-</article>
+<article class="item reveal"><span class="dot"></span><div class="exp"><div class="exp-top"><div><span class="exp-code">EXPERIENCE / 02 · SUPERVISION</span><h3>Assistant Supervisor</h3><div class="company">Imdaad LLC · Dubai, UAE</div></div><span class="date">UAE</span></div><ul><li>Supervised and coordinated daily team activities.</li><li>Prepared and maintained daily workforce rosters.</li><li>Supported site operations and task allocation.</li><li>Monitored completion of assigned operational tasks.</li><li>Supported facility cleaning and maintenance activities.</li><li>Coordinated grass cutting, loading and unloading and outdoor area maintenance activities.</li><li>Maintained communication between workers and supervisors.</li><li>Supported daily reporting and operational documentation.</li></ul><div class="tags"><span>Team Supervision</span><span>Roster Management</span><span>Task Allocation</span><span>Facility Support</span><span>Reporting</span></div></div></article>
 
-<article class="item">
-<span class="dot"></span>
-<div class="exp">
-<div class="exp-top">
-<div>
-<span class="exp-code">EXPERIENCE / 02 · SUPERVISION</span>
-<h3>Assistant Supervisor</h3>
-<div class="company">Imdaad LLC · Dubai, UAE</div>
-</div>
-<span class="date">UAE</span>
-</div>
-<ul>
-<li>Supervised and coordinated daily team activities.</li>
-<li>Prepared and maintained daily workforce rosters.</li>
-<li>Supported site operations and task allocation.</li>
-<li>Monitored completion of assigned operational tasks.</li>
-<li>Supported facility cleaning and maintenance activities.</li>
-<li>Coordinated grass cutting, loading and unloading and outdoor area maintenance activities.</li>
-<li>Maintained communication between workers and supervisors.</li>
-<li>Supported daily reporting and operational documentation.</li>
-</ul>
-<div class="tags"><span>Team Supervision</span><span>Roster Management</span><span>Task Allocation</span><span>Facility Support</span><span>Reporting</span></div>
-</div>
-</article>
+<article class="item reveal"><span class="dot"></span><div class="exp"><div class="exp-top"><div><span class="exp-code">EXPERIENCE / 03 · COMPUTER &amp; OFFICE OPERATIONS</span><h3>Computer Operator / Data Entry</h3><div class="company">Pakistan</div></div><span class="date">PAKISTAN</span></div><ul><li>Performed computer-based data entry and documentation.</li><li>Worked with Microsoft Word and Excel.</li><li>Maintained digital and office records.</li><li>Prepared documents and basic reports.</li><li>Supported day-to-day office administration.</li></ul><div class="tags"><span>Data Entry</span><span>MS Word</span><span>MS Excel</span><span>Office Administration</span><span>Digital Records</span></div></div></article>
 
-<article class="item">
-<span class="dot"></span>
-<div class="exp">
-<div class="exp-top">
-<div>
-<span class="exp-code">EXPERIENCE / 03 · COMPUTER &amp; OFFICE OPERATIONS</span>
-<h3>Computer Operator / Data Entry</h3>
-<div class="company">Pakistan</div>
-</div>
-<span class="date">PAKISTAN</span>
-</div>
-<ul>
-<li>Performed computer-based data entry and documentation.</li>
-<li>Worked with Microsoft Word and Excel.</li>
-<li>Maintained digital and office records.</li>
-<li>Prepared documents and basic reports.</li>
-<li>Supported day-to-day office administration.</li>
-</ul>
-<div class="tags"><span>Data Entry</span><span>MS Word</span><span>MS Excel</span><span>Office Administration</span><span>Digital Records</span></div>
-</div>
-</article>
+</div></div></section>
 
-</div>
-</div>
-</section>
+<section id="bms"><div class="container"><div class="heading reveal"><div class="kicker">04 / BMS Lab</div><h2>Building Management Systems.</h2><p>Practical BMS capability covering monitoring, HVAC systems, alarms, building parameters and maintenance coordination.</p></div><div class="skills">
+<div class="skill reveal"><strong>◉ BMS Monitoring</strong><span>Monitor BMS graphics, equipment status, alarms and operating conditions.</span></div><div class="skill reveal"><strong>◇ HVAC Systems</strong><span>Monitor AHU, FCU and related HVAC equipment through BMS.</span></div><div class="skill reveal"><strong>⚠ Alarm Management</strong><span>Identify alarms and abnormal conditions, communicate issues and support timely action.</span></div><div class="skill reveal"><strong>⚙ MEP Coordination</strong><span>Coordinate with maintenance and MEP teams for troubleshooting and corrective actions.</span></div><div class="skill reveal"><strong>◈ Building Parameters</strong><span>Monitor operational parameters and equipment performance for reliable facility operation.</span></div><div class="skill reveal"><strong>▣ Logs &amp; Reporting</strong><span>Maintain shift logs, incident records, equipment conditions and operational reports.</span></div>
+</div></div></section>
 
-<section id="bms">
-<div class="container">
-<div class="heading">
-<div class="kicker">04 / BMS Lab</div>
-<h2>Building Management Systems.</h2>
-<p>Practical BMS capability covering monitoring, HVAC systems, alarms, building parameters and maintenance coordination.</p>
-</div>
-<div class="skills">
-<div class="skill"><strong>BMS Monitoring</strong><span>Monitor BMS graphics, equipment status, alarms and operating conditions.</span></div>
-<div class="skill"><strong>HVAC Systems</strong><span>Monitor AHU, FCU and related HVAC equipment through BMS.</span></div>
-<div class="skill"><strong>Alarm Management</strong><span>Identify alarms and abnormal conditions, communicate issues and support timely action.</span></div>
-<div class="skill"><strong>MEP Coordination</strong><span>Coordinate with maintenance and MEP teams for troubleshooting and corrective actions.</span></div>
-<div class="skill"><strong>Building Parameters</strong><span>Monitor operational parameters and equipment performance for reliable facility operation.</span></div>
-<div class="skill"><strong>Logs & Reporting</strong><span>Maintain shift logs, incident records, equipment conditions and operational reports.</span></div>
-</div>
-</div>
-</section>
+<section id="education"><div class="container"><div class="heading reveal"><div class="kicker">05 / Education</div><h2>Education &amp; development.</h2></div><div class="cards"><div class="card reveal"><h3>Graduation</h3><p>Academic qualification · Completed</p></div><div class="card reveal"><h3>Computer &amp; Office Skills</h3><p>MS Office, Word, Excel &amp; Data Entry · Skilled</p></div></div></div></section>
 
-<section id="education">
-<div class="container">
-<div class="heading"><div class="kicker">05 / Education</div><h2>Education &amp; development.</h2></div>
-<div class="cards">
-<div class="card"><h3>Graduation</h3><p>Academic qualification · Completed</p></div>
-<div class="card"><h3>Computer &amp; Office Skills</h3><p>MS Office, Word, Excel &amp; Data Entry · Skilled</p></div>
-</div>
-</div>
-</section>
+<section id="services"><div class="container"><div class="heading reveal"><div class="kicker">06 / Services</div><h2>What I can contribute.</h2><p>Professional support across administration, operations, workforce coordination and facilities operations.</p></div><div class="services">
+<div class="service reveal"><div class="num">01 / ADMIN</div><h3>Office Administration</h3><p>Documentation, records, data entry, reporting and general administrative support.</p></div>
+<div class="service reveal"><div class="num">02 / OPS</div><h3>Operations Support</h3><p>Daily operational coordination, task monitoring, facility support and BMS awareness.</p></div>
+<div class="service reveal"><div class="num">03 / TEAM</div><h3>Team Coordination</h3><p>Workforce organization, roster management and daily task coordination.</p></div>
+<div class="service reveal"><div class="num">04 / DATA</div><h3>Data &amp; Reporting</h3><p>Excel data entry, digital records, shift reports and organized information.</p></div>
+</div></div></section>
 
-<section id="services">
-<div class="container">
-<div class="heading"><div class="kicker">06 / Services</div><h2>What I can contribute.</h2><p>Professional support across administration, operations, workforce coordination and facilities operations.</p></div>
-<div class="services">
-<div class="service"><div class="num">01 / ADMIN</div><h3>Office Administration</h3><p>Documentation, records, data entry, reporting and general administrative support.</p></div>
-<div class="service"><div class="num">02 / OPS</div><h3>Operations Support</h3><p>Daily operational coordination, task monitoring, facility support and BMS awareness.</p></div>
-<div class="service"><div class="num">03 / TEAM</div><h3>Team Coordination</h3><p>Workforce organization, roster management and daily task coordination.</p></div>
-<div class="service"><div class="num">04 / DATA</div><h3>Data &amp; Reporting</h3><p>Excel data entry, digital records, shift reports and organized information.</p></div>
-</div>
-</div>
-</section>
-
-<section id="contact">
-<div class="container">
-<div class="contact">
-<div class="kicker">07 / Contact</div>
-<h2 style="font-size:clamp(32px,5vw,52px);letter-spacing:-.045em;margin-top:8px">Let's connect.</h2>
-<p>For career opportunities, professional networking or collaboration, feel free to contact me.</p>
-<div class="contact-grid">
+<section id="contact"><div class="container"><div class="contact reveal"><div class="kicker">07 / Contact</div><h2>Let's connect.</h2><p>For career opportunities, professional networking or collaboration, feel free to contact me.</p><div class="contact-grid">
 <div class="contact-item"><small>Email</small><a href="mailto:mashirhadi@gmail.com">mashirhadi@gmail.com</a></div>
 <div class="contact-item"><small>Phone</small><a href="tel:+971558436330">+971 55 843 6330</a></div>
 <div class="contact-item"><small>Location</small><span>Dubai, UAE</span></div>
 <div class="contact-item"><small>Availability</small><span>Open to suitable administrative, operations, coordination and professional opportunities.</span></div>
-</div>
-<div class="actions"><a class="btn primary" href="mailto:mashirhadi@gmail.com">Email Me</a><a class="btn" href="https://wa.me/971558436330" target="_blank" rel="noopener">WhatsApp</a></div>
-</div>
-</div>
-</section>
-
+</div><div class="actions"><a class="btn primary" href="mailto:mashirhadi@gmail.com">Email Me</a><a class="btn" href="https://wa.me/971558436330" target="_blank" rel="noopener">WhatsApp ↗</a><a class="btn" href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359/" target="_blank" rel="noopener">LinkedIn ↗</a></div></div></div></section>
 </main>
-<footer><div class="container">© 2026 M. Ashir Hadi. All rights reserved.</div></footer>
+
+<footer><div class="footer-neon"></div><div class="container">© 2026 M. Ashir Hadi · Administrative &amp; Operations Professional · Dubai, UAE</div></footer>
+
+<script>
+const typingElement=document.getElementById("typing");
+const roles=["Administrative & Operations Professional","BMS Operator","Assistant Supervisor","Facility Operations Professional","Team Coordination Specialist"];
+let roleIndex=0,charIndex=0,deleting=false;
+function typeRole(){const current=roles[roleIndex];if(!deleting){typingElement.textContent=current.substring(0,charIndex+1);charIndex++;if(charIndex===current.length){deleting=true;setTimeout(typeRole,1800);return}}else{typingElement.textContent=current.substring(0,charIndex-1);charIndex--;if(charIndex===0){deleting=false;roleIndex=(roleIndex+1)%roles.length}}setTimeout(typeRole,deleting?35:65)} typeRole();
+
+const canvas=document.getElementById("particles"),ctx=canvas.getContext("2d");let particles=[],mouse={x:null,y:null};
+function resizeCanvas(){canvas.width=innerWidth;canvas.height=innerHeight;particles=[];const count=innerWidth<650?45:90;for(let i=0;i<count;i++)particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*1.7+.3,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,a:Math.random()*.65+.15})}
+function drawParticles(){ctx.clearRect(0,0,canvas.width,canvas.height);for(const p of particles){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>canvas.width)p.vx*=-1;if(p.y<0||p.y>canvas.height)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(0,234,255,${p.a})`;ctx.fill()}for(let i=0;i<particles.length;i++)for(let j=i+1;j<particles.length;j++){const a=particles[i],b=particles[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);if(d<110){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle=`rgba(0,234,255,${.08*(1-d/110)})`;ctx.lineWidth=.5;ctx.stroke()}}requestAnimationFrame(drawParticles)}
+addEventListener("resize",resizeCanvas);addEventListener("mousemove",e=>{mouse.x=e.clientX;mouse.y=e.clientY});resizeCanvas();drawParticles();
+
+const glow=document.getElementById("cursorGlow");addEventListener("mousemove",e=>{glow.style.left=e.clientX+"px";glow.style.top=e.clientY+"px"});
+
+const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("show");revealObserver.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>revealObserver.observe(el));
+
+const skillObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.querySelectorAll(".skill-bar i").forEach(bar=>bar.style.width=bar.dataset.width);skillObserver.unobserve(entry.target)}}),{threshold:.2});
+document.querySelectorAll(".skills").forEach(el=>skillObserver.observe(el));
+
+const counters=document.querySelectorAll(".counter"),counterObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)return;const c=entry.target,target=Number(c.dataset.target),start=performance.now();function update(now){const p=Math.min((now-start)/1000,1);c.textContent=Math.floor(p*target);if(p<1)requestAnimationFrame(update);else c.textContent=target+"+"}requestAnimationFrame(update);counterObserver.unobserve(c)}),{threshold:.8});
+counters.forEach(c=>counterObserver.observe(c));
+
+const profile=document.getElementById("profileCard");if(profile){profile.addEventListener("mousemove",e=>{if(innerWidth<800)return;const r=profile.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top,ry=(x/r.width-.5)*12,rx=(y/r.height-.5)*-12;profile.style.transform=`perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-5px)`});profile.addEventListener("mouseleave",()=>profile.style.transform="perspective(900px) rotateX(0) rotateY(0)")}
+
+const menuBtn=document.getElementById("menuBtn"),mobileMenu=document.getElementById("mobileMenu");menuBtn.addEventListener("click",()=>{mobileMenu.classList.toggle("open");menuBtn.textContent=mobileMenu.classList.contains("open")?"×":"☰"});mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{mobileMenu.classList.remove("open");menuBtn.textContent="☰"}));
+
+const sections=document.querySelectorAll("section[id]"),navLinks=document.querySelectorAll(".navlinks a");const navObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(l=>l.style.color="#9da8c2");const active=document.querySelector(`.navlinks a[href="#${entry.target.id}"]`);if(active)active.style.color="#00eaff"}}),{rootMargin:"-35% 0px -55% 0px"});sections.forEach(s=>navObserver.observe(s));
+
+const profileImage=document.querySelector(".profile img");if(profileImage)profileImage.addEventListener("error",()=>{profileImage.style.display="none";const inner=profileImage.parentElement;inner.style.background="radial-gradient(circle at 50% 35%,rgba(0,234,255,.25),transparent 35%),linear-gradient(135deg,#071c2b,#0c0920)";inner.insertAdjacentHTML("beforeend",`<div style="position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:30px;color:#9ffaff;font-weight:900;letter-spacing:.08em;font-size:13px">M. ASHIR HADI<br><span style="margin-top:8px;color:#667796;font-size:9px">BMS • OPERATIONS • ADMINISTRATION</span></div>`)});
+</script>
 </body>
 </html>
