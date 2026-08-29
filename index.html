@@ -1,72 +1,294 @@
-<div class="experience-item reveal">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#03050a">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="M. Ashir Hadi — Administrative & Operations Professional in Dubai, UAE. BMS Operator, team coordination, office administration and facilities operations.">
+<title>M. Ashir Hadi | Administrative & Operations Professional</title>
 
-    <span class="timeline-dot"></span>
+<style>
+:root {
+  --bg:#03050a;
+  --panel:rgba(255,255,255,.045);
+  --line:rgba(255,255,255,.10);
+  --text:#f5f7fb;
+  --muted:rgba(245,247,251,.66);
+  --soft:rgba(245,247,251,.46);
+  --accent:#9fb7ff;
+  --max:1120px;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 80% 0%, rgba(80,110,255,.12), transparent 32rem),
+    radial-gradient(circle at 0% 45%, rgba(120,80,255,.07), transparent 28rem),
+    var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+a { color:inherit; text-decoration:none; }
+.container { width:min(calc(100% - 36px), var(--max)); margin:auto; }
+nav {
+  position:fixed; inset:0 0 auto 0; z-index:100;
+  background:rgba(3,5,10,.72); backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.nav-inner { height:72px; display:flex; align-items:center; justify-content:space-between; }
+.logo { font-weight:800; letter-spacing:-.03em; }
+.logo span { color:var(--accent); }
+.nav-links { display:flex; gap:24px; color:var(--muted); font-size:14px; }
+.nav-links a:hover { color:#fff; }
+.hero { min-height:100vh; display:grid; place-items:center; padding:120px 0 70px; }
+.hero-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:70px; align-items:center; }
+.eyebrow,.kicker { text-transform:uppercase; letter-spacing:.18em; font-size:11px; color:var(--soft); font-weight:700; }
+h1 { margin-top:16px; font-size:clamp(48px,7vw,86px); line-height:.98; letter-spacing:-.055em; max-width:850px; }
+.gradient { color:var(--accent); }
+.hero-copy { margin-top:24px; max-width:680px; color:var(--muted); font-size:18px; }
+.actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+.btn { padding:12px 17px; border:1px solid var(--line); border-radius:999px; font-size:14px; transition:.25s; }
+.btn.primary { background:#fff; color:#03050a; border-color:#fff; }
+.btn:hover { transform:translateY(-2px); }
+.profile-wrap { display:flex; justify-content:center; }
+.profile {
+  width:min(330px,80vw); aspect-ratio:1;
+  border-radius:28px; overflow:hidden;
+  border:1px solid var(--line); background:var(--panel);
+  box-shadow:0 25px 80px rgba(0,0,0,.35);
+}
+.profile img { width:100%; height:100%; object-fit:cover; display:block; }
+.placeholder { height:100%; display:grid; place-items:center; color:var(--soft); text-align:center; padding:30px; }
+section { padding:100px 0; }
+.heading { max-width:720px; margin-bottom:42px; }
+.heading h2 { font-size:clamp(32px,5vw,52px); letter-spacing:-.045em; line-height:1.05; margin-top:10px; }
+.heading p { margin-top:15px; color:var(--muted); }
+.about-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:45px; }
+.about-copy p { color:var(--muted); margin-bottom:18px; }
+.cards { display:grid; gap:13px; }
+.card { padding:22px; border:1px solid var(--line); border-radius:18px; background:var(--panel); }
+.card h3 { font-size:16px; margin-bottom:5px; }
+.card p { color:var(--muted); font-size:14px; }
+.timeline { position:relative; max-width:980px; }
+.timeline:before { content:""; position:absolute; left:9px; top:10px; bottom:10px; width:1px; background:var(--line); }
+.item { position:relative; padding-left:42px; margin-bottom:28px; }
+.dot { position:absolute; left:0; top:13px; width:19px; height:19px; border-radius:50%; background:#fff; border:4px solid var(--bg); box-shadow:0 0 0 1px rgba(255,255,255,.3); }
+.exp { border:1px solid var(--line); background:var(--panel); border-radius:20px; padding:28px; }
+.exp-top { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; }
+.exp-label { font-size:10px; letter-spacing:.16em; color:var(--soft); text-transform:uppercase; }
+.exp h3 { font-size:24px; margin-top:5px; }
+.badge { border:1px solid var(--line); border-radius:999px; padding:6px 10px; color:var(--muted); font-size:11px; white-space:nowrap; }
+.exp-summary { margin-top:15px; color:var(--muted); }
+.exp ul { margin:17px 0 0 19px; color:var(--muted); }
+.exp li { margin:8px 0; }
+.tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
+.tags span { padding:6px 10px; border-radius:999px; background:rgba(255,255,255,.055); border:1px solid rgba(255,255,255,.08); color:var(--muted); font-size:11px; }
+.skills { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+.skill { padding:22px; border:1px solid var(--line); border-radius:18px; background:var(--panel); }
+.skill strong { display:block; margin-bottom:6px; }
+.skill span { color:var(--muted); font-size:14px; }
+.contact {
+  border:1px solid var(--line); border-radius:24px; padding:42px;
+  background:linear-gradient(135deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+}
+.contact p { color:var(--muted); max-width:650px; margin-top:12px; }
+.contact-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:25px; }
+footer { padding:30px 0 45px; color:var(--soft); font-size:12px; border-top:1px solid rgba(255,255,255,.06); }
+@media(max-width:780px){
+  .nav-links { display:none; }
+  .hero { padding-top:110px; }
+  .hero-grid,.about-grid { grid-template-columns:1fr; gap:38px; }
+  .profile-wrap { order:-1; }
+  .profile { width:230px; border-radius:22px; }
+  section { padding:75px 0; }
+  .skills { grid-template-columns:1fr; }
+  .exp-top { flex-direction:column; }
+  .badge { white-space:normal; }
+}
+</style>
+</head>
 
-    <div class="card exp-card card-hover">
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#top">M. Ashir <span>Hadi</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
 
-        <div class="exp-top">
+<main id="top">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Dubai, UAE · Administrative & Operations</div>
+      <h1>Reliable operations.<br><span class="gradient">Organized execution.</span></h1>
+      <p class="hero-copy">
+        Administrative & Operations Professional with hands-on experience in
+        BMS monitoring, facilities operations, team coordination, documentation,
+        communication and day-to-day workplace support.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#experience">View Experience</a>
+        <a class="btn" href="resume.pdf">View Resume</a>
+        <a class="btn" href="#contact">Contact Me</a>
+      </div>
+    </div>
+    <div class="profile-wrap">
+      <div class="profile">
+        <img src="linkedin-preview.jpg" alt="M. Ashir Hadi" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+        <div class="placeholder" style="display:none;">M. Ashir Hadi<br>Professional Profile</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div>
-                <span class="exp-code">EXP.01 / BMS OPERATIONS</span>
+<section id="about">
+  <div class="container">
+    <div class="heading">
+      <div class="kicker">Core / About</div>
+      <h2>Professional, practical, and operations-focused.</h2>
+      <p>A clear overview of the strengths I bring to administrative and operational environments.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>
+          I am an Administrative & Operations Professional with practical
+          experience supporting daily operations, coordinating teams, monitoring
+          facilities, handling documentation and helping maintain smooth
+          workplace activities.
+        </p>
+        <p>
+          My experience includes working as a <strong>BMS Operator</strong>,
+          monitoring building management systems, observing facility conditions,
+          responding to operational issues and supporting the smooth functioning
+          of building services.
+        </p>
+        <p>
+          I bring a responsible and organized approach to communication,
+          reporting, task follow-up, teamwork and problem-solving. I am
+          comfortable working in fast-paced environments where accuracy,
+          reliability and attention to detail matter.
+        </p>
+      </div>
+      <div class="cards">
+        <div class="card"><h3>Administration</h3><p>Documentation, reporting, communication and daily office support.</p></div>
+        <div class="card"><h3>Operations</h3><p>Daily operational support, monitoring, task coordination and follow-up.</p></div>
+        <div class="card"><h3>BMS Monitoring</h3><p>Building systems monitoring, alarms, operational checks and escalation.</p></div>
+        <div class="card"><h3>Team Coordination</h3><p>Task communication, teamwork, supervisor support and workflow coordination.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <h3>BMS Operator</h3>
-
-                <div class="exp-company">
-                    Imdaad LLC · Dubai, UAE
-                </div>
-            </div>
-
-            <span class="exp-date">
-                2+ YEARS
-            </span>
-
-        </div>
-
-        <ul>
-
-            <li>
-                Monitor and operate Building Management Systems (BMS)
-                to support efficient and reliable building operations.
-            </li>
-
-            <li>
-                Monitor HVAC systems, including AHUs, FCUs and related
-                building equipment through BMS.
-            </li>
-
-            <li>
-                Monitor system alarms, equipment status and abnormal
-                operating conditions and take appropriate action.
-            </li>
-
-            <li>
-                Coordinate with MEP and maintenance teams for
-                troubleshooting, corrective actions and service requests.
-            </li>
-
-            <li>
-                Monitor building parameters and equipment performance
-                to support safe and efficient facility operations.
-            </li>
-
-            <li>
-                Record alarms, incidents, equipment conditions and
-                operational activities in shift logs and reports.
-            </li>
-
-            <li>
-                Support preventive and reactive maintenance activities
-                by identifying system issues and communicating them
-                to the responsible maintenance team.
-            </li>
-
-            <li>
-                Follow facility procedures, safety requirements and
-                operational standards during daily BMS operations.
-            </li>
-
-        </ul>
-
+<section id="experience">
+  <div class="container">
+    <div class="heading">
+      <div class="kicker">Experience</div>
+      <h2>Professional Experience</h2>
+      <p>Experience across building operations, administration, coordination and workplace support.</p>
     </div>
 
-</div>
+    <div class="timeline">
+      <article class="item">
+        <div class="dot"></div>
+        <div class="exp">
+          <div class="exp-top">
+            <div>
+              <div class="exp-label">Facilities & Operations</div>
+              <h3>BMS Operator</h3>
+            </div>
+            <span class="badge">Dubai, UAE</span>
+          </div>
+          <p class="exp-summary">
+            Monitored and supported building operations through the Building
+            Management System (BMS), helping maintain operational continuity
+            and identify facility issues.
+          </p>
+          <ul>
+            <li>Monitored BMS systems and building operational conditions.</li>
+            <li>Observed alarms, system notifications and abnormal operating conditions.</li>
+            <li>Supported identification and reporting of operational and facility-related issues.</li>
+            <li>Coordinated with relevant teams when maintenance or corrective action was required.</li>
+            <li>Maintained attention to system status and day-to-day building operations.</li>
+            <li>Followed operational procedures and supported a safe, organized working environment.</li>
+          </ul>
+          <div class="tags"><span>BMS Monitoring</span><span>Facilities Operations</span><span>Alarm Monitoring</span><span>Issue Reporting</span><span>Team Coordination</span></div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="dot"></div>
+        <div class="exp">
+          <div class="exp-top">
+            <div>
+              <div class="exp-label">Administration & Operations</div>
+              <h3>Administrative & Operations Support</h3>
+            </div>
+            <span class="badge">Professional Experience</span>
+          </div>
+          <p class="exp-summary">
+            Supported daily administrative and operational activities, helping
+            teams stay organized and ensuring tasks were followed through efficiently.
+          </p>
+          <ul>
+            <li>Supported day-to-day administrative and operational activities.</li>
+            <li>Coordinated tasks and communicated information between team members and departments.</li>
+            <li>Assisted with documentation, records, reporting and routine office requirements.</li>
+            <li>Followed up on assigned tasks and helped maintain workflow continuity.</li>
+            <li>Communicated professionally with colleagues, supervisors and operational teams.</li>
+          </ul>
+          <div class="tags"><span>Administration</span><span>Operations</span><span>Documentation</span><span>Reporting</span><span>Communication</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <div class="heading">
+      <div class="kicker">Core Skills</div>
+      <h2>What I bring to the workplace.</h2>
+    </div>
+    <div class="skills">
+      <div class="skill"><strong>Operations</strong><span>Daily operations, monitoring, task follow-up and workflow support.</span></div>
+      <div class="skill"><strong>Administration</strong><span>Documentation, reporting, organization and office coordination.</span></div>
+      <div class="skill"><strong>Facilities</strong><span>BMS monitoring, alarms, building systems awareness and issue escalation.</span></div>
+      <div class="skill"><strong>Communication</strong><span>Professional communication with teams, supervisors and departments.</span></div>
+      <div class="skill"><strong>Teamwork</strong><span>Coordination, cooperation, task support and dependable follow-through.</span></div>
+      <div class="skill"><strong>Problem Solving</strong><span>Identifying issues, communicating them clearly and supporting resolution.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact">
+      <div class="kicker">Contact</div>
+      <h2 style="font-size:clamp(32px,5vw,52px);letter-spacing:-.045em;margin-top:8px;">Let's connect.</h2>
+      <p>
+        For professional opportunities, administrative and operations roles,
+        or collaboration, please get in touch.
+      </p>
+      <div class="contact-actions">
+        <a class="btn primary" href="mailto:">Email Me</a>
+        <a class="btn" href="#top">Back to Top</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">© 2026 M. Ashir Hadi · Administrative & Operations Professional · Dubai, UAE</div>
+</footer>
+</body>
+</html>
