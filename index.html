@@ -83,6 +83,8 @@ h1{font-size:clamp(3rem,7vw,6.4rem);line-height:.93;letter-spacing:-.065em;margi
 .card-face:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;left:-80px;bottom:-60px;background:var(--accent2);filter:blur(70px);opacity:.18}
 .card-content{position:absolute;inset:30px;display:flex;flex-direction:column;justify-content:space-between;transform:translateZ(55px)}
 .chip{width:46px;height:34px;border:1px solid rgba(255,255,255,.3);border-radius:9px;background:linear-gradient(135deg,rgba(255,255,255,.2),rgba(255,255,255,.03))}
+.profile-photo{width:118px;height:118px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid rgba(98,230,255,.7);box-shadow:0 0 0 7px rgba(98,230,255,.06),0 0 35px rgba(98,230,255,.2);display:block;background:#101d32}
+.profile-wrap{display:flex;align-items:flex-start;justify-content:space-between;gap:15px}
 .monogram{font-size:6rem;font-weight:950;letter-spacing:-.1em;line-height:1}
 .card-title{font-size:1.2rem;font-weight:850}.card-sub{color:var(--muted);font-size:.85rem}
 .card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
@@ -119,7 +121,7 @@ footer{padding:35px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 @media(max-width:500px){
  .container{width:min(var(--max),calc(100% - 24px))}section{padding:72px 0}
  h1{font-size:clamp(2.8rem,15vw,4.5rem)}.lead{font-size:.95rem}
- .stats{gap:18px}.float{display:none}.card-content{inset:22px}.monogram{font-size:4.5rem}
+ .stats{gap:18px}.float{display:none}.card-content{inset:22px}.profile-photo{width:92px;height:92px}.monogram{font-size:4.5rem}
 }
 @media(prefers-reduced-motion:reduce){
  html{scroll-behavior:auto}.reveal{opacity:1;transform:none}.card3d{transition:none}
@@ -162,7 +164,10 @@ footer{padding:35px 0;border-top:1px solid var(--line);color:var(--muted);font-s
    <div class="card3d" id="card3d">
     <div class="card-face">
      <div class="card-content">
-      <div><div class="chip"></div><div class="monogram">AH</div></div>
+      <div class="profile-wrap">
+  <div><div class="chip"></div></div>
+  <img class="profile-photo" src="IMG-20250803-WA0006.jpg" alt="M. Ashir Hadi — BMS Operator & Assistant Supervisor" loading="eager" decoding="async" onerror="this.style.display='none'">
+</div>
       <div>
        <div class="card-title">BMS / OPERATIONS</div>
        <div class="card-sub">Dubai, United Arab Emirates</div>
