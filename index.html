@@ -2,252 +2,102 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#070b14">
-<meta name="description" content="Muhammad Ashir Hadi — BMS Operator and Assistant Facilities Supervisor in Dubai, UAE. Explore a cinematic 3D building and interactive BMS digital twin.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1b080b">
+<meta name="description" content="Muhammad Ashir Hadi — BMS Operator and Assistant Facilities Supervisor in Dubai, UAE. Honeywell BMS, HVAC monitoring, alarm response and facilities operations.">
 <meta property="og:title" content="Muhammad Ashir Hadi | BMS Operator & Assistant Facilities Supervisor">
-<meta property="og:description" content="Cinematic 3D facilities portfolio and interactive building management simulator.">
+<meta property="og:description" content="BMS and facilities operations portfolio — Dubai, UAE.">
 <meta property="og:type" content="website">
-<title>Muhammad Ashir Hadi | BMS & Facilities Operations</title>
+<title>Muhammad Ashir Hadi | BMS Operator & Facilities Supervisor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#070b14;--panel:rgba(13,22,36,.78);--line:rgba(122,177,210,.17);--text:#edf7ff;--muted:#8ca3b8;--cyan:#56e4f5;--blue:#478dff;--green:#65edbd;--amber:#ffc66e;--red:#ff6d7b;--radius:18px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}
-#starfield{position:fixed;inset:0;z-index:-3;background:radial-gradient(ellipse at 70% 15%,#10233a 0%,#070b14 52%,#05070d 100%)}
-#starfield:after{content:"";position:absolute;inset:0;opacity:.25;background-image:linear-gradient(rgba(105,179,220,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(105,179,220,.08) 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(to bottom,black,transparent 78%)}
-.noise{position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E")}
-header{position:fixed;z-index:20;top:0;left:0;right:0;padding:17px clamp(18px,5vw,76px);display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg,rgba(5,9,16,.9),rgba(5,9,16,.28));backdrop-filter:blur(14px);border-bottom:1px solid rgba(130,190,220,.08)}
-.brand{font-weight:800;letter-spacing:.13em;font-size:12px}.brand span{color:var(--cyan)}nav{display:flex;gap:27px;align-items:center}nav a{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#b5c8d8;transition:.2s}nav a:hover{color:var(--cyan)}.nav-cta{border:1px solid rgba(86,228,245,.45);padding:10px 15px;border-radius:30px;color:var(--cyan)}
-.menu{display:none;background:none;border:1px solid var(--line);color:white;border-radius:10px;padding:8px}
-.hero{min-height:780px;height:100svh;max-height:1000px;position:relative;display:flex;align-items:center;padding:110px clamp(22px,8vw,130px) 70px;overflow:hidden}
-#hero3d{position:absolute;inset:0;width:100%;height:100%;z-index:0}
-.hero:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#070b14 0%,rgba(7,11,20,.93) 27%,rgba(7,11,20,.38) 61%,rgba(7,11,20,.12) 100%),linear-gradient(0deg,#070b14 0%,transparent 32%)}
-.hero-copy{position:relative;z-index:2;max-width:650px;padding-top:35px;pointer-events:none}.eyebrow,.mono{font-family:"DM Mono",monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);font-size:10px}.eyebrow{display:flex;align-items:center;gap:12px}.eyebrow:before{content:"";width:32px;height:1px;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
-h1{font-size:clamp(43px,7vw,88px);line-height:.98;letter-spacing:-.065em;margin:25px 0 18px;font-weight:800}h1 em{font-style:normal;color:var(--cyan);text-shadow:0 0 35px rgba(86,228,245,.23)}.hero-sub{font-size:clamp(15px,1.55vw,18px);line-height:1.8;color:#a9bbca;max-width:540px}.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:31px;pointer-events:auto}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:30px;padding:14px 20px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;transition:.25s}.btn-primary{background:var(--cyan);color:#04121b;box-shadow:0 0 30px rgba(86,228,245,.22)}.btn-primary:hover{transform:translateY(-3px);box-shadow:0 0 40px rgba(86,228,245,.42)}.btn-ghost{border:1px solid rgba(160,197,220,.3);color:#dcebf4;background:rgba(10,20,32,.4)}.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
-.hero-meta{position:absolute;z-index:3;bottom:34px;left:clamp(22px,8vw,130px);display:flex;gap:34px;flex-wrap:wrap}.meta-item{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.13em;color:#7891a6;text-transform:uppercase}.meta-item strong{display:block;color:#e1f3fc;font-size:12px;font-weight:500;margin-top:7px;letter-spacing:.04em}
-.scroll-cue{position:absolute;right:5vw;bottom:36px;z-index:3;color:#7891a6;font:9px "DM Mono";letter-spacing:.2em;writing-mode:vertical-rl}
-section{padding:110px clamp(20px,7vw,110px);position:relative}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:42px}.kicker{font:10px "DM Mono";color:var(--cyan);letter-spacing:.17em;text-transform:uppercase}.section-title{font-size:clamp(31px,4.3vw,55px);letter-spacing:-.055em;line-height:1.05;margin:12px 0 0}.section-note{max-width:360px;color:var(--muted);font-size:13px;line-height:1.8}
-.glass{background:linear-gradient(145deg,rgba(20,35,53,.78),rgba(8,15,26,.84));border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 18px 70px rgba(0,0,0,.22);backdrop-filter:blur(18px)}
-.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:-1px}.metric{padding:23px 25px}.metric strong{display:block;font-size:30px;letter-spacing:-.06em}.metric span{font:9px "DM Mono";letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
-#digital-twin{background:linear-gradient(180deg,transparent,rgba(13,26,42,.48),transparent)}.twin-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,.8fr);gap:18px}.twin-view{min-height:520px;position:relative;overflow:hidden}.twin-view canvas{display:block;width:100%;height:100%;min-height:520px}.twin-overlay{position:absolute;top:22px;left:24px;right:24px;display:flex;justify-content:space-between;pointer-events:none}.live{font:9px "DM Mono";color:var(--green);letter-spacing:.15em}.live:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:8px;box-shadow:0 0 12px var(--green)}.twin-hint{position:absolute;bottom:20px;left:24px;color:#7e98ad;font:9px "DM Mono";letter-spacing:.12em}
-.control-panel{padding:24px;display:flex;flex-direction:column;gap:16px}.panel-top{display:flex;justify-content:space-between;align-items:center}.panel-title{font-size:13px;font-weight:800;letter-spacing:.08em}.tag{font:9px "DM Mono";color:var(--cyan);border:1px solid rgba(86,228,245,.3);padding:6px 8px;border-radius:5px}
-.system-row{display:flex;align-items:center;justify-content:space-between;padding:13px 0;border-bottom:1px solid rgba(140,180,205,.1)}.system-info{display:flex;align-items:center;gap:12px}.sys-icon{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:rgba(86,228,245,.09);color:var(--cyan);font-size:16px}.sys-name{font-size:12px;font-weight:700}.sys-desc{font:9px "DM Mono";color:var(--muted);margin-top:4px}.switch{width:42px;height:23px;border:1px solid #385064;border-radius:20px;background:#172535;position:relative;transition:.2s}.switch:after{content:"";position:absolute;width:15px;height:15px;left:3px;top:3px;border-radius:50%;background:#7e94a6;transition:.2s}.switch.on{background:rgba(101,237,189,.2);border-color:var(--green)}.switch.on:after{left:22px;background:var(--green);box-shadow:0 0 10px var(--green)}
-.reading-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.reading{padding:12px;border-radius:12px;background:rgba(5,12,21,.5);border:1px solid rgba(130,180,210,.1)}.reading span{display:block;font:8px "DM Mono";color:var(--muted);letter-spacing:.1em}.reading strong{font-size:20px;display:block;margin-top:7px}.reading small{font:9px "DM Mono";color:var(--green)}
-.setpoint{padding:13px 0}.setpoint-head{display:flex;justify-content:space-between;font-size:10px;color:#a8bbca;margin-bottom:12px}.setpoint-head strong{color:var(--cyan);font:12px "DM Mono"}input[type=range]{width:100%;accent-color:var(--cyan)}
-.alarm-box{padding:13px;border:1px solid rgba(255,198,110,.2);border-radius:12px;background:rgba(255,198,110,.05)}.alarm-head{display:flex;justify-content:space-between;align-items:center;font:9px "DM Mono";color:var(--amber);letter-spacing:.1em}.alarm-message{font-size:11px;color:#bdcbd5;margin:8px 0 12px}.small-btn{border:1px solid rgba(255,198,110,.35);background:transparent;color:var(--amber);padding:7px 11px;border-radius:20px;font-size:9px;letter-spacing:.08em}
-.trend-card{margin-top:18px;padding:22px 24px}.trend-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.trend-top strong{font-size:12px}.trend-top span{font:9px "DM Mono";color:var(--muted)}#trend{width:100%;height:120px;display:block}
-.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.profile-card{padding:30px}.profile-card h3{font-size:18px;margin:0 0 13px}.profile-card p{color:var(--muted);font-size:13px;line-height:1.9;margin:0}.skill-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.chip{border:1px solid rgba(86,228,245,.2);background:rgba(86,228,245,.055);padding:8px 11px;border-radius:30px;color:#bfeef3;font-size:10px}
-.timeline{border-left:1px solid rgba(86,228,245,.35);margin:23px 0 0 5px;padding-left:25px}.timeline-item{position:relative;margin-bottom:27px}.timeline-item:before{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--cyan);left:-30px;top:5px;box-shadow:0 0 12px var(--cyan)}.timeline-item strong{font-size:13px}.timeline-item small{display:block;font:9px "DM Mono";color:var(--cyan);margin:6px 0}.timeline-item p{font-size:11px;color:var(--muted);line-height:1.7}
-.capabilities{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.cap{padding:25px;min-height:190px;transition:.25s}.cap:hover{transform:translateY(-5px);border-color:rgba(86,228,245,.4)}.cap .number{font:10px "DM Mono";color:var(--cyan)}.cap h3{font-size:16px;margin:22px 0 9px}.cap p{font-size:11px;line-height:1.8;color:var(--muted);margin:0}
-.contact{padding-bottom:80px}.contact-panel{padding:clamp(28px,5vw,58px);display:flex;justify-content:space-between;align-items:center;gap:30px;background:radial-gradient(ellipse at 90% 10%,rgba(40,133,172,.2),transparent 55%),linear-gradient(135deg,rgba(16,36,54,.9),rgba(8,15,26,.9))}.contact-panel h2{font-size:clamp(30px,4vw,50px);letter-spacing:-.06em;margin:12px 0}.contact-panel p{font-size:13px;color:var(--muted);max-width:500px;line-height:1.8}
-footer{padding:25px clamp(20px,7vw,110px);border-top:1px solid rgba(130,180,210,.1);display:flex;justify-content:space-between;gap:20px;color:#70879a;font:9px "DM Mono";letter-spacing:.08em}
-.toast{position:fixed;z-index:50;bottom:25px;left:50%;transform:translate(-50%,20px);opacity:0;background:#122638;border:1px solid rgba(86,228,245,.4);padding:12px 18px;border-radius:30px;color:var(--cyan);font:10px "DM Mono";transition:.3s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:900px){nav{gap:15px}nav a{font-size:9px}.twin-layout{grid-template-columns:1fr}.twin-view{min-height:430px}.twin-view canvas{min-height:430px}.capabilities{grid-template-columns:1fr 1fr}}
-@media(max-width:650px){header{padding:14px 18px}.menu{display:block}nav{display:none;position:absolute;top:60px;left:12px;right:12px;padding:18px;background:#0b1522;border:1px solid var(--line);border-radius:14px;flex-direction:column;align-items:stretch}nav.open{display:flex}nav a{padding:9px}.hero{min-height:760px;height:95svh;padding:100px 22px 90px}.hero:after{background:linear-gradient(90deg,rgba(7,11,20,.96),rgba(7,11,20,.65)),linear-gradient(0deg,#070b14 0%,transparent 40%)}.hero-copy{padding-top:20px}.hero-meta{left:22px;right:22px;bottom:24px;gap:17px}.meta-item{font-size:8px}.meta-item strong{font-size:10px}.scroll-cue{display:none}section{padding:78px 18px}.section-head{display:block}.section-note{margin-top:17px}.metrics{grid-template-columns:1fr 1fr}.metric{padding:18px}.metric strong{font-size:25px}.profile-grid{grid-template-columns:1fr}.capabilities{grid-template-columns:1fr}.contact-panel{display:block}.contact-panel .btn{margin-top:15px}footer{flex-direction:column}.twin-view,.twin-view canvas{min-height:360px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+:root{--wine:#1b080b;--wine2:#300e13;--cream:#f1e4d9;--white:#f8eee6;--muted:#c8b7ac;--copper:#d99a72;--line:rgba(248,238,230,.17);--green:#51d6a1}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wine);color:var(--white);font-family:Manrope,Arial,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input{font:inherit}
+header{height:70px;position:fixed;z-index:20;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,6vw,84px);background:rgba(27,8,11,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand{font-size:12px;letter-spacing:.18em;font-weight:800}.brand b{color:var(--copper)}nav{display:flex;gap:28px;align-items:center}nav a{font:10px "DM Mono";letter-spacing:.13em;text-transform:uppercase;color:#ddc9bd}nav a:hover{color:var(--copper)}.nav-contact{border:1px solid var(--copper);padding:11px 15px}
+.menu{display:none;color:var(--white);background:none;border:1px solid var(--line);padding:8px 11px}
+section{padding:100px clamp(22px,7vw,100px)}
+.hero{padding-top:125px;padding-bottom:65px;min-height:850px;background:radial-gradient(ellipse at 50% 30%,#36151b 0%,var(--wine) 58%);position:relative}
+.topline{display:flex;justify-content:space-between;color:#cbb9ae;font:11px "DM Mono";letter-spacing:.28em}
+.hero h1{font:clamp(58px,12vw,142px)/.9 "DM Serif Display",Georgia,serif;text-align:center;margin:18px 0 28px;letter-spacing:.01em}
+.portrait{display:block;width:min(440px,76vw);height:490px;object-fit:cover;object-position:center 18%;margin:0 auto 65px;background:#e4e0e4}
+.hero-copy{max-width:780px;margin:auto}.eyebrow{font:12px "DM Mono";letter-spacing:.22em;color:var(--copper)}
+.hero h2{font:clamp(43px,8vw,78px)/1 "DM Serif Display",Georgia,serif;margin:17px 0 10px}
+.role{font:clamp(13px,2vw,19px) "DM Mono";letter-spacing:.16em;color:#d8c4b9;line-height:1.7}
+.hero-copy p{font-size:clamp(16px,2vw,21px);line-height:1.9;color:#d4c2b7;margin:35px 0 24px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-block;padding:15px 22px;border:1px solid var(--copper);font:10px "DM Mono";letter-spacing:.16em;text-transform:uppercase}.btn.primary{background:var(--copper);color:var(--wine)}.btn:hover{filter:brightness(1.12)}
+.hero-foot{max-width:780px;margin:52px auto 0;padding-top:23px;border-top:1px solid var(--line);display:flex;gap:45px;flex-wrap:wrap}.hero-foot small{display:block;color:#bd9f90;font:9px "DM Mono";letter-spacing:.16em}.hero-foot strong{display:block;margin-top:8px;font-size:13px}
+.intro-line{padding:35px clamp(22px,7vw,100px) 85px}.intro-line h3{font:italic clamp(30px,5vw,52px)/1.35 "DM Serif Display";max-width:780px;margin:0 0 35px}.intro-line ul{list-style:none;margin:0;padding:0;display:grid;gap:17px}.intro-line li{font:clamp(14px,2vw,19px) "DM Mono";letter-spacing:.1em;color:#d9c8bd}.intro-line li:before{content:"—";color:var(--copper);margin-right:15px}
+.what{background:var(--cream);color:#230d11}.section-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:42px}.kicker{font:10px "DM Mono";letter-spacing:.18em;color:#a9684d;text-transform:uppercase}.section-title{font:clamp(43px,7vw,75px)/1.02 "DM Serif Display";margin:13px 0 0}.section-note{max-width:390px;color:#5d4038;font-size:16px;line-height:1.8;margin:0}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:24px}.service{height:470px;border-radius:7px;overflow:hidden;position:relative;background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:space-between;padding:28px;color:#fff}.service:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(28,5,9,.97),rgba(28,5,9,.45) 55%,rgba(28,5,9,.05))}.service>*{position:relative}.service .num{align-self:flex-end;color:var(--copper);font:24px "DM Serif Display"}.service h3{font:34px "DM Serif Display";margin:0 0 13px}.service p{max-width:400px;font-size:16px;line-height:1.8;color:#ddc9bd;margin:0}
+.experience{background:var(--wine)}.experience h2{font:clamp(48px,8vw,86px) "DM Serif Display";margin:10px 0 20px}.experience .site{font-size:19px;color:#d4c2b7}.date{display:inline-block;margin:30px 0;padding-bottom:12px;border-bottom:1px solid var(--copper);font:13px "DM Mono";letter-spacing:.2em;color:var(--copper)}.company{border-top:1px solid var(--line);padding-top:45px;margin-top:30px}.company h3{font:clamp(42px,7vw,70px) "DM Serif Display";margin:0}.company .role{margin-top:10px}.company ul{padding-left:20px;color:#d1beb3;line-height:2;font-size:16px}
+.stats{background:#300e13;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}.stat strong{font:clamp(38px,6vw,64px) "DM Serif Display"}.stat span{display:block;margin-top:10px;color:#d0b8ac;font:11px "DM Mono";letter-spacing:.14em;text-transform:uppercase}
+.how{background:var(--wine)}.how h2{font:italic clamp(44px,7vw,74px) "DM Serif Display";margin:0 0 12px}.how .lead{color:#d1beb3;font-size:18px}.steps{margin-top:55px}.step{border-top:1px solid var(--line);padding:30px 0 40px}.step .n{color:var(--copper);font:24px "DM Serif Display"}.step h3{font:24px "DM Mono";font-weight:400;margin:22px 0 12px}.step p{font-size:16px;line-height:1.8;color:#cbb8ad;max-width:760px;margin:0}
+.simulator{background:var(--cream);color:#210d10}.simulator .section-title{color:#210d10}.simulator .section-note{color:#5d4038}.sim-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+.building{min-height:440px;border-radius:8px;background:radial-gradient(ellipse at 50% 45%,#60242a,#1b080b 70%);position:relative;overflow:hidden;display:grid;place-items:center}
+.building:before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(217,154,114,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(217,154,114,.08) 1px,transparent 1px);background-size:35px 35px;transform:perspective(500px) rotateX(55deg) scale(1.7);transform-origin:center bottom}
+.tower{position:relative;width:190px;height:260px;transform:perspective(600px) rotateY(-18deg) skewY(-3deg);background:repeating-linear-gradient(0deg,transparent 0 27px,rgba(217,154,114,.55) 28px 30px),repeating-linear-gradient(90deg,#193442 0 44px,#b06c54 45px 47px);border:3px solid #d99a72;box-shadow:30px 30px 60px #080306;transition:.3s}
+.tower:before{content:"";position:absolute;left:-45px;top:18px;width:44px;height:230px;background:repeating-linear-gradient(0deg,#172d3a 0 27px,#b06c54 28px 30px);transform:skewY(-38deg);transform-origin:right}
+.tower:after{content:"";position:absolute;left:0;right:0;top:-24px;height:22px;background:#d99a72;transform:skewX(-45deg);transform-origin:left}
+.building-label{position:absolute;left:22px;top:20px;color:#f0c3a3;font:10px "DM Mono";letter-spacing:.14em}.building-status{position:absolute;bottom:18px;left:22px;color:#e7cabc;font:10px "DM Mono"}
+.panel{background:#2a0c10;color:#f7e9df;border-radius:8px;padding:25px}.panel-head{display:flex;justify-content:space-between;gap:10px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px}.panel h3{font:20px "DM Serif Display";margin:0}.live{font:9px "DM Mono";color:var(--green)}.sys{display:flex;align-items:center;justify-content:space-between;padding:15px 0;border-bottom:1px solid var(--line)}.sys small{display:block;color:#bca79b;font:9px "DM Mono";margin-top:5px}.toggle{border:1px solid #997063;background:#49232a;color:#f7e9df;padding:8px 12px;font:9px "DM Mono";min-width:65px}.toggle.on{border-color:var(--green);color:var(--green);background:#16372e}.readings{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}.reading{padding:12px;background:#1b080b;border:1px solid var(--line)}.reading small{display:block;color:#bca79b;font:9px "DM Mono"}.reading strong{display:block;font:22px "DM Serif Display";margin-top:7px}.setpoint{margin:20px 0}.setpoint label{display:flex;justify-content:space-between;font:10px "DM Mono";margin-bottom:10px}.setpoint output{color:var(--copper)}input[type=range]{width:100%;accent-color:var(--copper)}.alarm{padding:14px;border:1px solid rgba(217,154,114,.4);background:#35151b}.alarm strong{font:10px "DM Mono";color:var(--copper)}.alarm p{font-size:11px;line-height:1.6;color:#d8c4b9}.alarm button{border:1px solid var(--copper);background:none;color:var(--copper);padding:8px 12px;font:9px "DM Mono"}
+.contact{background:#300e13}.contact h2{font:clamp(48px,8vw,82px)/1.05 "DM Serif Display";margin:0 0 30px}.contact h2 em{font-weight:400}.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px}.contact p{font-size:18px;line-height:1.8;color:#d2beb2}.contact-details{border-top:1px solid var(--line);padding-top:24px}.contact-details a{display:block;font-size:18px;margin:15px 0}.contact-details small{display:block;color:var(--copper);font:10px "DM Mono";letter-spacing:.15em;margin-top:25px}
+footer{padding:27px clamp(22px,7vw,100px);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#b99e91;font:10px "DM Mono";letter-spacing:.1em}
+@media(max-width:760px){header{height:62px}nav{display:none;position:absolute;top:62px;left:10px;right:10px;padding:18px;background:#2a0c10;border:1px solid var(--line);flex-direction:column;align-items:stretch;gap:16px}nav.open{display:flex}.menu{display:block}.hero{padding-top:105px;min-height:0}.topline{font-size:8px;letter-spacing:.15em}.hero h1{font-size:clamp(53px,14vw,90px)}.portrait{height:clamp(350px,110vw,470px);margin-bottom:48px}.hero-foot{gap:22px}.intro-line{padding-top:25px}.section-head{display:block}.section-note{margin-top:18px}.cards{grid-template-columns:1fr}.service{height:420px}.stats{grid-template-columns:1fr 1fr;padding-top:55px;padding-bottom:55px}.sim-wrap,.contact-grid{grid-template-columns:1fr}.building{min-height:370px}.panel{padding:18px}section{padding:75px 19px}footer{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
 <body>
-<div id="starfield"></div><div class="noise"></div>
-<header>
-  <a class="brand" href="#top">ASHIR<span>.</span>HADI</a>
-  <button class="menu" id="menuBtn" aria-label="Open navigation">☰</button>
-  <nav id="nav">
-    <a href="#digital-twin">Digital Twin</a><a href="#profile">Profile</a><a href="#expertise">Expertise</a><a href="#contact" class="nav-cta">Contact</a>
-  </nav>
-</header>
+<header><a class="brand" href="#top">ASHIR <b>HADI</b></a><button class="menu" id="menu" aria-label="Open menu">MENU</button><nav id="nav"><a href="#what">What I do</a><a href="#experience">Experience</a><a href="#how">How I work</a><a href="#simulator">BMS Simulator</a><a class="nav-contact" href="#contact">Contact</a></nav></header>
 <main>
 <section class="hero" id="top">
-  <canvas id="hero3d" aria-label="Interactive 3D architectural building model"></canvas>
-  <div class="hero-copy">
-    <div class="eyebrow">Building intelligence · Dubai, UAE</div>
-    <h1>Muhammad<br><em>Ashir Hadi</em></h1>
-    <p class="hero-sub">BMS Operator <span style="color:var(--cyan)">/</span> Assistant Facilities Supervisor. Keeping complex building systems visible, stable and efficient through operational awareness and smart controls.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#digital-twin">Explore digital twin <span>↗</span></a>
-      <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noopener">View résumé ↗</a>
-    </div>
-  </div>
-  <div class="hero-meta">
-    <div class="meta-item">Based in<strong>Dubai, UAE</strong></div>
-    <div class="meta-item">Current organisation<strong>Imdaad LLC</strong></div>
-    <div class="meta-item">Focus<strong>BMS · HVAC · FM</strong></div>
-  </div>
-  <div class="scroll-cue">SCROLL TO EXPLORE ↓</div>
+<div class="topline"><span>BMS OPERATOR PROFILE</span><span>DUBAI / UAE</span></div>
+<h1>ASHIR HADI</h1>
+<img class="portrait" src="IMG-20250803-WA0006.jpg" alt="Muhammad Ashir Hadi professional portrait" onerror="this.style.display='none'">
+<div class="hero-copy"><div class="eyebrow">I'M MUHAMMAD ASHIR HADI</div><h2>BMS OPERATOR</h2><div class="role">ASSISTANT FACILITIES SUPERVISOR</div><p>BMS Operator with 3 years of UAE experience. Skilled in Honeywell BMS, HVAC monitoring, alarm response and maintenance coordination.</p><div class="actions"><a class="btn primary" href="#contact">Get in touch ↗</a><a class="btn" href="resume.pdf" target="_blank" rel="noopener">View résumé ↗</a></div></div>
+<div class="hero-foot"><div><small>BASED IN</small><strong>Dubai, UAE</strong></div><div><small>ORGANISATION</small><strong>Imdaad LLC</strong></div><div><small>CURRENT SITE</small><strong>flydubai Campus</strong></div></div>
 </section>
-
-<section aria-label="Professional overview" style="padding-top:0;padding-bottom:35px">
-  <div class="metrics">
-    <div class="glass metric"><strong>02–03</strong><span>Years BMS experience</span></div>
-    <div class="glass metric"><strong>24/7</strong><span>Operational mindset</span></div>
-    <div class="glass metric"><strong>HVAC</strong><span>Building systems</span></div>
-    <div class="glass metric"><strong>UAE</strong><span>Facilities operations</span></div>
-  </div>
-</section>
-
-<section id="digital-twin">
-  <div class="section-head">
-    <div><div class="kicker">01 / Interactive environment</div><h2 class="section-title">Building digital twin<span style="color:var(--cyan)">.</span></h2></div>
-    <p class="section-note">A browser-based conceptual BMS simulator. Toggle equipment, adjust the cooling setpoint and acknowledge a demonstration alarm. It is a portfolio simulation, not connected to live building equipment.</p>
-  </div>
-  <div class="twin-layout">
-    <div class="glass twin-view">
-      <canvas id="twin3d" aria-label="Interactive 3D building systems visualization"></canvas>
-      <div class="twin-overlay"><span class="mono">FACILITY MODEL / 3D VIEW</span><span class="live">SIMULATION ONLINE</span></div>
-      <div class="twin-hint">DRAG TO ROTATE · SCROLL TO ZOOM</div>
-    </div>
-    <div class="glass control-panel">
-      <div class="panel-top"><div class="panel-title">SYSTEM COMMAND</div><span class="tag">DEMO / LIVE DATA SIM</span></div>
-      <div id="systems">
-        <div class="system-row"><div class="system-info"><div class="sys-icon">❄</div><div><div class="sys-name">Chiller plant</div><div class="sys-desc">CH-01 · Cooling generation</div></div></div><button class="switch on" data-system="chiller" aria-label="Toggle chiller plant" aria-pressed="true"></button></div>
-        <div class="system-row"><div class="system-info"><div class="sys-icon">⇄</div><div><div class="sys-name">Primary pump</div><div class="sys-desc">P-01 · Chilled water circuit</div></div></div><button class="switch on" data-system="pump" aria-label="Toggle primary pump" aria-pressed="true"></button></div>
-        <div class="system-row"><div class="system-info"><div class="sys-icon">▤</div><div><div class="sys-name">Air handling unit</div><div class="sys-desc">AHU-01 · Supply air</div></div></div><button class="switch on" data-system="ahu" aria-label="Toggle air handling unit" aria-pressed="true"></button></div>
-        <div class="system-row"><div class="system-info"><div class="sys-icon">◉</div><div><div class="sys-name">Cooling tower</div><div class="sys-desc">CT-01 · Heat rejection</div></div></div><button class="switch on" data-system="tower" aria-label="Toggle cooling tower" aria-pressed="true"></button></div>
-      </div>
-      <div class="reading-grid">
-        <div class="reading"><span>SUPPLY WATER</span><strong id="supplyTemp">6.8°C</strong><small>CHW supply</small></div>
-        <div class="reading"><span>RETURN WATER</span><strong id="returnTemp">12.4°C</strong><small>CHW return</small></div>
-        <div class="reading"><span>AHU STATUS</span><strong id="ahuStatus">RUN</strong><small id="ahuSub">Fan command active</small></div>
-        <div class="reading"><span>PLANT LOAD</span><strong id="plantLoad">72%</strong><small>Calculated demo</small></div>
-      </div>
-      <div class="setpoint"><div class="setpoint-head"><span>CHW SUPPLY SETPOINT</span><strong id="setpointValue">6.5°C</strong></div><input type="range" id="setpoint" min="5" max="9" step=".5" value="6.5" aria-label="Chilled water supply setpoint"></div>
-      <div class="alarm-box"><div class="alarm-head"><span>⚠ ACTIVE DEMO ALARM</span><span id="alarmState">UNACKNOWLEDGED</span></div><div class="alarm-message" id="alarmMessage">AHU-01 · Filter differential pressure high — inspect filter condition.</div><button class="small-btn" id="ackAlarm">ACKNOWLEDGE ALARM</button></div>
-    </div>
-  </div>
-  <div class="glass trend-card"><div class="trend-top"><strong>CHILLED WATER / TREND VIEW</strong><span>SIMULATED · LAST 60 SECONDS</span></div><canvas id="trend" width="1000" height="150" aria-label="Simulated chilled water trend chart"></canvas></div>
-</section>
-
-<section id="profile">
-  <div class="section-head"><div><div class="kicker">02 / Professional profile</div><h2 class="section-title">Operations with purpose<span style="color:var(--cyan)">.</span></h2></div><p class="section-note">A practical, systems-focused approach to building operations: monitor performance, respond to alarms and coordinate maintenance activity.</p></div>
-  <div class="profile-grid">
-    <article class="glass profile-card"><div class="kicker">About</div><h3>BMS Operator &amp; Assistant Facilities Supervisor</h3><p>Dubai-based facilities operations professional with 2–3 years of BMS experience at Imdaad LLC. Focused on building management system monitoring, HVAC plant observation, alarm response, operational reporting and coordination with technical teams. Interested in reliable, energy-aware building operations and continuous technical development.</p><div class="skill-list"><span class="chip">Honeywell BMS</span><span class="chip">HVAC monitoring</span><span class="chip">Alarm response</span><span class="chip">Shift reporting</span><span class="chip">Team coordination</span></div></article>
-    <article class="glass profile-card"><div class="kicker">Experience</div><div class="timeline"><div class="timeline-item"><strong>BMS Operator</strong><small>IMDAAD LLC · DUBAI, UAE · FEB 2023 — PRESENT</small><p>Monitor BMS graphics, equipment status and alarms; observe HVAC systems and support operational coordination across facilities.</p></div><div class="timeline-item"><strong>Professional direction</strong><small>BMS OPERATIONS / FACILITIES MANAGEMENT</small><p>Progressing toward senior BMS operations and assistant facilities supervision responsibilities.</p></div></div></article>
-  </div>
-</section>
-
-<section id="expertise">
-  <div class="section-head"><div><div class="kicker">03 / Technical focus</div><h2 class="section-title">Systems I work around<span style="color:var(--cyan)">.</span></h2></div><p class="section-note">Core building services and day-to-day operational tasks represented in the portfolio simulator.</p></div>
-  <div class="capabilities">
-    <article class="glass cap"><div class="number">01 / BMS</div><h3>Building management</h3><p>Honeywell BMS monitoring, graphics navigation, equipment status checks, alarm review and operational follow-up.</p></article>
-    <article class="glass cap"><div class="number">02 / HVAC</div><h3>Air-side systems</h3><p>AHU status monitoring, supply-air conditions, filter-related alarms and coordination for inspection and troubleshooting.</p></article>
-    <article class="glass cap"><div class="number">03 / CHW</div><h3>Chilled water plant</h3><p>Chiller plant observation, primary and secondary pump status, chilled-water temperatures and cooling tower operation.</p></article>
-    <article class="glass cap"><div class="number">04 / RESPONSE</div><h3>Alarm &amp; fault response</h3><p>Identify alarm conditions, assess displayed status, communicate findings and follow the site escalation process.</p></article>
-    <article class="glass cap"><div class="number">05 / REPORTING</div><h3>Shift operations</h3><p>Handover awareness, clear shift updates, recording abnormal conditions and following up outstanding issues.</p></article>
-    <article class="glass cap"><div class="number">06 / PEOPLE</div><h3>Team coordination</h3><p>Support coordination between BMS operators, technicians and facilities teams to keep site activities organised.</p></article>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="glass contact-panel"><div><div class="kicker">04 / Connect</div><h2>Let’s keep buildings<br><span style="color:var(--cyan)">running smarter.</span></h2><p>Open to relevant BMS Operator, Senior BMS Operator and Assistant Facilities Supervisor opportunities in the UAE and internationally, subject to role requirements.</p></div><div style="display:flex;flex-direction:column;gap:12px;min-width:190px"><a class="btn btn-primary" href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a><a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noopener">Open résumé ↗</a></div></div>
-</section>
+<section class="intro-line"><h3>Every alarm seen,<br>every shift handed over.</h3><ul><li>HONEYWELL BMS</li><li>HVAC MONITORING</li><li>ALARM RESPONSE</li><li>MAINTENANCE COORDINATION</li></ul></section>
+<section class="what" id="what"><div class="section-head"><div><div class="kicker">01 / What I do</div><h2 class="section-title">WHAT I DO</h2></div><p class="section-note">Reliable day-to-day operation of building systems and facilities.</p></div>
+<div class="cards">
+<article class="service" style="background-image:url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1200&q=85')"><span class="num">01</span><div><h3>BMS MONITORING</h3><p>Building systems and connected equipment monitored on the Honeywell BMS platform.</p></div></article>
+<article class="service" style="background-image:url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=85')"><span class="num">02</span><div><h3>HVAC &amp; ALARMS</h3><p>Tracking HVAC operating conditions and reporting abnormal alarms promptly.</p></div></article>
+<article class="service" style="background-image:url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=85')"><span class="num">03</span><div><h3>MAINTENANCE</h3><p>Fault identification, escalation and preventive and corrective follow-up with technicians.</p></div></article>
+<article class="service" style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85')"><span class="num">04</span><div><h3>FACILITIES SUPPORT</h3><p>Work orders, shift handovers, documentation and site safety compliance.</p></div></article>
+</div></section>
+<section class="experience" id="experience"><div class="kicker">02 / Experience</div><h2>EXPERIENCE</h2><p class="site">Current site: flydubai Campus, Dubai.</p><div class="date">FEBRUARY 2023 — PRESENT</div><div class="company"><h3>IMDAAD LLC</h3><div class="role">BMS OPERATOR · DUBAI, UAE</div><ul><li>Monitor building systems and connected equipment through BMS.</li><li>Observe HVAC plant status, alarms and operating conditions.</li><li>Report abnormal conditions and coordinate with relevant technical teams.</li><li>Support shift handovers and maintenance follow-up.</li></ul></div></section>
+<section class="stats"><div class="stat"><strong>3+</strong><span>Years in the UAE</span></div><div class="stat"><strong>3</strong><span>Certifications</span></div><div class="stat"><strong>4</strong><span>Diplomas &amp; courses</span></div><div class="stat"><strong>1</strong><span>Current site · flydubai</span></div></section>
+<section class="how" id="how"><div class="kicker">03 / Daily operations</div><h2>How I Work</h2><p class="lead">A steady routine that keeps facilities running.</p><div class="steps">
+<div class="step"><span class="n">01</span><h3>MONITOR</h3><p>Continuous watch over building systems, HVAC and equipment status.</p></div>
+<div class="step"><span class="n">02</span><h3>RESPOND</h3><p>Prompt reporting of BMS alarms and abnormal conditions through the site escalation process.</p></div>
+<div class="step"><span class="n">03</span><h3>COORDINATE</h3><p>Follow up with technicians and relevant teams on maintenance activities and equipment issues.</p></div>
+<div class="step"><span class="n">04</span><h3>HAND OVER</h3><p>Share clear shift updates and operational information to support continuity.</p></div>
+</div></section>
+<section class="simulator" id="simulator"><div class="section-head"><div><div class="kicker">04 / Interactive demonstration</div><h2 class="section-title">BMS CONTROL SIMULATOR</h2></div><p class="section-note">A portfolio demonstration inspired by building management workflows. It is not connected to live Honeywell equipment or a real building.</p></div>
+<div class="sim-wrap"><div class="building"><span class="building-label">FACILITY DIGITAL TWIN · DEMO</span><div class="tower" id="tower"></div><span class="building-status" id="buildingStatus">SYSTEM STATUS: ALL SYSTEMS NORMAL</span></div>
+<div class="panel"><div class="panel-head"><h3>PLANT OVERVIEW</h3><span class="live">● SIMULATION ONLINE</span></div>
+<div class="sys"><div>Chiller plant<small>CH-01 · Cooling generation</small></div><button class="toggle on" data-key="chiller">ON</button></div>
+<div class="sys"><div>Primary pump<small>P-01 · Chilled water circuit</small></div><button class="toggle on" data-key="pump">ON</button></div>
+<div class="sys"><div>Air handling unit<small>AHU-01 · Supply air</small></div><button class="toggle on" data-key="ahu">ON</button></div>
+<div class="sys"><div>Cooling tower<small>CT-01 · Heat rejection</small></div><button class="toggle on" data-key="tower">ON</button></div>
+<div class="readings"><div class="reading"><small>CHW SUPPLY</small><strong id="supply">6.8°C</strong></div><div class="reading"><small>CHW RETURN</small><strong id="return">12.4°C</strong></div><div class="reading"><small>AHU STATUS</small><strong id="ahuStatus">RUN</strong></div><div class="reading"><small>PLANT LOAD</small><strong id="load">72%</strong></div></div>
+<div class="setpoint"><label for="sp">CHW SUPPLY SETPOINT <output id="spval">6.5°C</output></label><input id="sp" type="range" min="5" max="9" step=".5" value="6.5"></div>
+<div class="alarm"><strong>⚠ DEMONSTRATION ALARM · AHU-01</strong><p id="alarmText">Filter differential pressure high — inspect filter condition.</p><button id="ack">ACKNOWLEDGE ALARM</button></div>
+</div></div></section>
+<section class="contact" id="contact"><div class="contact-grid"><div><div class="kicker">05 / Get in touch</div><h2>Let's Keep Your Building <em>Running Smoothly.</em></h2><p>Open to relevant BMS Operator, Senior BMS Operator and Assistant Facilities Supervisor opportunities.</p><a class="btn primary" href="mailto:mashirhadi@gmail.com">Send an email ↗</a></div>
+<div class="contact-details"><small>EMAIL</small><a href="mailto:mashirhadi@gmail.com">mashirhadi@gmail.com</a><small>PHONE</small><a href="tel:+971558436330">+971 55 843 6330</a><small>LOCATION</small><p>Dubai, United Arab Emirates<br>Nationality: Pakistani<br>Employment residence visa</p><small>LINKEDIN</small><a href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359/" target="_blank" rel="noopener">View LinkedIn profile ↗</a><small>EDUCATION &amp; CERTIFICATES</small><p>Honeywell BMS Certificate<br>Facilities Management Certificate<br>Soft Skills Certificate<br>Computer Operator Diploma<br>Office Management Diploma<br>BMS Control FCU</p><a class="btn" href="resume.pdf" target="_blank" rel="noopener">Open résumé ↗</a></div></div></section>
 </main>
-<footer><span>© <span id="year"></span> MUHAMMAD ASHIR HADI</span><span>BMS OPERATIONS · FACILITIES MANAGEMENT · DUBAI, UAE</span><span>BUILT FOR THE NEXT GENERATION OF BUILDINGS</span></footer>
-<div class="toast" id="toast" role="status"></div>
-<script type="module">
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
-
-const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const cyan = 0x56e4f5;
-function makeScene(canvas, isHero=false){
-  const scene = new THREE.Scene();
-  scene.fog = new THREE.FogExp2(0x070b14, isHero ? .018 : .027);
-  const camera = new THREE.PerspectiveCamera(isHero?42:38,1,.1,150);
-  camera.position.set(isHero?8:7,isHero?6:5,isHero?13:10);
-  const renderer = new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
-  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
-  renderer.setClearColor(0x000000,0);
-  renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.25;
-  scene.add(new THREE.HemisphereLight(0x9bdfff,0x101a2a,2));
-  const key = new THREE.DirectionalLight(0x7ddfff,3.1);key.position.set(7,12,8);scene.add(key);
-  const rim = new THREE.PointLight(0x168cff,24,35);rim.position.set(-8,4,-4);scene.add(rim);
-  const group = new THREE.Group();scene.add(group);
-  const mat = (color,emissive=0x000000,opacity=1,wire=false)=>new THREE.MeshStandardMaterial({color,emissive,emissiveIntensity:1.1,metalness:.55,roughness:.28,transparent:opacity<1,opacity,wireframe:wire});
-  const glass = mat(0x17354a,0x061e31,.78);
-  const edge = new THREE.LineBasicMaterial({color:cyan,transparent:true,opacity:.85});
-  const floorMat = mat(0x102437,0x071725,.95);
-  // Architectural podium and stacked glass towers.
-  const base = new THREE.Mesh(new THREE.BoxGeometry(7,.45,5),floorMat);base.position.y=-.25;group.add(base);
-  const buildings = [];
-  const specs = isHero ? [{x:0,z:0,w:3.2,d:2.7,h:7.2,y:3.6},{x:-2.5,z:.5,w:1.5,d:1.8,h:4.1,y:2.05},{x:2.25,z:-.6,w:1.35,d:1.6,h:5.1,y:2.55}] : [{x:0,z:0,w:2.8,d:2.5,h:5.5,y:2.75},{x:-2.15,z:.3,w:1.15,d:1.4,h:3.3,y:1.65},{x:1.95,z:-.5,w:1.1,d:1.3,h:4.1,y:2.05}];
-  specs.forEach((s,i)=>{
-    const mesh=new THREE.Mesh(new THREE.BoxGeometry(s.w,s.h,s.d),glass);mesh.position.set(s.x,s.y,s.z);group.add(mesh);buildings.push(mesh);
-    const edges=new THREE.LineSegments(new THREE.EdgesGeometry(mesh.geometry),edge);edges.position.copy(mesh.position);group.add(edges);
-    const count=Math.floor(s.h/.42);
-    for(let j=0;j<count;j++){
-      const y=.35+j*.42;
-      const strip=new THREE.Mesh(new THREE.BoxGeometry(s.w*.86,.018,s.d*.86),new THREE.MeshBasicMaterial({color:i===0?0x2e9fc1:0x1e668f,transparent:true,opacity:.55}));
-      strip.position.set(s.x,y,s.z);group.add(strip);
-    }
-  });
-  // Glowing site grid.
-  const grid = new THREE.GridHelper(28,28,0x1a7592,0x15334a);grid.position.y=-.48;grid.material.transparent=true;grid.material.opacity=.34;group.add(grid);
-  // BMS telemetry nodes and connecting risers.
-  const nodes=[];
-  for(let i=0;i<9;i++){
-    const a=i/9*Math.PI*2;
-    const x=Math.cos(a)*4.4,z=Math.sin(a)*3.4;
-    const orb=new THREE.Mesh(new THREE.SphereGeometry(.075,12,12),new THREE.MeshBasicMaterial({color:i%3===0?0x65edbd:cyan}));
-    orb.position.set(x,.1,z);group.add(orb);nodes.push(orb);
-    const pts=[new THREE.Vector3(x,.1,z),new THREE.Vector3(x,.8,z),new THREE.Vector3(x,1.7,z)];
-    const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:cyan,transparent:true,opacity:.32}));group.add(line);
-  }
-  // Rotating holographic rings.
-  const ringMat=new THREE.MeshBasicMaterial({color:cyan,transparent:true,opacity:.22,side:THREE.DoubleSide});
-  const ring=new THREE.Mesh(new THREE.TorusGeometry(4.7,.012,6,120),ringMat);ring.rotation.x=Math.PI/2;ring.position.y=-.36;group.add(ring);
-  const ring2=new THREE.Mesh(new THREE.TorusGeometry(5.2,.008,6,120),new THREE.MeshBasicMaterial({color:0x398cff,transparent:true,opacity:.2}));ring2.rotation.x=Math.PI/2;ring2.position.y=-.34;group.add(ring2);
-  const particlesGeo=new THREE.BufferGeometry(), positions=[];
-  for(let i=0;i<180;i++)positions.push((Math.random()-.5)*24,Math.random()*9-1,(Math.random()-.5)*20);
-  particlesGeo.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));
-  const particles=new THREE.Points(particlesGeo,new THREE.PointsMaterial({color:0x74dfff,size:.025,transparent:true,opacity:.65}));scene.add(particles);
-  const resize=()=>{const w=canvas.clientWidth,h=canvas.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()};
-  new ResizeObserver(resize).observe(canvas);resize();
-  let down=false,lastX=0,lastY=0,rotY=0,rotX=0,zoom=0;
-  canvas.addEventListener('pointerdown',e=>{down=true;lastX=e.clientX;lastY=e.clientY;canvas.setPointerCapture(e.pointerId)});
-  canvas.addEventListener('pointerup',()=>down=false);canvas.addEventListener('pointercancel',()=>down=false);
-  canvas.addEventListener('pointermove',e=>{if(!down)return;rotY+=(e.clientX-lastX)*.006;rotX+=(e.clientY-lastY)*.003;lastX=e.clientX;lastY=e.clientY});
-  canvas.addEventListener('wheel',e=>{zoom=Math.max(-3,Math.min(4,zoom+e.deltaY*.004))},{passive:true});
-  const clock=new THREE.Clock();
-  function animate(){requestAnimationFrame(animate);const t=clock.getElapsedTime();if(!down&&!reduced)rotY+=.0015;group.rotation.y=rotY;group.rotation.x=Math.max(-.25,Math.min(.25,rotX+(reduced?0:Math.sin(t*.2)*.025)));ring.rotation.z=t*.12;ring2.rotation.z=-t*.08;nodes.forEach((n,i)=>{n.scale.setScalar(.8+Math.sin(t*2+i)*.22)});camera.position.z=(isHero?13:10)+zoom;camera.lookAt(0,2.2,0);renderer.render(scene,camera)}
-  animate();
-  return {group,buildings,nodes,renderer};
-}
-const heroCanvas=document.getElementById('hero3d');
-const twinCanvas=document.getElementById('twin3d');
-let heroScene,twinScene;
-try{heroScene=makeScene(heroCanvas,true);twinScene=makeScene(twinCanvas,false)}catch(e){console.warn('3D renderer unavailable',e);document.querySelectorAll('.twin-hint').forEach(x=>x.textContent='3D VIEW UNAVAILABLE IN THIS BROWSER');}
+<footer><span>© <span id="year"></span> MUHAMMAD ASHIR HADI</span><span>BMS OPERATOR · DUBAI, UAE</span></footer>
+<script>
 document.getElementById('year').textContent=new Date().getFullYear();
-const nav=document.getElementById('nav');document.getElementById('menuBtn').addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
-const systems={chiller:true,pump:true,ahu:true,tower:true};
-const toast=document.getElementById('toast');let toastTimer;
-function notify(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2300)}
-document.querySelectorAll('.switch').forEach(btn=>btn.addEventListener('click',()=>{
-  const id=btn.dataset.system;systems[id]=!systems[id];btn.classList.toggle('on',systems[id]);btn.setAttribute('aria-pressed',String(systems[id]));
-  btn.setAttribute('aria-label',`Toggle ${id}: ${systems[id]?'on':'off'}`);
-  updateReadings();notify(`${id.toUpperCase()} ${systems[id]?'ENABLED':'DISABLED'} · SIMULATION UPDATED`);
-}));
-let setpoint=6.5,ack=false;
-document.getElementById('setpoint').addEventListener('input',e=>{setpoint=Number(e.target.value);document.getElementById('setpointValue').textContent=setpoint.toFixed(1)+'°C';updateReadings()});
-document.getElementById('ackAlarm').addEventListener('click',()=>{ack=true;document.getElementById('alarmState').textContent='ACKNOWLEDGED';document.getElementById('alarmMessage').textContent='AHU-01 · Demonstration alarm acknowledged. Inspect filter condition as part of the site response process.';document.getElementById('ackAlarm').textContent='ALARM ACKNOWLEDGED';document.getElementById('ackAlarm').disabled=true;document.getElementById('ackAlarm').style.opacity='.5';notify('DEMO ALARM ACKNOWLEDGED')});
-function updateReadings(){
-  const running=systems.chiller&&systems.pump&&systems.ahu&&systems.tower;
-  const supply=systems.chiller&&systems.pump?setpoint+.3: '--';
-  document.getElementById('supplyTemp').textContent=typeof supply==='number'?supply.toFixed(1)+'°C':'—';
-  document.getElementById('returnTemp').textContent=systems.pump?(12.4+(setpoint-6.5)*.18).toFixed(1)+'°C':'—';
-  document.getElementById('ahuStatus').textContent=systems.ahu?'RUN':'STOP';
-  document.getElementById('ahuSub').textContent=systems.ahu?'Fan command active':'Unit disabled in demo';
-  const load=Object.values(systems).filter(Boolean).length*18;
-  document.getElementById('plantLoad').textContent=load+'%';
-  if(twinScene){twinScene.buildings.forEach((b,i)=>{b.material.emissive.setHex(systems.ahu?0x061e31:0x190d12)});twinScene.nodes.forEach((n,i)=>n.material.color.setHex(Object.values(systems)[i%4]?cyan:0xff6d7b))}
-}
-updateReadings();
-// Draw a live-feeling trend without external chart dependencies.
-const trend=document.getElementById('trend'),ctx=trend.getContext('2d');let samples=Array.from({length:60},(_,i)=>6.8+Math.sin(i*.22)*.18);
-function drawTrend(){const w=trend.width,h=trend.height;ctx.clearRect(0,0,w,h);ctx.strokeStyle='rgba(120,170,200,.16)';ctx.lineWidth=1;for(let i=1;i<5;i++){ctx.beginPath();ctx.moveTo(0,i*h/5);ctx.lineTo(w,i*h/5);ctx.stroke()}ctx.fillStyle='#7894a9';ctx.font='16px monospace';ctx.fillText('8.0°',8,18);ctx.fillText('6.0°',8,h-7);ctx.beginPath();samples.forEach((v,i)=>{const x=i/(samples.length-1)*w,y=h-((v-5)/4)*(h-20)-10;if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y)});ctx.strokeStyle='#56e4f5';ctx.lineWidth=3;ctx.shadowColor='#56e4f5';ctx.shadowBlur=10;ctx.stroke();ctx.shadowBlur=0;const last=samples.at(-1),x=w,y=h-((last-5)/4)*(h-20)-10;ctx.fillStyle='#65edbd';ctx.beginPath();ctx.arc(x,y,5,0,Math.PI*2);ctx.fill()}
-function tick(){const current=systems.chiller&&systems.pump?setpoint+.3:8.8;samples.push(current+(Math.random()-.5)*.14);if(samples.length>60)samples.shift();drawTrend()}
-drawTrend();setInterval(tick,1100);
+const nav=document.getElementById('nav');document.getElementById('menu').addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const state={chiller:true,pump:true,ahu:true,tower:true};const $=id=>document.getElementById(id);
+function update(){const count=Object.values(state).filter(Boolean).length;const running=state.chiller&&state.pump;const sp=Number($('sp').value);$('supply').textContent=running?(sp+.3).toFixed(1)+'°C':'—';$('return').textContent=state.pump?(12.4+(sp-6.5)*.18).toFixed(1)+'°C':'—';$('ahuStatus').textContent=state.ahu?'RUN':'STOP';$('load').textContent=(count*18)+'%';$('buildingStatus').textContent=count===4?'SYSTEM STATUS: ALL SYSTEMS NORMAL':'SYSTEM STATUS: CHECK EQUIPMENT';$('tower').style.filter=count===4?'none':'sepia(.45) brightness(.72)';}
+document.querySelectorAll('.toggle').forEach(btn=>btn.addEventListener('click',()=>{const k=btn.dataset.key;state[k]=!state[k];btn.textContent=state[k]?'ON':'OFF';btn.classList.toggle('on',state[k]);update()}));
+$('sp').addEventListener('input',()=>{$('spval').textContent=Number($('sp').value).toFixed(1)+'°C';update()});
+$('ack').addEventListener('click',()=>{$('alarmText').textContent='Demonstration alarm acknowledged. Follow the site inspection and escalation procedure.';$('ack').textContent='ALARM ACKNOWLEDGED';$('ack').disabled=true;$('ack').style.opacity='.55'});
+update();
 </script>
-</body>
-</html>
+</body></html>
