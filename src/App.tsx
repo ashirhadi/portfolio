@@ -1,3 +1,4 @@
+import PortfolioEnhancements from './PortfolioEnhancements';
 import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { Activity, ArrowUpRight, BadgeCheck, Building2, Download, Fan, Gauge, Github, Linkedin, Mail, Menu, Network, Power, ShieldCheck, Snowflake, Waves, X } from 'lucide-react';
@@ -178,6 +179,7 @@ export default function App(){
   </main>;
 
   return <>
+      <PortfolioEnhancements />
     <header className="topbar"><a className="brand" href="#home">AH<span>.</span><small>SMART BUILDING OPERATIONS</small></a>
       <nav className={menu?'nav open':'nav'}>{links.map(([label,href])=><a key={href} href={href} onClick={()=>setMenu(false)}>{label}</a>)}</nav>
       <div className="top-actions"><span className="clock"><i className="live-dot"/> DXB {clock}</span><a href="https://www.linkedin.com/in/muhammad-ashir-hadi-6434a8359/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin/></a><button className="menu-btn" onClick={()=>setMenu(!menu)} aria-label="Toggle navigation">{menu?<X/>:<Menu/>}</button></div>
