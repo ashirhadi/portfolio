@@ -107,6 +107,21 @@ footer{border-top:1px solid var(--line);padding:34px 0 40px;letter-spacing:.2em;
 .back-link:hover{text-decoration:underline}
 @media(max-width:600px){.experience-card{min-height:220px}.detail-hero{padding:44px 0 34px}}
 @media(prefers-reduced-motion:reduce){.experience-card{transition:none}.experience-card:hover{transform:none}}
+
+/* Integrated BMS systems gallery */
+.bms-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.bms-visual{min-width:0;margin:0;overflow:hidden;border:1px solid var(--line);border-radius:10px;background:linear-gradient(145deg,var(--d2),var(--d))}
+.bms-visual img{display:block;width:100%;height:190px;object-fit:cover;background:var(--d2);filter:saturate(.82)}
+.bms-visual figcaption{padding:17px 18px 19px}
+.bms-visual strong{display:block;font:600 21px/1.2 Fraunces,Georgia,serif;color:var(--ink);margin-bottom:6px}
+.bms-visual span{display:block;color:var(--mute);font-size:14px;line-height:1.5}
+.bms-note{margin:22px 0 0;color:var(--mute);font-size:13px;line-height:1.6}
+.bms-credits{margin-top:10px;color:var(--mute);font-size:12px;line-height:1.7}
+.bms-credits a{color:var(--cu);text-decoration:none}
+.bms-credits a:hover{text-decoration:underline}
+@media(max-width:760px){.bms-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.bms-visual img{height:170px}}
+@media(max-width:480px){.bms-gallery{grid-template-columns:1fr}.bms-visual img{height:210px}}
+
 </style>
 </head>
 <body>
@@ -127,6 +142,59 @@ footer{border-top:1px solid var(--line);padding:34px 0 40px;letter-spacing:.2em;
         <a class="back-link" href="index.html#experience">← Back to all experience</a>
       </div>
     </section>
+    <section class="detail-section dark2" aria-labelledby="bms-systems-title">
+      <div class="w">
+        <div class="detail-kicker">Integrated building systems</div>
+        <h2 id="bms-systems-title">BMS in focus</h2>
+        <p class="experience-intro">A building-wide view of the systems and interfaces that can be monitored through a Building Management System.</p>
+
+        <div class="bms-gallery">
+          <figure class="bms-visual">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Air_handling_unit.JPG?width=960" alt="Commercial air handling unit with ductwork and HVAC components" loading="lazy">
+            <figcaption><strong>AHU / FAHU / MAHU</strong><span>Air handling equipment, operating status and HVAC conditions</span></figcaption>
+          </figure>
+
+          <figure class="bms-visual">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fan-Coil_Unit.jpg?width=960" alt="Fan coil unit used in a building HVAC system" loading="lazy">
+            <figcaption><strong>FCU systems</strong><span>Room-level cooling equipment and associated control points</span></figcaption>
+          </figure>
+
+          <figure class="bms-visual">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Light_switch_with_passive_infrared_sensor.jpg?width=960" alt="Lighting switch with passive infrared occupancy sensor" loading="lazy">
+            <figcaption><strong>Lighting &amp; sensors</strong><span>Occupancy, temperature and environmental sensor signals</span></figcaption>
+          </figure>
+
+          <figure class="bms-visual">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Chiller_plant_SCADA_system.jpg" alt="Building plant SCADA monitoring interface" loading="lazy">
+            <figcaption><strong>BMS graphics &amp; interfaces</strong><span>System graphics, equipment status, readings and connected points</span></figcaption>
+          </figure>
+
+          <figure class="bms-visual">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wall-mounted_climate_controls_and_light_switches_inside_a_Bergen_building.jpg?width=960" alt="Building climate displays and lighting controls" loading="lazy">
+            <figcaption><strong>Alarms &amp; events</strong><span>Alarm indications, abnormal conditions and event follow-up</span></figcaption>
+          </figure>
+
+          <figure class="bms-visual">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Elevator_control_panel.jpg?width=960" alt="Elevator control panel representing lift system interfaces" loading="lazy">
+            <figcaption><strong>Lift interfaces</strong><span>Lift status and interface points where integrated with the BMS</span></figcaption>
+          </figure>
+        </div>
+
+        <p class="bms-note">These are illustrative industry photographs, not photographs of the flydubai Campus site. Lift references describe monitoring/interface integration, not lift operation or maintenance.</p>
+
+        <p class="bms-credits">
+          Image credits:
+          AHU — P199 (public domain);
+          FCU — Saud (CC BY-SA 4.0);
+          occupancy sensor — Z22 (CC BY-SA 4.0);
+          climate controls — Shixart1985 (CC BY 2.0);
+          lift panel — PeterFisk (CC BY-SA 4.0).
+          Images via <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.
+          SCADA image: Wikimedia Commons, CC0.
+        </p>
+      </div>
+    </section>
+
     <section class="detail-section">
       <div class="w">
         <h2>Responsibilities</h2>
