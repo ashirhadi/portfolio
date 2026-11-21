@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && cp experience-data.js dist/experience-data.js",
+    "build": "tsc -b && vite build && cp experience.html dist/experience.html && cp experience-data.js dist/experience-data.js",
     "preview": "vite preview"
   },
   "dependencies": {
