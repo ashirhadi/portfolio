@@ -178,6 +178,69 @@ export default function App(){
     </footer>
   </main>;
 
+
+  const activeExperience = new URLSearchParams(window.location.search).get('experience');
+  if (activeExperience === 'imdaad') return <main className="service-page">
+    <header className="topbar">
+      <a className="brand" href={import.meta.env.BASE_URL}>AH<span>.</span><small>SMART BUILDING OPERATIONS</small></a>
+      <a className="service-back" href={import.meta.env.BASE_URL}>← BACK TO PORTFOLIO</a>
+    </header>
+    <div className="service-hero wrap">
+      <span className="eyebrow">ASHIR HADI / PROFESSIONAL EXPERIENCE</span>
+      <h1>Imdaad LLC<span className="cyan">.</span></h1>
+      <h2>BMS Operator · Dubai, UAE</h2>
+      <p>Building Management System operations supporting building services through Honeywell BMS monitoring, HVAC plant status awareness, alarm response and facilities coordination.</p>
+      <div className="service-meta">FEBRUARY 2023 — PRESENT · DUBAI, UAE</div>
+    </div>
+    <div className="service-content wrap">
+      <article className="service-detail-card">
+        <span className="eyebrow">01 / BMS OPERATIONS</span>
+        <h2>Building monitoring</h2>
+        <p>Monitor building systems through BMS graphics and operating information to maintain awareness of equipment conditions.</p>
+        <ul>
+          <li>Monitor Honeywell BMS graphics and equipment status.</li>
+          <li>Review system trends and operational alarms.</li>
+          <li>Observe abnormal indications and report concerns through site procedures.</li>
+        </ul>
+      </article>
+      <article className="service-detail-card">
+        <span className="eyebrow">02 / HVAC PLANT</span>
+        <h2>HVAC equipment awareness</h2>
+        <p>Support HVAC operations by monitoring plant status and coordinating with the responsible site technicians.</p>
+        <ul>
+          <li>Chiller plant status awareness.</li>
+          <li>Primary and secondary pump status awareness.</li>
+          <li>Cooling tower operating status awareness.</li>
+        </ul>
+      </article>
+      <article className="service-detail-card">
+        <span className="eyebrow">03 / ALARM RESPONSE</span>
+        <h2>Fault reporting and escalation</h2>
+        <p>Respond to BMS alarms by checking available system information and communicating abnormal conditions through the appropriate operational channels.</p>
+        <ul>
+          <li>Review alarms and equipment indications.</li>
+          <li>Communicate faults to the responsible maintenance team.</li>
+          <li>Follow site procedures and escalation channels.</li>
+        </ul>
+      </article>
+      <article className="service-detail-card">
+        <span className="eyebrow">04 / SITE COORDINATION</span>
+        <h2>Communication and continuity</h2>
+        <p>Coordinate with site technicians to support consistent facilities operations across shifts.</p>
+        <ul>
+          <li>Coordinate operational concerns with technicians.</li>
+          <li>Maintain clear shift communication.</li>
+          <li>Support service continuity through timely reporting.</li>
+        </ul>
+      </article>
+    </div>
+    <footer className="footer wrap">
+      <a className="brand" href={import.meta.env.BASE_URL}>ASHIR HADI<span>.</span></a>
+      <a href="mailto:mashirhadi@gmail.com">CONTACT ME ↗</a>
+      <a href={import.meta.env.BASE_URL}>← BACK TO PORTFOLIO</a>
+    </footer>
+  </main>;
+
   return <>
       <PortfolioEnhancements />
     <header className="topbar"><a className="brand" href="#home">AH<span>.</span><small>SMART BUILDING OPERATIONS</small></a>
@@ -199,7 +262,7 @@ export default function App(){
         <div className="skill-grid">{skills.map(([name,desc,tag],i)=><a className="skill-card service-card" href={`${import.meta.env.BASE_URL}?service=${serviceSlugs[name]}`} key={name}><span className="skill-index">0{i+1}</span><span className="skill-tag">{tag}</span><h3>{name}</h3><p>{desc}</p><div className="skill-line"><i style={{width:tag==='CORE'?'82%':'48%'}}/></div><span className="service-open">EXPLORE DETAILS ↗</span></a>)}</div>
       </section>
       <section className="section alt" id="experience"><div className="wrap"><div className="section-head"><div><span className="eyebrow">02 / CAREER</span><h2>Experience in<br/><em>the field.</em></h2></div><p>Focused on dependable site operations, clear communication and consistent monitoring of building services.</p></div>
-        <article className="experience-card"><div className="exp-date">FEB 2023 — PRESENT<br/>DUBAI, UAE</div><div><span className="eyebrow">CURRENT ORGANISATION</span><h3>Imdaad LLC</h3><h4>BMS Operator</h4><p>Building Management System operations with exposure to Honeywell BMS monitoring, HVAC plant status, alarms and facilities coordination.</p><ul><li>Monitor BMS graphics, equipment status, trends and alarms.</li><li>Support HVAC operations across chiller plant equipment, pumps and cooling towers.</li><li>Coordinate with site technicians and escalate faults through operational channels.</li><li>Maintain clear shift communication and service continuity.</li></ul></div><div className="exp-mark"><Building2/><span>UAE</span></div></article>
+        <a className="experience-link" href={`${import.meta.env.BASE_URL}?experience=imdaad`} target="_blank" rel="noopener noreferrer"><article className="experience-card"><div className="exp-date">FEB 2023 — PRESENT<br/>DUBAI, UAE</div><div><span className="eyebrow">CURRENT ORGANISATION</span><h3>Imdaad LLC</h3><h4>BMS Operator</h4><p>Building Management System operations with exposure to Honeywell BMS monitoring, HVAC plant status, alarms and facilities coordination.</p><ul><li>Monitor BMS graphics, equipment status, trends and alarms.</li><li>Support HVAC operations across chiller plant equipment, pumps and cooling towers.</li><li>Coordinate with site technicians and escalate faults through operational channels.</li><li>Maintain clear shift communication and service continuity.</li></ul></div><div className="exp-mark"><Building2/><span>UAE</span></div></article></a>
       </div></section>
       <section className="section wrap" id="digital-twin"><div className="section-head"><div><span className="eyebrow">03 / SYSTEMS LAB</span><h2>Explore a<br/><em>smart building.</em></h2></div><p>A browser-based 3D concept and interactive plant-state simulator, created as a portfolio demonstration.</p></div>
         <div className="lab-grid"><BuildingScene/><div className="lab-copy"><span className="eyebrow">DIGITAL BUILDING CONCEPT</span><h3>Connected systems.<br/>Clear visibility.</h3><p>Visualise how building layers, HVAC services and operational data come together in a modern facility.</p><div className="lab-points"><span><Network/> Integrated building systems</span><span><Activity/> Equipment status awareness</span><span><Gauge/> Operational visibility</span></div></div></div><Simulator/>
