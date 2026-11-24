@@ -25,5 +25,16 @@ window.PORTFOLIO_EXPERIENCES = [
       "Shift handover",
       "Maintenance follow-up"
     ]
+  },
+  {
+    "slug": "facilities-support",
+    "title": "Facilities Support",
+    "company": "Vision Technologies Pvt Ltd",
+    "location": "Pakistan",
+    "dates": "2020 – 2022",
+    "summary": "Facilities Support experience at Vision Technologies Pvt Ltd, Pakistan.",
+    "overview": "Professional experience in Facilities Support at Vision Technologies Pvt Ltd from 2020 to 2022.",
+    "responsibilities": [],
+    "skills": []
   }
 ];
