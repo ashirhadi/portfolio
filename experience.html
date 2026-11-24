@@ -225,6 +225,10 @@ footer{border-top:1px solid var(--line);padding:34px 0 40px;letter-spacing:.2em;
           <a class="back-link" href="index.html#experience">← Back to portfolio</a>
         </div></section>`;
     } else {
+      const bmsSection = document.querySelector('[aria-labelledby="bms-systems-title"]');
+      if (bmsSection) {
+        bmsSection.style.display = role.slug === 'bms-operator' ? '' : 'none';
+      }
       document.title = `${role.title} | Muhammad Ashir Hadi`;
       document.getElementById('detail-title').textContent = role.title;
       document.getElementById('detail-meta').textContent = `${role.company} · ${role.location} · ${role.dates}`;
