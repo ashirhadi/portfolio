@@ -195,6 +195,62 @@ footer{border-top:1px solid var(--line);padding:34px 0 40px;letter-spacing:.2em;
       </div>
     </section>
 
+    <section class="detail-section dark2" aria-labelledby="facilities-support-title">
+      <div class="w">
+        <div class="detail-kicker">Facilities operations</div>
+        <h2 id="facilities-support-title">Facilities Support in Focus</h2>
+        <p class="experience-intro">Illustrative industry photographs representing the facilities operations, maintenance coordination, team communication and safety support described in this role.</p>
+
+        <div class="bms-gallery">
+          <figure class="bms-visual">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Michigan_Commercial_Building_Inspectors.jpg" alt="Commercial building exterior representing a facilities environment" loading="lazy">
+            <figcaption>
+              <strong>Facilities Operations</strong>
+              <span>Supporting daily facility activities, operational follow-up and coordination to help maintain an orderly and functional building environment.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="bms-visual">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Maintenance_work.jpg" alt="Maintenance technicians working on industrial equipment" loading="lazy">
+            <figcaption>
+              <strong>Maintenance Coordination</strong>
+              <span>Following up on work orders, maintenance activities and operational issues, while helping teams track progress and outstanding tasks.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="bms-visual">
+            <img src="https://live.staticflickr.com/8024/7633867116_3c10bb5222_o.jpg" alt="Facilities team meeting and work planning discussion" loading="lazy">
+            <figcaption>
+              <strong>Team Communication &amp; Handover</strong>
+              <span>Supporting clear team communication, shift handovers, task updates and documentation to maintain continuity between working shifts.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="bms-visual">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Safety_inspection.png" alt="Workers carrying out a workplace safety inspection" loading="lazy">
+            <figcaption>
+              <strong>Safety &amp; Service Quality</strong>
+              <span>Supporting site safety procedures, operational checks and service quality follow-up to help maintain safe and reliable facility operations.</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <p class="bms-note">These are illustrative industry photographs, not photographs of Vision Technologies or its work sites.</p>
+        <p class="bms-credits">
+          Image credits:
+          Building — Baz48316 (CC BY-SA 4.0);
+          maintenance — Okane nyatoh daniel (CC BY-SA 4.0);
+          team meeting — NAVFAC (CC BY 2.0);
+          safety inspection — Anandh srinivasan (CC BY 4.0).
+          Sources and license details:
+          <a href="https://commons.wikimedia.org/wiki/File:Michigan_Commercial_Building_Inspectors.jpg" target="_blank" rel="noopener noreferrer">Building</a>,
+          <a href="https://commons.wikimedia.org/wiki/File:Maintenance_work.jpg" target="_blank" rel="noopener noreferrer">Maintenance</a>,
+          <a href="https://commons.wikimedia.org/wiki/File:Team_Meeting_(7633867116).jpg" target="_blank" rel="noopener noreferrer">Team meeting</a>,
+          <a href="https://commons.wikimedia.org/wiki/File:Safety_inspection.png" target="_blank" rel="noopener noreferrer">Safety</a>.
+        </p>
+      </div>
+    </section>
+
     <section class="detail-section">
       <div class="w">
         <h2>Responsibilities</h2>
@@ -228,6 +284,10 @@ footer{border-top:1px solid var(--line);padding:34px 0 40px;letter-spacing:.2em;
       const bmsSection = document.querySelector('[aria-labelledby="bms-systems-title"]');
       if (bmsSection) {
         bmsSection.style.display = role.slug === 'bms-operator' ? '' : 'none';
+      }
+      const facilitiesSection = document.querySelector('[aria-labelledby="facilities-support-title"]');
+      if (facilitiesSection) {
+        facilitiesSection.style.display = role.slug === 'facilities-support' ? '' : 'none';
       }
       document.title = `${role.title} | Muhammad Ashir Hadi`;
       document.getElementById('detail-title').textContent = role.title;

@@ -32,9 +32,23 @@ window.PORTFOLIO_EXPERIENCES = [
     "company": "Vision Technologies Pvt Ltd",
     "location": "Pakistan",
     "dates": "2020 – 2022",
-    "summary": "Facilities Support experience at Vision Technologies Pvt Ltd, Pakistan.",
-    "overview": "Professional experience in Facilities Support at Vision Technologies Pvt Ltd from 2020 to 2022.",
-    "responsibilities": [],
-    "skills": []
+    "summary": "Facilities operations and maintenance coordination support.",
+    "overview": "Supported daily facilities operations through maintenance coordination, work-order follow-up, team communication, shift handovers, documentation, reporting and site safety compliance.",
+    "responsibilities": [
+      "Supported daily facilities operations and maintenance coordination.",
+      "Followed up on work orders, maintenance activities and operational issues.",
+      "Assisted with team communication, shift handovers, documentation and reporting.",
+      "Supported service quality and compliance with site safety procedures."
+    ],
+    "skills": [
+      "Facilities Operations",
+      "Maintenance Coordination",
+      "Work Order Follow-up",
+      "Shift Handover",
+      "Team Communication",
+      "Documentation",
+      "Reporting",
+      "Safety Compliance"
+    ]
   }
 ];
