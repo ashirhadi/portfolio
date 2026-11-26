@@ -50,5 +50,40 @@ window.PORTFOLIO_EXPERIENCES = [
       "Reporting",
       "Safety Compliance"
     ]
-  }
+  },
+  {
+  "slug": "chiller-plant-operations",
+  "title": "Chiller Plant Operations",
+  "company": "Imdaad LLC · flydubai Campus",
+  "location": "Dubai, UAE",
+  "dates": "February 2023 – Present",
+  "site": "flydubai Campus, Dubai",
+  "summary": "Chiller plant monitoring through Trane Tracer Synchrony as part of BMS operations.",
+  "overview": "Technical specialisation within my BMS Operator responsibilities, monitoring the chiller plant through Trane Tracer Synchrony.",
+  "responsibilities": [
+    "Monitor chiller plant graphics through Trane Tracer Synchrony.",
+    "Monitor chiller start and stop status.",
+    "Monitor chilled water pumps (CHWP).",
+    "Monitor condenser water pumps (CWP).",
+    "Monitor cooling tower status.",
+    "Observe chilled water temperatures and operating setpoints.",
+    "Monitor plant alarms and abnormal equipment indications.",
+    "Report abnormalities and coordinate technical follow-up.",
+    "Support remote plant monitoring and shift handovers."
+  ],
+  "skills": [
+    "Trane Tracer Synchrony",
+    "Chiller Plant Monitoring",
+    "Chiller Plant Graphics",
+    "Chilled Water Pumps (CHWP)",
+    "Condenser Water Pumps (CWP)",
+    "Cooling Tower Monitoring",
+    "Chilled Water Temperature Monitoring",
+    "Operating Setpoint Monitoring",
+    "Plant Alarm Monitoring",
+    "HVAC Operations",
+    "Remote Plant Monitoring",
+    "BMS Monitoring"
+  ]
+}
 ];
